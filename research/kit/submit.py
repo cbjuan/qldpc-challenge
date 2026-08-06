@@ -30,7 +30,7 @@ from css import compute_k, verify_css, commutes, in_rowspace
 from surrogate import lightest_logical
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
-_SCHEMA_PATH = os.path.join(_HERE, "..", "schema", "code.schema.json")
+_SCHEMA_PATH = os.path.join(_HERE, "..", "..", "schema", "code.schema.json")
 
 
 def _supports(H):
