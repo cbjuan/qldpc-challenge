@@ -68,3 +68,16 @@ updated candidate. `validate` saves the trusted gate's complete verdict.
   seven newly arrived codes were non-BB and did not change these lanes.
 - 2026-08-06: Built the optional `gf2_fast` extension locally. Its witnesses
   are accepted only after the Python GF(2) checks and are always persisted.
+- 2026-08-06: User prioritized `k^2*d/n` as an additional research metric but
+  explicitly rejected `d=2` codes as useful correction-code leaders. Preserve
+  such witnesses for the audit trail, but do not promote them to deeper rungs;
+  rank useful candidates only once a witnessed `d >= 3` is available.
+- 2026-08-07: User shifted allocation toward larger distances. Continue to
+  report `k^2*d/n`, but downweight `d=3` in new promotion decisions and favor
+  shared factors of order 4--7 plus mutations of the witnessed/known
+  `d=9--18` periodic-BB parents. This is a priority change, not a hard distance
+  cutoff.
+- 2026-08-07: User then set `d >= 8` as the high-distance sweet-spot target.
+  Preserve all lower-distance witnesses, but stop promoting them beyond the
+  shallow rung. New deep-confirmation budget goes to candidates whose persisted
+  witness remains at least 8, centered on proven `d=8,9,14,18` parents.

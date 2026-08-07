@@ -2,10 +2,37 @@
 
 All entries remain local and unsubmitted. `passed` means the trusted local
 validator accepted the candidate and did not refute its witness-backed upper
-bound. Literature novelty is unverified.
+bound. Literature novelty is unverified. The board's headline FOM remains
+`k*d^2/n`; for this campaign, `k^2*d/n` is also tracked, with `d=2` candidates
+retained only as audit/calibration results rather than useful leaders.
 
 | Candidate | Check weight | Gate | Board status | Artifact |
 |---|---:|---|---|---|
+| `[[696,236,3]]` | 8 | passed after flat 400→8k→60k→1M ladder | advances weight-8 × unrestricted; `k^2*d/n=240.07`, board FOM 3.05 | `artifacts/candidates/c0040000-c4193bf60d-1m-python8000-s1347971176-fast1000000.json` |
+| `[[696,236,3]]` | 8 | passed after flat 400→8k→60k→1M ladder | distinct balanced transfer; advances weight-8 × unrestricted; `k^2*d/n=240.07`, board FOM 3.05 | `artifacts/candidates/c0040002-29b3ec6e62-1m-python8000reuse8k-s1132323535-fast1000000.json` |
+| `[[690,234,3]]` | 8 | passed after flat 400→8k→60k→1M ladder | advances weight-8 × unrestricted; `k^2*d/n=238.07`, board FOM 3.05 | `artifacts/candidates/c0040003-c764da547d-1m-python8000reuse8k-s1503037155-fast1000000.json` |
+| `[[672,228,3]]` | 8 | passed after flat 400→8k→60k→1M ladder | advances weight-8 × unrestricted; `k^2*d/n=232.07`, board FOM 3.05 | `artifacts/candidates/c0040004-6483270b14-1m-python8000reuse8k-s249566288-fast1000000.json` |
+| `[[696,232,3]]` | 6 | passed after flat 400→8k→60k→1M ladder | advances weight-6 × unrestricted; `k^2*d/n=232.00`, board FOM 3.00 | `artifacts/candidates/c0040001-81f0c752c6-1m-python8000-s2031276414-fast1000000.json` |
+| `[[696,174,4]]` | 8 | passed after flat 400→8k→60k→1M ladder | advances weight-8 × unrestricted; `k^2*d/n=174.00`, board FOM 4.00 | `artifacts/candidates/c0040005-b68a3301fb-1m-python8000reuse8k-s120306866-fast1000000.json` |
+| `[[688,172,4]]` | 8 | passed after flat 400→8k→60k→1M ladder | advances weight-8 × unrestricted; `k^2*d/n=172.00`, board FOM 4.00 | `artifacts/candidates/c0040006-0b9faf210c-1m-python8000reuse8k-s2066873088-fast1000000.json` |
+| `[[680,170,4]]` | 8 | passed after flat 400→8k→60k→1M ladder | advances weight-8 × unrestricted; `k^2*d/n=170.00`, board FOM 4.00 | `artifacts/candidates/c0040007-1eec85e1b2-1m-python8000reuse8k-s774987152-fast1000000.json` |
+| `[[396,136,3]]` | 8 | passed after flat 400→8k→60k→1M ladder | advances weight-8 × unrestricted; `k^2*d/n=140.12`, board FOM 3.09 | `artifacts/candidates/c0014474-4b5cda8d68-1m-python8000-s996299447-fast1000000.json` |
+| `[[384,96,4]]` | 8 | passed after flat 400→8k→60k→1M ladder | advances weight-8 × unrestricted; `k^2*d/n=96.00`, board FOM 4.00 | `artifacts/candidates/c0019513-cf4de4242f-1m-python8000-s724216748-fast1000000.json` |
+| `[[288,100,3]]` | 8 | passed after flat 400→8k→60k ladder | advances weight-8 × unrestricted; `k^2*d/n=104.17`, board FOM 3.13 | `artifacts/candidates/c0016394-ec8a86c6f4-60k-python8000-s1804300979-fast60000.json` |
+| `[[288,96,3]]` | 8 | passed after flat 400→8k→60k ladder | advances weight-8 × unrestricted; `k^2*d/n=96.00`, board FOM 3.00 | `artifacts/candidates/c0016039-c2c078191d-60k-python8000-s1102068388-fast60000.json` |
+| `[[270,90,3]]` | 6 | passed after flat 400→8k→60k ladder | advances weight-6 × unrestricted; `k^2*d/n=90.00`, board FOM 3.00 | `artifacts/candidates/c0011462-508dfbd86d-60k-python8000-s2136219389-fast60000.json` |
+| `[[234,78,3]]` | 6 | passed after flat 400→8k→60k ladder | advances weight-6 × unrestricted; `k^2*d/n=78.00`, board FOM 3.00 | `artifacts/candidates/c0006423-842ade0cea-60k-python8000-s196597815-fast60000.json` |
+| `[[272,48,8]]` | 8 | passed after flat 400→8k→60k ladder | advances weight-8 × unrestricted; `k^2*d/n=67.76`, board FOM 11.29 | `artifacts/candidates/c0020118-b8a2568227-60k-python8000-s1707877928-fast60000.json` |
+| `[[304,52,7]]` | 8 | passed after flat 400→8k→60k→1M ladder | advances weight-8 × unrestricted; `k^2*d/n=62.26`, board FOM 8.38 | `artifacts/candidates/c0020058-540ca6a88d-1m-python8000-s1887582726-fast1000000.json` |
+| `[[266,50,6]]` | 8 | passed after flat 400→8k→60k ladder | advances weight-8 × unrestricted; `k^2*d/n=56.39`, board FOM 6.77 | `artifacts/candidates/c0020978-0ef0f9df16-60k-python8000-s190069857-fast60000.json` |
+| `[[252,48,6]]` | 8 | passed after flat 400→8k→60k ladder | advances weight-8 × unrestricted; `k^2*d/n=54.86`, board FOM 6.86 | `artifacts/candidates/c0020343-fcf20f92d7-60k-python8000-s1563588468-fast60000.json` |
+| `[[238,46,6]]` | 8 | passed after flat 400→8k→60k ladder | advances weight-8 × unrestricted; `k^2*d/n=53.34`, board FOM 6.96 | `artifacts/candidates/c0020198-d966cd50f5-60k-python8000-s1561949336-fast60000.json` |
+| `[[224,44,6]]` | 8 | passed after flat 400→8k→60k ladder | advances weight-8 × unrestricted; `k^2*d/n=51.86`, board FOM 7.07 | `artifacts/candidates/c0020498-1e29ef0df9-60k-python8000-s1633147836-fast60000.json` |
+| `[[270,30,7]]` | 6 | passed after flat 400→8k→60k ladder | advances weight-6 × unrestricted; `k^2*d/n=23.33`, board FOM 5.44 | `artifacts/candidates/c0020418-ac336096c5-60k-python8000-s833036170-fast60000.json` |
+| `[[240,30,6]]` | 6 | passed after flat 400→8k→60k ladder | advances weight-6 × unrestricted; `k^2*d/n=22.50`, board FOM 4.50 | `artifacts/candidates/c0020458-59b4d301d1-60k-python8000-s1310485133-fast60000.json` |
+| `[[234,26,7]]` | 6 | passed after flat 400→8k→60k ladder | advances weight-6 × unrestricted; `k^2*d/n=20.22`, board FOM 5.44 | `artifacts/candidates/c0020918-56134fef19-60k-python8000-s1591394722-fast60000.json` |
+| `[[260,26,6]]` | 6 | passed after flat 400→8k→60k ladder | advances the current board but is locally dominated by `[[208,26,6]]`; retained only | `artifacts/candidates/c0020623-1b541c0665-60k-python8000-s533806105-fast60000.json` |
+| `[[256,46,6]]` | 8 | passed after flat 400→8k→60k ladder | advances the current board but is locally dominated by `[[238,46,6]]`; retained only | `artifacts/candidates/c0020718-4968fce3fd-60k-python8000-s280143555-fast60000.json` |
 | `[[270,18,9]]` | 6 | passed after flat 2k→8k→60k ladder | advances weight-6 × unrestricted; FOM 5.40 | `artifacts/candidates/c0010524-88d55b4bd0-60k-python8000-s852276647-fast60000.json` |
 | `[[280,20,7]]` | 6 | passed after flat 2k→8k→60k ladder | advances weight-6 × unrestricted; FOM 3.50 | `artifacts/candidates/c0018628-a16cd470e9-60k-python8000-s1424024388-fast60000.json` |
 | `[[208,26,6]]` | 6 | passed after flat 2k→8k→60k ladder | advances weight-6 × unrestricted | `artifacts/candidates/c0016229-34ddd89e34-60k-python8000-s730123194-fast60000.json` |

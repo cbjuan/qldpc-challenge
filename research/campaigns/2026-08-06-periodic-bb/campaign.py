@@ -64,6 +64,90 @@ SEEDS = [
      "B": [(9, 1), (5, 11), (3, 9)]},
 ]
 
+TARGET_PARENTS = [
+    {"name": "local-270-18-9", "l": 9, "m": 15,
+     "A": [(0, 0), (0, 11), (7, 2), (7, 8)],
+     "B": [(0, 0), (0, 1)]},
+    {"name": "local-208-26-6", "l": 8, "m": 13,
+     "A": [(0, 0), (0, 7), (2, 7), (5, 0)],
+     "B": [(0, 0), (1, 0)]},
+    {"name": "known-288-12-18", "l": 12, "m": 12,
+     "A": [(3, 0), (0, 2), (0, 7)],
+     "B": [(0, 3), (1, 0), (2, 0)]},
+    {"name": "known-360-16-14", "l": 15, "m": 12,
+     "A": [(0, 2), (0, 4), (3, 0)],
+     "B": [(0, 6), (7, 0), (14, 0)]},
+    {"name": "known-288-50-8", "l": 18, "m": 8,
+     "A": [(0, 0), (1, 0), (0, 5), (1, 5)],
+     "B": [(0, 0), (0, 1), (5, 0), (5, 1)]},
+    {"name": "july-210-8-14", "l": 15, "m": 7,
+     "A": [(8, 2), (2, 4), (10, 6)],
+     "B": [(3, 0), (6, 3), (7, 5)]},
+]
+
+# IDs 40,000+ continue from the first two 20k phases without changing any
+# persisted proposal.  The first entries are explicit large-geometry transfers
+# of the shared-factor lane that produced validated d=3 leaders; subsequent IDs
+# explore common binomials of controlled group order on large rectangular tori.
+FACTOR_TRANSFER_SEEDS = [
+    {
+        "name": "transfer-396-136-3-to-6x58",
+        "l": 6,
+        "m": 58,
+        "A": [(0, 0), (1, 25), (3, 25), (4, 0)],
+        "B": [(0, 0), (1, 12), (3, 12), (4, 0)],
+    },
+    {
+        "name": "order-3-maximal-3x116",
+        "l": 3,
+        "m": 116,
+        "A": [(0, 0), (2, 0), (0, 1), (2, 1)],
+        "B": [(0, 0), (2, 0)],
+    },
+    {
+        "name": "balanced-order-3-12x29",
+        "l": 12,
+        "m": 29,
+        "A": [(1, 25), (4, 0), (5, 25), (8, 0)],
+        "B": [(1, 12), (4, 0), (5, 12), (8, 0)],
+    },
+    {
+        "name": "balanced-order-3-15x23",
+        "l": 15,
+        "m": 23,
+        "A": [(1, 2), (4, 0), (6, 2), (9, 0)],
+        "B": [(1, 12), (4, 0), (6, 12), (9, 0)],
+    },
+    {
+        "name": "balanced-order-3-21x16",
+        "l": 21,
+        "m": 16,
+        "A": [(1, 9), (4, 0), (8, 9), (11, 0)],
+        "B": [(1, 12), (4, 0), (8, 12), (11, 0)],
+    },
+    {
+        "name": "balanced-order-4-29x12",
+        "l": 29,
+        "m": 12,
+        "A": [(0, 0), (0, 3), (1, 3), (1, 6), (7, 1), (7, 10)],
+        "B": [(0, 0), (0, 3)],
+    },
+    {
+        "name": "balanced-order-4-8x43",
+        "l": 8,
+        "m": 43,
+        "A": [(0, 0), (1, 10), (1, 15), (2, 0), (3, 15), (7, 10)],
+        "B": [(0, 0), (2, 0)],
+    },
+    {
+        "name": "balanced-order-4-20x17",
+        "l": 20,
+        "m": 17,
+        "A": [(0, 0), (1, 15), (5, 0), (6, 15), (7, 10), (12, 10)],
+        "B": [(0, 0), (5, 0)],
+    },
+]
+
 
 def stable_seed(*parts: object) -> int:
     raw = "|".join(str(p) for p in (VERSION, MASTER_SEED, *parts)).encode()
@@ -202,7 +286,177 @@ def profile_for_lane(rng: np.random.Generator, lane: str) -> tuple[int, int]:
     return wa, total - wa
 
 
+def targeted_proposal(candidate_id: int) -> dict:
+    """Local mutations of witnessed/known periodic BB parents.
+
+    IDs below 20,000 retain the original broad-generator semantics. This
+    targeted phase begins at 20,000, so adding it does not alter any persisted
+    proposal.
+    """
+    rng = rng_for("targeted-proposal", candidate_id)
+    parent = copy.deepcopy(TARGET_PARENTS[int(rng.integers(0, len(TARGET_PARENTS)))])
+    l, m = int(parent["l"]), int(parent["m"])
+    A = normalize_support(parent["A"], l, m)
+    B = normalize_support(parent["B"], l, m)
+    operation = candidate_id % 5
+
+    if operation == 0:  # relocate one term
+        side = A if int(rng.integers(0, 2)) == 0 else B
+        index = int(rng.integers(0, len(side)))
+        occupied = set(side)
+        occupied.remove(side[index])
+        while True:
+            term = (int(rng.integers(0, l)), int(rng.integers(0, m)))
+            if term not in occupied:
+                side[index] = term
+                break
+        operation_name = "relocate-one"
+    elif operation == 1:  # correlated relocation, one term per polynomial
+        for side in (A, B):
+            index = int(rng.integers(0, len(side)))
+            occupied = set(side)
+            occupied.remove(side[index])
+            while True:
+                term = (int(rng.integers(0, l)), int(rng.integers(0, m)))
+                if term not in occupied:
+                    side[index] = term
+                    break
+        operation_name = "relocate-pair"
+    elif operation == 2:  # small exponent move
+        side = A if int(rng.integers(0, 2)) == 0 else B
+        index = int(rng.integers(0, len(side)))
+        da = int(rng.choice([-2, -1, 1, 2]))
+        db = int(rng.choice([-2, -1, 1, 2]))
+        side[index] = ((side[index][0] + da) % l, (side[index][1] + db) % m)
+        operation_name = "local-exponent-step"
+    elif operation == 3:  # nearby rectangular group type
+        for _ in range(50):
+            nl = l + int(rng.integers(-2, 3))
+            nm = m + int(rng.integers(-2, 3))
+            if nl >= 2 and nm >= 2 and nl * nm <= 350 and (nl, nm) != (l, m):
+                l, m = nl, nm
+                break
+        operation_name = "nearby-geometry"
+    else:  # change support size by one without exceeding the schema cap
+        side = A if int(rng.integers(0, 2)) == 0 else B
+        if len(A) + len(B) < 32 and (len(side) == 1 or int(rng.integers(0, 2)) == 0):
+            while True:
+                term = (int(rng.integers(0, l)), int(rng.integers(0, m)))
+                if term not in side:
+                    side.append(term)
+                    break
+            operation_name = "add-term"
+        else:
+            del side[int(rng.integers(0, len(side)))]
+            operation_name = "delete-term"
+
+    A, B = normalize_support(A, l, m), normalize_support(B, l, m)
+    return {
+        "family": "bivariate-bicycle",
+        "construction": "periodic-rectangular-torus",
+        "candidate_id": candidate_id,
+        "generator_version": VERSION,
+        "proposal_seed": stable_seed("targeted-proposal", candidate_id),
+        "lane": "targeted-mutation",
+        "proposal_kernel": operation_name,
+        "parent": parent["name"],
+        "l": l,
+        "m": m,
+        "A": [list(x) for x in A],
+        "B": [list(x) for x in B],
+    }
+
+
+def element_order(term: tuple[int, int], l: int, m: int) -> int:
+    """Additive order of an element of Z_l x Z_m (structural only)."""
+    from math import gcd, lcm
+
+    a, b = term
+    return lcm(l // gcd(a, l), m // gcd(b, m))
+
+
+@lru_cache(maxsize=None)
+def factor_geometries(order: int) -> tuple[tuple[int, int, tuple[tuple[int, int], ...]], ...]:
+    out = []
+    for l, m in geometry_pool(240, 350):
+        elements = tuple(
+            (a, b)
+            for a in range(l)
+            for b in range(m)
+            if (a or b) and element_order((a, b), l, m) == order
+        )
+        if elements:
+            out.append((l, m, elements))
+    return tuple(out)
+
+
+def factor_order_proposal(candidate_id: int) -> dict:
+    """Large-geometry shared-binomial continuation for IDs 40,000+.
+
+    A common factor ``1+g`` with controlled finite order produced the first
+    useful high-rate branch: order two collapsed to d=2, while persisted
+    order-three/four examples survived deep confirmation at d=3/4.  Order is
+    only a proposal heuristic; distance is still measured and gated normally.
+    """
+    offset = candidate_id - 40_000
+    if offset < len(FACTOR_TRANSFER_SEEDS):
+        chosen = copy.deepcopy(FACTOR_TRANSFER_SEEDS[offset])
+        l, m = int(chosen["l"]), int(chosen["m"])
+        A = normalize_support(chosen["A"], l, m)
+        B = normalize_support(chosen["B"], l, m)
+        return {
+            "family": "bivariate-bicycle",
+            "construction": "periodic-rectangular-torus",
+            "candidate_id": candidate_id,
+            "generator_version": VERSION,
+            "proposal_seed": stable_seed("factor-order-proposal", candidate_id),
+            "lane": "factor-order-continuation",
+            "proposal_kernel": "explicit-transfer",
+            "parent": chosen["name"],
+            "l": l,
+            "m": m,
+            "A": [list(x) for x in A],
+            "B": [list(x) for x in B],
+        }
+
+    rng = rng_for("factor-order-proposal", candidate_id)
+    order = (3, 4, 5, 6, 7)[offset % 5]
+    geometries = factor_geometries(order)
+    if not geometries:
+        raise RuntimeError(f"no large geometry supports factor order {order}")
+    l, m, elements = geometries[int(rng.integers(0, len(geometries)))]
+    g = elements[int(rng.integers(0, len(elements)))]
+    factor = [(0, 0), g]
+    profiles = [(2, 4), (4, 2), (4, 4), (2, 6), (6, 2)]
+    wa, wb = profiles[int(rng.integers(0, len(profiles)))]
+    A = factored_support(rng, l, m, wa, factor)
+    B = factored_support(rng, l, m, wb, factor)
+    if A is None or B is None:
+        raise RuntimeError(
+            f"failed to sample order-{order} factored supports for c{candidate_id}"
+        )
+    return {
+        "family": "bivariate-bicycle",
+        "construction": "periodic-rectangular-torus",
+        "candidate_id": candidate_id,
+        "generator_version": VERSION,
+        "proposal_seed": stable_seed("factor-order-proposal", candidate_id),
+        "lane": "factor-order-continuation",
+        "proposal_kernel": f"shared-binomial-order-{order}",
+        "factor_order": order,
+        "factor": [list(x) for x in factor],
+        "l": l,
+        "m": m,
+        "A": [list(x) for x in normalize_support(A, l, m)],
+        "B": [list(x) for x in normalize_support(B, l, m)],
+    }
+
+
 def proposal(candidate_id: int) -> dict:
+    if candidate_id >= 40_000:
+        return factor_order_proposal(candidate_id)
+    if candidate_id >= 20_000:
+        return targeted_proposal(candidate_id)
     rng = rng_for("proposal", candidate_id)
     lane_roll = candidate_id % 20
     if lane_roll < 2:
@@ -445,7 +699,15 @@ def command_census(args: argparse.Namespace) -> None:
     print(f"ledger={STRUCTURAL}")
 
 
-def selection_score(record: dict) -> float:
+def selection_score(record: dict, mode: str) -> float:
+    if mode == "k2d-proxy":
+        distance_proxy = int(record.get("factor_order", min(record["l"], record["m"])))
+        return record["k"] * record["k"] * distance_proxy / record["n"]
+    if mode == "fom-proxy":
+        short_axis = min(int(record["l"]), int(record["m"]))
+        return record["k"] * short_axis * short_axis / record["n"]
+    if mode == "deterministic-random":
+        return float(stable_seed("selection-random", record["candidate_id"]))
     if not record.get("indecomposable", True):
         return -1_000_000_000 + record["k"]
     automatic = 1.0 if record["automatic_high_rate_gap"] else 0.0
@@ -465,7 +727,16 @@ def command_select(args: argparse.Namespace) -> None:
         for path in (ARTIFACTS / "candidates").glob("c???????-*.json")
         if len(path.name) >= 8 and path.name[1:8].isdigit()
     }
+    requested_ids = set(args.candidate_id)
     for record in records:
+        if requested_ids and int(record["candidate_id"]) not in requested_ids:
+            continue
+        if int(record["candidate_id"]) < args.min_candidate_id:
+            continue
+        if args.max_candidate_id is not None and int(record["candidate_id"]) > args.max_candidate_id:
+            continue
+        if int(record.get("factor_order", 0)) < args.min_factor_order:
+            continue
         if "components" not in record:
             HX, HZ = build_bb(record["l"], record["m"], record["A"], record["B"])
             components, component_sizes = component_profile(HX, HZ)
@@ -486,17 +757,33 @@ def command_select(args: argparse.Namespace) -> None:
             continue
         buckets[record["weight_class"]].append(record)
     for bucket in buckets.values():
-        bucket.sort(key=selection_score, reverse=True)
+        bucket.sort(key=lambda record: selection_score(record, args.score), reverse=True)
 
     chosen: list[dict] = []
     positions = defaultdict(int)
+    geometry_counts: dict[tuple[int, int], int] = defaultdict(int)
+    kernel_counts: dict[str, int] = defaultdict(int)
     order = ["weight-6", "weight-8", "weight-4", "any-weight"]
     while len(chosen) < args.limit and any(positions[name] < len(buckets[name]) for name in order):
         for name in order:
-            pos = positions[name]
-            if pos < len(buckets[name]) and len(chosen) < args.limit:
-                chosen.append(buckets[name][pos])
+            while positions[name] < len(buckets[name]) and len(chosen) < args.limit:
+                record = buckets[name][positions[name]]
                 positions[name] += 1
+                geometry = (int(record["l"]), int(record["m"]))
+                kernel = str(record["proposal_kernel"])
+                if geometry_counts[geometry] >= args.max_per_geometry:
+                    continue
+                if kernel_counts[kernel] >= args.max_per_kernel:
+                    continue
+                chosen.append(record)
+                geometry_counts[geometry] += 1
+                kernel_counts[kernel] += 1
+                break
+    if requested_ids:
+        selected_ids = {int(record["candidate_id"]) for record in chosen}
+        missing = requested_ids - selected_ids
+        if missing:
+            raise RuntimeError(f"requested candidates were filtered out: {sorted(missing)}")
     payload = {
         "generator_version": VERSION,
         "selection_size": len(chosen),
@@ -600,6 +887,42 @@ def validate_fast_witness(HX: np.ndarray, HZ: np.ndarray, side: str,
         raise RuntimeError(f"accelerated witness failed trusted Python checks: {side} w={weight}")
 
 
+def reused_python_submission(record: dict, python_trials: int, source_rung: str,
+                             target_rung: str, seed: int) -> tuple[dict, Path]:
+    """Copy an already persisted Python witness as the base of a deeper fast rung."""
+    candidate_dir = ARTIFACTS / "candidates"
+    prefix = f"c{int(record['candidate_id']):07d}-{record['canonical_key'][:10]}-"
+    pattern = f"{prefix}{source_rung}-python{python_trials}-s*.json"
+    sources = [
+        path for path in candidate_dir.glob(pattern)
+        if "-fast" not in path.stem
+        and not path.name.endswith(".evidence.json")
+        and not path.name.endswith(".verdict.json")
+    ]
+    if len(sources) != 1:
+        raise RuntimeError(
+            f"expected one persisted Python source for c{record['candidate_id']} "
+            f"at rung {source_rung}, found {[path.name for path in sources]}"
+        )
+    source_path = sources[0]
+    doc = json.loads(source_path.read_text())
+    if int(doc["n"]) != int(record["n"]) or int(doc["k"]) != int(record["k"]):
+        raise RuntimeError(f"persisted Python source drift for c{record['candidate_id']}")
+    doc["provenance"]["notes"] += (
+        f" Reused persisted Python witness from {source_path.name} as the base "
+        f"for accelerated rung={target_rung}; no Python witness search was repeated."
+    )
+    label = f"{target_rung}-python{python_trials}reuse{source_rung}"
+    target_path = candidate_dir / f"{candidate_stem(record, label, seed)}.json"
+    if target_path.exists():
+        raise FileExistsError(f"refusing to overwrite reused Python base: {target_path}")
+    errors = save_submission(doc, str(target_path))
+    if errors or not target_path.exists():
+        raise RuntimeError(f"hard save/schema failure for {target_path}: {errors}")
+    json.loads(target_path.read_text())
+    return doc, target_path
+
+
 def command_confirm(args: argparse.Namespace) -> None:
     if gf2_fast is None:
         raise RuntimeError("gf2_fast unavailable; run `env UV_CACHE_DIR=.uv-cache make fast`")
@@ -607,8 +930,13 @@ def command_confirm(args: argparse.Namespace) -> None:
         HX, HZ = build_record(record)
         seed = stable_seed("confirm", args.rung, record["candidate_id"],
                            args.python_trials, args.fast_trials) % (2**31)
-        doc, base_path = saved_submission(record, HX, HZ, args.python_trials, seed,
-                                          f"{args.rung}-python{args.python_trials}")
+        if args.reuse_python_rung:
+            doc, base_path = reused_python_submission(
+                record, args.python_trials, args.reuse_python_rung, args.rung, seed
+            )
+        else:
+            doc, base_path = saved_submission(record, HX, HZ, args.python_trials, seed,
+                                              f"{args.rung}-python{args.python_trials}")
         weight, side, support = gf2_fast.distance_rand_witness(
             HX, HZ, trials=args.fast_trials, seed=seed + 17,
             pair_depth=args.pair_depth, threads=args.threads)
@@ -696,6 +1024,15 @@ def parser() -> argparse.ArgumentParser:
     select.add_argument("--exclude-kernel", action="append", default=[])
     select.add_argument("--min-dimension", type=int, default=2)
     select.add_argument("--include-packaged", action="store_true")
+    select.add_argument("--candidate-id", action="append", type=int, default=[])
+    select.add_argument("--score", choices=("high-rate", "fom-proxy", "k2d-proxy",
+                                             "deterministic-random"),
+                        default="high-rate")
+    select.add_argument("--min-candidate-id", type=int, default=0)
+    select.add_argument("--max-candidate-id", type=int)
+    select.add_argument("--min-factor-order", type=int, default=0)
+    select.add_argument("--max-per-geometry", type=int, default=1_000_000)
+    select.add_argument("--max-per-kernel", type=int, default=1_000_000)
     select.set_defaults(func=command_select)
 
     package = sub.add_parser("package", help="persist initial Python witnesses")
@@ -709,6 +1046,7 @@ def parser() -> argparse.ArgumentParser:
     confirm.add_argument("--candidate-id", action="append", type=int, default=[])
     confirm.add_argument("--rung", required=True)
     confirm.add_argument("--python-trials", type=int, default=8000)
+    confirm.add_argument("--reuse-python-rung")
     confirm.add_argument("--fast-trials", type=int, required=True)
     confirm.add_argument("--pair-depth", type=int, default=16)
     confirm.add_argument("--threads", type=int, default=8)
