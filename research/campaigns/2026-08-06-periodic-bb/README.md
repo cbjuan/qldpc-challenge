@@ -171,3 +171,15 @@ updated candidate. `validate` saves the trusted gate's complete verdict.
   `selection-refreshed-highd-balance-epoch4-001.json` keeps `k=8--10`
   children of the validated `d=20--26` parents. No witness search was run;
   parent distance is only a structural scheduling prior.
+- 2026-08-07: Epoch 4 produced the new useful-`k` sweet spot
+  `[[576,12,30]]`, a distinct `[[686,12,30]]`, and another
+  `[[686,12,28]]`. Its `k=8` branch added a third distinct `[[660,8,32]]`,
+  while reserve c54859 tied the high-distance `[[686,6,36]]` point. Every
+  result passed from a fresh all-rung document; the apparent shallow maxima
+  of 40--52 again collapsed materially by 1M.
+- 2026-08-07: Began immutable epoch 5 at the untouched cursor 57663. Its
+  deterministic 11-parent cycle allocates the largest share to the new
+  trusted `k=8--16`, `d=20--34` frontier while retaining five prior geometry,
+  distance-ceiling, and high-`k` anchors. Regression tests freeze every prior
+  proposal ID and verify the new parents against their connected structures,
+  final candidate documents, and trusted board-advancing verdicts.
