@@ -124,6 +124,7 @@ retained only as audit/calibration results rather than useful leaders.
 | `[[224,112,2]]` | 6 | passed | advances weight-6 × unrestricted | `artifacts/candidates/c0012783-4b63b4ed57-python2000-s1744585393.json` |
 | `[[452,228,2]]` | 8 | passed | advances weight-8 × unrestricted | `artifacts/candidates/c0004417-e3a2cafb05-python2000-s1815568102.json` |
 | `[[40,2,4]]` | 4 | passed | dominated; retained as calibration | `artifacts/candidates/c0008081-a7602f8560-python2000-s1872254395.json` |
+| `[[648,8,32]]` | 6 | passed; side-aware upper-bound ladder `54→42→40→32` at 400→8k→60k→1M; all-rung consolidated at `(X,Z)=(32,40)` | c58638 advances the public weight-6 × unrestricted board but is locally dominated by `[[648,8,34]]`; `k^2*d/n=3.16`, board FOM 12.64 | `artifacts/candidates/c0058638-324eb6a044-epoch5-final-allrungs-s183048936.json` |
 
 The adjacent `*.verdict.json` files contain the full validator evidence. The
 continuous search does not stop at any entry in this table.
