@@ -161,3 +161,13 @@ updated candidate. `validate` saves the trusted gate's complete verdict.
   disjoint six-record `parent_d=20--26` useful-k balance queue in
   `selection-refreshed-highd-balance-001.json`. No witness search was run;
   `parent_d` remains a scheduling prior, not a child-distance claim.
+- 2026-08-07: Continued the immutable refreshed census through IDs
+  54663--57662. The 3,000 proposals yielded 369 new encoders, 345 connected;
+  182 connected records had `parent_d >= 28`. Froze 18 in
+  `selection-refreshed-highd-epoch4-001.json`, retaining the epoch-3 caps of
+  two per parent, four per geometry, and six per kernel. Fourteen have
+  `k >= 8`; the four `k=4` records are distance-ceiling probes from
+  `d=28--36` parents. A disjoint six-record balance queue in
+  `selection-refreshed-highd-balance-epoch4-001.json` keeps `k=8--10`
+  children of the validated `d=20--26` parents. No witness search was run;
+  parent distance is only a structural scheduling prior.
