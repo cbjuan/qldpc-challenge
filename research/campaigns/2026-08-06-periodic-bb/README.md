@@ -153,3 +153,11 @@ updated candidate. `validate` saves the trusted gate's complete verdict.
   `[[630,8,28]]`. Each parent is a connected, structurally distinct periodic
   BB code that passed the trusted gate; its witnessed distance is only a prior
   for children, which must persist their own witnesses.
+- 2026-08-07: Structurally censused refreshed IDs 51663--54662, exactly 40
+  proposals for every one of the 15 parent/five-kernel pairs. The 3,000
+  proposals yielded 508 new encoders, 476 connected. Froze 18 connected
+  `parent_d >= 28` records in `selection-refreshed-highd-epoch3-001.json`
+  (at most two per parent, four per geometry, and six per kernel), plus a
+  disjoint six-record `parent_d=20--26` useful-k balance queue in
+  `selection-refreshed-highd-balance-001.json`. No witness search was run;
+  `parent_d` remains a scheduling prior, not a child-distance claim.
