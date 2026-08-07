@@ -15,6 +15,9 @@ OLD_PROPOSAL_DIGEST = "dc5a3eef67f8a668ba8f096cc06ec00904512b9ed29f4cdbb8cb4b73d
 REFRESHED_PROPOSAL_END = 57_663
 REFRESHED_PROPOSAL_DIGEST = "84e1dc1c7a4ba06adad539fd75cac1fabc9394b848bc3e1e808dc0ea06efce11"
 EPOCH5_FIRST_CYCLE_DIGEST = "9a445a7870d4ed759299427459603762c2ffbf1b25978f72076b735fd68a567d"
+EPOCH5_PROPOSAL_END = 60_663
+EPOCH5_PROPOSAL_DIGEST = "8e55ef190af78eebca952b46cb0da56717c826a75a960c102a60b81732d3a8e4"
+EPOCH6_FIRST_CYCLE_DIGEST = "50ff7b081e2521702711c76f61a9b76c2d6a85eac9cab85ef867e94065bdf637"
 SELECTION_IDS = {
     49_973, 49_984, 50_011, 50_033, 50_071, 50_490,
     50_526, 50_584, 50_670, 50_719, 50_947, 51_066,
@@ -54,6 +57,28 @@ EPOCH5_SOURCE_FINAL_ARTIFACTS = {
     56_884: "c0056884-add1f28e94-epoch4-c56884-final-allrungs-s255505412",
     52_988: "c0052988-c5f0902d47-epoch3-final-allrungs-s2067371932",
 }
+EPOCH6_SOURCE_IDS = (58_579, 60_611, 58_638, 59_571, 58_472)
+EPOCH6_SOURCE_KEYS = {
+    58_579: "4962667b1a9b5e01f92905bc",
+    60_611: "ecad34533e34338633c5439e",
+    58_638: "324eb6a044dc8b8048fbb37d",
+    59_571: "185be85cbee676d9acee5a90",
+    58_472: "bb2c3fe1d7472b16b19489dd",
+}
+EPOCH6_SOURCE_SELECTIONS = {
+    58_579: "selection-refreshed-highk-balance-epoch5-001.json",
+    60_611: "selection-refreshed-highd-epoch5-001.json",
+    58_638: "selection-refreshed-highd-epoch5-001.json",
+    59_571: "selection-refreshed-highk-balance-epoch5-001.json",
+    58_472: "selection-refreshed-highd-epoch5-001.json",
+}
+EPOCH6_SOURCE_FINAL_ARTIFACTS = {
+    58_579: "c0058579-4962667b1a-epoch5-balance-final-allrungs-s146694265",
+    60_611: "c0060611-ecad34533e-epoch5-final-allrungs-s1316218620",
+    58_638: "c0058638-324eb6a044-epoch5-final-allrungs-s183048936",
+    59_571: "c0059571-185be85cbe-epoch5-balance-final-allrungs-s785985312",
+    58_472: "c0058472-bb2c3fe1d7-epoch5-primary-final-allrungs-s1226758122",
+}
 
 
 def proposal_digest(start: int, stop: int) -> str:
@@ -86,6 +111,19 @@ class CampaignStructureTest(unittest.TestCase):
                 REFRESHED_PROPOSAL_END,
             ),
             REFRESHED_PROPOSAL_DIGEST,
+        )
+
+    def test_epoch5_candidate_ids_are_immutable(self) -> None:
+        self.assertEqual(
+            campaign.REFRESHED_HIGH_DISTANCE_EPOCH6_START,
+            EPOCH5_PROPOSAL_END,
+        )
+        self.assertEqual(
+            proposal_digest(
+                campaign.REFRESHED_HIGH_DISTANCE_EPOCH5_START,
+                EPOCH5_PROPOSAL_END,
+            ),
+            EPOCH5_PROPOSAL_DIGEST,
         )
 
     def test_next_selection_is_an_exact_connected_ledger_subset(self) -> None:
@@ -304,6 +342,155 @@ class CampaignStructureTest(unittest.TestCase):
             self.assertEqual(proposal["parent_k"], parent["parent_k"])
             self.assertEqual(proposal["proposal_kernel"], kernels[offset // parent_count])
             self.assertEqual(proposal["lane"], "refreshed-high-distance-mutation")
+            self.assertLessEqual(2 * proposal["l"] * proposal["m"], 700)
+            self.assertEqual(
+                proposal["A"],
+                [list(term) for term in campaign.normalize_support(
+                    proposal["A"], proposal["l"], proposal["m"]
+                )],
+            )
+            self.assertEqual(
+                proposal["B"],
+                [list(term) for term in campaign.normalize_support(
+                    proposal["B"], proposal["l"], proposal["m"]
+                )],
+            )
+
+            HX, HZ = campaign.build_bb(
+                proposal["l"], proposal["m"], proposal["A"], proposal["B"]
+            )
+            self.assertEqual(HX.shape, HZ.shape)
+            self.assertEqual(
+                HX.shape,
+                (
+                    proposal["l"] * proposal["m"],
+                    2 * proposal["l"] * proposal["m"],
+                ),
+            )
+            self.assertTrue(campaign.verify_css(HX, HZ))
+
+    def test_epoch6_parents_match_connected_validated_sources(self) -> None:
+        ledger_by_id = {record["candidate_id"]: record for record in campaign.load_records()}
+        old_keys = {
+            campaign.canonical_key(parent)
+            for parent in campaign.EPOCH5_HIGH_DISTANCE_PARENTS
+        }
+        new_keys: set[str] = set()
+
+        self.assertEqual(
+            len(campaign.EPOCH6_ADDITIONAL_HIGH_DISTANCE_PARENTS),
+            len(EPOCH6_SOURCE_IDS),
+        )
+        for parent, source_id in zip(
+            campaign.EPOCH6_ADDITIONAL_HIGH_DISTANCE_PARENTS,
+            EPOCH6_SOURCE_IDS,
+            strict=True,
+        ):
+            source = ledger_by_id[source_id]
+            selection_path = campaign.ARTIFACTS / EPOCH6_SOURCE_SELECTIONS[source_id]
+            selection = json.loads(selection_path.read_text())
+            selected = [
+                record for record in selection["records"]
+                if record["candidate_id"] == source_id
+            ]
+
+            self.assertEqual(selected, [source])
+            self.assertTrue(source["indecomposable"])
+            self.assertEqual(
+                (source["components"], source["component_sizes"]),
+                (1, [source["n"]]),
+            )
+
+            key = campaign.canonical_key(parent)
+            new_keys.add(key)
+            self.assertEqual(key, EPOCH6_SOURCE_KEYS[source_id])
+            self.assertEqual(parent["l"], source["l"])
+            self.assertEqual(parent["m"], source["m"])
+            self.assertEqual([list(term) for term in parent["A"]], source["A"])
+            self.assertEqual([list(term) for term in parent["B"]], source["B"])
+            self.assertEqual(parent["parent_k"], source["k"])
+
+            artifact_stem = EPOCH6_SOURCE_FINAL_ARTIFACTS[source_id]
+            candidate_path = campaign.ARTIFACTS / "candidates" / f"{artifact_stem}.json"
+            verdict_path = (
+                campaign.ARTIFACTS / "candidates" / f"{artifact_stem}.verdict.json"
+            )
+            candidate = json.loads(candidate_path.read_text())
+            verdict = json.loads(verdict_path.read_text())
+            self.assertEqual(
+                (candidate["n"], candidate["k"], candidate["distance"]["d"]),
+                (source["n"], parent["parent_k"], parent["parent_d"]),
+            )
+            self.assertTrue(verdict["passed"])
+            self.assertTrue(verdict["gates"]["novelty"]["board_advancing"])
+
+            HX, HZ = campaign.build_bb(
+                parent["l"], parent["m"], parent["A"], parent["B"]
+            )
+            self.assertTrue(campaign.verify_css(HX, HZ))
+            self.assertEqual(campaign.exact_k(HX, HZ), parent["parent_k"])
+            components, sizes = campaign.component_profile(HX, HZ)
+            self.assertEqual((components, sizes), (1, [source["n"]]))
+
+        self.assertEqual(len(new_keys), len(EPOCH6_SOURCE_IDS))
+        self.assertTrue(new_keys.isdisjoint(old_keys))
+        self.assertEqual(
+            [parent["name"] for parent in campaign.EPOCH6_DIVERSITY_PARENTS],
+            list(campaign.EPOCH6_DIVERSITY_PARENT_NAMES),
+        )
+        self.assertTrue(
+            all(
+                parent in campaign.EPOCH5_HIGH_DISTANCE_PARENTS
+                for parent in campaign.EPOCH6_DIVERSITY_PARENTS
+            )
+        )
+        self.assertEqual(
+            campaign.EPOCH6_HIGH_DISTANCE_PARENTS,
+            [
+                *campaign.EPOCH6_ADDITIONAL_HIGH_DISTANCE_PARENTS,
+                *campaign.EPOCH6_DIVERSITY_PARENTS,
+            ],
+        )
+        self.assertEqual(len(campaign.EPOCH6_HIGH_DISTANCE_PARENTS), 11)
+        self.assertNotEqual(
+            EPOCH6_SOURCE_KEYS[58_472],
+            EPOCH6_SOURCE_KEYS[58_638],
+        )
+
+    def test_epoch6_proposals_are_deterministic_valid_bb_specs(self) -> None:
+        kernels = [
+            "validated-highd-local-one",
+            "validated-highd-local-pair",
+            "validated-highd-nearby-geometry",
+            "validated-highd-two-step",
+            "validated-highd-correlated",
+        ]
+        parents = campaign.EPOCH6_HIGH_DISTANCE_PARENTS
+        parent_count = len(parents)
+        cycle_stop = (
+            campaign.REFRESHED_HIGH_DISTANCE_EPOCH6_START
+            + parent_count * len(kernels)
+        )
+        self.assertEqual(
+            proposal_digest(
+                campaign.REFRESHED_HIGH_DISTANCE_EPOCH6_START,
+                cycle_stop,
+            ),
+            EPOCH6_FIRST_CYCLE_DIGEST,
+        )
+
+        for offset in range(parent_count * len(kernels)):
+            candidate_id = campaign.REFRESHED_HIGH_DISTANCE_EPOCH6_START + offset
+            proposal = campaign.proposal(candidate_id)
+            parent = parents[offset % parent_count]
+
+            self.assertEqual(proposal, campaign.proposal(candidate_id))
+            self.assertEqual(proposal["candidate_id"], candidate_id)
+            self.assertEqual(proposal["parent"], parent["name"])
+            self.assertEqual(proposal["parent_d"], parent["parent_d"])
+            self.assertEqual(proposal["parent_k"], parent["parent_k"])
+            self.assertEqual(proposal["proposal_kernel"], kernels[offset // parent_count])
+            self.assertEqual(proposal["lane"], "refreshed-high-distance-epoch6-mutation")
             self.assertLessEqual(2 * proposal["l"] * proposal["m"], 700)
             self.assertEqual(
                 proposal["A"],
