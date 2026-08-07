@@ -135,9 +135,12 @@ retained only as audit/calibration results rather than useful leaders.
 | `[[630,14,28]]` | 6 | passed; cumulative side-aware upper-bound ladder `32→28→28→28` at 400→8k→60k→1M; all-rung consolidated at `(X,Z)=(28,28)` | c60702 is a major new local high-`k`/high-distance sweet spot and advances weight-6 × unrestricted; `k^2*d/n=8.71`, board FOM 17.42 | `artifacts/candidates/c0060702-44aec63f56-epoch6-final-allrungs-s740444642.json` |
 | `[[648,8,32]]` | 6 | passed; cumulative side-aware upper-bound ladder `50→42→34→32` at 400→8k→60k→1M; all-rung consolidated at `(X,Z)=(32,34)` | structurally distinct c61526 advances the public board but is locally dominated by `[[648,8,34]]`; `k^2*d/n=3.16`, board FOM 12.64 | `artifacts/candidates/c0061526-57bcb6a864-epoch6-final-allrungs-s2095749779.json` |
 | `[[648,8,32]]` | 6 | passed; cumulative side-aware upper-bound ladder `52→36→36→32` at 400→8k→60k→1M; all-rung consolidated at `(X,Z)=(32,36)` | structurally distinct c60866 advances the public board but is locally dominated by `[[648,8,34]]`; `k^2*d/n=3.16`, board FOM 12.64 | `artifacts/candidates/c0060866-186ef035e1-epoch6-primary-final-allrungs-s1487922377.json` |
+| `[[630,14,28]]` | 6 | passed; cumulative side-aware upper-bound ladder `40→30→28→28` at 400→8k→60k→1M; all-rung consolidated at `(X,Z)=(28,30)` | structurally distinct c62627 ties local c60702 and advances the public weight-6 × unrestricted board; `k^2*d/n=8.71`, board FOM 17.42 | `artifacts/candidates/c0062627-d9b124ae1a-epoch6-balance-final-allrungs-s1919330075.json` |
+| `[[576,16,20]]` | 6 | passed; flat upper-bound ladder `20→20→20→20` at 400→8k→60k→1M; all-rung consolidated at `(X,Z)=(20,20)` | fourth structurally distinct campaign support at these parameters; c60754 advances the public weight-6 × unrestricted board; `k^2*d/n=8.89`, board FOM 11.11 | `artifacts/candidates/c0060754-cdb21794c5-epoch6-balance-final-allrungs-s1169629506.json` |
 
 The adjacent `*.verdict.json` files contain the full validator evidence. The
-continuous search does not stop at any entry in this table.
+continuous search did not stop at any individual find; it stopped only on the
+user's explicit instruction after the final c62627/c60754 verification.
 
 The shallow `[[288,50,8]]` candidate with FOM 11.11 was rejected as an exact
 duplicate of the existing board entry and is retained only as a regression
