@@ -148,6 +148,188 @@ FACTOR_TRANSFER_SEEDS = [
     },
 ]
 
+# Candidate IDs 45,008--45,022: conservative geometry transfers of parents
+# with persisted/known d >= 8.  Supports are unchanged as integer exponent
+# sets; only the rectangular torus changes.  The parent distance is a ranking
+# hint, never a claim for the child.
+HIGH_DISTANCE_TRANSFER_SEEDS = [
+    # Validated local [[272,48,8]], holding the short axis m=8 fixed.
+    *[
+        {
+            "name": f"local-272-48-8-to-{l}x8",
+            "parent_d": 8,
+            "l": l,
+            "m": 8,
+            "A": [(0, 0), (0, 5), (1, 0), (1, 5)],
+            "B": [(0, 0), (0, 1), (5, 0), (5, 1)],
+        }
+        for l in (43, 42, 41, 39, 38, 37)
+    ],
+    # Validated local [[270,18,9]], holding m=15 fixed.
+    *[
+        {
+            "name": f"local-270-18-9-to-{l}x15",
+            "parent_d": 9,
+            "l": l,
+            "m": 15,
+            "A": [(0, 0), (0, 11), (7, 2), (7, 8)],
+            "B": [(0, 0), (0, 1)],
+        }
+        for l in (23, 22, 20, 19)
+    ],
+    # July [[210,8,14]].
+    *[
+        {
+            "name": f"july-210-8-14-to-30x{m}",
+            "parent_d": 14,
+            "l": 30,
+            "m": m,
+            "A": [(8, 2), (2, 4), (10, 6)],
+            "B": [(3, 0), (6, 3), (7, 5)],
+        }
+        for m in (8, 10)
+    ],
+    # Known [[288,12,18]].
+    *[
+        {
+            "name": f"known-288-12-18-to-{l}x{m}",
+            "parent_d": 18,
+            "l": l,
+            "m": m,
+            "A": [(3, 0), (0, 2), (0, 7)],
+            "B": [(0, 3), (1, 0), (2, 0)],
+        }
+        for l, m in ((18, 12), (12, 18))
+    ],
+    # Known [[360,16,14]].
+    {
+        "name": "known-360-16-14-to-15x15",
+        "parent_d": 14,
+        "l": 15,
+        "m": 15,
+        "A": [(0, 2), (0, 4), (3, 0)],
+        "B": [(0, 6), (7, 0), (14, 0)],
+    },
+]
+
+# Deterministic continuation after the hand-picked cap-adjacent transfers.
+# These are still only structural proposals: ``parent_d`` is a ranking prior,
+# never inherited evidence.  The grids keep the empirically important short
+# axes fixed, then sweep every useful larger torus under the n <= 700 cap.
+HIGH_DISTANCE_CONTINUATION_TRANSFERS = [
+    # The d=8 support is calibrated only on m=8; avoid the collapse-prone m=9
+    # direction and fill the remaining high-k geometries below the explicit
+    # l=37--43 cap-adjacent batch.
+    *[
+        {
+            "name": f"local-272-48-8-grid-{l}x8",
+            "parent_d": 8,
+            "l": l,
+            "m": 8,
+            "A": [(0, 0), (0, 5), (1, 0), (1, 5)],
+            "B": [(0, 0), (0, 1), (5, 0), (5, 1)],
+        }
+        for l in range(36, 18, -1)
+    ],
+    # The local d=9 support has survived on m=14 and m=15.  Sweep both axes;
+    # the structural deduper removes already-seen 20k-phase geometries.
+    *[
+        {
+            "name": f"local-270-18-9-grid-{l}x14",
+            "parent_d": 9,
+            "l": l,
+            "m": 14,
+            "A": [(0, 0), (0, 11), (7, 2), (7, 8)],
+            "B": [(0, 0), (0, 1)],
+        }
+        for l in range(25, 7, -1)
+    ],
+    *[
+        {
+            "name": f"local-270-18-9-grid-{l}x15",
+            "parent_d": 9,
+            "l": l,
+            "m": 15,
+            "A": [(0, 0), (0, 11), (7, 2), (7, 8)],
+            "B": [(0, 0), (0, 1)],
+        }
+        for l in range(18, 7, -1)
+    ],
+    # Orient both long axes for the known d=18 support.
+    *[
+        {
+            "name": f"known-288-12-18-grid-{l}x12",
+            "parent_d": 18,
+            "l": l,
+            "m": 12,
+            "A": [(3, 0), (0, 2), (0, 7)],
+            "B": [(0, 3), (1, 0), (2, 0)],
+        }
+        for l in range(29, 12, -1)
+        if l != 18
+    ],
+    *[
+        {
+            "name": f"known-288-12-18-grid-12x{m}",
+            "parent_d": 18,
+            "l": 12,
+            "m": m,
+            "A": [(3, 0), (0, 2), (0, 7)],
+            "B": [(0, 3), (1, 0), (2, 0)],
+        }
+        for m in range(29, 12, -1)
+        if m != 18
+    ],
+    # Long-axis continuations of the known d=14 support.
+    *[
+        {
+            "name": f"known-360-16-14-grid-{l}x12",
+            "parent_d": 14,
+            "l": l,
+            "m": 12,
+            "A": [(0, 2), (0, 4), (3, 0)],
+            "B": [(0, 6), (7, 0), (14, 0)],
+        }
+        for l in range(29, 15, -1)
+    ],
+    *[
+        {
+            "name": f"known-360-16-14-grid-15x{m}",
+            "parent_d": 14,
+            "l": 15,
+            "m": m,
+            "A": [(0, 2), (0, 4), (3, 0)],
+            "B": [(0, 6), (7, 0), (14, 0)],
+        }
+        for m in range(23, 12, -1)
+        if m != 15
+    ],
+    # Keep the July d=14 short axis at 7, plus the two untested neighbors of
+    # the promising 30x10 transfer (30x8 already collapsed at the shallow rung).
+    *[
+        {
+            "name": f"july-210-8-14-grid-{l}x7",
+            "parent_d": 14,
+            "l": l,
+            "m": 7,
+            "A": [(8, 2), (2, 4), (10, 6)],
+            "B": [(3, 0), (6, 3), (7, 5)],
+        }
+        for l in range(50, 15, -1)
+    ],
+    *[
+        {
+            "name": f"july-210-8-14-grid-30x{m}",
+            "parent_d": 14,
+            "l": 30,
+            "m": m,
+            "A": [(8, 2), (2, 4), (10, 6)],
+            "B": [(3, 0), (6, 3), (7, 5)],
+        }
+        for m in (11, 9)
+    ],
+]
+
 
 def stable_seed(*parts: object) -> int:
     raw = "|".join(str(p) for p in (VERSION, MASTER_SEED, *parts)).encode()
@@ -452,7 +634,81 @@ def factor_order_proposal(candidate_id: int) -> dict:
     }
 
 
+def high_distance_proposal(candidate_id: int) -> dict:
+    offset = candidate_id - 45_008
+    if offset < 0:
+        raise RuntimeError(f"high-distance transfer ID out of range: {candidate_id}")
+    if offset < len(HIGH_DISTANCE_TRANSFER_SEEDS):
+        chosen = copy.deepcopy(HIGH_DISTANCE_TRANSFER_SEEDS[offset])
+        proposal_kernel = "exact-geometry-transfer"
+    else:
+        continuation_offset = offset - len(HIGH_DISTANCE_TRANSFER_SEEDS)
+        transfer_count = len(HIGH_DISTANCE_CONTINUATION_TRANSFERS)
+        chosen = copy.deepcopy(
+            HIGH_DISTANCE_CONTINUATION_TRANSFERS[continuation_offset % transfer_count]
+        )
+        if continuation_offset < transfer_count:
+            proposal_kernel = "exact-geometry-grid"
+        else:
+            # Infinite deterministic continuation: small support-preserving
+            # mutations of the calibrated geometry grid.  Every mutation is
+            # merely a proposal and must earn its own persisted witness.
+            rng = rng_for("high-distance-mutation", candidate_id)
+            operation = continuation_offset % 3
+            sides = [chosen["A"], chosen["B"]]
+            changed_sides = [int(rng.integers(0, 2))] if operation != 1 else [0, 1]
+            deltas = (-2, -1, 1, 2)
+            for side_index in changed_sides:
+                side = sides[side_index]
+                original_size = len(side)
+                for _ in range(64):
+                    trial = list(side)
+                    term_index = int(rng.integers(0, len(trial)))
+                    a, b = trial[term_index]
+                    if operation == 2:
+                        da = int(rng.choice(deltas))
+                        db = int(rng.choice(deltas))
+                    elif int(rng.integers(0, 2)) == 0:
+                        da, db = int(rng.choice(deltas)), 0
+                    else:
+                        da, db = 0, int(rng.choice(deltas))
+                    trial[term_index] = (a + da, b + db)
+                    normalized = normalize_support(trial, int(chosen["l"]), int(chosen["m"]))
+                    if len(normalized) == original_size and normalized != normalize_support(
+                            side, int(chosen["l"]), int(chosen["m"])):
+                        sides[side_index] = normalized
+                        break
+                else:
+                    raise RuntimeError(f"failed high-distance mutation for c{candidate_id}")
+            chosen["A"], chosen["B"] = sides
+            chosen["name"] += f"-mutation-{candidate_id}"
+            proposal_kernel = (
+                "high-distance-correlated-step" if operation == 1
+                else "high-distance-local-step"
+            )
+    l, m = int(chosen["l"]), int(chosen["m"])
+    A = normalize_support(chosen["A"], l, m)
+    B = normalize_support(chosen["B"], l, m)
+    return {
+        "family": "bivariate-bicycle",
+        "construction": "periodic-rectangular-torus",
+        "candidate_id": candidate_id,
+        "generator_version": VERSION,
+        "proposal_seed": stable_seed("high-distance-proposal", candidate_id),
+        "lane": "high-distance-transfer",
+        "proposal_kernel": proposal_kernel,
+        "parent": chosen["name"],
+        "parent_d": int(chosen["parent_d"]),
+        "l": l,
+        "m": m,
+        "A": [list(x) for x in A],
+        "B": [list(x) for x in B],
+    }
+
+
 def proposal(candidate_id: int) -> dict:
+    if candidate_id >= 45_008:
+        return high_distance_proposal(candidate_id)
     if candidate_id >= 40_000:
         return factor_order_proposal(candidate_id)
     if candidate_id >= 20_000:
@@ -701,7 +957,9 @@ def command_census(args: argparse.Namespace) -> None:
 
 def selection_score(record: dict, mode: str) -> float:
     if mode == "k2d-proxy":
-        distance_proxy = int(record.get("factor_order", min(record["l"], record["m"])))
+        distance_proxy = int(record.get(
+            "parent_d", record.get("factor_order", min(record["l"], record["m"]))
+        ))
         return record["k"] * record["k"] * distance_proxy / record["n"]
     if mode == "fom-proxy":
         short_axis = min(int(record["l"]), int(record["m"]))
@@ -789,7 +1047,11 @@ def command_select(args: argparse.Namespace) -> None:
         "selection_size": len(chosen),
         "records": chosen,
     }
-    path = ARTIFACTS / f"selection-{len(list(ARTIFACTS.glob('selection-*.json'))) + 1:03d}.json"
+    path = (Path(args.output) if args.output else
+            ARTIFACTS / f"selection-{len(list(ARTIFACTS.glob('selection-*.json'))) + 1:03d}.json")
+    if path.exists():
+        raise FileExistsError(f"refusing to overwrite selection: {path}")
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
     print(f"wrote {len(chosen)} candidates to {path}")
     for r in chosen:
@@ -1033,6 +1295,7 @@ def parser() -> argparse.ArgumentParser:
     select.add_argument("--min-factor-order", type=int, default=0)
     select.add_argument("--max-per-geometry", type=int, default=1_000_000)
     select.add_argument("--max-per-kernel", type=int, default=1_000_000)
+    select.add_argument("--output", help="explicit selection path (must not already exist)")
     select.set_defaults(func=command_select)
 
     package = sub.add_parser("package", help="persist initial Python witnesses")
