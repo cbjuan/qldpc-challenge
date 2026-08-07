@@ -138,3 +138,7 @@ updated candidate. `validate` saves the trusted gate's complete verdict.
   board-advancing `[[576,16,20]]`. Four companion k=12--16 candidates also
   passed but were board-non-advancing. The result remains a witness-backed
   upper bound with literature novelty unverified.
+- 2026-08-07: Three early high-distance epoch-2 children also passed as
+  board-advancing: `[[600,8,26]]`, `[[540,8,26]]`, and a structurally distinct
+  `[[540,8,30]]`. The last descended 38→32→32→30 at 1M, demonstrating why the
+  deep rung and all-rung witness merge remain mandatory.
