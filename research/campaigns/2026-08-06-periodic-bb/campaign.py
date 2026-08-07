@@ -456,6 +456,63 @@ REFRESHED_HIGH_DISTANCE_PARENTS = [
     *VALIDATED_HIGH_DISTANCE_PARENTS,
 ]
 
+# Candidate IDs below this boundary are immutable.  Epoch 5 gives six of its
+# eleven deterministic parent slots to useful-k frontier points, including the
+# four produced by epoch 4.  Each one is connected and has a persisted all-rung
+# submission plus a trusted passed/board-advancing verdict.  ``parent_d`` is
+# still only a scheduling prior: every child must earn and persist its own
+# witness.
+REFRESHED_HIGH_DISTANCE_EPOCH5_START = 57_663
+EPOCH5_ADDITIONAL_HIGH_DISTANCE_PARENTS = [
+    {"name": "validated-c50584-630-8-34", "parent_d": 34, "parent_k": 8,
+     "l": 15, "m": 21,
+     "A": [(0, 2), (0, 4), (3, 0)],
+     "B": [(0, 6), (7, 0), (14, 18)]},
+    {"name": "validated-c54828-660-8-32", "parent_d": 32, "parent_k": 8,
+     "l": 30, "m": 11,
+     "A": [(2, 3), (8, 2), (10, 8)],
+     "B": [(3, 2), (6, 3), (7, 5)]},
+    {"name": "validated-c56213-576-12-30", "parent_d": 30, "parent_k": 12,
+     "l": 12, "m": 24,
+     "A": [(0, 2), (1, 9), (3, 0)],
+     "B": [(0, 3), (1, 0), (2, 0)]},
+    {"name": "validated-c57634-686-12-30", "parent_d": 30, "parent_k": 12,
+     "l": 49, "m": 7,
+     "A": [(2, 4), (8, 2), (11, 0)],
+     "B": [(2, 6), (6, 3), (7, 4)]},
+    {"name": "validated-c56884-686-12-28", "parent_d": 28, "parent_k": 12,
+     "l": 49, "m": 7,
+     "A": [(3, 3), (8, 2), (11, 0)],
+     "B": [(3, 0), (6, 3), (7, 5)]},
+    {"name": "validated-c52988-576-16-20", "parent_d": 20, "parent_k": 16,
+     "l": 12, "m": 24,
+     "A": [(0, 2), (0, 7), (3, 21)],
+     "B": [(0, 3), (1, 0), (2, 0)]},
+]
+
+# Retain a compact prior-pool cross-section for distance and geometry
+# diversity.  Superseded ancestors on 12x24, 15x21, 30x11, and 49x7 are
+# represented by their stronger descendants above; the low-distance d=8/9
+# anchors are omitted in this distance-first epoch.
+EPOCH5_DIVERSITY_PARENT_NAMES = (
+    "validated-c45508-648-4-36",  # distance ceiling, 12x27
+    "validated-c45088-648-8-34",  # useful-k neighbor, 12x27
+    "validated-c46282-540-8-30",  # compact 30x9
+    "validated-c47091-630-14-20",  # useful-k bridge, 45x7
+    "validated-c45107-576-24-12",  # high-k diversity, 24x12
+)
+_EPOCH5_PRIOR_PARENT_BY_NAME = {
+    parent["name"]: parent for parent in REFRESHED_HIGH_DISTANCE_PARENTS
+}
+EPOCH5_DIVERSITY_PARENTS = [
+    _EPOCH5_PRIOR_PARENT_BY_NAME[name]
+    for name in EPOCH5_DIVERSITY_PARENT_NAMES
+]
+EPOCH5_HIGH_DISTANCE_PARENTS = [
+    *EPOCH5_ADDITIONAL_HIGH_DISTANCE_PARENTS,
+    *EPOCH5_DIVERSITY_PARENTS,
+]
+
 
 def stable_seed(*parts: object) -> int:
     raw = "|".join(str(p) for p in (VERSION, MASTER_SEED, *parts)).encode()
@@ -951,6 +1008,17 @@ def refreshed_high_distance_proposal(candidate_id: int) -> dict:
     )
 
 
+def epoch5_high_distance_proposal(candidate_id: int) -> dict:
+    """Distance-first mutations of the epoch-4 frontier and prior diversity."""
+    return _validated_parent_mutation_proposal(
+        candidate_id,
+        start=REFRESHED_HIGH_DISTANCE_EPOCH5_START,
+        parents=EPOCH5_HIGH_DISTANCE_PARENTS,
+        seed_namespace="refreshed-high-distance-epoch5-proposal",
+        lane="refreshed-high-distance-mutation",
+    )
+
+
 def validated_transfer_proposal(candidate_id: int) -> dict:
     """Finite exact-geometry probes at the post-census cursor."""
     offset = candidate_id - VALIDATED_TRANSFER_START
@@ -977,6 +1045,8 @@ def validated_transfer_proposal(candidate_id: int) -> dict:
 
 
 def proposal(candidate_id: int) -> dict:
+    if candidate_id >= REFRESHED_HIGH_DISTANCE_EPOCH5_START:
+        return epoch5_high_distance_proposal(candidate_id)
     if candidate_id >= REFRESHED_HIGH_DISTANCE_START:
         return refreshed_high_distance_proposal(candidate_id)
     if VALIDATED_TRANSFER_START <= candidate_id < (
