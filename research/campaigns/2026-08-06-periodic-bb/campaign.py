@@ -432,6 +432,30 @@ VALIDATED_TRANSFER_SEEDS = [
      "B": [(3, 2), (6, 3), (7, 5)]},
 ]
 
+# Candidate IDs below this boundary are immutable.  This refreshed parent
+# epoch begins at the post-census cursor and uses only connected candidates
+# that survived the full witness ladder and trusted gate.  Their distances
+# remain search priors, not inherited claims for any child.
+REFRESHED_HIGH_DISTANCE_START = 51_663
+ADDITIONAL_HIGH_DISTANCE_PARENTS = [
+    {"name": "validated-c48101-660-8-34", "parent_d": 34, "parent_k": 8,
+     "l": 30, "m": 11,
+     "A": [(2, 4), (8, 2), (10, 8)],
+     "B": [(3, 0), (6, 3), (7, 5)]},
+    {"name": "validated-c48487-686-6-36", "parent_d": 36, "parent_k": 6,
+     "l": 49, "m": 7,
+     "A": [(2, 4), (8, 2), (11, 0)],
+     "B": [(3, 0), (6, 3), (7, 5)]},
+    {"name": "validated-c48911-630-8-28", "parent_d": 28, "parent_k": 8,
+     "l": 45, "m": 7,
+     "A": [(2, 4), (8, 2), (10, 6)],
+     "B": [(3, 0), (6, 4), (7, 5)]},
+]
+REFRESHED_HIGH_DISTANCE_PARENTS = [
+    *ADDITIONAL_HIGH_DISTANCE_PARENTS,
+    *VALIDATED_HIGH_DISTANCE_PARENTS,
+]
+
 
 def stable_seed(*parts: object) -> int:
     raw = "|".join(str(p) for p in (VERSION, MASTER_SEED, *parts)).encode()
@@ -829,18 +853,20 @@ def local_support_move(rng: np.random.Generator, support: list[tuple[int, int]],
     raise RuntimeError("failed to make collision-free validated-parent mutation")
 
 
-def validated_high_distance_proposal(candidate_id: int) -> dict:
-    """Second-epoch mutations of deeply witnessed, gate-passing BB parents."""
-    offset = candidate_id - VALIDATED_HIGH_DISTANCE_START
+def _validated_parent_mutation_proposal(candidate_id: int, *, start: int,
+                                        parents: list[dict], seed_namespace: str,
+                                        lane: str) -> dict:
+    """Mutate a deterministic cycle of deeply witnessed BB parents."""
+    offset = candidate_id - start
     if offset < 0:
         raise RuntimeError(f"validated high-distance ID out of range: {candidate_id}")
-    rng = rng_for("validated-high-distance-proposal", candidate_id)
-    parent_index = offset % len(VALIDATED_HIGH_DISTANCE_PARENTS)
-    parent = copy.deepcopy(VALIDATED_HIGH_DISTANCE_PARENTS[parent_index])
+    rng = rng_for(seed_namespace, candidate_id)
+    parent_index = offset % len(parents)
+    parent = copy.deepcopy(parents[parent_index])
     l, m = int(parent["l"]), int(parent["m"])
     A = normalize_support(parent["A"], l, m)
     B = normalize_support(parent["B"], l, m)
-    operation = (offset // len(VALIDATED_HIGH_DISTANCE_PARENTS)) % 5
+    operation = (offset // len(parents)) % 5
 
     if operation == 0:
         side_index = int(rng.integers(0, 2))
@@ -890,8 +916,8 @@ def validated_high_distance_proposal(candidate_id: int) -> dict:
         "construction": "periodic-rectangular-torus",
         "candidate_id": candidate_id,
         "generator_version": VERSION,
-        "proposal_seed": stable_seed("validated-high-distance-proposal", candidate_id),
-        "lane": "validated-high-distance-mutation",
+        "proposal_seed": stable_seed(seed_namespace, candidate_id),
+        "lane": lane,
         "proposal_kernel": operation_name,
         "parent": parent["name"],
         "parent_d": int(parent["parent_d"]),
@@ -901,6 +927,28 @@ def validated_high_distance_proposal(candidate_id: int) -> dict:
         "A": [list(x) for x in normalize_support(A, l, m)],
         "B": [list(x) for x in normalize_support(B, l, m)],
     }
+
+
+def validated_high_distance_proposal(candidate_id: int) -> dict:
+    """Second-epoch mutations of the original validated-parent pool."""
+    return _validated_parent_mutation_proposal(
+        candidate_id,
+        start=VALIDATED_HIGH_DISTANCE_START,
+        parents=VALIDATED_HIGH_DISTANCE_PARENTS,
+        seed_namespace="validated-high-distance-proposal",
+        lane="validated-high-distance-mutation",
+    )
+
+
+def refreshed_high_distance_proposal(candidate_id: int) -> dict:
+    """Next-epoch mutations of the refreshed validated-parent pool."""
+    return _validated_parent_mutation_proposal(
+        candidate_id,
+        start=REFRESHED_HIGH_DISTANCE_START,
+        parents=REFRESHED_HIGH_DISTANCE_PARENTS,
+        seed_namespace="refreshed-high-distance-proposal",
+        lane="refreshed-high-distance-mutation",
+    )
 
 
 def validated_transfer_proposal(candidate_id: int) -> dict:
@@ -929,6 +977,8 @@ def validated_transfer_proposal(candidate_id: int) -> dict:
 
 
 def proposal(candidate_id: int) -> dict:
+    if candidate_id >= REFRESHED_HIGH_DISTANCE_START:
+        return refreshed_high_distance_proposal(candidate_id)
     if VALIDATED_TRANSFER_START <= candidate_id < (
             VALIDATED_TRANSFER_START + len(VALIDATED_TRANSFER_SEEDS)):
         return validated_transfer_proposal(candidate_id)

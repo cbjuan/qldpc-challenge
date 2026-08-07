@@ -142,3 +142,14 @@ updated candidate. `validate` saves the trusted gate's complete verdict.
   board-advancing: `[[600,8,26]]`, `[[540,8,26]]`, and a structurally distinct
   `[[540,8,30]]`. The last descended 38→32→32→30 at 1M, demonstrating why the
   deep rung and all-rung witness merge remain mandatory.
+- 2026-08-07: The next epoch-2 high-distance queue keeps the 12 connected
+  candidates in `selection-validated-highd-epoch2-002.json`. Seven additional
+  distance-ceiling proposals and all three high-k balance probes split into
+  two or three equal connected components, so the normal structural selector
+  excluded them before witness work; do not bypass that gate merely to inflate
+  aggregate `k` with direct sums.
+- 2026-08-07: Refreshed the validated-parent mutation pool at the untouched
+  cursor 51663 with c48101 `[[660,8,34]]`, c48487 `[[686,6,36]]`, and c48911
+  `[[630,8,28]]`. Each parent is a connected, structurally distinct periodic
+  BB code that passed the trusted gate; its witnessed distance is only a prior
+  for children, which must persist their own witnesses.
