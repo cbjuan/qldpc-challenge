@@ -102,3 +102,9 @@ updated candidate. `validate` saves the trusted gate's complete verdict.
   trusted board-advancing codes through 1M: `[[690,46,9]]`, `[[660,44,9]]`,
   `[[600,40,9]]`, and `[[570,38,9]]`. The separate `m=8` transfer reached a
   validated local `[[688,100,8]]` FOM leader but was board-non-advancing.
+- 2026-08-07: Auditing the high-d grid exposed that the original reused-Python
+  path kept raw fast evidence but did not merge a lighter accelerated 8k
+  witness into the next candidate document. The runner now merges every saved
+  source-rung fast document before promotion, making distance evidence
+  monotone. Pre-fix 60k documents remain audit artifacts only; final 1M runs
+  use the corrected carry-forward path.

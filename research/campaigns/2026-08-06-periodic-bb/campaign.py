@@ -1151,7 +1151,12 @@ def validate_fast_witness(HX: np.ndarray, HZ: np.ndarray, side: str,
 
 def reused_python_submission(record: dict, python_trials: int, source_rung: str,
                              target_rung: str, seed: int) -> tuple[dict, Path]:
-    """Copy an already persisted Python witness as the base of a deeper fast rung."""
+    """Carry all persisted source-rung witnesses into a deeper fast rung.
+
+    The Python document is the reproducible base, but an accelerated source-rung
+    document may contain a lighter witness.  Merge every saved fast document so
+    promotion is monotone and never drops the most expensive evidence produced.
+    """
     candidate_dir = ARTIFACTS / "candidates"
     prefix = f"c{int(record['candidate_id']):07d}-{record['canonical_key'][:10]}-"
     pattern = f"{prefix}{source_rung}-python{python_trials}-s*.json"
@@ -1170,9 +1175,29 @@ def reused_python_submission(record: dict, python_trials: int, source_rung: str,
     doc = json.loads(source_path.read_text())
     if int(doc["n"]) != int(record["n"]) or int(doc["k"]) != int(record["k"]):
         raise RuntimeError(f"persisted Python source drift for c{record['candidate_id']}")
+    fast_pattern = f"{prefix}{source_rung}-python{python_trials}-s*-fast*.json"
+    fast_sources = sorted(
+        path for path in candidate_dir.glob(fast_pattern)
+        if not path.name.endswith(".evidence.json")
+        and not path.name.endswith(".verdict.json")
+    )
+    merged_fast_sources: list[str] = []
+    for fast_source in fast_sources:
+        fast_doc = json.loads(fast_source.read_text())
+        if int(fast_doc["n"]) != int(record["n"]) or int(fast_doc["k"]) != int(record["k"]):
+            raise RuntimeError(f"persisted accelerated source drift for c{record['candidate_id']}")
+        for side in ("X", "Z"):
+            if int(fast_doc["distance"][side]["value"]) < int(doc["distance"][side]["value"]):
+                doc["distance"][side] = copy.deepcopy(fast_doc["distance"][side])
+        merged_fast_sources.append(fast_source.name)
+    doc["distance"]["d"] = min(int(doc["distance"]["X"]["value"]),
+                                   int(doc["distance"]["Z"]["value"]))
+    doc["name"] = f"[[{doc['n']},{doc['k']},{doc['distance']['d']}]] local periodic BB c{record['candidate_id']}"
     doc["provenance"]["notes"] += (
         f" Reused persisted Python witness from {source_path.name} as the base "
         f"for accelerated rung={target_rung}; no Python witness search was repeated."
+        f" Merged lighter persisted accelerated source documents: "
+        f"{merged_fast_sources or 'none'}."
     )
     label = f"{target_rung}-python{python_trials}reuse{source_rung}"
     target_path = candidate_dir / f"{candidate_stem(record, label, seed)}.json"
