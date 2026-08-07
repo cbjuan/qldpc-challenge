@@ -389,6 +389,49 @@ VALIDATED_HIGH_DISTANCE_PARENTS = [
      "B": [(0, 0), (0, 1), (5, 0), (5, 1)]},
 ]
 
+# Explicit geometry transfers inserted at the untouched cursor after the first
+# 2,000-candidate validated-parent census.  The finite ID window keeps every
+# earlier proposal stable; the infinite mutation stream resumes afterwards.
+VALIDATED_TRANSFER_START = 51_163
+VALIDATED_TRANSFER_SEEDS = [
+    *[
+        {"name": f"validated-c45508-transfer-12x{m}", "parent_d": 36,
+         "parent_k": 4, "l": 12, "m": m,
+         "A": [(0, 2), (0, 7), (3, 0)],
+         "B": [(0, 3), (1, 0), (4, 2)]}
+        for m in (18, 21, 15)
+    ],
+    *[
+        {"name": f"validated-c46378-transfer-15x{m}", "parent_d": 32,
+         "parent_k": 4, "l": 15, "m": m,
+         "A": [(0, 2), (0, 4), (3, 0)],
+         "B": [(0, 6), (5, 2), (14, 0)]}
+        for m in (18, 15)
+    ],
+    *[
+        {"name": f"validated-c45244-transfer-{l}x12", "parent_d": 34,
+         "parent_k": 4, "l": l, "m": 12,
+         "A": [(0, 2), (2, 5), (3, 0)],
+         "B": [(0, 6), (7, 0), (14, 0)]}
+        for l in (24, 21, 18)
+    ],
+    *[
+        {"name": f"validated-c45426-transfer-30x{m}", "parent_d": 26,
+         "parent_k": 8, "l": 30, "m": m,
+         "A": [(2, 4), (8, 3), (10, 6)],
+         "B": [(3, 1), (6, 3), (7, 5)]}
+        for m in (10, 11)
+    ],
+    {"name": "validated-c46841-transfer-30x8", "parent_d": 34,
+     "parent_k": 8, "l": 30, "m": 8,
+     "A": [(2, 4), (8, 1), (10, 6)],
+     "B": [(3, 0), (6, 3), (7, 5)]},
+    {"name": "validated-c47091-control-30x6", "parent_d": 20,
+     "parent_k": 14, "l": 30, "m": 6,
+     "A": [(2, 4), (8, 3), (10, 6)],
+     "B": [(3, 2), (6, 3), (7, 5)]},
+]
+
 
 def stable_seed(*parts: object) -> int:
     raw = "|".join(str(p) for p in (VERSION, MASTER_SEED, *parts)).encode()
@@ -860,7 +903,35 @@ def validated_high_distance_proposal(candidate_id: int) -> dict:
     }
 
 
+def validated_transfer_proposal(candidate_id: int) -> dict:
+    """Finite exact-geometry probes at the post-census cursor."""
+    offset = candidate_id - VALIDATED_TRANSFER_START
+    if not 0 <= offset < len(VALIDATED_TRANSFER_SEEDS):
+        raise RuntimeError(f"validated transfer ID out of range: {candidate_id}")
+    chosen = copy.deepcopy(VALIDATED_TRANSFER_SEEDS[offset])
+    l, m = int(chosen["l"]), int(chosen["m"])
+    return {
+        "family": "bivariate-bicycle",
+        "construction": "periodic-rectangular-torus",
+        "candidate_id": candidate_id,
+        "generator_version": VERSION,
+        "proposal_seed": stable_seed("validated-transfer-proposal", candidate_id),
+        "lane": "validated-high-distance-transfer",
+        "proposal_kernel": "validated-highd-exact-geometry",
+        "parent": chosen["name"],
+        "parent_d": int(chosen["parent_d"]),
+        "parent_k": int(chosen["parent_k"]),
+        "l": l,
+        "m": m,
+        "A": [list(x) for x in normalize_support(chosen["A"], l, m)],
+        "B": [list(x) for x in normalize_support(chosen["B"], l, m)],
+    }
+
+
 def proposal(candidate_id: int) -> dict:
+    if VALIDATED_TRANSFER_START <= candidate_id < (
+            VALIDATED_TRANSFER_START + len(VALIDATED_TRANSFER_SEEDS)):
+        return validated_transfer_proposal(candidate_id)
     if candidate_id >= VALIDATED_HIGH_DISTANCE_START:
         return validated_high_distance_proposal(candidate_id)
     if candidate_id >= 45_008:

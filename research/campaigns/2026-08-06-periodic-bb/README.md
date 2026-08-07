@@ -127,3 +127,9 @@ updated candidate. `validate` saves the trusted gate's complete verdict.
   mostly from the gate-passing d=12--36 parents, with a small allocation to the
   best d=8--9 high-rate parents so the search can move toward higher d without
   abandoning useful k.
+- 2026-08-07: A read-only geometry audit identified the strongest scaling on
+  the July support (`30x7`, `30x9`, `30x11` witnessed at d=26,30,34) and the
+  known-288/360 distance-ceiling mutations. Added a finite, immutable exact-
+  transfer block at IDs 51163--51174, the untouched post-census cursor; 11 of
+  its 12 encoded probes are connected and enter the next shallow queue. The
+  earlier proposal stream remains byte-for-byte addressable by candidate ID.
