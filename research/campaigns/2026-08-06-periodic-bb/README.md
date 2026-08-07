@@ -133,3 +133,8 @@ updated candidate. `validate` saves the trusted gate's complete verdict.
   transfer block at IDs 51163--51174, the untouched post-census cursor; 11 of
   its 12 encoded probes are connected and enter the next shallow queue. The
   earlier proposal stream remains byte-for-byte addressable by candidate ID.
+- 2026-08-07: The first validated-parent balance probe, c50641, followed a
+  400→8k→60k→1M ladder of 24→20→20→20 and passed the trusted gate as the
+  board-advancing `[[576,16,20]]`. Four companion k=12--16 candidates also
+  passed but were board-non-advancing. The result remains a witness-backed
+  upper bound with literature novelty unverified.
