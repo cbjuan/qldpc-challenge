@@ -98,3 +98,7 @@ updated candidate. `validate` saves the trusted gate's complete verdict.
   four additional trusted board-advancing d=8 codes: `[[448,56,8]]` in weight
   8 and `[[644,46,8]]`, `[[616,44,8]]`, `[[532,38,8]]` in weight 6. Each held
   through 1M; all non-advancing siblings and their witnesses were retained.
+- 2026-08-07: Exact `m=15` transfers of the local d=9 support yielded four
+  trusted board-advancing codes through 1M: `[[690,46,9]]`, `[[660,44,9]]`,
+  `[[600,40,9]]`, and `[[570,38,9]]`. The separate `m=8` transfer reached a
+  validated local `[[688,100,8]]` FOM leader but was board-non-advancing.
