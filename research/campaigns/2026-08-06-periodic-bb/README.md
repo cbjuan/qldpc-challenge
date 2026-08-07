@@ -94,3 +94,7 @@ updated candidate. `validate` saves the trusted gate's complete verdict.
   support, stayed `[[330,22,9]]` through 1M and passed the trusted gate as
   board-advancing. The other eight large candidates in that confirmation batch
   passed but were non-advancing; all verdicts were retained.
+- 2026-08-07: The first support-preserving high-distance mutation batch yielded
+  four additional trusted board-advancing d=8 codes: `[[448,56,8]]` in weight
+  8 and `[[644,46,8]]`, `[[616,44,8]]`, `[[532,38,8]]` in weight 6. Each held
+  through 1M; all non-advancing siblings and their witnesses were retained.
