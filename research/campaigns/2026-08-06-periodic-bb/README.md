@@ -81,3 +81,16 @@ updated candidate. `validate` saves the trusted gate's complete verdict.
   Preserve all lower-distance witnesses, but stop promoting them beyond the
   shallow rung. New deep-confirmation budget goes to candidates whose persisted
   witness remains at least 8, centered on proven `d=8,9,14,18` parents.
+- 2026-08-07: Candidate 20168, a `10x14` transfer of the local d=9
+  support, survived the 400→8k→60k ladder as `[[280,20,8]]` and passed the
+  trusted gate as board-advancing. Its witness, verdict, ledger row, and note
+  remain local; the search continued without pausing.
+- 2026-08-07: Added a deterministic high-distance continuation after the
+  hand-picked transfer batch. It exhausts calibrated fixed-short-axis geometry
+  grids under `n <= 700`, then continues with support-preserving local
+  mutations. `parent_d` is used only as a selection prior; every child must
+  obtain and persist its own witness before promotion.
+- 2026-08-07: Candidate 20283, the `11x15` continuation of the local d=9
+  support, stayed `[[330,22,9]]` through 1M and passed the trusted gate as
+  board-advancing. The other eight large candidates in that confirmation batch
+  passed but were non-advancing; all verdicts were retained.
