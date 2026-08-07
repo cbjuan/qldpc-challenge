@@ -108,3 +108,22 @@ updated candidate. `validate` saves the trusted gate's complete verdict.
   source-rung fast document before promotion, making distance evidence
   monotone. Pre-fix 60k documents remain audit artifacts only; final 1M runs
   use the corrected carry-forward path.
+- 2026-08-07: Hardened witness carry-forward again: promotion and the new
+  `consolidate` command now independently check both sides of every persisted
+  submission document, including the shallow Python rung, and retain the
+  lightest X and Z witnesses in a fresh immutable final document. Only these
+  all-rung documents are sent to the trusted gate.
+- 2026-08-07: Exact high-rate transfers produced 20 trusted board-advancing
+  `d=8--9` candidates. The strongest new point is `[[464,72,8]]` with
+  `k^2*d/n=89.38`; the distance-nine branch reaches `[[540,36,9]]`. All
+  candidate documents, verdicts, and notes remain local.
+- 2026-08-07: The exact high-distance grid and parent-d>=14 mutation batch
+  produced 14 trusted board-advancing candidates. The observed sweet spots are
+  `[[432,24,12]]`, `[[630,14,20]]`, and `[[576,12,28]]`; the largest witnessed
+  distance is 36 at `[[648,4,36]]`. These are upper bounds, not exact-distance
+  claims, and literature novelty remains unverified.
+- 2026-08-07: Began a reproducibility-preserving second mutation epoch at
+  candidate ID 49163. Earlier candidate IDs are unchanged. New proposals draw
+  mostly from the gate-passing d=12--36 parents, with a small allocation to the
+  best d=8--9 high-rate parents so the search can move toward higher d without
+  abandoning useful k.

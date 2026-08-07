@@ -330,6 +330,65 @@ HIGH_DISTANCE_CONTINUATION_TRANSFERS = [
     ],
 ]
 
+# Candidate IDs before this boundary are immutable.  The second high-distance
+# epoch starts at the cursor reached after the first mutation census and is
+# seeded only by candidates that subsequently survived the full
+# 400 -> 8k -> 60k -> 1M ladder and the trusted gate.  ``parent_d`` remains a
+# search prior: children must produce and persist their own logical witness.
+VALIDATED_HIGH_DISTANCE_START = 49_163
+VALIDATED_HIGH_DISTANCE_PARENTS = [
+    {"name": "validated-c45113-432-24-12", "parent_d": 12, "parent_k": 24,
+     "l": 18, "m": 12,
+     "A": [(0, 2), (0, 4), (3, 0)],
+     "B": [(0, 6), (7, 0), (14, 0)]},
+    {"name": "validated-c45107-576-24-12", "parent_d": 12, "parent_k": 24,
+     "l": 24, "m": 12,
+     "A": [(0, 2), (0, 4), (3, 0)],
+     "B": [(0, 6), (7, 0), (14, 0)]},
+    {"name": "validated-c45091-576-12-28", "parent_d": 28, "parent_k": 12,
+     "l": 12, "m": 24,
+     "A": [(0, 2), (0, 7), (3, 0)],
+     "B": [(0, 3), (1, 0), (2, 0)]},
+    {"name": "validated-c47091-630-14-20", "parent_d": 20, "parent_k": 14,
+     "l": 45, "m": 7,
+     "A": [(2, 4), (8, 3), (10, 6)],
+     "B": [(3, 2), (6, 3), (7, 5)]},
+    {"name": "validated-c45088-648-8-34", "parent_d": 34, "parent_k": 8,
+     "l": 12, "m": 27,
+     "A": [(0, 2), (0, 7), (3, 0)],
+     "B": [(0, 3), (1, 0), (2, 0)]},
+    {"name": "validated-c45118-630-8-30", "parent_d": 30, "parent_k": 8,
+     "l": 15, "m": 21,
+     "A": [(0, 2), (0, 4), (3, 0)],
+     "B": [(0, 6), (7, 0), (14, 0)]},
+    {"name": "validated-c45426-420-8-26", "parent_d": 26, "parent_k": 8,
+     "l": 30, "m": 7,
+     "A": [(2, 4), (8, 3), (10, 6)],
+     "B": [(3, 1), (6, 3), (7, 5)]},
+    {"name": "validated-c46282-540-8-30", "parent_d": 30, "parent_k": 8,
+     "l": 30, "m": 9,
+     "A": [(2, 4), (8, 2), (9, 8)],
+     "B": [(3, 0), (6, 3), (7, 5)]},
+    {"name": "validated-c46841-660-8-34", "parent_d": 34, "parent_k": 8,
+     "l": 30, "m": 11,
+     "A": [(2, 4), (8, 1), (10, 6)],
+     "B": [(3, 0), (6, 3), (7, 5)]},
+    {"name": "validated-c45508-648-4-36", "parent_d": 36, "parent_k": 4,
+     "l": 12, "m": 27,
+     "A": [(0, 2), (0, 7), (3, 0)],
+     "B": [(0, 3), (1, 0), (4, 2)]},
+    # A small allocation remains on the best useful-rate d=9 and d=8 parents
+    # so the search can move toward the user's desired high-d/high-k balance.
+    {"name": "validated-c45059-540-36-9", "parent_d": 9, "parent_k": 36,
+     "l": 18, "m": 15,
+     "A": [(0, 0), (0, 11), (7, 2), (7, 8)],
+     "B": [(0, 0), (0, 1)]},
+    {"name": "validated-c45030-464-72-8", "parent_d": 8, "parent_k": 72,
+     "l": 29, "m": 8,
+     "A": [(0, 0), (0, 5), (1, 0), (1, 5)],
+     "B": [(0, 0), (0, 1), (5, 0), (5, 1)]},
+]
+
 
 def stable_seed(*parts: object) -> int:
     raw = "|".join(str(p) for p in (VERSION, MASTER_SEED, *parts)).encode()
@@ -706,7 +765,104 @@ def high_distance_proposal(candidate_id: int) -> dict:
     }
 
 
+def local_support_move(rng: np.random.Generator, support: list[tuple[int, int]],
+                       l: int, m: int, allow_diagonal: bool = False,
+                       forced_delta: tuple[int, int] | None = None) -> list[tuple[int, int]]:
+    """Make one collision-free small move while preserving support weight."""
+    original = normalize_support(support, l, m)
+    deltas = [(-2, 0), (-1, 0), (1, 0), (2, 0),
+              (0, -2), (0, -1), (0, 1), (0, 2)]
+    if allow_diagonal:
+        deltas.extend([(-1, -1), (-1, 1), (1, -1), (1, 1)])
+    for _ in range(96):
+        trial = list(original)
+        term_index = int(rng.integers(0, len(trial)))
+        da, db = forced_delta or deltas[int(rng.integers(0, len(deltas)))]
+        a, b = trial[term_index]
+        trial[term_index] = ((a + da) % l, (b + db) % m)
+        normalized = normalize_support(trial, l, m)
+        if len(normalized) == len(original) and normalized != original:
+            return normalized
+    raise RuntimeError("failed to make collision-free validated-parent mutation")
+
+
+def validated_high_distance_proposal(candidate_id: int) -> dict:
+    """Second-epoch mutations of deeply witnessed, gate-passing BB parents."""
+    offset = candidate_id - VALIDATED_HIGH_DISTANCE_START
+    if offset < 0:
+        raise RuntimeError(f"validated high-distance ID out of range: {candidate_id}")
+    rng = rng_for("validated-high-distance-proposal", candidate_id)
+    parent_index = offset % len(VALIDATED_HIGH_DISTANCE_PARENTS)
+    parent = copy.deepcopy(VALIDATED_HIGH_DISTANCE_PARENTS[parent_index])
+    l, m = int(parent["l"]), int(parent["m"])
+    A = normalize_support(parent["A"], l, m)
+    B = normalize_support(parent["B"], l, m)
+    operation = (offset // len(VALIDATED_HIGH_DISTANCE_PARENTS)) % 5
+
+    if operation == 0:
+        side_index = int(rng.integers(0, 2))
+        sides = [A, B]
+        sides[side_index] = local_support_move(rng, sides[side_index], l, m)
+        A, B = sides
+        operation_name = "validated-highd-local-one"
+    elif operation == 1:
+        A = local_support_move(rng, A, l, m)
+        B = local_support_move(rng, B, l, m)
+        operation_name = "validated-highd-local-pair"
+    elif operation == 2:
+        original_sizes = (len(A), len(B))
+        geometry_deltas = [(-2, 0), (-1, 0), (1, 0), (2, 0),
+                           (0, -2), (0, -1), (0, 1), (0, 2),
+                           (-1, -1), (-1, 1), (1, -1), (1, 1)]
+        for _ in range(96):
+            dl, dm = geometry_deltas[int(rng.integers(0, len(geometry_deltas)))]
+            nl, nm = l + dl, m + dm
+            if nl < 2 or nm < 2 or nl * nm > 350:
+                continue
+            next_A = normalize_support(A, nl, nm)
+            next_B = normalize_support(B, nl, nm)
+            if len(next_A) == original_sizes[0] and len(next_B) == original_sizes[1]:
+                l, m, A, B = nl, nm, next_A, next_B
+                break
+        else:
+            A = local_support_move(rng, A, l, m)
+        operation_name = "validated-highd-nearby-geometry"
+    elif operation == 3:
+        side_index = int(rng.integers(0, 2))
+        sides = [A, B]
+        first = local_support_move(rng, sides[side_index], l, m, allow_diagonal=True)
+        sides[side_index] = local_support_move(rng, first, l, m, allow_diagonal=True)
+        A, B = sides
+        operation_name = "validated-highd-two-step"
+    else:
+        correlated_deltas = [(-1, 0), (1, 0), (0, -1), (0, 1),
+                             (-1, -1), (-1, 1), (1, -1), (1, 1)]
+        delta = correlated_deltas[int(rng.integers(0, len(correlated_deltas)))]
+        A = local_support_move(rng, A, l, m, forced_delta=delta)
+        B = local_support_move(rng, B, l, m, forced_delta=delta)
+        operation_name = "validated-highd-correlated"
+
+    return {
+        "family": "bivariate-bicycle",
+        "construction": "periodic-rectangular-torus",
+        "candidate_id": candidate_id,
+        "generator_version": VERSION,
+        "proposal_seed": stable_seed("validated-high-distance-proposal", candidate_id),
+        "lane": "validated-high-distance-mutation",
+        "proposal_kernel": operation_name,
+        "parent": parent["name"],
+        "parent_d": int(parent["parent_d"]),
+        "parent_k": int(parent["parent_k"]),
+        "l": l,
+        "m": m,
+        "A": [list(x) for x in normalize_support(A, l, m)],
+        "B": [list(x) for x in normalize_support(B, l, m)],
+    }
+
+
 def proposal(candidate_id: int) -> dict:
+    if candidate_id >= VALIDATED_HIGH_DISTANCE_START:
+        return validated_high_distance_proposal(candidate_id)
     if candidate_id >= 45_008:
         return high_distance_proposal(candidate_id)
     if candidate_id >= 40_000:
@@ -995,6 +1151,8 @@ def command_select(args: argparse.Namespace) -> None:
             continue
         if int(record.get("factor_order", 0)) < args.min_factor_order:
             continue
+        if int(record.get("parent_d", 0)) < args.min_parent_d:
+            continue
         if "components" not in record:
             HX, HZ = build_bb(record["l"], record["m"], record["A"], record["B"])
             components, component_sizes = component_profile(HX, HZ)
@@ -1021,6 +1179,7 @@ def command_select(args: argparse.Namespace) -> None:
     positions = defaultdict(int)
     geometry_counts: dict[tuple[int, int], int] = defaultdict(int)
     kernel_counts: dict[str, int] = defaultdict(int)
+    parent_counts: dict[str, int] = defaultdict(int)
     order = ["weight-6", "weight-8", "weight-4", "any-weight"]
     while len(chosen) < args.limit and any(positions[name] < len(buckets[name]) for name in order):
         for name in order:
@@ -1029,13 +1188,17 @@ def command_select(args: argparse.Namespace) -> None:
                 positions[name] += 1
                 geometry = (int(record["l"]), int(record["m"]))
                 kernel = str(record["proposal_kernel"])
+                parent = str(record.get("parent", "none"))
                 if geometry_counts[geometry] >= args.max_per_geometry:
                     continue
                 if kernel_counts[kernel] >= args.max_per_kernel:
                     continue
+                if parent_counts[parent] >= args.max_per_parent:
+                    continue
                 chosen.append(record)
                 geometry_counts[geometry] += 1
                 kernel_counts[kernel] += 1
+                parent_counts[parent] += 1
                 break
     if requested_ids:
         selected_ids = {int(record["candidate_id"]) for record in chosen}
@@ -1149,13 +1312,55 @@ def validate_fast_witness(HX: np.ndarray, HZ: np.ndarray, side: str,
         raise RuntimeError(f"accelerated witness failed trusted Python checks: {side} w={weight}")
 
 
+def candidate_submission_sources(record: dict) -> list[Path]:
+    """Return every persisted submission document for one exact candidate.
+
+    Evidence and verdict files are deliberately excluded: only schema-valid
+    submission documents contain both X and Z witnesses.  Looking across all
+    rungs (including shallow Python documents) ensures a lucky light witness is
+    never discarded by a later search with a different seed.
+    """
+    candidate_dir = ARTIFACTS / "candidates"
+    prefix = f"c{int(record['candidate_id']):07d}-{record['canonical_key'][:10]}-"
+    return sorted(
+        path for path in candidate_dir.glob(f"{prefix}*.json")
+        if not path.name.endswith(".evidence.json")
+        and not path.name.endswith(".verdict.json")
+    )
+
+
+def merge_persisted_witnesses(record: dict, HX: np.ndarray, HZ: np.ndarray,
+                              doc: dict, sources: list[Path]) -> list[str]:
+    """Merge and independently check the lightest saved witness on each side."""
+    merged_sources: list[str] = []
+    for source in sources:
+        source_doc = json.loads(source.read_text())
+        if int(source_doc["n"]) != int(record["n"]) or int(source_doc["k"]) != int(record["k"]):
+            raise RuntimeError(f"persisted submission drift for c{record['candidate_id']}: {source}")
+        for side in ("X", "Z"):
+            side_doc = source_doc["distance"][side]
+            weight = int(side_doc["value"])
+            support = [int(q) for q in side_doc["witness"]]
+            validate_fast_witness(HX, HZ, side, support, weight)
+            if weight < int(doc["distance"][side]["value"]):
+                doc["distance"][side] = copy.deepcopy(side_doc)
+        merged_sources.append(source.name)
+    doc["distance"]["d"] = min(int(doc["distance"]["X"]["value"]),
+                                   int(doc["distance"]["Z"]["value"]))
+    doc["name"] = (f"[[{doc['n']},{doc['k']},{doc['distance']['d']}]] "
+                   f"local periodic BB c{record['candidate_id']}")
+    return merged_sources
+
+
 def reused_python_submission(record: dict, python_trials: int, source_rung: str,
-                             target_rung: str, seed: int) -> tuple[dict, Path]:
-    """Carry all persisted source-rung witnesses into a deeper fast rung.
+                             target_rung: str, seed: int, HX: np.ndarray,
+                             HZ: np.ndarray) -> tuple[dict, Path]:
+    """Carry all persisted candidate witnesses into a deeper fast rung.
 
     The Python document is the reproducible base, but an accelerated source-rung
-    document may contain a lighter witness.  Merge every saved fast document so
-    promotion is monotone and never drops the most expensive evidence produced.
+    or earlier document may contain a lighter witness.  Merge every saved
+    submission document so promotion is monotone and never drops the most
+    expensive evidence produced.
     """
     candidate_dir = ARTIFACTS / "candidates"
     prefix = f"c{int(record['candidate_id']):07d}-{record['canonical_key'][:10]}-"
@@ -1175,29 +1380,14 @@ def reused_python_submission(record: dict, python_trials: int, source_rung: str,
     doc = json.loads(source_path.read_text())
     if int(doc["n"]) != int(record["n"]) or int(doc["k"]) != int(record["k"]):
         raise RuntimeError(f"persisted Python source drift for c{record['candidate_id']}")
-    fast_pattern = f"{prefix}{source_rung}-python{python_trials}-s*-fast*.json"
-    fast_sources = sorted(
-        path for path in candidate_dir.glob(fast_pattern)
-        if not path.name.endswith(".evidence.json")
-        and not path.name.endswith(".verdict.json")
+    merged_sources = merge_persisted_witnesses(
+        record, HX, HZ, doc, candidate_submission_sources(record)
     )
-    merged_fast_sources: list[str] = []
-    for fast_source in fast_sources:
-        fast_doc = json.loads(fast_source.read_text())
-        if int(fast_doc["n"]) != int(record["n"]) or int(fast_doc["k"]) != int(record["k"]):
-            raise RuntimeError(f"persisted accelerated source drift for c{record['candidate_id']}")
-        for side in ("X", "Z"):
-            if int(fast_doc["distance"][side]["value"]) < int(doc["distance"][side]["value"]):
-                doc["distance"][side] = copy.deepcopy(fast_doc["distance"][side])
-        merged_fast_sources.append(fast_source.name)
-    doc["distance"]["d"] = min(int(doc["distance"]["X"]["value"]),
-                                   int(doc["distance"]["Z"]["value"]))
-    doc["name"] = f"[[{doc['n']},{doc['k']},{doc['distance']['d']}]] local periodic BB c{record['candidate_id']}"
     doc["provenance"]["notes"] += (
         f" Reused persisted Python witness from {source_path.name} as the base "
         f"for accelerated rung={target_rung}; no Python witness search was repeated."
-        f" Merged lighter persisted accelerated source documents: "
-        f"{merged_fast_sources or 'none'}."
+        f" Merged and checked all persisted submission documents: "
+        f"{merged_sources or 'none'}."
     )
     label = f"{target_rung}-python{python_trials}reuse{source_rung}"
     target_path = candidate_dir / f"{candidate_stem(record, label, seed)}.json"
@@ -1210,6 +1400,33 @@ def reused_python_submission(record: dict, python_trials: int, source_rung: str,
     return doc, target_path
 
 
+def command_consolidate(args: argparse.Namespace) -> None:
+    """Write fresh final documents containing the lightest witness from every rung."""
+    for record in selected_records(args.selection, args.candidate_id):
+        HX, HZ = build_record(record)
+        sources = candidate_submission_sources(record)
+        if not sources:
+            raise RuntimeError(f"no persisted submissions for c{record['candidate_id']}")
+        doc = json.loads(sources[0].read_text())
+        merged_sources = merge_persisted_witnesses(record, HX, HZ, doc, sources)
+        doc["provenance"]["notes"] += (
+            f" Final all-rung witness consolidation label={args.label}; merged and "
+            f"independently checked submission documents: {merged_sources}."
+        )
+        seed = stable_seed("consolidate", args.label, record["candidate_id"],
+                           *merged_sources) % (2**31)
+        label = f"{args.label}-allrungs"
+        target_path = ARTIFACTS / "candidates" / f"{candidate_stem(record, label, seed)}.json"
+        if target_path.exists():
+            raise FileExistsError(f"refusing to overwrite consolidated candidate: {target_path}")
+        errors = save_submission(doc, str(target_path))
+        if errors or not target_path.exists():
+            raise RuntimeError(f"hard save/schema failure for {target_path}: {errors}")
+        json.loads(target_path.read_text())
+        print(f"saved {target_path.name}: [[{doc['n']},{doc['k']},{doc['distance']['d']}]] "
+              f"from {len(merged_sources)} documents")
+
+
 def command_confirm(args: argparse.Namespace) -> None:
     if gf2_fast is None:
         raise RuntimeError("gf2_fast unavailable; run `env UV_CACHE_DIR=.uv-cache make fast`")
@@ -1219,7 +1436,7 @@ def command_confirm(args: argparse.Namespace) -> None:
                            args.python_trials, args.fast_trials) % (2**31)
         if args.reuse_python_rung:
             doc, base_path = reused_python_submission(
-                record, args.python_trials, args.reuse_python_rung, args.rung, seed
+                record, args.python_trials, args.reuse_python_rung, args.rung, seed, HX, HZ
             )
         else:
             doc, base_path = saved_submission(record, HX, HZ, args.python_trials, seed,
@@ -1318,8 +1535,10 @@ def parser() -> argparse.ArgumentParser:
     select.add_argument("--min-candidate-id", type=int, default=0)
     select.add_argument("--max-candidate-id", type=int)
     select.add_argument("--min-factor-order", type=int, default=0)
+    select.add_argument("--min-parent-d", type=int, default=0)
     select.add_argument("--max-per-geometry", type=int, default=1_000_000)
     select.add_argument("--max-per-kernel", type=int, default=1_000_000)
+    select.add_argument("--max-per-parent", type=int, default=1_000_000)
     select.add_argument("--output", help="explicit selection path (must not already exist)")
     select.set_defaults(func=command_select)
 
@@ -1339,6 +1558,14 @@ def parser() -> argparse.ArgumentParser:
     confirm.add_argument("--pair-depth", type=int, default=16)
     confirm.add_argument("--threads", type=int, default=8)
     confirm.set_defaults(func=command_confirm)
+
+    consolidate = sub.add_parser(
+        "consolidate", help="persist a fresh candidate with the lightest witnesses from every rung"
+    )
+    consolidate.add_argument("--selection", required=True)
+    consolidate.add_argument("--candidate-id", action="append", type=int, default=[])
+    consolidate.add_argument("--label", default="consolidated")
+    consolidate.set_defaults(func=command_consolidate)
 
     validate = sub.add_parser("validate", help="save full trusted validator verdicts")
     validate.add_argument("--glob", required=True)
