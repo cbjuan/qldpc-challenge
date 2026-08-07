@@ -125,6 +125,8 @@ retained only as audit/calibration results rather than useful leaders.
 | `[[452,228,2]]` | 8 | passed | advances weight-8 × unrestricted | `artifacts/candidates/c0004417-e3a2cafb05-python2000-s1815568102.json` |
 | `[[40,2,4]]` | 4 | passed | dominated; retained as calibration | `artifacts/candidates/c0008081-a7602f8560-python2000-s1872254395.json` |
 | `[[648,8,32]]` | 6 | passed; side-aware upper-bound ladder `54→42→40→32` at 400→8k→60k→1M; all-rung consolidated at `(X,Z)=(32,40)` | c58638 advances the public weight-6 × unrestricted board but is locally dominated by `[[648,8,34]]`; `k^2*d/n=3.16`, board FOM 12.64 | `artifacts/candidates/c0058638-324eb6a044-epoch5-final-allrungs-s183048936.json` |
+| `[[630,10,28]]` | 6 | passed; side-aware upper-bound ladder `40→28→28→28` at 400→8k→60k→1M; all-rung consolidated at `(X,Z)=(28,32)` | c60611 advances the public weight-6 × unrestricted board but is locally dominated by `[[576,12,30]]`; `k^2*d/n=4.44`, board FOM 12.44 | `artifacts/candidates/c0060611-ecad34533e-epoch5-final-allrungs-s1316218620.json` |
+| `[[648,8,30]]` | 6 | passed; cumulative side-aware upper-bound ladder `32→32→30→30` at 400→8k→60k→1M; all-rung consolidated at `(X,Z)=(30,32)` | structurally distinct c58472 advances the public board but is locally dominated by `[[648,8,34]]`; `k^2*d/n=2.96`, board FOM 11.11 | `artifacts/candidates/c0058472-bb2c3fe1d7-epoch5-primary-final-allrungs-s1226758122.json` |
 
 The adjacent `*.verdict.json` files contain the full validator evidence. The
 continuous search does not stop at any entry in this table.
