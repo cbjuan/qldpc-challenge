@@ -1,0 +1,576 @@
+\documentclass[11pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=24mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,longtable,array}
+\usepackage[table]{xcolor}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,linkcolor=blue!55!black,
+            citecolor=blue!55!black,urlcolor=blue!55!black]{hyperref}
+\hypersetup{
+  pdfauthor={Juan Cruz-Benito},
+  pdftitle={Periodic Bivariate-Bicycle Autoresearch: Internal progress report}
+}
+
+\definecolor{ink}{RGB}{26,32,44}
+\definecolor{muted}{RGB}{88,96,112}
+\definecolor{accent}{RGB}{69,55,145}
+\definecolor{scorewash}{RGB}{239,236,252}
+\definecolor{distancewash}{RGB}{232,244,239}
+\definecolor{cautionwash}{RGB}{252,245,224}
+\definecolor{rulegray}{RGB}{218,222,229}
+
+\newcommand{\GF}{\mathbb{F}_2}
+\newcommand{\HX}{H_X}
+\newcommand{\HZ}{H_Z}
+\newcommand{\dw}{d_{\mathrm w}}
+\newcommand{\score}{\mathcal{S}}
+\newcommand{\boardfom}{\mathcal{B}}
+\newcommand{\qcode}[3]{\ensuremath{[\![#1,#2,d\!\leq\!#3]\!]}}
+\newcommand{\pathcode}[1]{\nolinkurl{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\setlist[itemize]{topsep=0.25em,itemsep=0.15em,leftmargin=1.5em}
+\setlist[enumerate]{topsep=0.25em,itemsep=0.2em,leftmargin=1.7em}
+\renewcommand{\arraystretch}{1.12}
+\setlength{\LTcapwidth}{\textwidth}
+\color{ink}
+
+\title{\textbf{Periodic Bivariate-Bicycle Autoresearch}\\[3pt]
+       \large Internal progress report for the
+       \pathcode{2026-08-06-periodic-bb} campaign}
+\author{Juan Cruz-Benito}
+\date{7 August 2026}
+
+\begin{document}
+\maketitle
+
+\noindent
+\colorbox{cautionwash}{%
+  \parbox{\dimexpr\linewidth-2\fboxsep\relax}{%
+  \textbf{Preliminary, local-only results.}
+  Nothing in this report has been submitted to the public board.  The
+  reported distance labels are witness-backed upper bounds; no distance lower
+  bound has yet been certified.  Exact MILP certification is pending,
+  literature/state-of-the-art novelty has not yet been investigated, and
+  independent external reproduction has not yet been performed.}}
+
+\begin{abstract}
+We report progress in a continuous automated search over periodic rectangular
+bivariate-bicycle (BB) quantum LDPC codes.  The run is orchestrated by OpenAI
+GPT-5.6 Sol through the Codex harness and follows the Unitary Foundation qLDPC
+Challenge's tool-agnostic autoresearch protocol (``autoresearch mode'' here):
+generate reproducible constructions, screen exact
+structural properties, persist every logical witness, attack promoted
+candidates at increasing randomized-search budgets, and let the repository's
+trusted validator---rather than the agent---decide whether a result is a
+campaign find.  The campaign may be viewed as a continuation of our earlier
+LLM-guided BB-code search, with a different harness and repository trust
+gate~\cite{cruzbenito2026}.  At the stated data cutoff, 47,163 structural
+proposals have produced 45 board-advancing local finds representing 44
+distinct parameter triples.
+Two distinct \qcode{696}{236}{3} constructions jointly maximize the campaign
+score $\score=k^2\dw/n$ at $240.07$.  The largest witness-supported distance
+label among the finds is $d\leq9$, attained by six constructions.  All
+distance statements remain upper bounds and all novelty statements remain
+provisional.
+\end{abstract}
+
+\section{Scope, terminology, and status}
+
+The construction family is locked to the periodic abelian group
+$G=\mathbb{Z}_{\ell}\times\mathbb{Z}_m$.  Open-boundary, twisted-torus,
+non-abelian generalized-bicycle, coset, lifted-product, and balanced-product
+codes are out of scope.  Work remains on the
+\pathcode{autoresearch/2026-08-06-local} branch of the personal fork
+\url{https://github.com/cbjuan/qldpc-challenge}.  Campaign artifacts may be
+archived on that branch, but no candidate has been written to \pathcode{codes/},
+submitted to the challenge, or used to open a pull request.
+The surrounding verification and leaderboard framework is described in the
+QEC Challenge whitepaper~\cite{qecwhitepaper}; the current public board is the
+challenge website~\cite{qecwebsite}.
+
+\paragraph{Data cutoff and inclusion rule.}
+This is a frozen working-tree snapshot at \textbf{2026-08-07 16:02:20 CEST},
+based on repository commit \pathcode{ef7f13b} plus local artifacts already
+present at that time.  Git committedness and scientific validation are
+separate properties.  A candidate enters the results only when a frozen
+candidate JSON and its adjacent full verdict both exist by the cutoff, with
+\pathcode{passed: true} and \pathcode{novelty.board_advancing: true}.  Under
+that rule, 41 finds are committed at the cutoff and four additional finds
+(\texttt{c45014}--\texttt{c45017}) are uncommitted but fully verdict-backed;
+all 45 are included.  Candidate files without a trusted verdict are excluded
+from counts, rankings, and extrema regardless of their screening weight or
+Git status.  Files written after the cutoff are likewise outside this report.
+
+The campaign uses the following deliberately narrow meaning of a
+\emph{find}: the saved call to \pathcode{verify/validate_candidate.py} returns
+\pathcode{passed: true}, and its novelty gate returns
+\pathcode{board_advancing: true}.  ``Board-advancing'' is relative only to the
+repository snapshot and its computed Pareto cells.  It is not a claim of
+literature novelty or of global state-of-the-art performance.
+
+For compactness, this report writes a campaign label as \qcode{n}{k}{\dw}.
+Here $\dw$ is the lightest logical weight persisted by the campaign, so the
+mathematical statement is
+\[
+  d_X\leq w_X,\qquad d_Z\leq w_Z,\qquad
+  d\leq \dw:=\min(w_X,w_Z).
+\]
+Thus \qcode{n}{k}{\dw} must not be read as an exact-distance certificate.
+The same caveat applies to every score containing $\dw$.
+
+\begin{longtable}{@{}lr@{}}
+\caption{Campaign snapshot.  Counts of validator outcomes are by distinct
+candidate ID, not by verdict file; three candidates were validated at more
+than one confirmation rung.}
+\label{tab:snapshot}\\
+\toprule
+Quantity & Count \\
+\midrule
+Deterministic structural proposals & 47,163 \\
+Unique encoding proposals retained in the structural ledger & 18,004 \\
+Canonical construction duplicates skipped & 8,776 \\
+Known translated-equal structural traps skipped & 140 \\
+Candidate IDs given a trusted-validator verdict & 83 \\
+Candidate IDs passing the validator & 81 \\
+Board-advancing campaign finds & \textbf{45} \\
+\quad committed at the cutoff & 41 \\
+\quad uncommitted but verdict-backed at the cutoff & 4 \\
+Distinct \qcode{n}{k}{\dw} triples among the finds & \textbf{44} \\
+Active promotion-queue candidates without a verdict & 64 \\
+Public submissions & 0 \\
+\bottomrule
+\end{longtable}
+
+Of the 46 entries retained in the findings ledger at the cutoff, 20 reached a
+one-million accelerated-trial rung, 20 reached a 60,000-trial rung, and six
+are shallow 2,000-trial or calibration results.  Forty-five are finds; the remaining
+\qcode{40}{2}{4} entry is a passed but dominated calibration code.
+
+\section{Construction and exact structural screening}
+
+Let
+\[
+  R=\GF[x,y]/(x^{\ell}-1,\,y^m-1),
+\]
+and let $A,B\in R$ be arbitrary binary sums of monomials, with unequal support
+sizes allowed.  Their regular representations are $\ell m\times\ell m$
+binary circulant matrices.  The CSS checks are
+\[
+  \HX=\begin{bmatrix}A&B\end{bmatrix},\qquad
+  \HZ=\begin{bmatrix}B^{\mathsf T}&A^{\mathsf T}\end{bmatrix}.
+\]
+Because $A$ and $B$ commute and the arithmetic has characteristic two,
+$\HX\HZ^{\mathsf T}=AB+BA=0$.  The resulting block length and encoded
+dimension are recomputed exactly as
+\[
+  n=2\ell m,
+  \qquad
+  k=n-\operatorname{rank}_{\GF}(\HX)
+      -\operatorname{rank}_{\GF}(\HZ).
+\]
+The search respects the repository bounds $n\leq700$ and total check weight
+at most 32.
+
+Before any distance work, the campaign performs exact GF(2) rank and CSS
+checks, canonicalizes translations and axis symmetries, removes construction
+duplicates, records connected-component structure, and rejects a known
+translated-$A=B$ trap that forces a weight-two logical whenever the code
+encodes.  This distance-free census makes the expensive witness search a
+promotion step rather than a property of every proposal.
+
+\section{Automation and research workflow}
+
+The two automation layers have different responsibilities.
+
+\begin{itemize}
+  \item \textbf{Codex harness.}  GPT-5.6 Sol operates as a repository-aware
+  research agent: it inspects the current board and field notes, implements
+  and invokes the deterministic campaign runner, monitors artifacts, adjusts
+  allocation according to observed collapses, and maintains the decision
+  journal.  Shell execution, file persistence, and source-control awareness
+  make long multi-rung experiments resumable and auditable.
+
+  \item \textbf{Unitary Foundation autoresearch protocol (``autoresearch
+  mode'').}  The repository's tool-agnostic autoresearch manual supplies the
+  scientific control loop and trust boundary.  The model may propose, rank,
+  and test constructions, but it cannot declare its own result valid.  Every
+  find must be packaged by the research kit, preserve its witnesses, and pass
+  the pinned validator.  The trusted \pathcode{verify/} stack is never
+  modified by the campaign.
+\end{itemize}
+
+The implemented loop is
+\begin{center}
+\small
+\fbox{proposal} $\longrightarrow$ \fbox{exact structural screen}
+$\longrightarrow$ \fbox{diverse selection}
+$\longrightarrow$ \fbox{persisted witness}\\[0.45em]
+$\lhook\joinrel\longrightarrow$ \fbox{RIS ladder}
+$\longrightarrow$ \fbox{trusted gate}
+$\longrightarrow$ \fbox{local ledger}.
+\end{center}
+
+Proposal IDs and random seeds are deterministic.  The initial lanes cover
+weight-4 breadth, high-rate weight-6 and weight-8 gaps, arbitrary unequal
+supports, axis-mixed supports, shared-factor motifs, and mutations of
+reproducible BB seeds.  Later phases add targeted nearby-geometry mutations,
+controlled-order common-factor transfers, and a high-distance continuation
+around parents carrying reported bounds $d\leq8$, $d\leq9$, $d\leq14$, or
+$d\leq18$.  A parent's reported distance label is a selection prior only:
+every child obtains and persists its own witness.
+
+The key operational safeguard is persistence-first execution.
+\pathcode{submit.make_submission} packages an initial Python result; every
+deeper accelerated rung saves both raw witness evidence and a new candidate
+file without overwriting its ancestor.  Accelerated witnesses are then
+rechecked by the trusted Python GF(2) predicates.  Consequently, an expensive
+logical operator is not lost if a later run or save fails.
+
+\clearpage
+\section{Verification already performed and still pending}
+
+\small
+\begin{longtable}{@{}L{3.15cm}L{5.2cm}L{5.4cm}@{}}
+\caption{Verification layers and their present campaign status.}
+\label{tab:verification}\\
+\toprule
+Layer & Method & Status and interpretation \\
+\midrule
+\endfirsthead
+\multicolumn{3}{c}{\tablename~\thetable\ (continued)}\\
+\toprule
+Layer & Method & Status and interpretation \\
+\midrule
+\endhead
+\midrule
+\multicolumn{3}{r}{Continued on next page}\\
+\endfoot
+\bottomrule
+\endlastfoot
+Structure
+& Exact binary rank, CSS commutation, dimensions, check weight, schema and
+  resource bounds
+& Complete for packaged candidates; these are deterministic checks. \\
+\addlinespace
+Logical witness
+& Exact tests that an $X$ ($Z$) vector lies in
+  $\ker\HZ\setminus\operatorname{row}\HX$
+  (respectively $\ker\HX\setminus\operatorname{row}\HZ$), with exact weight
+& Complete and embedded for both sectors; proves only an upper bound. \\
+\addlinespace
+Distance attack
+& Randomized-information-set (RIS/QDistRnd-style) search using
+  random-permuted elimination and light-row combinations; NumPy first, then
+  the bit-packed \pathcode{gf2_fast} implementation at 8k, 60k, or 1M rungs
+& Complete at the recorded budget.  Python and C++ are implementations of the
+  same search family, not independent distance algorithms. \\
+\addlinespace
+Trusted candidate gate
+& Fresh-seed pure-Python bounded RIS refutation, exact witness recheck,
+  stabilizer fingerprint deduplication, and board-Pareto labeling
+& Complete for all ledger entries.  A pass means ``not refuted within this
+  budget'', not ``distance proven''. \\
+\addlinespace
+Exact distance
+& \pathcode{research/kit/distance.exact_distance}, wrapping the
+  SciPy/HiGHS MILP tier in \pathcode{verify/certify.py}, separately for
+  $X$ and $Z$
+& \textbf{Pending.}  No MILP certificate or \pathcode{d_exact} artifact is
+  present in the campaign. \\
+\addlinespace
+Independent heuristic
+& BP+OSD residual-logical search via
+  \pathcode{research/kit/distance.decoder_distance}
+& Available but not yet run.  It would provide an independent upper-bound
+  cross-check, not an exact proof. \\
+\addlinespace
+External validation
+& Independent reproduction and literature/state-of-the-art comparison
+& \textbf{Not started.} \\
+\end{longtable}
+\normalsize
+
+The pending exact tier formulates a binary mixed-integer linear program for
+each logical sector and each complementary logical-basis generator.  It asks
+whether a nontrivial logical of weight $1,\ldots,\dw-1$ exists while enforcing
+the parity-check constraints and an odd logical overlap.  Infeasibility of
+every such problem on both sectors certifies the persisted upper bound as the
+exact distance; a feasible solution refutes it; a timeout leaves the result
+at upper-bound confidence.  The first MILP queue should prioritize the six
+$d\leq9$ finds and the six $d\leq8$ finds, while retaining all timeout and
+counterexample artifacts.
+
+\section{Results}
+
+The campaign tracks
+\[
+  \score=\frac{k^2\dw}{n}
+  \qquad\text{and}\qquad
+  \boardfom=\frac{k\dw^2}{n}.
+\]
+$\score$ is the campaign's rate-sensitive priority requested for this run;
+$\boardfom$ is the board's commonly reported operational-efficiency column.
+Neither scalar replaces Pareto comparison.  Because $\dw$ is an upper bound,
+the displayed values are provisional upper-bound scores as well.
+
+\subsection{Highlights}
+
+\begin{longtable}{@{}L{3.2cm}L{4.4cm}rL{5.0cm}@{}}
+\caption{Leading candidates under complementary provisional views.}
+\label{tab:highlights}\\
+\toprule
+Criterion & Candidate(s) & Value & Interpretation \\
+\midrule
+Largest $\score$
+& \texttt{c40000}, \texttt{c40002}: \qcode{696}{236}{3}
+& \textbf{240.07}
+& Two distinct saved constructions, on $\mathbb Z_6\!\times\!\mathbb Z_{58}$ and
+  $\mathbb Z_{12}\!\times\!\mathbb Z_{29}$; the gain is rate-driven. \\
+Runner-up $\score$
+& \texttt{c40003}: \qcode{690}{234}{3}
+& 238.07
+& Another order-three, high-rate continuation. \\
+Largest reported upper bound
+& \texttt{c10524}, \texttt{c20283},
+  \texttt{c45014}--\texttt{c45017}: six $m=15$ constructions
+& \textbf{$d\leq9$}
+& The same 4+2 support motif on six torus geometries; exact distance remains
+  pending for every entry. \\
+Largest $\boardfom$
+& \texttt{c20118}: \qcode{272}{48}{8}
+& \textbf{11.29}
+& Best balance of rate and the witnessed upper-bound label under
+  $k\dw^2/n$. \\
+\bottomrule
+\end{longtable}
+
+The two $\score$ leaders have equal parameters but are not the same saved
+construction: their canonical construction keys and torus geometries differ.
+Each candidate's gate found neither an exact board duplicate nor a
+Weisfeiler--Lehman-equivalent board entry.  This establishes two independently
+board-advancing constructions, not inequivalence under every possible qubit
+permutation.
+
+The leading constructions are directly reproducible from their supports:
+\begin{align*}
+\texttt{c40000}:\quad &(\ell,m)=(6,58),\\
+ A&=\{(0,0),(1,25),(3,25),(4,0)\},\\
+ B&=\{(0,0),(1,12),(3,12),(4,0)\};\\[2pt]
+\texttt{c40002}:\quad &(\ell,m)=(12,29),\\
+ A&=\{(1,25),(4,0),(5,25),(8,0)\},\\
+ B&=\{(1,12),(4,0),(5,12),(8,0)\};\\[2pt]
+\texttt{c10524/c20283/c45014--c45017}:\quad
+ &m=15,\quad \ell\in\{9,11,19,20,22,23\},\\
+ A&=\{(0,0),(0,11),(7,2),(7,8)\},\qquad
+ B=\{(0,0),(0,1)\}.
+\end{align*}
+
+The campaign runner calls the last four candidates ``exact geometry
+transfers.''  In that provenance label,
+``exact'' means that the integer support was transferred without mutation; it
+does \emph{not} mean that the quantum distance has been certified exactly.
+
+\subsection{Complete inventory of campaign finds}
+
+Table~\ref{tab:inventory} lists every board-advancing candidate once, ordered
+by $\score$.  It contains 45 constructions but 44 parameter triples because
+the first two rows are distinct \qcode{696}{236}{3} codes.  The check-weight
+distribution is 24 weight-6, 20 weight-8, and one weight-16 find.  The
+witnessed upper-bound distribution is: three at $d\leq2$, twelve at
+$d\leq3$, six at $d\leq4$, eight at $d\leq6$, four at $d\leq7$, six at
+$d\leq8$, and six at $d\leq9$.
+
+\begingroup
+\small
+\setlength{\tabcolsep}{4.5pt}
+\begin{longtable}{@{}l l r r r L{3.35cm}@{}}
+\caption{Complete find inventory.  $w$ is the maximum check weight; all
+entries passed the trusted gate and were labeled board-advancing.  Purple
+marks the joint provisional $\score=k^2\dw/n$ leaders; green marks the six
+constructions attaining the campaign's largest witness-supported label,
+$d\leq9$.  Both highlights depend on witness upper bounds and do not denote
+exact-distance certificates.}
+\label{tab:inventory}\\
+\toprule
+ID & Campaign label & $w$ & $\score=k^2\dw/n$ & $\boardfom=k\dw^2/n$ & Note \\
+\midrule
+\endfirsthead
+\multicolumn{6}{c}{\tablename~\thetable\ (continued)}\\
+\toprule
+ID & Campaign label & $w$ & $\score$ & $\boardfom$ & Note \\
+\midrule
+\endhead
+\midrule
+\multicolumn{6}{r}{Continued on next page}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\rowcolor{scorewash}
+\texttt{c40000} & \qcode{696}{236}{3} & 8 & \textbf{240.07} & 3.05 & joint $\score$ leader \\
+\rowcolor{scorewash}
+\texttt{c40002} & \qcode{696}{236}{3} & 8 & \textbf{240.07} & 3.05 & joint $\score$ leader; distinct \\
+\texttt{c40003} & \qcode{690}{234}{3} & 8 & 238.07 & 3.05 & $\score$ runner-up \\
+\texttt{c40004} & \qcode{672}{228}{3} & 8 & 232.07 & 3.05 & --- \\
+\texttt{c40001} & \qcode{696}{232}{3} & 6 & 232.00 & 3.00 & weight-6 high-rate leader \\
+\texttt{c4417}  & \qcode{452}{228}{2} & 8 & 230.02 & 2.02 & $d\leq2$; audit-only priority \\
+\texttt{c40005} & \qcode{696}{174}{4} & 8 & 174.00 & 4.00 & --- \\
+\texttt{c40006} & \qcode{688}{172}{4} & 8 & 172.00 & 4.00 & --- \\
+\texttt{c40007} & \qcode{680}{170}{4} & 8 & 170.00 & 4.00 & --- \\
+\texttt{c14474} & \qcode{396}{136}{3} & 8 & 140.12 & 3.09 & --- \\
+\texttt{c12783} & \qcode{224}{112}{2} & 6 & 112.00 & 2.00 & $d\leq2$; audit-only priority \\
+\texttt{c16394} & \qcode{288}{100}{3} & 8 & 104.17 & 3.13 & --- \\
+\texttt{c19513} & \qcode{384}{96}{4}  & 8 & 96.00  & 4.00 & --- \\
+\texttt{c16039} & \qcode{288}{96}{3}  & 8 & 96.00  & 3.00 & --- \\
+\texttt{c11462} & \qcode{270}{90}{3}  & 6 & 90.00  & 3.00 & --- \\
+\texttt{c6423}  & \qcode{234}{78}{3}  & 6 & 78.00  & 3.00 & --- \\
+\texttt{c20118} & \qcode{272}{48}{8}  & 8 & 67.76  & \textbf{11.29} & largest $\boardfom$ \\
+\texttt{c20058} & \qcode{304}{52}{7}  & 8 & 62.26  & 8.38 & --- \\
+\texttt{c19531} & \qcode{248}{62}{4}  & 6 & 62.00  & 4.00 & --- \\
+\texttt{c20978} & \qcode{266}{50}{6}  & 8 & 56.39  & 6.77 & --- \\
+\texttt{c45591} & \qcode{448}{56}{8}  & 8 & 56.00  & 8.00 & --- \\
+\texttt{c20343} & \qcode{252}{48}{6}  & 8 & 54.86  & 6.86 & --- \\
+\texttt{c20198} & \qcode{238}{46}{6}  & 8 & 53.34  & 6.96 & --- \\
+\texttt{c20498} & \qcode{224}{44}{6}  & 8 & 51.86  & 7.07 & --- \\
+\texttt{c20718} & \qcode{256}{46}{6}  & 8 & 49.59  & 6.47 & locally dominated by c20198 \\
+\texttt{c2359}  & \qcode{108}{36}{3}  & 16& 36.00  & 3.00 & weight-9plus cell \\
+\rowcolor{distancewash}
+\texttt{c45014} & \qcode{690}{46}{9}  & 6 & 27.60  & 5.40 & local; verdict-backed \\
+\rowcolor{distancewash}
+\texttt{c45015} & \qcode{660}{44}{9}  & 6 & 26.40  & 5.40 & local; verdict-backed \\
+\texttt{c46163} & \qcode{644}{46}{8}  & 6 & 26.29  & 4.57 & --- \\
+\texttt{c142}   & \qcode{208}{52}{2}  & 6 & 26.00  & 1.00 & $d\leq2$; audit-only priority \\
+\texttt{c46164} & \qcode{616}{44}{8}  & 6 & 25.14  & 4.57 & --- \\
+\rowcolor{distancewash}
+\texttt{c45016} & \qcode{600}{40}{9}  & 6 & 24.00  & 5.40 & local; verdict-backed \\
+\texttt{c20418} & \qcode{270}{30}{7}  & 6 & 23.33  & 5.44 & --- \\
+\rowcolor{distancewash}
+\texttt{c45017} & \qcode{570}{38}{9}  & 6 & 22.80  & 5.40 & local; verdict-backed \\
+\texttt{c20458} & \qcode{240}{30}{6}  & 6 & 22.50  & 4.50 & --- \\
+\texttt{c46587} & \qcode{532}{38}{8}  & 6 & 21.71  & 4.57 & --- \\
+\texttt{c6625}  & \qcode{266}{38}{4}  & 6 & 21.71  & 2.29 & --- \\
+\texttt{c20918} & \qcode{234}{26}{7}  & 6 & 20.22  & 5.44 & --- \\
+\texttt{c16229} & \qcode{208}{26}{6}  & 6 & 19.50  & 4.50 & --- \\
+\texttt{c20623} & \qcode{260}{26}{6}  & 6 & 15.60  & 3.60 & locally dominated by c16229 \\
+\rowcolor{distancewash}
+\texttt{c20283} & \qcode{330}{22}{9}  & 6 & 13.20  & 5.40 & joint largest bound $d\leq9$ \\
+\texttt{c20168} & \qcode{280}{20}{8}  & 6 & 11.43  & 4.57 & --- \\
+\rowcolor{distancewash}
+\texttt{c10524} & \qcode{270}{18}{9}  & 6 & 10.80  & 5.40 & joint largest bound $d\leq9$ \\
+\texttt{c4584}  & \qcode{198}{26}{3}  & 6 & 10.24  & 1.18 & --- \\
+\texttt{c18628} & \qcode{280}{20}{7}  & 6 & 10.00  & 3.50 & --- \\
+\end{longtable}
+\endgroup
+
+The additional calibration entry \texttt{c8081}, \qcode{40}{2}{4} with
+$w=4$, has $\score=0.40$ and $\boardfom=0.80$.  It passed structural,
+witness, and bounded-refutation checks but was dominated by the current
+board, so it is not counted as a find.
+
+\subsection{Negative results and high-distance controls}
+
+The trusted gate was run on 83 distinct candidate IDs.  Besides the 45 finds,
+36 candidates passed but did not advance their board cell.  The largest
+witnessed upper-bound label anywhere in this accepted control set is
+$d\leq24$, attained by \texttt{c45020}, \qcode{432}{12}{24}; it is excluded
+from the find inventory because it is non-advancing.  Two additional candidates did
+not pass solely because the gate identified exact existing-board duplicates:
+\qcode{288}{50}{8} and \qcode{288}{12}{18}.  These controls are useful for
+calibrating the high-distance continuation, but they are not new campaign
+finds.
+
+\subsection{In-flight candidates excluded from the results}
+
+At the data cutoff, 64 additional packaged candidates remained in three
+active survivor queues without any saved
+\pathcode{validate_candidate.py} verdict: 17 had reached 60,000 accelerated
+RIS trials, 23 had reached 8,000, and 24 had only the initial 400-trial Python
+screen.  None is a campaign find, and none contributes to the inventory,
+distributions, rankings, or extrema above.  Their persisted logical weights
+are screening upper bounds only and may decrease under deeper attacks; the
+largest such shallow label was $d\leq54$, which is especially susceptible to
+search-depth inflation.  The strings \pathcode{exact-grid} and
+\pathcode{exact-rate} in two queue filenames describe deterministic proposal
+lanes, not exact-distance certification.  Later artifacts written after the
+cutoff are deferred to a subsequent report revision.
+
+\enlargethispage{\baselineskip}
+\section{Limitations and immediate next steps}
+
+\begin{enumerate}
+  \item \textbf{External reproduction.}  Rebuild the highlighted candidates
+  from their monomial supports in a clean checkout and on an independent
+  machine, rerun fresh-seed witness searches, and compare file hashes and
+  validator verdicts.  This is the immediate next validation step.
+
+  \item \textbf{Exact MILP certification.}  Run the SciPy/HiGHS certifier on
+  both logical sectors, beginning with the $d\leq9$ and $d\leq8$ finds.  Save
+  feasible counterexamples, logged infeasibility outcomes, and all timeouts;
+  do not relabel a distance exact unless
+  the authoritative certifier returns \pathcode{d_exact: true}.
+
+  \item \textbf{Independent distance corroboration.}  Run the BP+OSD
+  residual-witness method with fresh seeds.  Agreement would be valuable
+  cross-mechanism evidence, but would still not supply a lower bound.
+
+  \item \textbf{State-of-the-art and equivalence review.}  No systematic
+  comparison with the current literature, preprints, or independent code
+  tables has begun.  Search for equivalent BB support presentations and
+  qubit permutations, compare against published parameter families, and
+  retain the label ``literature novelty unverified'' until that review is
+  complete.
+
+  \item \textbf{Human promotion decision.}  Only after reproduction,
+  certification/corroboration, and literature review should a human decide
+  whether any staged JSON belongs in \pathcode{codes/}.  This report itself
+  authorizes no submission.
+\end{enumerate}
+
+The numerical source of record for the inventory is
+\pathcode{FINDINGS.md} together with the adjacent candidate and
+\pathcode{*.verdict.json} artifacts.  Search policy and reproducible commands
+are recorded in \pathcode{README.md}; the deterministic implementation is
+\pathcode{campaign.py}; and the governing protocol is
+\pathcode{research/AUTORESEARCH.md}.  This report is a dated snapshot of an
+ongoing local campaign.
+
+\vspace{-0.4em}
+\begin{thebibliography}{9}
+\setlength{\itemsep}{0.15em}
+
+\bibitem{cruzbenito2026}
+J.~Cruz-Benito, A.~W. Cross, D.~Kremer, and I.~Faro,
+``Evolutionary Discovery of Bivariate Bicycle Codes with LLM-Guided Search,''
+\emph{arXiv preprint arXiv:2606.02418}, 2026.
+\href{https://arxiv.org/abs/2606.02418}{arXiv:2606.02418}.
+
+\bibitem{qecwhitepaper}
+Unitary Foundation,
+``The QEC Challenge: A public, automatically verified leaderboard for quantum
+low-density parity-check codes,'' 2026.
+\href{https://github.com/unitaryfoundation/qldpc-challenge/blob/main/docs/qec_challenge.pdf}%
+{QEC Challenge whitepaper}.
+
+\bibitem{qecwebsite}
+Unitary Foundation,
+``qLDPC Challenge---public leaderboard,'' 2026.
+\href{https://unitaryfoundation.github.io/qldpc-challenge/index.html}%
+{qLDPC Challenge website}.
+
+\end{thebibliography}
+
+\vspace{-0.5em}
+\section*{Acknowledgments}
+
+This report was drafted with the assistance of OpenAI GPT-5.6 Sol + Codex
+harness, which also helped to run the experiments described herein.
+
+As stated above, these are preliminary results and external reproduction is
+the immediate next validation step.
+
+\end{document}

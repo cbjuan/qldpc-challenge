@@ -1,0 +1,55 @@
+{
+  "candidate": {
+    "d": 10,
+    "family": "bivariate-bicycle",
+    "k": 12,
+    "locality_class": "unrestricted",
+    "n": 490,
+    "weight_class": "weight-6"
+  },
+  "gates": {
+    "dedup": {
+      "exact_duplicate_of": null,
+      "wl_equivalent_of": null
+    },
+    "novelty": {
+      "board_advancing": false,
+      "cell": [
+        "weight-6",
+        "unrestricted"
+      ],
+      "dominated_by": [
+        "[[144,12,12]] 144-12-12.json",
+        "[[240,12,12]] 240-12-12.json",
+        "[[252,12,16]] 252-12-16.json",
+        "[[288,12,18]] 288-12-18.json",
+        "[[288,16,16]] 288-16-16.json",
+        "[[340,16,18]] 340-16-18.json",
+        "[[360,12,24]] 360-12-24.json",
+        "[[360,16,14]] 360-16-14.json",
+        "[[360,24,10]] 360-24-10.json"
+      ],
+      "literature_novelty": "unverified"
+    },
+    "refute": {
+      "detail": "no lighter logical in 8000 RIS trials (seed 1365663327)",
+      "refuted": false,
+      "seed": 1365663327
+    },
+    "verify": {
+      "failed_checks": [],
+      "locality_class": "unrestricted",
+      "ok": true,
+      "weight_class": "weight-6"
+    }
+  },
+  "labels": [
+    "does not advance its board cell",
+    "literature novelty UNVERIFIED"
+  ],
+  "passed": true,
+  "validator": {
+    "seed": 1365663327,
+    "source_sha256": "ea4430bacb9c5e68b5bac66f56d9a82e83f0ba8823b1357288b26972ce8842b8"
+  }
+}
