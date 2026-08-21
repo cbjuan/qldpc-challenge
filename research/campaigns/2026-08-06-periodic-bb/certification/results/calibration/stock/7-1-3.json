@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "fixture": "7-1-3",
+  "started_at_utc": "2026-08-20T23:47:24.786662+00:00",
+  "duration_seconds": 0.4187601590529084,
+  "command": [
+    "/root/qldpc-challenge/.venv/bin/python",
+    "verify/certify.py",
+    "codes/7-1-3.json",
+    "--tlim",
+    "120"
+  ],
+  "candidate_sha256": "1ec98be581eefe1a6ce1080e2fb1549f3e6daf1ac04f0cbe6409d00f04a4b521",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "expected_certificate_sha256": "c6d1ef3a203a9cb19fc45cc5a8cbfd3de0e644e1203dd608e789a2ed6acf7889",
+  "returncode": 0,
+  "stdout": "{\n  \"name\": \"[[7,1,3]] color code\",\n  \"d\": 3,\n  \"solver\": \"scipy/HiGHS MILP\",\n  \"sides\": {\n    \"X\": {\n      \"value\": 3,\n      \"exact\": true,\n      \"note\": \"no logical < 3 exists\"\n    },\n    \"Z\": {\n      \"value\": 3,\n      \"exact\": true,\n      \"note\": \"no logical < 3 exists\"\n    }\n  },\n  \"d_exact\": true\n}\n",
+  "stderr": "",
+  "certifier_output": {
+    "name": "[[7,1,3]] color code",
+    "d": 3,
+    "solver": "scipy/HiGHS MILP",
+    "sides": {
+      "X": {
+        "value": 3,
+        "exact": true,
+        "note": "no logical < 3 exists"
+      },
+      "Z": {
+        "value": 3,
+        "exact": true,
+        "note": "no logical < 3 exists"
+      }
+    },
+    "d_exact": true
+  },
+  "calibration_passed": true
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "stage": "calibration-sharded-threadcap-smoke",
+  "started_at_utc": "2026-08-20T23:54:00.802180+00:00",
+  "candidate_key": "64-2-8",
+  "candidate_path": "codes/64-2-8.json",
+  "candidate_sha256": "d0ef8274aef5341d07d2c3547ed7180ef10ab7cd15dcc3b79f643c9f44261970",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "git_commit": "cef801d6c7204a6716dd6e4b9a9d915abb14d754",
+  "parameters": {
+    "n": 64,
+    "k": 2,
+    "d": 8,
+    "d_x_upper": 8,
+    "d_z_upper": 8
+  },
+  "matrix_sha256": {
+    "HX": "aa82ff682e044c5df5113492e9121c86462398761e0843a43ef795b2cdaf2f70",
+    "HZ": "f17f936a7e6f79184cd6ae394a3f00eac1c608ce0f3af050dc6deaaef7a7a227"
+  },
+  "logical_basis_sha256": {
+    "X": "ec48dc7665566bd4cc13b5b7dfc29c264464cd6f6dbf836183ed78dc312e9ba7",
+    "Z": "ec48dc7665566bd4cc13b5b7dfc29c264464cd6f6dbf836183ed78dc312e9ba7"
+  },
+  "worker_limit": 2,
+  "task_time_limit_seconds": 120.0,
+  "thread_limits": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "expected_task_count": 4,
+  "new_task_count": 4,
+  "inherited_definitive_task_count": 0,
+  "tasks": [
+    {
+      "task_id": "X-0000",
+      "side": "X",
+      "logical_row_index": 0,
+      "cutoff": 7,
+      "inherited": false,
+      "evidence_path": null
+    },
+    {
+      "task_id": "X-0001",
+      "side": "X",
+      "logical_row_index": 1,
+      "cutoff": 7,
+      "inherited": false,
+      "evidence_path": null
+    },
+    {
+      "task_id": "Z-0000",
+      "side": "Z",
+      "logical_row_index": 0,
+      "cutoff": 7,
+      "inherited": false,
+      "evidence_path": null
+    },
+    {
+      "task_id": "Z-0001",
+      "side": "Z",
+      "logical_row_index": 1,
+      "cutoff": 7,
+      "inherited": false,
+      "evidence_path": null
+    }
+  ]
+}

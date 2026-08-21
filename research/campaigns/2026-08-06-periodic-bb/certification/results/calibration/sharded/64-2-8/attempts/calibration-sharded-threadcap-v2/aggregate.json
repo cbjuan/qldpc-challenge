@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "stage": "calibration-sharded-threadcap-v2",
+  "finished_at_utc": "2026-08-20T23:58:26.967649+00:00",
+  "candidate_key": "64-2-8",
+  "candidate_path": "codes/64-2-8.json",
+  "candidate_sha256": "d0ef8274aef5341d07d2c3547ed7180ef10ab7cd15dcc3b79f643c9f44261970",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "parameters": {
+    "n": 64,
+    "k": 2,
+    "d": 8,
+    "d_x_upper": 8,
+    "d_z_upper": 8
+  },
+  "aggregate_status": "apparent_exact_requires_serial_confirmation",
+  "sides": {
+    "X": {
+      "status": "exact",
+      "task_count": 2,
+      "counts": {
+        "proven_infeasible": 2,
+        "feasible_refutation": 0,
+        "unknown": 0,
+        "runner_error": 0,
+        "missing": 0
+      }
+    },
+    "Z": {
+      "status": "exact",
+      "task_count": 2,
+      "counts": {
+        "proven_infeasible": 2,
+        "feasible_refutation": 0,
+        "unknown": 0,
+        "runner_error": 0,
+        "missing": 0
+      }
+    }
+  },
+  "task_count": 4,
+  "task_wall_seconds_sum": 2.6742941071279347,
+  "task_cpu_seconds_sum": 2.6561804579999997,
+  "tasks": [
+    {
+      "task_id": "X-0000",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/calibration/sharded/64-2-8/attempts/calibration-sharded-threadcap-v2/tasks/X-0000.json",
+      "duration_seconds": 0.4834894009400159,
+      "process_cpu_seconds": 0.48048708399999995
+    },
+    {
+      "task_id": "X-0001",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/calibration/sharded/64-2-8/attempts/calibration-sharded-threadcap-v2/tasks/X-0001.json",
+      "duration_seconds": 0.5325477852020413,
+      "process_cpu_seconds": 0.5291608969999999
+    },
+    {
+      "task_id": "Z-0000",
+      "side": "Z",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/calibration/sharded/64-2-8/attempts/calibration-sharded-threadcap-v2/tasks/Z-0000.json",
+      "duration_seconds": 0.7826966298744082,
+      "process_cpu_seconds": 0.7772062009999998
+    },
+    {
+      "task_id": "Z-0001",
+      "side": "Z",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/calibration/sharded/64-2-8/attempts/calibration-sharded-threadcap-v2/tasks/Z-0001.json",
+      "duration_seconds": 0.8755602911114693,
+      "process_cpu_seconds": 0.8693262760000001
+    }
+  ]
+}

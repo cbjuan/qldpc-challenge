@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "candidate_key": "126-28-8",
+  "candidate_path": "codes/126-28-8.json",
+  "candidate_sha256": "883a6eb506a6bcc279a9bf5137ca46b4ff786bd4e542443a6aa8d07351a8d871",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "X-0018",
+  "side": "X",
+  "logical_row_index": 18,
+  "logical_generator_support": [
+    70,
+    71,
+    72,
+    73,
+    75,
+    78,
+    79,
+    81,
+    85,
+    86,
+    89,
+    92,
+    93,
+    94,
+    96,
+    98,
+    102,
+    103,
+    109,
+    113,
+    115,
+    116,
+    118,
+    120,
+    122,
+    125
+  ],
+  "cutoff": 7,
+  "time_limit_seconds": 120.0,
+  "seed": null,
+  "started_at_utc": "2026-08-20T23:54:26.724350+00:00",
+  "finished_at_utc": "2026-08-20T23:56:26.737990+00:00",
+  "duration_seconds": 120.01364092505537,
+  "process_cpu_seconds": 119.233960044,
+  "worker_pid": 33,
+  "memory_bytes": {
+    "before": {
+      "rss": 77500416,
+      "high_water": 77500416
+    },
+    "after": {
+      "rss": 140476416,
+      "high_water": 207835136
+    },
+    "ru_maxrss": 207835136
+  },
+  "status": "unknown",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "solver_options": {
+    "time_limit": 120.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 120.01171679492109
+    }
+  ],
+  "error": null
+}

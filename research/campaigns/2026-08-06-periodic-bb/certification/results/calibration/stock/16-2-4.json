@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "fixture": "16-2-4",
+  "started_at_utc": "2026-08-20T23:47:25.206312+00:00",
+  "duration_seconds": 0.49053391302004457,
+  "command": [
+    "/root/qldpc-challenge/.venv/bin/python",
+    "verify/certify.py",
+    "codes/16-2-4.json",
+    "--tlim",
+    "120"
+  ],
+  "candidate_sha256": "6e54b7775555735e4084fcabe32d74efe52c2aae9c54d11df6c050fc49757547",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "expected_certificate_sha256": "95ed5834a97c97d9cf979f49f31daf4342bfdad151f5154168e918beaeed3239",
+  "returncode": 0,
+  "stdout": "{\n  \"name\": \"[[16,2,4]] toric code\",\n  \"d\": 4,\n  \"solver\": \"scipy/HiGHS MILP\",\n  \"sides\": {\n    \"X\": {\n      \"value\": 4,\n      \"exact\": true,\n      \"note\": \"no logical < 4 exists\"\n    },\n    \"Z\": {\n      \"value\": 4,\n      \"exact\": true,\n      \"note\": \"no logical < 4 exists\"\n    }\n  },\n  \"d_exact\": true\n}\n",
+  "stderr": "",
+  "certifier_output": {
+    "name": "[[16,2,4]] toric code",
+    "d": 4,
+    "solver": "scipy/HiGHS MILP",
+    "sides": {
+      "X": {
+        "value": 4,
+        "exact": true,
+        "note": "no logical < 4 exists"
+      },
+      "Z": {
+        "value": 4,
+        "exact": true,
+        "note": "no logical < 4 exists"
+      }
+    },
+    "d_exact": true
+  },
+  "calibration_passed": true
+}

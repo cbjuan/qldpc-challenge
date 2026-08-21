@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "stage": "calibration-sharded-v1",
+  "started_at_utc": "2026-08-20T23:51:38.255106+00:00",
+  "candidate_key": "36-2-6",
+  "candidate_path": "codes/36-2-6.json",
+  "candidate_sha256": "5309551c679705a64d932341edb6eaba1dcd256963a91394f26fadca804f26ab",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "git_commit": "cef801d6c7204a6716dd6e4b9a9d915abb14d754",
+  "parameters": {
+    "n": 36,
+    "k": 2,
+    "d": 6,
+    "d_x_upper": 6,
+    "d_z_upper": 6
+  },
+  "matrix_sha256": {
+    "HX": "17792c4cc84ceee46c6dafe4bef5b418fd164d1a7f3a0c4dd892d03eb054ca28",
+    "HZ": "9838136b2bb0fda02e31c20ed0a262e3dcca6cf627f0a316e8d706b0ce850cd5"
+  },
+  "logical_basis_sha256": {
+    "X": "7801c3dd70b05455fb3ba1ed265f45d91f3ee0b1591d02696cae305c2e25869f",
+    "Z": "7801c3dd70b05455fb3ba1ed265f45d91f3ee0b1591d02696cae305c2e25869f"
+  },
+  "worker_limit": 32,
+  "task_time_limit_seconds": 120.0,
+  "thread_limits": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "expected_task_count": 4,
+  "new_task_count": 4,
+  "inherited_definitive_task_count": 0,
+  "tasks": [
+    {
+      "task_id": "X-0000",
+      "side": "X",
+      "logical_row_index": 0,
+      "cutoff": 5,
+      "inherited": false,
+      "evidence_path": null
+    },
+    {
+      "task_id": "X-0001",
+      "side": "X",
+      "logical_row_index": 1,
+      "cutoff": 5,
+      "inherited": false,
+      "evidence_path": null
+    },
+    {
+      "task_id": "Z-0000",
+      "side": "Z",
+      "logical_row_index": 0,
+      "cutoff": 5,
+      "inherited": false,
+      "evidence_path": null
+    },
+    {
+      "task_id": "Z-0001",
+      "side": "Z",
+      "logical_row_index": 1,
+      "cutoff": 5,
+      "inherited": false,
+      "evidence_path": null
+    }
+  ]
+}
