@@ -1,0 +1,103 @@
+{
+  "schema_version": 2,
+  "candidate_key": "c0020918",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0020918-56134fef19-60k-python8000-s1591394722-fast60000.json",
+  "candidate_sha256": "066d047f87f5c3adaae320955ddfc42238c8e4bfb70388e04aa172fc7e5c0a03",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508",
+  "runner_sha256": "a3ee133c53004306d25729729e85d009a0b905174e877836cdc591846bba6845",
+  "task_id": "Z-0025",
+  "side": "Z",
+  "logical_row_index": 25,
+  "check_matrix_sha256": "9543315364ac942fad33cb665fdcb851738f9bc236713a0d870bee27cfc1c437",
+  "logical_generator_sha256": "c11de2de27ccaae9acf8e127daa7b2dc68a57f4d02c482e7d3fd70d7dca0c5b7",
+  "logical_generator_support": [
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    221,
+    222,
+    223,
+    224,
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    231,
+    232,
+    233
+  ],
+  "cutoff": 6,
+  "time_limit_seconds": 120.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T12:01:20.035292+00:00",
+  "finished_at_utc": "2026-08-26T12:03:20.046318+00:00",
+  "duration_seconds": 120.01102526499926,
+  "process_cpu_seconds": 118.93887080600007,
+  "worker_pid": 175,
+  "memory_bytes": {
+    "before": {
+      "rss": 187916288,
+      "high_water": 433344512
+    },
+    "after": {
+      "rss": 233652224,
+      "high_water": 433344512
+    },
+    "ru_maxrss": 433344512
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "18d5730257b50fdb17881ae04c94e3af9e4c6501f69d2d9a36558f05248f9723",
+    "pivot_count": 104
+  },
+  "solver_options": {
+    "time_limit": 120.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 120.00951314899976
+    }
+  ],
+  "error": null
+}

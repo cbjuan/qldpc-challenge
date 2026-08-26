@@ -7,8 +7,8 @@
     "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
     "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508",
     "candidate_hashes_verified": 129,
-    "task_records_verified": 18026,
-    "canonical_logical_rows_verified": 18026,
+    "task_records_verified": 23218,
+    "canonical_logical_rows_verified": 23218,
     "refutation_indexes_verified": 22,
     "stock_serial_exact_records_verified": 18
   },
@@ -16,29 +16,31 @@
   "counts": {
     "exact": 12,
     "refuted": 5,
-    "sharded_closed_pending_serial": 0,
-    "timeout": 111,
+    "sharded_closed_pending_serial": 10,
+    "timeout": 101,
     "pending": 0
   },
-  "batch_wall_seconds": 4841.75532,
-  "batch_wall_seconds_reported_sum": 4841.755311127001,
-  "new_task_wall_seconds": 297105.019009617,
-  "new_task_cpu_seconds": 294186.05752918,
-  "solver_wall_seconds": 297105.019009617,
-  "solver_cpu_seconds": 294186.05752918,
-  "new_task_count": 18026,
-  "inherited_definitive_task_count": 3342,
+  "batch_wall_seconds": 13833.36417,
+  "batch_wall_seconds_reported_sum": 13833.364166470003,
+  "new_task_wall_seconds": 863640.567901529,
+  "new_task_cpu_seconds": 855008.157981561,
+  "solver_wall_seconds": 863640.567901529,
+  "solver_cpu_seconds": 855008.157981561,
+  "new_task_count": 23218,
+  "inherited_definitive_task_count": 8690,
   "orphan_new_task_count": 0,
   "orphan_new_task_wall_seconds": 0,
   "orphan_new_task_cpu_seconds": 0,
   "task_time_budgets_seconds": [
     5.0,
-    30.0
+    30.0,
+    120.0
   ],
   "batches": [
     "priority-t5-w32",
     "all-t5-w64",
-    "all-t30-w64"
+    "all-t30-w64",
+    "all-t120-w64"
   ],
   "batch_details": [
     {
@@ -85,6 +87,21 @@
       "new_task_cpu_seconds": 238522.70533858502,
       "reported_task_wall_seconds_sum": 240787.29022070303,
       "reported_task_cpu_seconds_sum": 238522.70533858502
+    },
+    {
+      "stage": "all-t120-w64",
+      "batch_result": "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/all-t120-w64.json",
+      "batch_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/all-t120-w64-start.json",
+      "candidate_count": 128,
+      "workers": 64,
+      "task_time_limit_seconds": 120.0,
+      "wall_seconds": 8991.608855343002,
+      "new_task_count": 5192,
+      "inherited_definitive_task_count": 5348,
+      "new_task_wall_seconds": 566535.548891912,
+      "new_task_cpu_seconds": 560822.1004523811,
+      "reported_task_wall_seconds_sum": 566535.548891912,
+      "reported_task_cpu_seconds_sum": 560822.1004523811
     }
   ],
   "orphan_incomplete_batch_starts": [],
@@ -121,6 +138,19 @@
       "solver_cpu_seconds": 8.502704108000017,
       "task_result_count": 104,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0000142/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0000142/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 104,
+          "new_task_count": 0,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 104,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0000142/attempts/all-t30-w64/run-start.json",
@@ -202,6 +232,19 @@
       "task_result_count": 72,
       "attempts": [
         {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0002359/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0002359/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 72,
+          "new_task_count": 0,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 72,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
+        {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0002359/attempts/all-t30-w64/run-start.json",
           "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0002359/attempts/all-t30-w64/aggregate.json",
@@ -281,6 +324,19 @@
       "solver_cpu_seconds": 151.43009468300008,
       "task_result_count": 456,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0004417/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0004417/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 456,
+          "new_task_count": 0,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 456,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0004417/attempts/all-t30-w64/run-start.json",
@@ -363,6 +419,19 @@
       "task_result_count": 53,
       "attempts": [
         {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0004584/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0004584/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 52,
+          "new_task_count": 0,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 52,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
+        {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0004584/attempts/all-t30-w64/run-start.json",
           "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0004584/attempts/all-t30-w64/aggregate.json",
@@ -435,6 +504,19 @@
       "solver_cpu_seconds": 58.61168873199998,
       "task_result_count": 156,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0006423/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0006423/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 156,
+          "new_task_count": 0,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 156,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0006423/attempts/all-t30-w64/run-start.json",
@@ -517,6 +599,19 @@
       "task_result_count": 81,
       "attempts": [
         {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0006625/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0006625/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 76,
+          "new_task_count": 0,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 76,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
+        {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0006625/attempts/all-t30-w64/run-start.json",
           "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0006625/attempts/all-t30-w64/aggregate.json",
@@ -565,14 +660,14 @@
       "d": 9,
       "status": "timeout",
       "side_status": {
-        "X": "timeout",
+        "X": "sharded_closed_pending_serial",
         "Z": "timeout"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 18,
-          "proven_infeasible_task_count": 12,
-          "all_persisted_proven_infeasible_task_count": 12,
+          "proven_infeasible_task_count": 18,
+          "all_persisted_proven_infeasible_task_count": 18,
           "persisted_refutation_count": 0
         },
         "Z": {
@@ -584,12 +679,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1083.9615233519994,
-      "solver_cpu_seconds": 1070.234626026,
-      "task_result_count": 72,
+      "solver_wall_seconds": 3449.899552808992,
+      "solver_cpu_seconds": 3413.0486717709996,
+      "task_result_count": 96,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0010524/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0010524/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 36,
+          "new_task_count": 24,
+          "persisted_new_task_count": 24,
+          "inherited_definitive_task_count": 12,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0010524/attempts/all-t30-w64/run-start.json",
@@ -656,6 +765,19 @@
       "solver_cpu_seconds": 452.8045037950001,
       "task_result_count": 196,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0011462/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0011462/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 180,
+          "new_task_count": 0,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 180,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0011462/attempts/all-t30-w64/run-start.json",
@@ -730,6 +852,19 @@
       "task_result_count": 224,
       "attempts": [
         {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0012783/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0012783/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 224,
+          "new_task_count": 0,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 224,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
+        {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0012783/attempts/all-t30-w64/run-start.json",
           "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0012783/attempts/all-t30-w64/aggregate.json",
@@ -785,31 +920,45 @@
       "d": 3,
       "status": "timeout",
       "side_status": {
-        "X": "timeout",
+        "X": "sharded_closed_pending_serial",
         "Z": "timeout"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 136,
-          "proven_infeasible_task_count": 122,
-          "all_persisted_proven_infeasible_task_count": 122,
+          "proven_infeasible_task_count": 136,
+          "all_persisted_proven_infeasible_task_count": 136,
           "persisted_refutation_count": 0
         },
         "Z": {
           "required_task_count": 136,
-          "proven_infeasible_task_count": 112,
-          "all_persisted_proven_infeasible_task_count": 112,
+          "proven_infeasible_task_count": 134,
+          "all_persisted_proven_infeasible_task_count": 134,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 4122.901397784993,
-      "solver_cpu_seconds": 4086.4224546180003,
-      "task_result_count": 444,
+      "solver_wall_seconds": 6265.558586675002,
+      "solver_cpu_seconds": 6207.740602173,
+      "task_result_count": 482,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0014474/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0014474/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 272,
+          "new_task_count": 38,
+          "persisted_new_task_count": 38,
+          "inherited_definitive_task_count": 234,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0014474/attempts/all-t30-w64/run-start.json",
@@ -877,6 +1026,19 @@
       "task_result_count": 208,
       "attempts": [
         {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0016039/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0016039/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 192,
+          "new_task_count": 0,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 192,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
+        {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0016039/attempts/all-t30-w64/run-start.json",
           "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0016039/attempts/all-t30-w64/aggregate.json",
@@ -923,10 +1085,10 @@
       "n": 208,
       "k": 26,
       "d": 6,
-      "status": "timeout",
+      "status": "sharded_closed_pending_serial",
       "side_status": {
         "X": "sharded_closed_pending_serial",
-        "Z": "timeout"
+        "Z": "sharded_closed_pending_serial"
       },
       "side_evidence": {
         "X": {
@@ -937,19 +1099,33 @@
         },
         "Z": {
           "required_task_count": 26,
-          "proven_infeasible_task_count": 13,
-          "all_persisted_proven_infeasible_task_count": 13,
+          "proven_infeasible_task_count": 26,
+          "all_persisted_proven_infeasible_task_count": 26,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 505.32459869300124,
-      "solver_cpu_seconds": 499.29790715700017,
-      "task_result_count": 65,
+      "solver_wall_seconds": 1017.0209727279996,
+      "solver_cpu_seconds": 1006.5074668250002,
+      "task_result_count": 78,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0016229/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0016229/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 52,
+          "new_task_count": 13,
+          "persisted_new_task_count": 13,
+          "inherited_definitive_task_count": 39,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0016229/attempts/all-t30-w64/run-start.json",
@@ -1017,6 +1193,19 @@
       "task_result_count": 224,
       "attempts": [
         {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0016394/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0016394/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 200,
+          "new_task_count": 0,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 200,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
+        {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0016394/attempts/all-t30-w64/run-start.json",
           "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0016394/attempts/all-t30-w64/aggregate.json",
@@ -1063,10 +1252,10 @@
       "n": 280,
       "k": 20,
       "d": 7,
-      "status": "timeout",
+      "status": "sharded_closed_pending_serial",
       "side_status": {
         "X": "sharded_closed_pending_serial",
-        "Z": "timeout"
+        "Z": "sharded_closed_pending_serial"
       },
       "side_evidence": {
         "X": {
@@ -1077,19 +1266,33 @@
         },
         "Z": {
           "required_task_count": 20,
-          "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 0,
+          "proven_infeasible_task_count": 20,
+          "all_persisted_proven_infeasible_task_count": 20,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 775.4204873460033,
-      "solver_cpu_seconds": 764.1371580099999,
-      "task_result_count": 64,
+      "solver_wall_seconds": 2422.423822479005,
+      "solver_cpu_seconds": 2393.25971812,
+      "task_result_count": 84,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0018628/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0018628/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 40,
+          "new_task_count": 20,
+          "persisted_new_task_count": 20,
+          "inherited_definitive_task_count": 20,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0018628/attempts/all-t30-w64/run-start.json",
@@ -1129,10 +1332,10 @@
       "n": 384,
       "k": 96,
       "d": 4,
-      "status": "timeout",
+      "status": "sharded_closed_pending_serial",
       "side_status": {
         "X": "sharded_closed_pending_serial",
-        "Z": "timeout"
+        "Z": "sharded_closed_pending_serial"
       },
       "side_evidence": {
         "X": {
@@ -1143,19 +1346,33 @@
         },
         "Z": {
           "required_task_count": 96,
-          "proven_infeasible_task_count": 90,
-          "all_persisted_proven_infeasible_task_count": 90,
+          "proven_infeasible_task_count": 96,
+          "all_persisted_proven_infeasible_task_count": 96,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1372.9466484080003,
-      "solver_cpu_seconds": 1352.4796851019994,
-      "task_result_count": 243,
+      "solver_wall_seconds": 1622.2003089090013,
+      "solver_cpu_seconds": 1598.4255229599994,
+      "task_result_count": 249,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019513/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019513/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 192,
+          "new_task_count": 6,
+          "persisted_new_task_count": 6,
+          "inherited_definitive_task_count": 186,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019513/attempts/all-t30-w64/run-start.json",
@@ -1222,6 +1439,19 @@
       "task_result_count": 124,
       "attempts": [
         {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 124,
+          "new_task_count": 0,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 124,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
+        {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t30-w64/run-start.json",
           "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t30-w64/aggregate.json",
@@ -1283,25 +1513,39 @@
       "side_evidence": {
         "X": {
           "required_task_count": 52,
-          "proven_infeasible_task_count": 7,
-          "all_persisted_proven_infeasible_task_count": 7,
+          "proven_infeasible_task_count": 40,
+          "all_persisted_proven_infeasible_task_count": 40,
           "persisted_refutation_count": 0
         },
         "Z": {
           "required_task_count": 52,
-          "proven_infeasible_task_count": 3,
-          "all_persisted_proven_infeasible_task_count": 3,
+          "proven_infeasible_task_count": 23,
+          "all_persisted_proven_infeasible_task_count": 23,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 3621.523103184003,
-      "solver_cpu_seconds": 3572.4563385730003,
-      "task_result_count": 208,
+      "solver_wall_seconds": 12246.984849773002,
+      "solver_cpu_seconds": 12091.050576549,
+      "task_result_count": 302,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020058/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020058/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 104,
+          "new_task_count": 94,
+          "persisted_new_task_count": 94,
+          "inherited_definitive_task_count": 10,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020058/attempts/all-t30-w64/run-start.json",
@@ -1349,25 +1593,39 @@
       "side_evidence": {
         "X": {
           "required_task_count": 48,
-          "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 0,
+          "proven_infeasible_task_count": 14,
+          "all_persisted_proven_infeasible_task_count": 14,
           "persisted_refutation_count": 0
         },
         "Z": {
           "required_task_count": 48,
-          "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 0,
+          "proven_infeasible_task_count": 15,
+          "all_persisted_proven_infeasible_task_count": 15,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 3372.7999724699985,
-      "solver_cpu_seconds": 3329.466376549,
-      "task_result_count": 192,
+      "solver_wall_seconds": 13935.850365429,
+      "solver_cpu_seconds": 13767.521938782,
+      "task_result_count": 288,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020118/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020118/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 96,
+          "new_task_count": 96,
+          "persisted_new_task_count": 96,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020118/attempts/all-t30-w64/run-start.json",
@@ -1421,19 +1679,33 @@
         },
         "Z": {
           "required_task_count": 20,
-          "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 0,
+          "proven_infeasible_task_count": 8,
+          "all_persisted_proven_infeasible_task_count": 8,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 922.127389121001,
-      "solver_cpu_seconds": 912.6917922910002,
-      "task_result_count": 88,
+      "solver_wall_seconds": 3108.8721430449978,
+      "solver_cpu_seconds": 3075.394994731,
+      "task_result_count": 108,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020168/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020168/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 40,
+          "new_task_count": 20,
+          "persisted_new_task_count": 20,
+          "inherited_definitive_task_count": 20,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020168/attempts/all-t30-w64/run-start.json",
@@ -1486,33 +1758,47 @@
       "n": 238,
       "k": 46,
       "d": 6,
-      "status": "timeout",
+      "status": "sharded_closed_pending_serial",
       "side_status": {
-        "X": "timeout",
-        "Z": "timeout"
+        "X": "sharded_closed_pending_serial",
+        "Z": "sharded_closed_pending_serial"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 46,
-          "proven_infeasible_task_count": 35,
-          "all_persisted_proven_infeasible_task_count": 35,
+          "proven_infeasible_task_count": 46,
+          "all_persisted_proven_infeasible_task_count": 46,
           "persisted_refutation_count": 0
         },
         "Z": {
           "required_task_count": 46,
-          "proven_infeasible_task_count": 32,
-          "all_persisted_proven_infeasible_task_count": 32,
+          "proven_infeasible_task_count": 46,
+          "all_persisted_proven_infeasible_task_count": 46,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2207.5281021660003,
-      "solver_cpu_seconds": 2181.077201559,
-      "task_result_count": 182,
+      "solver_wall_seconds": 3207.656297851002,
+      "solver_cpu_seconds": 3168.150719307,
+      "task_result_count": 207,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020198/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020198/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 92,
+          "new_task_count": 25,
+          "persisted_new_task_count": 25,
+          "inherited_definitive_task_count": 67,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020198/attempts/all-t30-w64/run-start.json",
@@ -1554,14 +1840,14 @@
       "d": 9,
       "status": "timeout",
       "side_status": {
-        "X": "timeout",
+        "X": "sharded_closed_pending_serial",
         "Z": "timeout"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 22,
-          "proven_infeasible_task_count": 15,
-          "all_persisted_proven_infeasible_task_count": 15,
+          "proven_infeasible_task_count": 22,
+          "all_persisted_proven_infeasible_task_count": 22,
           "persisted_refutation_count": 0
         },
         "Z": {
@@ -1573,12 +1859,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1574.9218380310035,
-      "solver_cpu_seconds": 1560.122308813,
-      "task_result_count": 128,
+      "solver_wall_seconds": 4496.545490537999,
+      "solver_cpu_seconds": 4450.19596465,
+      "task_result_count": 157,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020283/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020283/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 44,
+          "new_task_count": 29,
+          "persisted_new_task_count": 29,
+          "inherited_definitive_task_count": 15,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020283/attempts/all-t30-w64/run-start.json",
@@ -1631,33 +1931,47 @@
       "n": 252,
       "k": 48,
       "d": 6,
-      "status": "timeout",
+      "status": "sharded_closed_pending_serial",
       "side_status": {
-        "X": "timeout",
-        "Z": "timeout"
+        "X": "sharded_closed_pending_serial",
+        "Z": "sharded_closed_pending_serial"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 48,
-          "proven_infeasible_task_count": 40,
-          "all_persisted_proven_infeasible_task_count": 40,
+          "proven_infeasible_task_count": 48,
+          "all_persisted_proven_infeasible_task_count": 48,
           "persisted_refutation_count": 0
         },
         "Z": {
           "required_task_count": 48,
-          "proven_infeasible_task_count": 39,
-          "all_persisted_proven_infeasible_task_count": 39,
+          "proven_infeasible_task_count": 48,
+          "all_persisted_proven_infeasible_task_count": 48,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2217.375794663011,
-      "solver_cpu_seconds": 2187.264890887,
-      "task_result_count": 191,
+      "solver_wall_seconds": 3179.1147794900126,
+      "solver_cpu_seconds": 3136.942828346,
+      "task_result_count": 208,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020343/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020343/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 96,
+          "new_task_count": 17,
+          "persisted_new_task_count": 17,
+          "inherited_definitive_task_count": 79,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020343/attempts/all-t30-w64/run-start.json",
@@ -1699,31 +2013,45 @@
       "d": 7,
       "status": "timeout",
       "side_status": {
-        "X": "timeout",
+        "X": "sharded_closed_pending_serial",
         "Z": "timeout"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 30,
-          "proven_infeasible_task_count": 20,
-          "all_persisted_proven_infeasible_task_count": 20,
+          "proven_infeasible_task_count": 30,
+          "all_persisted_proven_infeasible_task_count": 30,
           "persisted_refutation_count": 0
         },
         "Z": {
           "required_task_count": 30,
-          "proven_infeasible_task_count": 1,
-          "all_persisted_proven_infeasible_task_count": 1,
+          "proven_infeasible_task_count": 15,
+          "all_persisted_proven_infeasible_task_count": 15,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1547.6087719789998,
-      "solver_cpu_seconds": 1526.701215445,
-      "task_result_count": 106,
+      "solver_wall_seconds": 5164.049986731994,
+      "solver_cpu_seconds": 5100.050319772001,
+      "task_result_count": 145,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020418/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020418/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 60,
+          "new_task_count": 39,
+          "persisted_new_task_count": 39,
+          "inherited_definitive_task_count": 21,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020418/attempts/all-t30-w64/run-start.json",
@@ -1763,10 +2091,10 @@
       "n": 240,
       "k": 30,
       "d": 6,
-      "status": "timeout",
+      "status": "sharded_closed_pending_serial",
       "side_status": {
         "X": "sharded_closed_pending_serial",
-        "Z": "timeout"
+        "Z": "sharded_closed_pending_serial"
       },
       "side_evidence": {
         "X": {
@@ -1777,19 +2105,33 @@
         },
         "Z": {
           "required_task_count": 30,
-          "proven_infeasible_task_count": 15,
-          "all_persisted_proven_infeasible_task_count": 15,
+          "proven_infeasible_task_count": 30,
+          "all_persisted_proven_infeasible_task_count": 30,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 590.2983775130008,
-      "solver_cpu_seconds": 582.2851469260002,
-      "task_result_count": 75,
+      "solver_wall_seconds": 1306.7097660839966,
+      "solver_cpu_seconds": 1289.316982407,
+      "task_result_count": 90,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020458/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020458/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 60,
+          "new_task_count": 15,
+          "persisted_new_task_count": 15,
+          "inherited_definitive_task_count": 45,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020458/attempts/all-t30-w64/run-start.json",
@@ -1829,10 +2171,10 @@
       "n": 224,
       "k": 44,
       "d": 6,
-      "status": "timeout",
+      "status": "sharded_closed_pending_serial",
       "side_status": {
         "X": "sharded_closed_pending_serial",
-        "Z": "timeout"
+        "Z": "sharded_closed_pending_serial"
       },
       "side_evidence": {
         "X": {
@@ -1843,19 +2185,33 @@
         },
         "Z": {
           "required_task_count": 44,
-          "proven_infeasible_task_count": 38,
-          "all_persisted_proven_infeasible_task_count": 38,
+          "proven_infeasible_task_count": 44,
+          "all_persisted_proven_infeasible_task_count": 44,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1627.7102443729973,
-      "solver_cpu_seconds": 1607.599800592,
-      "task_result_count": 172,
+      "solver_wall_seconds": 1911.386281353999,
+      "solver_cpu_seconds": 1887.681590907,
+      "task_result_count": 178,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020498/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020498/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 88,
+          "new_task_count": 6,
+          "persisted_new_task_count": 6,
+          "inherited_definitive_task_count": 82,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020498/attempts/all-t30-w64/run-start.json",
@@ -1923,6 +2279,19 @@
       "task_result_count": 65,
       "attempts": [
         {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020623/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020623/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 52,
+          "new_task_count": 0,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 52,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
+        {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020623/attempts/all-t30-w64/run-start.json",
           "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020623/attempts/all-t30-w64/aggregate.json",
@@ -1969,33 +2338,47 @@
       "n": 256,
       "k": 46,
       "d": 6,
-      "status": "timeout",
+      "status": "sharded_closed_pending_serial",
       "side_status": {
-        "X": "timeout",
-        "Z": "timeout"
+        "X": "sharded_closed_pending_serial",
+        "Z": "sharded_closed_pending_serial"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 46,
-          "proven_infeasible_task_count": 36,
-          "all_persisted_proven_infeasible_task_count": 36,
+          "proven_infeasible_task_count": 46,
+          "all_persisted_proven_infeasible_task_count": 46,
           "persisted_refutation_count": 0
         },
         "Z": {
           "required_task_count": 46,
-          "proven_infeasible_task_count": 21,
-          "all_persisted_proven_infeasible_task_count": 21,
+          "proven_infeasible_task_count": 46,
+          "all_persisted_proven_infeasible_task_count": 46,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2378.4933924570046,
-      "solver_cpu_seconds": 2341.183992086,
-      "task_result_count": 183,
+      "solver_wall_seconds": 4119.492153440009,
+      "solver_cpu_seconds": 4060.3034253999995,
+      "task_result_count": 218,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020718/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020718/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 92,
+          "new_task_count": 35,
+          "persisted_new_task_count": 35,
+          "inherited_definitive_task_count": 57,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020718/attempts/all-t30-w64/run-start.json",
@@ -2037,31 +2420,45 @@
       "d": 7,
       "status": "timeout",
       "side_status": {
-        "X": "timeout",
+        "X": "sharded_closed_pending_serial",
         "Z": "timeout"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 26,
-          "proven_infeasible_task_count": 19,
-          "all_persisted_proven_infeasible_task_count": 19,
+          "proven_infeasible_task_count": 26,
+          "all_persisted_proven_infeasible_task_count": 26,
           "persisted_refutation_count": 0
         },
         "Z": {
           "required_task_count": 26,
-          "proven_infeasible_task_count": 1,
-          "all_persisted_proven_infeasible_task_count": 1,
+          "proven_infeasible_task_count": 15,
+          "all_persisted_proven_infeasible_task_count": 15,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1331.423845259997,
-      "solver_cpu_seconds": 1312.6661463770001,
-      "task_result_count": 90,
+      "solver_wall_seconds": 3845.699935413994,
+      "solver_cpu_seconds": 3799.611902796,
+      "task_result_count": 122,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 52,
+          "new_task_count": 32,
+          "persisted_new_task_count": 32,
+          "inherited_definitive_task_count": 20,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t30-w64/run-start.json",
@@ -2101,33 +2498,47 @@
       "n": 266,
       "k": 50,
       "d": 6,
-      "status": "timeout",
+      "status": "sharded_closed_pending_serial",
       "side_status": {
-        "X": "timeout",
-        "Z": "timeout"
+        "X": "sharded_closed_pending_serial",
+        "Z": "sharded_closed_pending_serial"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 50,
-          "proven_infeasible_task_count": 43,
-          "all_persisted_proven_infeasible_task_count": 43,
+          "proven_infeasible_task_count": 50,
+          "all_persisted_proven_infeasible_task_count": 50,
           "persisted_refutation_count": 0
         },
         "Z": {
           "required_task_count": 50,
-          "proven_infeasible_task_count": 35,
-          "all_persisted_proven_infeasible_task_count": 35,
+          "proven_infeasible_task_count": 50,
+          "all_persisted_proven_infeasible_task_count": 50,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2085.2248055920018,
-      "solver_cpu_seconds": 2057.5075811930005,
-      "task_result_count": 194,
+      "solver_wall_seconds": 3189.9712226870006,
+      "solver_cpu_seconds": 3148.6169682340005,
+      "task_result_count": 216,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020978/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020978/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 100,
+          "new_task_count": 22,
+          "persisted_new_task_count": 22,
+          "inherited_definitive_task_count": 78,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020978/attempts/all-t30-w64/run-start.json",
@@ -2175,25 +2586,39 @@
       "side_evidence": {
         "X": {
           "required_task_count": 236,
-          "proven_infeasible_task_count": 37,
-          "all_persisted_proven_infeasible_task_count": 37,
+          "proven_infeasible_task_count": 189,
+          "all_persisted_proven_infeasible_task_count": 189,
           "persisted_refutation_count": 0
         },
         "Z": {
           "required_task_count": 236,
-          "proven_infeasible_task_count": 31,
-          "all_persisted_proven_infeasible_task_count": 31,
+          "proven_infeasible_task_count": 144,
+          "all_persisted_proven_infeasible_task_count": 144,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 16679.024615576,
-      "solver_cpu_seconds": 16521.292573665,
-      "task_result_count": 943,
+      "solver_wall_seconds": 50767.617792217,
+      "solver_cpu_seconds": 50311.74982192,
+      "task_result_count": 1347,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040000/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040000/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 472,
+          "new_task_count": 404,
+          "persisted_new_task_count": 404,
+          "inherited_definitive_task_count": 68,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040000/attempts/all-t30-w64/run-start.json",
@@ -2233,10 +2658,10 @@
       "n": 696,
       "k": 232,
       "d": 3,
-      "status": "timeout",
+      "status": "sharded_closed_pending_serial",
       "side_status": {
         "X": "sharded_closed_pending_serial",
-        "Z": "timeout"
+        "Z": "sharded_closed_pending_serial"
       },
       "side_evidence": {
         "X": {
@@ -2247,19 +2672,33 @@
         },
         "Z": {
           "required_task_count": 232,
-          "proven_infeasible_task_count": 224,
-          "all_persisted_proven_infeasible_task_count": 224,
+          "proven_infeasible_task_count": 232,
+          "all_persisted_proven_infeasible_task_count": 232,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 4319.351067669998,
-      "solver_cpu_seconds": 4263.837950816,
-      "task_result_count": 778,
+      "solver_wall_seconds": 4767.573497120992,
+      "solver_cpu_seconds": 4708.694013535,
+      "task_result_count": 786,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040001/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040001/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 464,
+          "new_task_count": 8,
+          "persisted_new_task_count": 8,
+          "inherited_definitive_task_count": 456,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040001/attempts/all-t30-w64/run-start.json",
@@ -2302,30 +2741,44 @@
       "status": "timeout",
       "side_status": {
         "X": "timeout",
-        "Z": "timeout"
+        "Z": "sharded_closed_pending_serial"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 236,
-          "proven_infeasible_task_count": 20,
-          "all_persisted_proven_infeasible_task_count": 20,
+          "proven_infeasible_task_count": 135,
+          "all_persisted_proven_infeasible_task_count": 135,
           "persisted_refutation_count": 0
         },
         "Z": {
           "required_task_count": 236,
-          "proven_infeasible_task_count": 229,
-          "all_persisted_proven_infeasible_task_count": 229,
+          "proven_infeasible_task_count": 236,
+          "all_persisted_proven_infeasible_task_count": 236,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 10447.461588218011,
-      "solver_cpu_seconds": 10336.009175988998,
-      "task_result_count": 769,
+      "solver_wall_seconds": 30818.00256397101,
+      "solver_cpu_seconds": 30524.562723218998,
+      "task_result_count": 992,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040002/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040002/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 472,
+          "new_task_count": 223,
+          "persisted_new_task_count": 223,
+          "inherited_definitive_task_count": 249,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040002/attempts/all-t30-w64/run-start.json",
@@ -2373,25 +2826,39 @@
       "side_evidence": {
         "X": {
           "required_task_count": 234,
-          "proven_infeasible_task_count": 101,
-          "all_persisted_proven_infeasible_task_count": 101,
+          "proven_infeasible_task_count": 180,
+          "all_persisted_proven_infeasible_task_count": 180,
           "persisted_refutation_count": 0
         },
         "Z": {
           "required_task_count": 234,
-          "proven_infeasible_task_count": 184,
-          "all_persisted_proven_infeasible_task_count": 184,
+          "proven_infeasible_task_count": 232,
+          "all_persisted_proven_infeasible_task_count": 232,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 11295.119210140007,
-      "solver_cpu_seconds": 11155.441430900999,
-      "task_result_count": 868,
+      "solver_wall_seconds": 26136.18773854,
+      "solver_cpu_seconds": 25859.843684983996,
+      "task_result_count": 1051,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040003/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040003/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 468,
+          "new_task_count": 183,
+          "persisted_new_task_count": 183,
+          "inherited_definitive_task_count": 285,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040003/attempts/all-t30-w64/run-start.json",
@@ -2439,25 +2906,39 @@
       "side_evidence": {
         "X": {
           "required_task_count": 228,
-          "proven_infeasible_task_count": 156,
-          "all_persisted_proven_infeasible_task_count": 156,
+          "proven_infeasible_task_count": 211,
+          "all_persisted_proven_infeasible_task_count": 211,
           "persisted_refutation_count": 0
         },
         "Z": {
           "required_task_count": 228,
-          "proven_infeasible_task_count": 104,
-          "all_persisted_proven_infeasible_task_count": 104,
+          "proven_infeasible_task_count": 186,
+          "all_persisted_proven_infeasible_task_count": 186,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 10995.268701452003,
-      "solver_cpu_seconds": 10879.243914802,
-      "task_result_count": 838,
+      "solver_wall_seconds": 26611.283465137003,
+      "solver_cpu_seconds": 26361.207832771,
+      "task_result_count": 1034,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040004/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040004/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 456,
+          "new_task_count": 196,
+          "persisted_new_task_count": 196,
+          "inherited_definitive_task_count": 260,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040004/attempts/all-t30-w64/run-start.json",
@@ -2518,12 +2999,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 7119.209684203004,
-      "solver_cpu_seconds": 7058.620218246003,
-      "task_result_count": 559,
+      "solver_wall_seconds": 28911.18204667501,
+      "solver_cpu_seconds": 28671.445033192005,
+      "task_result_count": 733,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040005/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040005/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 348,
+          "new_task_count": 174,
+          "persisted_new_task_count": 174,
+          "inherited_definitive_task_count": 174,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040005/attempts/all-t30-w64/run-start.json",
@@ -2577,19 +3072,33 @@
         },
         "Z": {
           "required_task_count": 172,
-          "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 0,
+          "proven_infeasible_task_count": 3,
+          "all_persisted_proven_infeasible_task_count": 3,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 6875.053019967997,
-      "solver_cpu_seconds": 6815.496696191,
-      "task_result_count": 541,
+      "solver_wall_seconds": 28405.83707326799,
+      "solver_cpu_seconds": 28160.646425762003,
+      "task_result_count": 713,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040006/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040006/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 344,
+          "new_task_count": 172,
+          "persisted_new_task_count": 172,
+          "inherited_definitive_task_count": 172,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040006/attempts/all-t30-w64/run-start.json",
@@ -2643,19 +3152,33 @@
         },
         "Z": {
           "required_task_count": 170,
-          "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 0,
+          "proven_infeasible_task_count": 1,
+          "all_persisted_proven_infeasible_task_count": 1,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 7125.269831746997,
-      "solver_cpu_seconds": 7054.084780819002,
-      "task_result_count": 549,
+      "solver_wall_seconds": 28448.224063946996,
+      "solver_cpu_seconds": 28203.940535757003,
+      "task_result_count": 719,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040007/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040007/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 340,
+          "new_task_count": 170,
+          "persisted_new_task_count": 170,
+          "inherited_definitive_task_count": 170,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040007/attempts/all-t30-w64/run-start.json",
@@ -2697,14 +3220,14 @@
       "d": 9,
       "status": "timeout",
       "side_status": {
-        "X": "timeout",
+        "X": "sharded_closed_pending_serial",
         "Z": "timeout"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 46,
-          "proven_infeasible_task_count": 23,
-          "all_persisted_proven_infeasible_task_count": 23,
+          "proven_infeasible_task_count": 46,
+          "all_persisted_proven_infeasible_task_count": 46,
           "persisted_refutation_count": 0
         },
         "Z": {
@@ -2716,12 +3239,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 3248.7949841420013,
-      "solver_cpu_seconds": 3209.912076022999,
-      "task_result_count": 184,
+      "solver_wall_seconds": 10586.866526759004,
+      "solver_cpu_seconds": 10484.519504096002,
+      "task_result_count": 253,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045014/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045014/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 92,
+          "new_task_count": 69,
+          "persisted_new_task_count": 69,
+          "inherited_definitive_task_count": 23,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045014/attempts/all-t30-w64/run-start.json",
@@ -2763,14 +3300,14 @@
       "d": 9,
       "status": "timeout",
       "side_status": {
-        "X": "timeout",
+        "X": "sharded_closed_pending_serial",
         "Z": "timeout"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 44,
-          "proven_infeasible_task_count": 22,
-          "all_persisted_proven_infeasible_task_count": 22,
+          "proven_infeasible_task_count": 44,
+          "all_persisted_proven_infeasible_task_count": 44,
           "persisted_refutation_count": 0
         },
         "Z": {
@@ -2782,12 +3319,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2827.7980402849994,
-      "solver_cpu_seconds": 2797.495487305001,
-      "task_result_count": 176,
+      "solver_wall_seconds": 9573.607538441007,
+      "solver_cpu_seconds": 9485.589836117999,
+      "task_result_count": 242,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045015/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045015/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 88,
+          "new_task_count": 66,
+          "persisted_new_task_count": 66,
+          "inherited_definitive_task_count": 22,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045015/attempts/all-t30-w64/run-start.json",
@@ -2829,14 +3380,14 @@
       "d": 9,
       "status": "timeout",
       "side_status": {
-        "X": "timeout",
+        "X": "sharded_closed_pending_serial",
         "Z": "timeout"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 40,
-          "proven_infeasible_task_count": 21,
-          "all_persisted_proven_infeasible_task_count": 21,
+          "proven_infeasible_task_count": 40,
+          "all_persisted_proven_infeasible_task_count": 40,
           "persisted_refutation_count": 0
         },
         "Z": {
@@ -2848,12 +3399,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 3059.7437046940017,
-      "solver_cpu_seconds": 3023.132084807001,
-      "task_result_count": 160,
+      "solver_wall_seconds": 9079.927258087992,
+      "solver_cpu_seconds": 8990.133765984998,
+      "task_result_count": 219,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045016/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045016/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 80,
+          "new_task_count": 59,
+          "persisted_new_task_count": 59,
+          "inherited_definitive_task_count": 21,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045016/attempts/all-t30-w64/run-start.json",
@@ -2895,14 +3460,14 @@
       "d": 9,
       "status": "timeout",
       "side_status": {
-        "X": "timeout",
+        "X": "sharded_closed_pending_serial",
         "Z": "timeout"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 38,
-          "proven_infeasible_task_count": 19,
-          "all_persisted_proven_infeasible_task_count": 19,
+          "proven_infeasible_task_count": 38,
+          "all_persisted_proven_infeasible_task_count": 38,
           "persisted_refutation_count": 0
         },
         "Z": {
@@ -2914,12 +3479,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2493.711267565996,
-      "solver_cpu_seconds": 2466.7448986889995,
-      "task_result_count": 152,
+      "solver_wall_seconds": 8281.920210556995,
+      "solver_cpu_seconds": 8200.297655757,
+      "task_result_count": 209,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045017/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045017/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 76,
+          "new_task_count": 57,
+          "persisted_new_task_count": 57,
+          "inherited_definitive_task_count": 19,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045017/attempts/all-t30-w64/run-start.json",
@@ -2973,19 +3552,33 @@
         },
         "Z": {
           "required_task_count": 72,
-          "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 0,
+          "proven_infeasible_task_count": 1,
+          "all_persisted_proven_infeasible_task_count": 1,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 5068.3027801499975,
-      "solver_cpu_seconds": 5017.297983433,
-      "task_result_count": 288,
+      "solver_wall_seconds": 22333.251195668996,
+      "solver_cpu_seconds": 22089.957927820004,
+      "task_result_count": 432,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045030/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045030/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 144,
+          "new_task_count": 144,
+          "persisted_new_task_count": 144,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045030/attempts/all-t30-w64/run-start.json",
@@ -3039,19 +3632,33 @@
         },
         "Z": {
           "required_task_count": 70,
-          "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 0,
+          "proven_infeasible_task_count": 3,
+          "all_persisted_proven_infeasible_task_count": 3,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 5072.796974658,
-      "solver_cpu_seconds": 5023.591851127002,
-      "task_result_count": 280,
+      "solver_wall_seconds": 21842.426586819987,
+      "solver_cpu_seconds": 21608.227419671002,
+      "task_result_count": 420,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045031/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045031/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 140,
+          "new_task_count": 140,
+          "persisted_new_task_count": 140,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045031/attempts/all-t30-w64/run-start.json",
@@ -3105,19 +3712,33 @@
         },
         "Z": {
           "required_task_count": 68,
-          "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 0,
+          "proven_infeasible_task_count": 7,
+          "all_persisted_proven_infeasible_task_count": 7,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 4895.321977486998,
-      "solver_cpu_seconds": 4842.742708045002,
-      "task_result_count": 272,
+      "solver_wall_seconds": 21172.619441263992,
+      "solver_cpu_seconds": 20938.724748285003,
+      "task_result_count": 408,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045032/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045032/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 136,
+          "new_task_count": 136,
+          "persisted_new_task_count": 136,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045032/attempts/all-t30-w64/run-start.json",
@@ -3165,25 +3786,39 @@
       "side_evidence": {
         "X": {
           "required_task_count": 66,
-          "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 0,
+          "proven_infeasible_task_count": 4,
+          "all_persisted_proven_infeasible_task_count": 4,
           "persisted_refutation_count": 0
         },
         "Z": {
           "required_task_count": 66,
-          "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 0,
+          "proven_infeasible_task_count": 5,
+          "all_persisted_proven_infeasible_task_count": 5,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 4639.634088406998,
-      "solver_cpu_seconds": 4590.660412398,
-      "task_result_count": 264,
+      "solver_wall_seconds": 20391.403670554013,
+      "solver_cpu_seconds": 20152.332511785007,
+      "task_result_count": 396,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045033/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045033/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 132,
+          "new_task_count": 132,
+          "persisted_new_task_count": 132,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045033/attempts/all-t30-w64/run-start.json",
@@ -3231,25 +3866,39 @@
       "side_evidence": {
         "X": {
           "required_task_count": 62,
-          "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 0,
+          "proven_infeasible_task_count": 6,
+          "all_persisted_proven_infeasible_task_count": 6,
           "persisted_refutation_count": 0
         },
         "Z": {
           "required_task_count": 62,
-          "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 0,
+          "proven_infeasible_task_count": 8,
+          "all_persisted_proven_infeasible_task_count": 8,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 4360.767909262997,
-      "solver_cpu_seconds": 4315.311924033999,
-      "task_result_count": 248,
+      "solver_wall_seconds": 19072.941973358982,
+      "solver_cpu_seconds": 18847.750027731003,
+      "task_result_count": 372,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045035/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045035/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 124,
+          "new_task_count": 124,
+          "persisted_new_task_count": 124,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045035/attempts/all-t30-w64/run-start.json",
@@ -3303,19 +3952,33 @@
         },
         "Z": {
           "required_task_count": 60,
-          "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 0,
+          "proven_infeasible_task_count": 14,
+          "all_persisted_proven_infeasible_task_count": 14,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 4224.321849113996,
-      "solver_cpu_seconds": 4182.722930817,
-      "task_result_count": 240,
+      "solver_wall_seconds": 18344.33615738999,
+      "solver_cpu_seconds": 18109.909711186992,
+      "task_result_count": 360,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045036/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045036/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 120,
+          "new_task_count": 120,
+          "persisted_new_task_count": 120,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045036/attempts/all-t30-w64/run-start.json",
@@ -3363,25 +4026,39 @@
       "side_evidence": {
         "X": {
           "required_task_count": 58,
-          "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 0,
+          "proven_infeasible_task_count": 1,
+          "all_persisted_proven_infeasible_task_count": 1,
           "persisted_refutation_count": 0
         },
         "Z": {
           "required_task_count": 58,
-          "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 0,
+          "proven_infeasible_task_count": 17,
+          "all_persisted_proven_infeasible_task_count": 17,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 4075.6468210610064,
-      "solver_cpu_seconds": 4031.639232875,
-      "task_result_count": 232,
+      "solver_wall_seconds": 17681.90766801502,
+      "solver_cpu_seconds": 17469.370819690008,
+      "task_result_count": 348,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045037/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045037/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 116,
+          "new_task_count": 116,
+          "persisted_new_task_count": 116,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045037/attempts/all-t30-w64/run-start.json",
@@ -3442,12 +4119,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 3055.303725702999,
-      "solver_cpu_seconds": 3025.9521468629996,
-      "task_result_count": 170,
+      "solver_wall_seconds": 9697.127627615975,
+      "solver_cpu_seconds": 9604.18768823,
+      "task_result_count": 220,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045041/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045041/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 100,
+          "new_task_count": 50,
+          "persisted_new_task_count": 50,
+          "inherited_definitive_task_count": 50,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045041/attempts/all-t30-w64/run-start.json",
@@ -3508,12 +4199,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2583.155957394,
-      "solver_cpu_seconds": 2560.2617366929994,
-      "task_result_count": 167,
+      "solver_wall_seconds": 8824.479041735001,
+      "solver_cpu_seconds": 8755.142723683997,
+      "task_result_count": 215,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045042/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045042/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 96,
+          "new_task_count": 48,
+          "persisted_new_task_count": 48,
+          "inherited_definitive_task_count": 48,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045042/attempts/all-t30-w64/run-start.json",
@@ -3574,12 +4279,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2561.0521982320015,
-      "solver_cpu_seconds": 2536.7003457729993,
-      "task_result_count": 158,
+      "solver_wall_seconds": 8481.356948234987,
+      "solver_cpu_seconds": 8410.390211044,
+      "task_result_count": 204,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045043/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045043/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 92,
+          "new_task_count": 46,
+          "persisted_new_task_count": 46,
+          "inherited_definitive_task_count": 46,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045043/attempts/all-t30-w64/run-start.json",
@@ -3640,12 +4359,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2017.4265600540016,
-      "solver_cpu_seconds": 1998.1963435679997,
-      "task_result_count": 147,
+      "solver_wall_seconds": 7642.324326709007,
+      "solver_cpu_seconds": 7570.209941924,
+      "task_result_count": 191,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045044/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045044/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 88,
+          "new_task_count": 44,
+          "persisted_new_task_count": 44,
+          "inherited_definitive_task_count": 44,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045044/attempts/all-t30-w64/run-start.json",
@@ -3706,12 +4439,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1790.0492674690056,
-      "solver_cpu_seconds": 1775.3819538909993,
-      "task_result_count": 138,
+      "solver_wall_seconds": 6808.788464436019,
+      "solver_cpu_seconds": 6734.277100857002,
+      "task_result_count": 178,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045046/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045046/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 80,
+          "new_task_count": 40,
+          "persisted_new_task_count": 40,
+          "inherited_definitive_task_count": 40,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045046/attempts/all-t30-w64/run-start.json",
@@ -3772,12 +4519,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1720.9026121380002,
-      "solver_cpu_seconds": 1703.6895707190004,
-      "task_result_count": 127,
+      "solver_wall_seconds": 6509.420843631992,
+      "solver_cpu_seconds": 6425.790223940001,
+      "task_result_count": 165,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045047/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045047/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 76,
+          "new_task_count": 38,
+          "persisted_new_task_count": 38,
+          "inherited_definitive_task_count": 38,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045047/attempts/all-t30-w64/run-start.json",
@@ -3838,12 +4599,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2138.4660283970024,
-      "solver_cpu_seconds": 2119.712523831,
-      "task_result_count": 125,
+      "solver_wall_seconds": 6585.85945827501,
+      "solver_cpu_seconds": 6512.158590136998,
+      "task_result_count": 161,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045048/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045048/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 72,
+          "new_task_count": 36,
+          "persisted_new_task_count": 36,
+          "inherited_definitive_task_count": 36,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045048/attempts/all-t30-w64/run-start.json",
@@ -3904,12 +4679,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1942.484821986996,
-      "solver_cpu_seconds": 1926.3745294919997,
-      "task_result_count": 117,
+      "solver_wall_seconds": 6104.160582007975,
+      "solver_cpu_seconds": 6033.154979689003,
+      "task_result_count": 151,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 68,
+          "new_task_count": 34,
+          "persisted_new_task_count": 34,
+          "inherited_definitive_task_count": 34,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t30-w64/run-start.json",
@@ -3951,14 +4740,14 @@
       "d": 9,
       "status": "timeout",
       "side_status": {
-        "X": "timeout",
+        "X": "sharded_closed_pending_serial",
         "Z": "timeout"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 36,
-          "proven_infeasible_task_count": 18,
-          "all_persisted_proven_infeasible_task_count": 18,
+          "proven_infeasible_task_count": 36,
+          "all_persisted_proven_infeasible_task_count": 36,
           "persisted_refutation_count": 0
         },
         "Z": {
@@ -3970,12 +4759,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2328.2824061280007,
-      "solver_cpu_seconds": 2302.198298350999,
-      "task_result_count": 144,
+      "solver_wall_seconds": 7730.2553511700135,
+      "solver_cpu_seconds": 7634.514461877002,
+      "task_result_count": 198,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045059/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045059/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 72,
+          "new_task_count": 54,
+          "persisted_new_task_count": 54,
+          "inherited_definitive_task_count": 18,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045059/attempts/all-t30-w64/run-start.json",
@@ -4017,14 +4820,14 @@
       "d": 9,
       "status": "timeout",
       "side_status": {
-        "X": "timeout",
+        "X": "sharded_closed_pending_serial",
         "Z": "timeout"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 34,
-          "proven_infeasible_task_count": 17,
-          "all_persisted_proven_infeasible_task_count": 17,
+          "proven_infeasible_task_count": 34,
+          "all_persisted_proven_infeasible_task_count": 34,
           "persisted_refutation_count": 0
         },
         "Z": {
@@ -4036,12 +4839,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2460.9350590919994,
-      "solver_cpu_seconds": 2436.27661336,
-      "task_result_count": 136,
+      "solver_wall_seconds": 7450.569066067022,
+      "solver_cpu_seconds": 7356.917539571999,
+      "task_result_count": 187,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045060/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045060/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 68,
+          "new_task_count": 51,
+          "persisted_new_task_count": 51,
+          "inherited_definitive_task_count": 17,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045060/attempts/all-t30-w64/run-start.json",
@@ -4083,14 +4900,14 @@
       "d": 9,
       "status": "timeout",
       "side_status": {
-        "X": "timeout",
+        "X": "sharded_closed_pending_serial",
         "Z": "timeout"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 32,
-          "proven_infeasible_task_count": 16,
-          "all_persisted_proven_infeasible_task_count": 16,
+          "proven_infeasible_task_count": 32,
+          "all_persisted_proven_infeasible_task_count": 32,
           "persisted_refutation_count": 0
         },
         "Z": {
@@ -4102,12 +4919,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2212.8943862450096,
-      "solver_cpu_seconds": 2190.5677133940026,
-      "task_result_count": 128,
+      "solver_wall_seconds": 6917.09280827903,
+      "solver_cpu_seconds": 6828.881752916002,
+      "task_result_count": 176,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045061/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045061/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 64,
+          "new_task_count": 48,
+          "persisted_new_task_count": 48,
+          "inherited_definitive_task_count": 16,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045061/attempts/all-t30-w64/run-start.json",
@@ -4149,31 +4980,45 @@
       "d": 9,
       "status": "timeout",
       "side_status": {
-        "X": "timeout",
+        "X": "sharded_closed_pending_serial",
         "Z": "timeout"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 30,
-          "proven_infeasible_task_count": 16,
-          "all_persisted_proven_infeasible_task_count": 16,
+          "proven_infeasible_task_count": 30,
+          "all_persisted_proven_infeasible_task_count": 30,
           "persisted_refutation_count": 0
         },
         "Z": {
           "required_task_count": 30,
-          "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 0,
+          "proven_infeasible_task_count": 2,
+          "all_persisted_proven_infeasible_task_count": 2,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1997.3998512149851,
-      "solver_cpu_seconds": 1978.8749366670022,
-      "task_result_count": 120,
+      "solver_wall_seconds": 6195.636949893982,
+      "solver_cpu_seconds": 6112.702671611002,
+      "task_result_count": 164,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045062/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045062/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 60,
+          "new_task_count": 44,
+          "persisted_new_task_count": 44,
+          "inherited_definitive_task_count": 16,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045062/attempts/all-t30-w64/run-start.json",
@@ -4215,14 +5060,14 @@
       "d": 9,
       "status": "timeout",
       "side_status": {
-        "X": "timeout",
+        "X": "sharded_closed_pending_serial",
         "Z": "timeout"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 26,
-          "proven_infeasible_task_count": 14,
-          "all_persisted_proven_infeasible_task_count": 14,
+          "proven_infeasible_task_count": 26,
+          "all_persisted_proven_infeasible_task_count": 26,
           "persisted_refutation_count": 0
         },
         "Z": {
@@ -4234,12 +5079,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1675.9918578130073,
-      "solver_cpu_seconds": 1658.091571937,
-      "task_result_count": 104,
+      "solver_wall_seconds": 5281.253744995009,
+      "solver_cpu_seconds": 5210.320433645,
+      "task_result_count": 142,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045064/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045064/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 52,
+          "new_task_count": 38,
+          "persisted_new_task_count": 38,
+          "inherited_definitive_task_count": 14,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045064/attempts/all-t30-w64/run-start.json",
@@ -4300,12 +5159,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1882.5891013249975,
-      "solver_cpu_seconds": 1863.3160418740003,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3850.116334952997,
+      "solver_cpu_seconds": 3807.639090426001,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045088/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045088/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045088/attempts/all-t30-w64/run-start.json",
@@ -4366,12 +5239,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1722.2890926529963,
-      "solver_cpu_seconds": 1706.8941341110005,
-      "task_result_count": 48,
+      "solver_wall_seconds": 4731.793991522996,
+      "solver_cpu_seconds": 4680.9586901640005,
+      "task_result_count": 72,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045091/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045091/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 24,
+          "new_task_count": 24,
+          "persisted_new_task_count": 24,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045091/attempts/all-t30-w64/run-start.json",
@@ -4432,12 +5319,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1568.2957169860006,
-      "solver_cpu_seconds": 1553.2350263769986,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3580.4333140530057,
+      "solver_cpu_seconds": 3543.152064957001,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045094/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045094/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045094/attempts/all-t30-w64/run-start.json",
@@ -4485,8 +5386,8 @@
       "side_evidence": {
         "X": {
           "required_task_count": 24,
-          "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 0,
+          "proven_infeasible_task_count": 7,
+          "all_persisted_proven_infeasible_task_count": 7,
           "persisted_refutation_count": 0
         },
         "Z": {
@@ -4498,12 +5399,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1778.6677781209933,
-      "solver_cpu_seconds": 1759.5077798320003,
-      "task_result_count": 96,
+      "solver_wall_seconds": 7433.472787798981,
+      "solver_cpu_seconds": 7326.003214910004,
+      "task_result_count": 144,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045107/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045107/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 48,
+          "new_task_count": 48,
+          "persisted_new_task_count": 48,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045107/attempts/all-t30-w64/run-start.json",
@@ -4564,12 +5479,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1938.1274883500034,
-      "solver_cpu_seconds": 1915.61003559,
-      "task_result_count": 144,
+      "solver_wall_seconds": 7704.274214559008,
+      "solver_cpu_seconds": 7618.462437528,
+      "task_result_count": 192,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045113/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045113/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 48,
+          "new_task_count": 48,
+          "persisted_new_task_count": 48,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045113/attempts/all-t30-w64/run-start.json",
@@ -4643,12 +5572,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1796.9093336889987,
-      "solver_cpu_seconds": 1777.757738675999,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3734.5816900899977,
+      "solver_cpu_seconds": 3687.420508988,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045118/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045118/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045118/attempts/all-t30-w64/run-start.json",
@@ -4709,12 +5652,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 800.3669163329996,
-      "solver_cpu_seconds": 793.3324494420002,
-      "task_result_count": 16,
+      "solver_wall_seconds": 1764.4806271519974,
+      "solver_cpu_seconds": 1743.6996211230007,
+      "task_result_count": 24,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045244/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045244/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 8,
+          "new_task_count": 8,
+          "persisted_new_task_count": 8,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045244/attempts/all-t30-w64/run-start.json",
@@ -4775,12 +5732,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 966.9518293090036,
-      "solver_cpu_seconds": 956.8043243680002,
-      "task_result_count": 32,
+      "solver_wall_seconds": 2888.5713330789945,
+      "solver_cpu_seconds": 2853.2192695269996,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045426/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045426/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045426/attempts/all-t30-w64/run-start.json",
@@ -4841,12 +5812,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 861.4548001499975,
-      "solver_cpu_seconds": 852.819851557001,
-      "task_result_count": 16,
+      "solver_wall_seconds": 1875.0482882899964,
+      "solver_cpu_seconds": 1856.9943286060025,
+      "task_result_count": 24,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045508/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045508/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 8,
+          "new_task_count": 8,
+          "persisted_new_task_count": 8,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045508/attempts/all-t30-w64/run-start.json",
@@ -4894,25 +5879,39 @@
       "side_evidence": {
         "X": {
           "required_task_count": 56,
-          "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 0,
+          "proven_infeasible_task_count": 24,
+          "all_persisted_proven_infeasible_task_count": 24,
           "persisted_refutation_count": 0
         },
         "Z": {
           "required_task_count": 56,
-          "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 0,
+          "proven_infeasible_task_count": 23,
+          "all_persisted_proven_infeasible_task_count": 23,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 3967.577711034995,
-      "solver_cpu_seconds": 3912.149048195004,
-      "task_result_count": 224,
+      "solver_wall_seconds": 16073.65308647899,
+      "solver_cpu_seconds": 15875.365451631997,
+      "task_result_count": 336,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045591/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045591/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 112,
+          "new_task_count": 112,
+          "persisted_new_task_count": 112,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045591/attempts/all-t30-w64/run-start.json",
@@ -4954,14 +5953,14 @@
       "d": 8,
       "status": "timeout",
       "side_status": {
-        "X": "timeout",
+        "X": "sharded_closed_pending_serial",
         "Z": "timeout"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 46,
-          "proven_infeasible_task_count": 39,
-          "all_persisted_proven_infeasible_task_count": 39,
+          "proven_infeasible_task_count": 46,
+          "all_persisted_proven_infeasible_task_count": 46,
           "persisted_refutation_count": 0
         },
         "Z": {
@@ -4973,12 +5972,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2830.4064037150038,
-      "solver_cpu_seconds": 2800.8385160410007,
-      "task_result_count": 182,
+      "solver_wall_seconds": 8853.715734017007,
+      "solver_cpu_seconds": 8764.574600228007,
+      "task_result_count": 235,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0046163/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0046163/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 92,
+          "new_task_count": 53,
+          "persisted_new_task_count": 53,
+          "inherited_definitive_task_count": 39,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0046163/attempts/all-t30-w64/run-start.json",
@@ -5039,12 +6052,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2189.0821366270034,
-      "solver_cpu_seconds": 2159.4829544780005,
-      "task_result_count": 171,
+      "solver_wall_seconds": 7738.931896438022,
+      "solver_cpu_seconds": 7660.963455084003,
+      "task_result_count": 215,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0046164/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0046164/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 88,
+          "new_task_count": 44,
+          "persisted_new_task_count": 44,
+          "inherited_definitive_task_count": 44,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0046164/attempts/all-t30-w64/run-start.json",
@@ -5105,12 +6132,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1158.3619421920025,
-      "solver_cpu_seconds": 1147.4823398849994,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3235.8467796080054,
+      "solver_cpu_seconds": 3205.7181442110013,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0046282/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0046282/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0046282/attempts/all-t30-w64/run-start.json",
@@ -5171,12 +6212,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 729.3721049420033,
-      "solver_cpu_seconds": 723.2904976840001,
-      "task_result_count": 16,
+      "solver_wall_seconds": 1730.6236483870066,
+      "solver_cpu_seconds": 1715.8632303490003,
+      "task_result_count": 24,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0046378/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0046378/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 8,
+          "new_task_count": 8,
+          "persisted_new_task_count": 8,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0046378/attempts/all-t30-w64/run-start.json",
@@ -5218,14 +6273,14 @@
       "d": 8,
       "status": "timeout",
       "side_status": {
-        "X": "timeout",
+        "X": "sharded_closed_pending_serial",
         "Z": "timeout"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 38,
-          "proven_infeasible_task_count": 34,
-          "all_persisted_proven_infeasible_task_count": 34,
+          "proven_infeasible_task_count": 38,
+          "all_persisted_proven_infeasible_task_count": 38,
           "persisted_refutation_count": 0
         },
         "Z": {
@@ -5237,12 +6292,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2338.7700382909857,
-      "solver_cpu_seconds": 2313.9254429889966,
-      "task_result_count": 151,
+      "solver_wall_seconds": 7279.406702024986,
+      "solver_cpu_seconds": 7212.057228872996,
+      "task_result_count": 193,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0046587/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0046587/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 76,
+          "new_task_count": 42,
+          "persisted_new_task_count": 42,
+          "inherited_definitive_task_count": 34,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0046587/attempts/all-t30-w64/run-start.json",
@@ -5303,12 +6372,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1974.9406236499985,
-      "solver_cpu_seconds": 1958.6412864570013,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3943.3383799350036,
+      "solver_cpu_seconds": 3912.0923403710003,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0046841/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0046841/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0046841/attempts/all-t30-w64/run-start.json",
@@ -5369,12 +6452,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2202.3008913619965,
-      "solver_cpu_seconds": 2184.62709821,
-      "task_result_count": 56,
+      "solver_wall_seconds": 5955.702780779997,
+      "solver_cpu_seconds": 5908.4590937420035,
+      "task_result_count": 84,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0047091/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0047091/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 28,
+          "new_task_count": 28,
+          "persisted_new_task_count": 28,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0047091/attempts/all-t30-w64/run-start.json",
@@ -5435,12 +6532,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1239.0662646109986,
-      "solver_cpu_seconds": 1229.3228555890014,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3182.0399843730074,
+      "solver_cpu_seconds": 3156.934263486002,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0047122/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0047122/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0047122/attempts/all-t30-w64/run-start.json",
@@ -5501,12 +6612,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1886.1059576570033,
-      "solver_cpu_seconds": 1871.776474343,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3829.5367750860014,
+      "solver_cpu_seconds": 3801.1320166669966,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0048101/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0048101/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0048101/attempts/all-t30-w64/run-start.json",
@@ -5567,12 +6692,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1835.9181834470005,
-      "solver_cpu_seconds": 1820.277715936,
-      "task_result_count": 36,
+      "solver_wall_seconds": 3576.053826803002,
+      "solver_cpu_seconds": 3545.007292673,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0048487/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0048487/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 12,
+          "new_task_count": 12,
+          "persisted_new_task_count": 12,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0048487/attempts/all-t30-w64/run-start.json",
@@ -5646,12 +6785,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1457.910576819998,
-      "solver_cpu_seconds": 1448.626007785,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3499.468243911003,
+      "solver_cpu_seconds": 3474.883850766001,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0048911/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0048911/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0048911/attempts/all-t30-w64/run-start.json",
@@ -5712,12 +6865,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 801.1758396399995,
-      "solver_cpu_seconds": 793.331214348,
-      "task_result_count": 20,
+      "solver_wall_seconds": 1543.7726962019983,
+      "solver_cpu_seconds": 1530.381796085,
+      "task_result_count": 26,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049220/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049220/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 8,
+          "new_task_count": 6,
+          "persisted_new_task_count": 6,
+          "inherited_definitive_task_count": 2,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049220/attempts/all-t30-w64/run-start.json",
@@ -5819,12 +6986,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1783.6003070080046,
-      "solver_cpu_seconds": 1769.1441989980003,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3799.234462921006,
+      "solver_cpu_seconds": 3770.2071589059997,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049291/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049291/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049291/attempts/all-t30-w64/run-start.json",
@@ -5885,12 +7066,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1139.3122202620043,
-      "solver_cpu_seconds": 1129.5200703449998,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3105.7152973110033,
+      "solver_cpu_seconds": 3079.410213635,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049482/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049482/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049482/attempts/all-t30-w64/run-start.json",
@@ -5951,12 +7146,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1841.6534805330025,
-      "solver_cpu_seconds": 1825.668746946,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3823.6963233900037,
+      "solver_cpu_seconds": 3791.768119108998,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049503/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049503/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049503/attempts/all-t30-w64/run-start.json",
@@ -6017,12 +7226,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1092.1125956009992,
-      "solver_cpu_seconds": 1083.3988747599997,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3136.2062952159968,
+      "solver_cpu_seconds": 3111.9920571650027,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049506/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049506/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049506/attempts/all-t30-w64/run-start.json",
@@ -6083,12 +7306,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1580.952004859998,
-      "solver_cpu_seconds": 1567.8825919350013,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3632.042373572999,
+      "solver_cpu_seconds": 3601.915841644999,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049780/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049780/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049780/attempts/all-t30-w64/run-start.json",
@@ -6149,12 +7386,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1318.5230448919988,
-      "solver_cpu_seconds": 1307.6431305330013,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3418.578476122007,
+      "solver_cpu_seconds": 3392.1369929229995,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049795/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049795/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049795/attempts/all-t30-w64/run-start.json",
@@ -6215,12 +7466,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1636.2796281619999,
-      "solver_cpu_seconds": 1625.0684806679988,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3714.7107509080056,
+      "solver_cpu_seconds": 3687.1323476740004,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049803/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049803/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049803/attempts/all-t30-w64/run-start.json",
@@ -6281,12 +7546,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1212.8225051439968,
-      "solver_cpu_seconds": 1203.334547039,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3154.9017477309953,
+      "solver_cpu_seconds": 3129.9267942149986,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049926/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049926/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049926/attempts/all-t30-w64/run-start.json",
@@ -6347,12 +7626,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1823.856476807005,
-      "solver_cpu_seconds": 1805.4183370070004,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3769.1367841149936,
+      "solver_cpu_seconds": 3735.8263714739996,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050011/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050011/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050011/attempts/all-t30-w64/run-start.json",
@@ -6413,12 +7706,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1578.4632433749998,
-      "solver_cpu_seconds": 1565.9048579560003,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3591.413269016992,
+      "solver_cpu_seconds": 3562.008196738,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050071/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050071/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050071/attempts/all-t30-w64/run-start.json",
@@ -6479,12 +7786,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1265.0102151079918,
-      "solver_cpu_seconds": 1255.3722028920008,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3323.4662268639913,
+      "solver_cpu_seconds": 3295.1234116330006,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050292/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050292/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050292/attempts/all-t30-w64/run-start.json",
@@ -6545,12 +7866,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1043.6077117759964,
-      "solver_cpu_seconds": 1035.8376037620005,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3088.5363346399904,
+      "solver_cpu_seconds": 3060.1116989840034,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050526/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050526/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050526/attempts/all-t30-w64/run-start.json",
@@ -6611,12 +7946,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1924.0996307930022,
-      "solver_cpu_seconds": 1906.5201605470002,
-      "task_result_count": 48,
+      "solver_wall_seconds": 3967.801097604001,
+      "solver_cpu_seconds": 3932.824721413,
+      "task_result_count": 64,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050584/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050584/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050584/attempts/all-t30-w64/run-start.json",
@@ -6690,12 +8039,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2205.6499610859955,
-      "solver_cpu_seconds": 2189.489824803002,
-      "task_result_count": 64,
+      "solver_wall_seconds": 6222.759201974006,
+      "solver_cpu_seconds": 6165.4893280060005,
+      "task_result_count": 96,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050641/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050641/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 32,
+          "new_task_count": 32,
+          "persisted_new_task_count": 32,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050641/attempts/all-t30-w64/run-start.json",
@@ -6756,12 +8119,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1284.5224241220012,
-      "solver_cpu_seconds": 1275.206708207999,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3241.377627908004,
+      "solver_cpu_seconds": 3213.0134206539997,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050670/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050670/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050670/attempts/all-t30-w64/run-start.json",
@@ -6822,12 +8199,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1279.981403023999,
-      "solver_cpu_seconds": 1270.640108389999,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3271.5083430229947,
+      "solver_cpu_seconds": 3244.4644497590025,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050719/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050719/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0050719/attempts/all-t30-w64/run-start.json",
@@ -6888,12 +8279,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1767.0878381279963,
-      "solver_cpu_seconds": 1754.7543723659996,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3783.5028048599943,
+      "solver_cpu_seconds": 3754.4443847889993,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0051753/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0051753/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0051753/attempts/all-t30-w64/run-start.json",
@@ -6954,12 +8359,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 993.50718095,
-      "solver_cpu_seconds": 986.4588557980002,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3071.9196943810052,
+      "solver_cpu_seconds": 3046.9475568860003,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0051763/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0051763/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0051763/attempts/all-t30-w64/run-start.json",
@@ -7020,12 +8439,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 927.0710055189993,
-      "solver_cpu_seconds": 920.214916807,
-      "task_result_count": 16,
+      "solver_wall_seconds": 1894.7198826649947,
+      "solver_cpu_seconds": 1878.3423259950014,
+      "task_result_count": 24,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0051880/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0051880/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 8,
+          "new_task_count": 8,
+          "persisted_new_task_count": 8,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0051880/attempts/all-t30-w64/run-start.json",
@@ -7086,12 +8519,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1666.9564750400004,
-      "solver_cpu_seconds": 1652.8293906559998,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3692.8761404419984,
+      "solver_cpu_seconds": 3662.4741978680026,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0051899/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0051899/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0051899/attempts/all-t30-w64/run-start.json",
@@ -7152,12 +8599,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1701.5464170220025,
-      "solver_cpu_seconds": 1688.7622953379994,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3673.925691158,
+      "solver_cpu_seconds": 3641.6354412830015,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0052765/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0052765/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0052765/attempts/all-t30-w64/run-start.json",
@@ -7218,12 +8679,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2226.291765316003,
-      "solver_cpu_seconds": 2207.2089138660012,
-      "task_result_count": 64,
+      "solver_wall_seconds": 6144.103113084998,
+      "solver_cpu_seconds": 6079.88426737,
+      "task_result_count": 96,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0052988/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0052988/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 32,
+          "new_task_count": 32,
+          "persisted_new_task_count": 32,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0052988/attempts/all-t30-w64/run-start.json",
@@ -7284,12 +8759,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 953.1980122150044,
-      "solver_cpu_seconds": 944.1565869499997,
-      "task_result_count": 21,
+      "solver_wall_seconds": 2046.774555412011,
+      "solver_cpu_seconds": 2023.877029380997,
+      "task_result_count": 30,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0054814/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0054814/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 12,
+          "new_task_count": 9,
+          "persisted_new_task_count": 9,
+          "inherited_definitive_task_count": 3,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0054814/attempts/all-t30-w64/run-start.json",
@@ -7391,12 +8880,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1833.9921446859971,
-      "solver_cpu_seconds": 1821.4988644110003,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3827.504360741992,
+      "solver_cpu_seconds": 3794.6081349630017,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0054828/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0054828/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0054828/attempts/all-t30-w64/run-start.json",
@@ -7457,12 +8960,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1755.6479853110018,
-      "solver_cpu_seconds": 1741.4216434090004,
-      "task_result_count": 24,
+      "solver_wall_seconds": 3457.135655797995,
+      "solver_cpu_seconds": 3424.1445143439987,
+      "task_result_count": 36,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0054859/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0054859/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 12,
+          "new_task_count": 12,
+          "persisted_new_task_count": 12,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0054859/attempts/all-t30-w64/run-start.json",
@@ -7523,12 +9040,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1612.2505665839972,
-      "solver_cpu_seconds": 1598.7345030210006,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3906.998096251985,
+      "solver_cpu_seconds": 3870.969751223004,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0054911/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0054911/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0054911/attempts/all-t30-w64/run-start.json",
@@ -7589,12 +9120,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1773.3274990329983,
-      "solver_cpu_seconds": 1758.535604002001,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3866.841894603992,
+      "solver_cpu_seconds": 3830.077900116004,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0055020/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0055020/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0055020/attempts/all-t30-w64/run-start.json",
@@ -7655,12 +9200,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 840.420136480996,
-      "solver_cpu_seconds": 834.2811078370003,
-      "task_result_count": 16,
+      "solver_wall_seconds": 1867.459209959994,
+      "solver_cpu_seconds": 1854.1480209809986,
+      "task_result_count": 24,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0055406/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0055406/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 8,
+          "new_task_count": 8,
+          "persisted_new_task_count": 8,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0055406/attempts/all-t30-w64/run-start.json",
@@ -7721,12 +9280,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2903.4728742160014,
-      "solver_cpu_seconds": 2883.880041984,
-      "task_result_count": 72,
+      "solver_wall_seconds": 5913.075671243006,
+      "solver_cpu_seconds": 5864.716176916,
+      "task_result_count": 96,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0056213/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0056213/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 24,
+          "new_task_count": 24,
+          "persisted_new_task_count": 24,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0056213/attempts/all-t30-w64/run-start.json",
@@ -7800,12 +9373,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1209.9767469570002,
-      "solver_cpu_seconds": 1200.2625169029998,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3217.9820528030036,
+      "solver_cpu_seconds": 3191.093562189999,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0056263/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0056263/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0056263/attempts/all-t30-w64/run-start.json",
@@ -7866,12 +9453,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2245.218730563994,
-      "solver_cpu_seconds": 2228.1193009479985,
-      "task_result_count": 42,
+      "solver_wall_seconds": 4462.207389786994,
+      "solver_cpu_seconds": 4428.414488635003,
+      "task_result_count": 60,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0056884/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0056884/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 24,
+          "new_task_count": 18,
+          "persisted_new_task_count": 18,
+          "inherited_definitive_task_count": 6,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0056884/attempts/all-t30-w64/run-start.json",
@@ -8012,12 +9613,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2466.0102154989977,
-      "solver_cpu_seconds": 2448.5507833909987,
-      "task_result_count": 42,
+      "solver_wall_seconds": 4876.121778178003,
+      "solver_cpu_seconds": 4839.942761920997,
+      "task_result_count": 60,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0057634/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0057634/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 24,
+          "new_task_count": 18,
+          "persisted_new_task_count": 18,
+          "inherited_definitive_task_count": 6,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0057634/attempts/all-t30-w64/run-start.json",
@@ -8158,12 +9773,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1015.5877745489965,
-      "solver_cpu_seconds": 1005.8494968599999,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3084.816497674998,
+      "solver_cpu_seconds": 3057.964741245997,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0057792/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0057792/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0057792/attempts/all-t30-w64/run-start.json",
@@ -8224,12 +9853,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1789.1456906159997,
-      "solver_cpu_seconds": 1774.5083649999997,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3734.567255031999,
+      "solver_cpu_seconds": 3702.8476484799958,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0058472/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0058472/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0058472/attempts/all-t30-w64/run-start.json",
@@ -8290,12 +9933,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 4257.985249013001,
-      "solver_cpu_seconds": 4230.118680527,
-      "task_result_count": 108,
+      "solver_wall_seconds": 8892.791570907006,
+      "solver_cpu_seconds": 8821.735983806,
+      "task_result_count": 144,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0058579/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0058579/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 36,
+          "new_task_count": 36,
+          "persisted_new_task_count": 36,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0058579/attempts/all-t30-w64/run-start.json",
@@ -8369,12 +10026,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1890.046893936002,
-      "solver_cpu_seconds": 1876.8221702480005,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3842.092520792007,
+      "solver_cpu_seconds": 3811.796490409999,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0058638/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0058638/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0058638/attempts/all-t30-w64/run-start.json",
@@ -8435,12 +10106,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2224.8732705400034,
-      "solver_cpu_seconds": 2205.910751649,
-      "task_result_count": 64,
+      "solver_wall_seconds": 6096.853634434989,
+      "solver_cpu_seconds": 6042.466646830004,
+      "task_result_count": 96,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0059571/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0059571/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 32,
+          "new_task_count": 32,
+          "persisted_new_task_count": 32,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0059571/attempts/all-t30-w64/run-start.json",
@@ -8501,12 +10186,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1543.5440752030026,
-      "solver_cpu_seconds": 1530.4350616269992,
-      "task_result_count": 35,
+      "solver_wall_seconds": 3615.8800618420155,
+      "solver_cpu_seconds": 3586.013402419997,
+      "task_result_count": 50,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060611/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060611/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 20,
+          "new_task_count": 15,
+          "persisted_new_task_count": 15,
+          "inherited_definitive_task_count": 5,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060611/attempts/all-t30-w64/run-start.json",
@@ -8634,12 +10333,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2762.9427067770002,
-      "solver_cpu_seconds": 2744.60103338,
-      "task_result_count": 84,
+      "solver_wall_seconds": 6685.468349264006,
+      "solver_cpu_seconds": 6632.10635073,
+      "task_result_count": 112,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060702/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060702/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 28,
+          "new_task_count": 28,
+          "persisted_new_task_count": 28,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060702/attempts/all-t30-w64/run-start.json",
@@ -8713,12 +10426,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2882.919112848003,
-      "solver_cpu_seconds": 2862.648593581,
-      "task_result_count": 96,
+      "solver_wall_seconds": 6792.672504336005,
+      "solver_cpu_seconds": 6738.524032669,
+      "task_result_count": 128,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060754/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060754/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 32,
+          "new_task_count": 32,
+          "persisted_new_task_count": 32,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060754/attempts/all-t30-w64/run-start.json",
@@ -8792,12 +10519,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1791.6875106140005,
-      "solver_cpu_seconds": 1776.7794587289993,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3781.4140574099883,
+      "solver_cpu_seconds": 3752.1139530689998,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060824/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060824/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060824/attempts/all-t30-w64/run-start.json",
@@ -8858,12 +10599,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1793.8184300830035,
-      "solver_cpu_seconds": 1781.949945248999,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3847.1075906569968,
+      "solver_cpu_seconds": 3818.9695251190014,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060866/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060866/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060866/attempts/all-t30-w64/run-start.json",
@@ -8924,12 +10679,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1781.2947509370001,
-      "solver_cpu_seconds": 1767.641789545,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3869.6254629899972,
+      "solver_cpu_seconds": 3842.048734670007,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0061526/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0061526/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0061526/attempts/all-t30-w64/run-start.json",
@@ -8990,12 +10759,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 2363.971765874001,
-      "solver_cpu_seconds": 2347.88492394,
-      "task_result_count": 56,
+      "solver_wall_seconds": 5908.84532126,
+      "solver_cpu_seconds": 5873.223114708997,
+      "task_result_count": 84,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0062627/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0062627/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 28,
+          "new_task_count": 28,
+          "persisted_new_task_count": 28,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0062627/attempts/all-t30-w64/run-start.json",
@@ -9056,12 +10839,26 @@
       },
       "timeout_budgets_seconds": [
         5.0,
-        30.0
+        30.0,
+        120.0
       ],
-      "solver_wall_seconds": 1431.0569718469997,
-      "solver_cpu_seconds": 1424.216299708,
-      "task_result_count": 32,
+      "solver_wall_seconds": 3455.9106696799936,
+      "solver_cpu_seconds": 3440.1504709230035,
+      "task_result_count": 48,
       "attempts": [
+        {
+          "stage": "all-t120-w64",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0063118/attempts/all-t120-w64/run-start.json",
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0063118/attempts/all-t120-w64/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 16,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 120.0,
+          "missing_task_count": 0
+        },
         {
           "stage": "all-t30-w64",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0063118/attempts/all-t30-w64/run-start.json",

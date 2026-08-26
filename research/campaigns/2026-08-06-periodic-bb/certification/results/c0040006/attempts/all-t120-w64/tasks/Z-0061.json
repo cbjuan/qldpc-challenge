@@ -1,0 +1,68 @@
+{
+  "schema_version": 2,
+  "candidate_key": "c0040006",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0040006-0b9faf210c-1m-python8000reuse8k-s2066873088-fast1000000.json",
+  "candidate_sha256": "860cdf5b92b8d73f609ec11d394bce698194257a0e439e1c9bc66443ebae42c0",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508",
+  "runner_sha256": "a3ee133c53004306d25729729e85d009a0b905174e877836cdc591846bba6845",
+  "task_id": "Z-0061",
+  "side": "Z",
+  "logical_row_index": 61,
+  "check_matrix_sha256": "2d44e493abefdf8bac498a3b097f1244012cd1a77e6ed7be06ec03882dbbc9ab",
+  "logical_generator_sha256": "7c12bb915e1e736f9057512a89d5205f86f8bb9903d05524aa7a774c129a5663",
+  "logical_generator_support": [
+    405,
+    491,
+    577,
+    663
+  ],
+  "cutoff": 3,
+  "time_limit_seconds": 120.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T12:30:54.503687+00:00",
+  "finished_at_utc": "2026-08-26T12:32:56.425155+00:00",
+  "duration_seconds": 121.92146831399987,
+  "process_cpu_seconds": 121.08780806300001,
+  "worker_pid": 171,
+  "memory_bytes": {
+    "before": {
+      "rss": 340439040,
+      "high_water": 369557504
+    },
+    "after": {
+      "rss": 340451328,
+      "high_water": 369557504
+    },
+    "ru_maxrss": 369557504
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "0be8da7582019494571a2b2880f544c0a013f5ceba5e22edfef4a28225897081",
+    "pivot_count": 258
+  },
+  "solver_options": {
+    "time_limit": 120.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 121.91759567099871
+    }
+  ],
+  "error": null
+}

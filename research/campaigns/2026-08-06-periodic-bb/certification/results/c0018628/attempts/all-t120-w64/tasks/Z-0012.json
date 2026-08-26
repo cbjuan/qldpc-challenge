@@ -1,0 +1,71 @@
+{
+  "schema_version": 2,
+  "candidate_key": "c0018628",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0018628-a16cd470e9-60k-python8000-s1424024388-fast60000.json",
+  "candidate_sha256": "60c209fd11cbe59608704cb91a631b1457452e20374c2dcfd88ed7dfa66a93cd",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508",
+  "runner_sha256": "a3ee133c53004306d25729729e85d009a0b905174e877836cdc591846bba6845",
+  "task_id": "Z-0012",
+  "side": "Z",
+  "logical_row_index": 12,
+  "check_matrix_sha256": "aa328dd3a0e16da7ccb1374f3046ce7621aae9f3ab8f1a80655299c6319ebd40",
+  "logical_generator_sha256": "34ca809b2ce089158ebac7a150628331f0539432e11717d0038bf9944900f7a5",
+  "logical_generator_support": [
+    169,
+    171,
+    173,
+    175,
+    177,
+    179,
+    181
+  ],
+  "cutoff": 6,
+  "time_limit_seconds": 120.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T11:53:16.744665+00:00",
+  "finished_at_utc": "2026-08-26T11:54:43.642855+00:00",
+  "duration_seconds": 86.89819360100046,
+  "process_cpu_seconds": 85.76026060699996,
+  "worker_pid": 145,
+  "memory_bytes": {
+    "before": {
+      "rss": 297095168,
+      "high_water": 395055104
+    },
+    "after": {
+      "rss": 265695232,
+      "high_water": 395055104
+    },
+    "ru_maxrss": 395055104
+  },
+  "status": "proven_infeasible",
+  "status_basis": "stock_predicate_infeasible",
+  "stock_predicate_return": false,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "81f8229b3b6b910c4f01a879dbe24d4f47878b4c912c450e5a925db1f2737691",
+    "pivot_count": 130
+  },
+  "solver_options": {
+    "time_limit": 120.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 86.89606316299978
+    }
+  ],
+  "error": null
+}
