@@ -1,6 +1,6 @@
 # Periodic BB exact-certification summary
 
-Targets: 128; exact: 6; refuted: 5; sharded closed pending serial: 6; timeout: 111; pending: 0.
+Targets: 128; exact: 12; refuted: 5; sharded closed pending serial: 0; timeout: 111; pending: 0.
 
 Non-overlapping batch wall time: 4841.8 s; summed new-task wall time: 297105.0 s; summed new-task CPU time: 294186.1 s.
 
@@ -21,16 +21,16 @@ A side marked `sharded_closed_pending_serial` has all logical-row cutoff MILPs p
 | c0000142 | [[208,52,2]] | exact | exact | exact | 5 | 8.9 | 8.5 |
 | c0002359 | [[108,36,3]] | exact | exact | exact | 5 | 16.4 | 15.8 |
 | c0004417 | [[452,228,2]] | exact | exact | exact | 5 | 154.4 | 151.4 |
-| c0004584 | [[198,26,3]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5,30 | 49.3 | 48.5 |
+| c0004584 | [[198,26,3]] | exact | exact | exact | 5,30 | 49.3 | 48.5 |
 | c0006423 | [[234,78,3]] | exact | exact | exact | 5 | 59.6 | 58.6 |
-| c0006625 | [[266,38,4]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5,30 | 150.1 | 148.1 |
+| c0006625 | [[266,38,4]] | exact | exact | exact | 5,30 | 150.1 | 148.1 |
 | c0010524 | [[270,18,9]] | timeout | timeout | timeout | 5,30 | 1084.0 | 1070.2 |
-| c0011462 | [[270,90,3]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5,30 | 459.7 | 452.8 |
+| c0011462 | [[270,90,3]] | exact | exact | exact | 5,30 | 459.7 | 452.8 |
 | c0012783 | [[224,112,2]] | exact | exact | exact | 5 | 3.7 | 3.4 |
 | c0014474 | [[396,136,3]] | timeout | timeout | timeout | 5,30 | 4122.9 | 4086.4 |
-| c0016039 | [[288,96,3]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5,30 | 527.1 | 520.6 |
+| c0016039 | [[288,96,3]] | exact | exact | exact | 5,30 | 527.1 | 520.6 |
 | c0016229 | [[208,26,6]] | sharded_closed_pending_serial | timeout | timeout | 5,30 | 505.3 | 499.3 |
-| c0016394 | [[288,100,3]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5,30 | 491.0 | 483.8 |
+| c0016394 | [[288,100,3]] | exact | exact | exact | 5,30 | 491.0 | 483.8 |
 | c0018628 | [[280,20,7]] | sharded_closed_pending_serial | timeout | timeout | 5,30 | 775.4 | 764.1 |
 | c0019513 | [[384,96,4]] | sharded_closed_pending_serial | timeout | timeout | 5,30 | 1372.9 | 1352.5 |
 | c0019531 | [[248,62,4]] | exact | exact | exact | 5 | 20.2 | 19.5 |
@@ -43,7 +43,7 @@ A side marked `sharded_closed_pending_serial` has all logical-row cutoff MILPs p
 | c0020418 | [[270,30,7]] | timeout | timeout | timeout | 5,30 | 1547.6 | 1526.7 |
 | c0020458 | [[240,30,6]] | sharded_closed_pending_serial | timeout | timeout | 5,30 | 590.3 | 582.3 |
 | c0020498 | [[224,44,6]] | sharded_closed_pending_serial | timeout | timeout | 5,30 | 1627.7 | 1607.6 |
-| c0020623 | [[260,26,6]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5,30 | 178.0 | 175.8 |
+| c0020623 | [[260,26,6]] | exact | exact | exact | 5,30 | 178.0 | 175.8 |
 | c0020718 | [[256,46,6]] | timeout | timeout | timeout | 5,30 | 2378.5 | 2341.2 |
 | c0020918 | [[234,26,7]] | timeout | timeout | timeout | 5,30 | 1331.4 | 1312.7 |
 | c0020978 | [[266,50,6]] | timeout | timeout | timeout | 5,30 | 2085.2 | 2057.5 |
