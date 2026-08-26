@@ -1,0 +1,75 @@
+{
+  "schema_version": 2,
+  "stage": "selective-t14400-w2-r6-c0020418",
+  "started_at_utc": "2026-08-26T18:28:44.080148+00:00",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508",
+  "runner_sha256": "a3ee133c53004306d25729729e85d009a0b905174e877836cdc591846bba6845",
+  "workers": 2,
+  "task_time_limit_seconds": 14400.0,
+  "reuse_definitive": true,
+  "candidate_keys": [
+    "c0020418"
+  ],
+  "candidate_inputs": [
+    {
+      "candidate_key": "c0020418",
+      "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0020418-ac336096c5-60k-python8000-s833036170-fast60000.json",
+      "candidate_sha256": "b1e3b8ce17a834f8c07ff61474ceea1dc665710ed3119ff6fcb05ba3fa1b3437"
+    }
+  ],
+  "thread_limits": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "finished_at_utc": "2026-08-26T19:29:11.576098+00:00",
+  "invocation_started_at_utc": "2026-08-26T18:28:44.080148+00:00",
+  "invocation_wall_seconds": 3627.4959626630007,
+  "invocation_submitted_task_count": 2,
+  "invocation_completed_task_count": 2,
+  "wall_seconds": 3627.4959653359983,
+  "submitted_task_count": 2,
+  "completed_task_count": 2,
+  "scheduled_task_count": 2,
+  "persisted_task_count": 2,
+  "candidate_count": 1,
+  "status_counts": {
+    "apparent_exact_requires_serial_confirmation": 1,
+    "refuted": 0,
+    "timeout": 0
+  },
+  "task_wall_seconds_sum": 7164.119184780007,
+  "task_cpu_seconds_sum": 7074.823010366999,
+  "aggregates": [
+    {
+      "candidate_key": "c0020418",
+      "aggregate_status": "apparent_exact_requires_serial_confirmation",
+      "sides": {
+        "X": {
+          "status": "exact",
+          "task_count": 30,
+          "counts": {
+            "proven_infeasible": 30,
+            "feasible_refutation": 0,
+            "unknown": 0,
+            "runner_error": 0,
+            "missing": 0
+          }
+        },
+        "Z": {
+          "status": "exact",
+          "task_count": 30,
+          "counts": {
+            "proven_infeasible": 30,
+            "feasible_refutation": 0,
+            "unknown": 0,
+            "runner_error": 0,
+            "missing": 0
+          }
+        }
+      },
+      "aggregate_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020418/attempts/selective-t14400-w2-r6-c0020418/aggregate.json"
+    }
+  ]
+}
