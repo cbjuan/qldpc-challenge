@@ -1,6 +1,6 @@
 # Periodic BB exact-certification summary
 
-Targets: 128; exact: 19; refuted: 6; sharded closed pending serial: 5; timeout: 98; pending: 0.
+Targets: 128; exact: 20; refuted: 6; sharded closed pending serial: 4; timeout: 98; pending: 0.
 
 Non-overlapping batch wall time: 19329.5 s; summed new-task wall time: 1134651.5 s; summed new-task CPU time: 1123625.5 s.
 
@@ -20,7 +20,7 @@ A side marked `sharded_closed_pending_serial` has all logical-row cutoff MILPs p
 Incomplete batch starts (not counted as timeouts):
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t3600-w62-r2-start.json`
 
-Persisted tasks outside completed batches: 1 (801.3 CPU s); retained as evidence but not counted as completed-batch timeouts.
+Persisted tasks outside completed batches: 7 (16542.5 CPU s); retained as evidence but not counted as completed-batch timeouts.
 
 ## Targets
 
@@ -48,13 +48,13 @@ Persisted tasks outside completed batches: 1 (801.3 CPU s); retained as evidence
 | c0020198 | [[238,46,6]] | exact | exact | exact | 5,30,120 | 3207.7 | 3168.2 |
 | c0020283 | [[330,22,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120 | 4496.5 | 4450.2 |
 | c0020343 | [[252,48,6]] | exact | exact | exact | 5,30,120 | 3179.1 | 3136.9 |
-| c0020418 | [[270,30,7]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600,3600 | 13593.4 | 13419.7 |
+| c0020418 | [[270,30,7]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600,3600 | 29566.5 | 29161.0 |
 | c0020458 | [[240,30,6]] | exact | exact | exact | 5,30,120 | 1306.7 | 1289.3 |
 | c0020498 | [[224,44,6]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5,30,120 | 1911.4 | 1887.7 |
 | c0020623 | [[260,26,6]] | exact | exact | exact | 5,30 | 178.0 | 175.8 |
 | c0020718 | [[256,46,6]] | exact | exact | exact | 5,30,120 | 4119.5 | 4060.3 |
 | c0020918 | [[234,26,7]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5,30,120,600,3600 | 25452.4 | 25184.2 |
-| c0020978 | [[266,50,6]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5,30,120 | 3190.0 | 3148.6 |
+| c0020978 | [[266,50,6]] | exact | exact | exact | 5,30,120 | 3190.0 | 3148.6 |
 | c0040000 | [[696,236,3]] | timeout | timeout | timeout | 5,30,120 | 50767.6 | 50311.7 |
 | c0040001 | [[696,232,3]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5,30,120 | 4767.6 | 4708.7 |
 | c0040002 | [[696,236,3]] | timeout | sharded_closed_pending_serial | timeout | 5,30,120 | 30818.0 | 30524.6 |

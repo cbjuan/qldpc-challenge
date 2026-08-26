@@ -29,6 +29,10 @@ RESULTS = HERE / "results"
 TARGETS = HERE / "targets.json"
 ENVIRONMENT = RESULTS / "environment.json"
 SERIAL_BATCHES = RESULTS / "serial-confirmation-batches"
+STDOUT_ISOLATOR = HERE / "serial_stdout_isolation" / "sitecustomize.py"
+STDOUT_ISOLATOR_PYCACHE_PREFIX = STDOUT_ISOLATOR.parent / ".disabled-pycache"
+STDOUT_ISOLATOR_MARKER_PREFIX = "QLDPC_STDOUT_ISOLATION_V1:"
+STDOUT_ISOLATOR_HASH_ENV = "QLDPC_STDOUT_ISOLATOR_EXPECTED_SHA256"
 STAGE_RE = re.compile(r"[A-Za-z0-9][A-Za-z0-9._-]{0,127}")
 SIDES = ("X", "Z")
 
@@ -189,8 +193,142 @@ def stable_start_fields(value: dict[str, Any]) -> dict[str, Any]:
         "gf2_sha256",
         "per_task_time_limit_seconds",
         "command",
+        "stdout_isolation",
     )
     return {key: value.get(key) for key in keys}
+
+
+def stdout_isolation_directory_clean() -> bool:
+    """Require the injected PYTHONPATH directory to contain only pinned source."""
+    try:
+        entries = list(STDOUT_ISOLATOR.parent.iterdir())
+    except OSError:
+        return False
+    return (
+        len(entries) == 1
+        and entries[0] == STDOUT_ISOLATOR
+        and entries[0].is_file()
+        and not entries[0].is_symlink()
+    )
+
+
+def configure_stdout_isolation(
+    enabled: bool, env: dict[str, str]
+) -> dict[str, Any] | None:
+    """Optionally separate Python stdout from native writes to file descriptor 1.
+
+    SciPy's bundled HiGHS can emit an unconditional native ``puts`` after a
+    successful solve.  The stock certifier writes its JSON through
+    ``sys.stdout``; the hash-pinned sitecustomize module gives that stream a
+    duplicate of the original stdout descriptor and redirects subsequent
+    native fd-1 writes to stderr.  Only the child environment is changed.
+    """
+    if not enabled:
+        return None
+    require_under(STDOUT_ISOLATOR, HERE, "stdout isolator")
+    if (
+        STDOUT_ISOLATOR.parent.is_symlink()
+        or STDOUT_ISOLATOR.is_symlink()
+        or not STDOUT_ISOLATOR.is_file()
+    ):
+        raise RuntimeError(f"stdout isolator is not a regular file: {STDOUT_ISOLATOR}")
+    if not stdout_isolation_directory_clean():
+        raise RuntimeError(
+            "stdout-isolation PYTHONPATH must contain only regular sitecustomize.py"
+        )
+    isolator_hash = sha256(STDOUT_ISOLATOR)
+    isolator_rel = STDOUT_ISOLATOR.relative_to(REPO).as_posix()
+    child_pythonpath = STDOUT_ISOLATOR.parent.relative_to(REPO).as_posix()
+    pycache_prefix = STDOUT_ISOLATOR_PYCACHE_PREFIX.relative_to(REPO).as_posix()
+    activation_marker = f"{STDOUT_ISOLATOR_MARKER_PREFIX}{isolator_hash}"
+    env["PYTHONPATH"] = child_pythonpath
+    env["PYTHONDONTWRITEBYTECODE"] = "1"
+    env["PYTHONPYCACHEPREFIX"] = pycache_prefix
+    env["PYTHONNOUSERSITE"] = "1"
+    env[STDOUT_ISOLATOR_HASH_ENV] = isolator_hash
+    return {
+        "sitecustomize_path": isolator_rel,
+        "sitecustomize_sha256": isolator_hash,
+        "child_pythonpath": child_pythonpath,
+        "child_python_pycache_prefix": pycache_prefix,
+        "child_python_dont_write_bytecode": "1",
+        "child_python_no_user_site": "1",
+        "child_expected_sha256_environment": isolator_hash,
+        "python_stdout_capture": "stdout",
+        "native_fd1_capture": "stderr",
+        "activation_marker": activation_marker,
+        "pythonpath_directory_policy": "only-regular-sitecustomize.py",
+    }
+
+
+def validate_stdout_isolation_metadata(isolation: Any) -> dict[str, Any]:
+    if not isinstance(isolation, dict):
+        raise RuntimeError("stdout-isolation metadata is not an object")
+    expected_keys = {
+        "sitecustomize_path",
+        "sitecustomize_sha256",
+        "child_pythonpath",
+        "child_python_pycache_prefix",
+        "child_python_dont_write_bytecode",
+        "child_python_no_user_site",
+        "child_expected_sha256_environment",
+        "python_stdout_capture",
+        "native_fd1_capture",
+        "activation_marker",
+        "pythonpath_directory_policy",
+    }
+    if set(isolation) != expected_keys:
+        raise RuntimeError("stdout-isolation metadata has unexpected fields")
+    isolator_hash = isolation.get("sitecustomize_sha256")
+    if not isinstance(isolator_hash, str) or re.fullmatch(
+        r"[0-9a-f]{64}", isolator_hash
+    ) is None:
+        raise RuntimeError("stdout-isolation source hash is invalid")
+    expected_values = {
+        "sitecustomize_path": STDOUT_ISOLATOR.relative_to(REPO).as_posix(),
+        "child_pythonpath": STDOUT_ISOLATOR.parent.relative_to(REPO).as_posix(),
+        "child_python_pycache_prefix": STDOUT_ISOLATOR_PYCACHE_PREFIX.relative_to(
+            REPO
+        ).as_posix(),
+        "child_python_dont_write_bytecode": "1",
+        "child_python_no_user_site": "1",
+        "child_expected_sha256_environment": isolator_hash,
+        "python_stdout_capture": "stdout",
+        "native_fd1_capture": "stderr",
+        "activation_marker": f"{STDOUT_ISOLATOR_MARKER_PREFIX}{isolator_hash}",
+        "pythonpath_directory_policy": "only-regular-sitecustomize.py",
+    }
+    for key, expected in expected_values.items():
+        if isolation.get(key) != expected:
+            raise RuntimeError(f"stdout-isolation metadata field {key} is invalid")
+    return isolation
+
+
+def observed_activation(stderr: str) -> tuple[str | None, int]:
+    markers = [
+        line
+        for line in stderr.splitlines()
+        if line.startswith(STDOUT_ISOLATOR_MARKER_PREFIX)
+    ]
+    return (markers[0] if len(markers) == 1 else None), len(markers)
+
+
+def expected_identity(start: dict[str, Any]) -> dict[str, Any]:
+    identity = {
+        "candidate_sha256": start["candidate_sha256"],
+        "certifier_sha256": start["certifier_sha256"],
+        "gf2_sha256": start["gf2_sha256"],
+    }
+    isolation = start.get("stdout_isolation")
+    if isolation is not None:
+        isolation = validate_stdout_isolation_metadata(isolation)
+        identity["stdout_isolator_sha256"] = isolation["sitecustomize_sha256"]
+        identity["stdout_isolator_activation_marker"] = isolation[
+            "activation_marker"
+        ]
+        identity["stdout_isolator_activation_marker_count"] = 1
+        identity["stdout_isolator_pythonpath_directory_clean"] = True
+    return identity
 
 
 def validate_source_batch(
@@ -322,17 +460,30 @@ def validate_completed_record(
     if parse_error:
         validation_errors.insert(0, f"invalid JSON: {parse_error}")
     output_valid = isinstance(parsed, dict) and not validation_errors
-    expected_identity = {
-        "candidate_sha256": expected_start["candidate_sha256"],
-        "certifier_sha256": expected_start["certifier_sha256"],
-        "gf2_sha256": expected_start["gf2_sha256"],
-    }
+    expected_identity_values = expected_identity(expected_start)
     identity_after = record.get("identity_after")
     if not isinstance(identity_after, dict):
         raise RuntimeError(f"completed record has no post-run identity: {record_path}")
+    observed_marker, observed_marker_count = observed_activation(record["stderr"])
+    if expected_start.get("stdout_isolation") is None:
+        unexpected_marker = bool(observed_marker_count)
+    elif (
+        identity_after.get("stdout_isolator_activation_marker") != observed_marker
+        or identity_after.get("stdout_isolator_activation_marker_count")
+        != observed_marker_count
+    ):
+        raise RuntimeError(
+            f"completed record activation-marker mismatch: {record_path}"
+        )
+    else:
+        unexpected_marker = False
     identity_errors = [
-        key for key, expected in expected_identity.items() if identity_after.get(key) != expected
+        key
+        for key, expected in expected_identity_values.items()
+        if identity_after.get(key) != expected
     ]
+    if unexpected_marker:
+        identity_errors.append("unexpected_stdout_isolator_activation_marker")
     expected_validation = {
         "valid": output_valid,
         "errors": validation_errors,
@@ -412,6 +563,14 @@ def main() -> None:
     parser.add_argument("--confirmation-stage", required=True)
     parser.add_argument("--tlim", type=float, required=True)
     parser.add_argument(
+        "--isolate-native-stdout",
+        action="store_true",
+        help=(
+            "load the hash-recorded child-only sitecustomize module that keeps "
+            "Python JSON on stdout while capturing native fd-1 writes on stderr"
+        ),
+    )
+    parser.add_argument(
         "--resume",
         action="store_true",
         help="resume only a matching, previously started immutable confirmation stage",
@@ -449,6 +608,7 @@ def main() -> None:
 
     env = os.environ.copy()
     env.update(OMP_NUM_THREADS="1", OPENBLAS_NUM_THREADS="1", MKL_NUM_THREADS="1")
+    stdout_isolation = configure_stdout_isolation(args.isolate_native_stdout, env)
     batch_dir = SERIAL_BATCHES / confirmation_stage
     require_under(batch_dir, SERIAL_BATCHES, "serial batch path")
     batch_start_path = batch_dir / "run-start.json"
@@ -475,6 +635,8 @@ def main() -> None:
             for key in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS")
         },
     }
+    if stdout_isolation is not None:
+        batch_start["stdout_isolation"] = stdout_isolation
 
     output_dirs = {
         candidate_id: RESULTS
@@ -570,6 +732,8 @@ def main() -> None:
             "per_task_time_limit_seconds": args.tlim,
             "command": command,
         }
+        if stdout_isolation is not None:
+            start_record["stdout_isolation"] = stdout_isolation
 
         if start_path.exists():
             if start_path.is_symlink():
@@ -653,15 +817,22 @@ def main() -> None:
             "certifier_sha256": sha256(REPO / "verify" / "certify.py"),
             "gf2_sha256": sha256(REPO / "verify" / "gf2.py"),
         }
+        marker, marker_count = observed_activation(stderr)
+        if stdout_isolation is not None:
+            current_identity["stdout_isolator_sha256"] = sha256(STDOUT_ISOLATOR)
+            current_identity["stdout_isolator_activation_marker"] = marker
+            current_identity["stdout_isolator_activation_marker_count"] = marker_count
+            current_identity["stdout_isolator_pythonpath_directory_clean"] = (
+                stdout_isolation_directory_clean()
+            )
+        expected_identity_values = expected_identity(start_record)
         identity_errors = [
             key
-            for key, expected in (
-                ("candidate_sha256", candidate_hash),
-                ("certifier_sha256", certifier_hash),
-                ("gf2_sha256", gf2_hash),
-            )
+            for key, expected in expected_identity_values.items()
             if current_identity[key] != expected
         ]
+        if stdout_isolation is None and marker_count:
+            identity_errors.append("unexpected_stdout_isolator_activation_marker")
         output_valid = isinstance(parsed, dict) and not validation_errors
         if execution_error is not None or returncode not in (0, None):
             status = "process_error"

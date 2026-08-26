@@ -54,6 +54,18 @@ Validate any sharded runner against the unmodified serial
 a campaign target exact, rerun that target through the authoritative serial
 certifier and persist its `d_exact: true` output.
 
+Some SciPy/HiGHS builds can write a native diagnostic to file descriptor 1
+after Python has emitted the certifier JSON. For a fresh serial-confirmation
+stage, `confirm_serial.py --isolate-native-stdout` loads the single,
+hash-recorded `serial_stdout_isolation/sitecustomize.py` module in the child
+only. It keeps Python's `sys.stdout` on the captured stdout pipe and redirects
+later native fd-1 writes to captured stderr. The stock certifier command and
+source remain unchanged, parsing remains strict `json.loads`, and both raw
+streams are persisted. The wrapper rejects bytecode caches or sibling modules,
+records the complete child environment override, and requires a source-hash
+activation marker before accepting output. Calibrate this mode on a known exact
+case before using it to close a campaign target.
+
 Prevent numerical-library oversubscription (`OMP_NUM_THREADS=1`,
 `OPENBLAS_NUM_THREADS=1`, `MKL_NUM_THREADS=1`) and choose process concurrency
 from both the 64-core count and available RAM. Each MILP builds dense matrices;

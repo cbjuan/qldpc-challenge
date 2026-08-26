@@ -1047,6 +1047,10 @@ def validate_serial_records(
             "serial command is not the exact stock verify/certify.py invocation",
         )
         parse_utc(start.get("started_at_utc"), start_path, "started_at_utc")
+        try:
+            expected_identity = serial_protocol.expected_identity(start)
+        except RuntimeError as exc:
+            fail(start_path, f"invalid serial start identity ({exc})")
 
         if not path.exists():
             require(
@@ -1085,11 +1089,6 @@ def validate_serial_records(
             validation_errors.insert(0, f"invalid JSON: {parse_error}")
         identity_after = record.get("identity_after")
         require(isinstance(identity_after, dict), path, "serial record has no post-run identity")
-        expected_identity = {
-            "candidate_sha256": target["candidate_sha256"],
-            "certifier_sha256": certifier_hash,
-            "gf2_sha256": gf2_hash,
-        }
         identity_errors = [
             field
             for field, expected in expected_identity.items()
