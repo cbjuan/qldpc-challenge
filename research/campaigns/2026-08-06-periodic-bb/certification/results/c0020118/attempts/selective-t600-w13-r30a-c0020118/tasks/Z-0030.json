@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "candidate_key": "c0020118",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0020118-b8a2568227-60k-python8000-s1707877928-fast60000.json",
+  "candidate_sha256": "47a8c0349fbd428c2f43f41712b9376f8c69175904d8e87da8f1071771e233f2",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508",
+  "runner_sha256": "a3ee133c53004306d25729729e85d009a0b905174e877836cdc591846bba6845",
+  "task_id": "Z-0030",
+  "side": "Z",
+  "logical_row_index": 30,
+  "check_matrix_sha256": "a19249cd0214e5d77cdf652bfc26c5c39e55b1bb2c81e14c9f4374de39dd232e",
+  "logical_generator_sha256": "3f9190cb6aecf32dcc154e4e306b4364c8bbba3058644507cb473d893204fb68",
+  "logical_generator_support": [
+    141,
+    143,
+    149,
+    151,
+    157,
+    159,
+    165,
+    167,
+    173,
+    175,
+    181,
+    183,
+    189,
+    191,
+    197,
+    199,
+    205,
+    207,
+    213,
+    215,
+    221,
+    223,
+    229,
+    231,
+    237,
+    239,
+    245,
+    247,
+    253,
+    255,
+    261,
+    263,
+    264,
+    265,
+    266,
+    267,
+    268,
+    270
+  ],
+  "cutoff": 7,
+  "time_limit_seconds": 600.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T21:55:23.744826+00:00",
+  "finished_at_utc": "2026-08-26T22:02:19.515792+00:00",
+  "duration_seconds": 415.77096823200554,
+  "process_cpu_seconds": 410.21218872199995,
+  "worker_pid": 8,
+  "memory_bytes": {
+    "before": {
+      "rss": 243679232,
+      "high_water": 428728320
+    },
+    "after": {
+      "rss": 265383936,
+      "high_water": 428728320
+    },
+    "ru_maxrss": 428728320
+  },
+  "status": "proven_infeasible",
+  "status_basis": "stock_predicate_infeasible",
+  "stock_predicate_return": false,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "89efee15a8edab5018368990b742cb0b95bf5321b9f35a331a1aa2aaeb419945",
+    "pivot_count": 112
+  },
+  "solver_options": {
+    "time_limit": 600.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 415.76898619599524
+    }
+  ],
+  "error": null
+}
