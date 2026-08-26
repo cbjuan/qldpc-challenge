@@ -1,6 +1,6 @@
 # Periodic BB exact-certification summary
 
-Targets: 128; exact: 0; refuted: 0; timeout: 10; pending: 118.
+Targets: 128; exact: 0; refuted: 1; timeout: 9; pending: 118.
 
 Batch wall time: 144.5 s; summed solver wall time: 4437.8 s; summed task CPU time: 4419.3 s.
 
@@ -90,7 +90,7 @@ A row is `exact` only after a persisted unmodified serial `verify/certify.py` ou
 | c0048101 | [[660,8,34]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0048487 | [[686,6,36]] | timeout | timeout | timeout | 5 | 65.1 | 64.9 |
 | c0048911 | [[630,8,28]] | pending | pending | pending | — | 0.0 | 0.0 |
-| c0049220 | [[648,4,38]] | timeout | timeout | timeout | 5 | 133.9 | 133.3 |
+| c0049220 | [[648,4,38]] | refuted | timeout | refuted | 5 | 133.9 | 133.3 |
 | c0049291 | [[660,8,28]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0049482 | [[540,8,26]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0049503 | [[648,8,30]] | pending | pending | pending | — | 0.0 | 0.0 |

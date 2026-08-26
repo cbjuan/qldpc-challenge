@@ -121,6 +121,26 @@ def serialize_solver_result(result: Any, n: int, H: np.ndarray, logical: np.ndar
     return serialized
 
 
+def has_valid_witness(record: dict) -> bool:
+    """Whether captured solver output contains a directly checkable logical."""
+    return any(
+        witness is not None
+        and witness.get("within_cutoff") is True
+        and witness.get("zero_syndrome") is True
+        and witness.get("anticommutes_with_logical_row") is True
+        for witness in (
+            call.get("logical_witness") for call in record.get("solver_calls", [])
+        )
+    )
+
+
+def evidence_status(record: dict) -> str:
+    """Promote a validated incumbent even when HiGHS stopped at its limit."""
+    if has_valid_witness(record):
+        return "feasible_refutation"
+    return record.get("status", "missing")
+
+
 def run_one_task(task: dict) -> dict:
     """Worker entry point: call the stock predicate on one logical row."""
     started_at = utc_now()
@@ -156,15 +176,24 @@ def run_one_task(task: dict) -> dict:
         lighter = certify._exists_lighter(
             H, logical.reshape(1, -1), task["cutoff"], task["time_limit_seconds"]
         )
-        status = {
-            True: "feasible_refutation",
-            False: "proven_infeasible",
-            None: "unknown",
-        }[lighter]
+        if lighter is True or has_valid_witness({"solver_calls": solver_calls}):
+            status = "feasible_refutation"
+            status_basis = (
+                "stock_predicate_feasible"
+                if lighter is True
+                else "validated_time_limit_incumbent"
+            )
+        elif lighter is False:
+            status = "proven_infeasible"
+            status_basis = "stock_predicate_infeasible"
+        else:
+            status = "unknown"
+            status_basis = "stock_predicate_unknown_without_valid_incumbent"
         error = None
     except BaseException as exc:  # preserve unexpected worker failures as data
         lighter = None
         status = "runner_error"
+        status_basis = "runner_exception"
         error = {
             "type": type(exc).__name__,
             "message": str(exc),
@@ -199,6 +228,7 @@ def run_one_task(task: dict) -> dict:
             "ru_maxrss": int(usage.ru_maxrss) * 1024,
         },
         "status": status,
+        "status_basis": status_basis,
         "stock_predicate_return": lighter,
         "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
         "solver_options": {"time_limit": task["time_limit_seconds"], "threads": 1},
@@ -264,20 +294,28 @@ def candidate_specs(args: argparse.Namespace) -> list[dict]:
     return specs
 
 
-def prior_evidence(spec: dict, certifier_hash: str, task_id: str) -> dict | None:
+def prior_evidence(
+    spec: dict, certifier_hash: str, task_id: str, *, exclude_stage: str | None = None
+) -> dict | None:
     evidence = []
     attempts = spec["result_root"] / "attempts"
     if not attempts.is_dir():
         return None
     for path in attempts.glob(f"*/tasks/{task_id}.json"):
+        if exclude_stage is not None and path.parents[1].name == exclude_stage:
+            continue
         record = json.loads(path.read_text())
         if (
             record.get("candidate_sha256") == spec["candidate_sha256"]
             and record.get("certifier_sha256") == certifier_hash
         ):
             evidence.append((path, record))
-    definitive = [item for item in evidence if item[1].get("status") in {"feasible_refutation", "proven_infeasible"}]
-    statuses = {item[1]["status"] for item in definitive}
+    definitive = [
+        item
+        for item in evidence
+        if evidence_status(item[1]) in {"feasible_refutation", "proven_infeasible"}
+    ]
+    statuses = {evidence_status(item[1]) for item in definitive}
     if len(statuses) > 1:
         raise RuntimeError(f"contradictory definitive evidence for {spec['candidate_key']} {task_id}")
     choices = definitive or evidence
@@ -367,7 +405,9 @@ def persist_refutation(task: dict, record: dict, stage: str) -> dict:
     staging_path = REPO / "research" / "candidates" / f"{stem}.json"
     for path in (result_path, staging_path):
         if path.exists():
-            raise FileExistsError(f"refusing to overwrite refutation witness: {path}")
+            if json.loads(path.read_text()) != doc:
+                raise FileExistsError(f"conflicting refutation witness: {path}")
+            continue
         path.parent.mkdir(parents=True, exist_ok=True)
         errors = submit_module.save_submission(doc, str(path))
         if errors:
@@ -376,22 +416,32 @@ def persist_refutation(task: dict, record: dict, stage: str) -> dict:
         "schema_version": 1,
         "persisted_at_utc": utc_now(),
         "candidate_key": task["candidate_key"],
+        "candidate_path": task["candidate_path"],
+        "candidate_sha256": task["candidate_sha256"],
+        "certifier_sha256": record["certifier_sha256"],
         "task_id": task["task_id"],
         "side": task["side"],
         "weight": witness_record["weight"],
         "support": witness_record["support"],
+        "source_task_result": task.get("source_task_result"),
         "result_submission": result_path.relative_to(REPO).as_posix(),
         "local_staging_submission": staging_path.relative_to(REPO).as_posix(),
         "result_submission_sha256": sha256(result_path),
         "local_staging_submission_sha256": sha256(staging_path),
     }
-    atomic_json(
+    index_path = (
         RESULTS
         / task["candidate_key"]
         / "refutation"
-        / f"{safe_stage}-{task['task_id']}.json",
-        index,
+        / f"{safe_stage}-{task['task_id']}.json"
     )
+    if index_path.exists():
+        existing = json.loads(index_path.read_text())
+        for key in ("candidate_key", "task_id", "side", "weight", "support"):
+            if existing.get(key) != index.get(key):
+                raise RuntimeError(f"conflicting refutation index {index_path}: {key}")
+        return existing
+    atomic_json(index_path, index)
     return index
 
 
@@ -418,9 +468,17 @@ def prepare_candidate(
         value = int(doc["distance"][side]["value"])
         for row_index, logical in enumerate(logical_basis):
             task_id = f"{side}-{row_index:04d}"
-            prior = prior_evidence(spec, certifier_hash, task_id) if args.reuse_definitive else None
+            prior = (
+                prior_evidence(
+                    spec, certifier_hash, task_id, exclude_stage=args.stage
+                )
+                if args.reuse_definitive
+                else None
+            )
             inherited = bool(
-                prior and prior["record"].get("status") in {"feasible_refutation", "proven_infeasible"}
+                prior
+                and evidence_status(prior["record"])
+                in {"feasible_refutation", "proven_infeasible"}
             )
             task_descriptors.append(
                 {
@@ -494,7 +552,21 @@ def prepare_candidate(
         if not args.resume:
             raise FileExistsError(f"stage exists; pass --resume: {run_dir}")
         existing = json.loads(start_path.read_text())
-        for key in ("candidate_sha256", "certifier_sha256", "expected_task_count"):
+        for key in (
+            "stage",
+            "candidate_key",
+            "candidate_path",
+            "candidate_sha256",
+            "certifier_sha256",
+            "parameters",
+            "matrix_sha256",
+            "logical_basis_sha256",
+            "worker_limit",
+            "task_time_limit_seconds",
+            "thread_limits",
+            "expected_task_count",
+            "tasks",
+        ):
             if existing.get(key) != start_record.get(key):
                 raise RuntimeError(f"resume metadata mismatch in {start_path}: {key}")
     else:
@@ -502,7 +574,34 @@ def prepare_candidate(
     tasks_path = run_dir / "tasks"
     tasks_path.mkdir(parents=True, exist_ok=True)
     if args.resume:
-        new_tasks = [task for task in new_tasks if not (tasks_path / f"{task['task_id']}.json").exists()]
+        remaining = []
+        for task in new_tasks:
+            task_path = tasks_path / f"{task['task_id']}.json"
+            if not task_path.exists():
+                remaining.append(task)
+                continue
+            record = json.loads(task_path.read_text())
+            expected = {
+                "candidate_key": task["candidate_key"],
+                "candidate_path": task["candidate_path"],
+                "candidate_sha256": task["candidate_sha256"],
+                "certifier_sha256": task["certifier_sha256"],
+                "task_id": task["task_id"],
+                "side": task["side"],
+                "logical_row_index": task["logical_row_index"],
+                "cutoff": task["cutoff"],
+                "time_limit_seconds": task["time_limit_seconds"],
+            }
+            for key, value in expected.items():
+                if record.get(key) != value:
+                    raise RuntimeError(f"resume task mismatch in {task_path}: {key}")
+            if has_valid_witness(record) and task["candidate_key"].startswith("c"):
+                task_with_source = {
+                    **task,
+                    "source_task_result": task_path.relative_to(REPO).as_posix(),
+                }
+                persist_refutation(task_with_source, record, args.stage)
+        new_tasks = remaining
     context = {
         "spec": spec,
         "doc": doc,
@@ -540,7 +639,7 @@ def aggregate_candidate(context: dict, certifier_hash: str) -> dict:
             {
                 "task_id": descriptor["task_id"],
                 "side": descriptor["side"],
-                "status": record["status"],
+                "status": evidence_status(record),
                 "evidence_path": path.relative_to(REPO).as_posix() if path else None,
                 "duration_seconds": record.get("duration_seconds", 0.0),
                 "process_cpu_seconds": record.get("process_cpu_seconds", 0.0),
@@ -621,7 +720,7 @@ def main() -> None:
     batch_dir = RESULTS / "batches"
     batch_start_path = batch_dir / f"{args.stage}-start.json"
     batch_output_path = batch_dir / f"{args.stage}.json"
-    if batch_output_path.exists() and not args.resume:
+    if batch_output_path.exists():
         raise FileExistsError(batch_output_path)
     batch_started = utc_now()
     batch_wall_start = time.monotonic()
@@ -637,8 +736,20 @@ def main() -> None:
     }
     if not batch_start_path.exists():
         atomic_json(batch_start_path, start_record)
-    elif not args.resume:
-        raise FileExistsError(batch_start_path)
+    else:
+        if not args.resume:
+            raise FileExistsError(batch_start_path)
+        existing_batch = json.loads(batch_start_path.read_text())
+        for key in (
+            "stage",
+            "certifier_sha256",
+            "workers",
+            "task_time_limit_seconds",
+            "reuse_definitive",
+            "candidate_keys",
+        ):
+            if existing_batch.get(key) != start_record.get(key):
+                raise RuntimeError(f"resume batch metadata mismatch: {key}")
 
     contexts: list[dict] = []
     stream = iter(task_stream(specs, args, certifier_hash, contexts))
@@ -682,6 +793,7 @@ def main() -> None:
                         "duration_seconds": 0.0,
                         "process_cpu_seconds": 0.0,
                         "status": "runner_error",
+                        "status_basis": "future_exception",
                         "stock_predicate_return": None,
                         "solver_calls": [],
                         "error": {
@@ -691,8 +803,12 @@ def main() -> None:
                         },
                     }
                 atomic_json(output_path, record)
-                if record["status"] == "feasible_refutation" and task["candidate_key"].startswith("c"):
-                    persisted = persist_refutation(task, record, args.stage)
+                if has_valid_witness(record) and task["candidate_key"].startswith("c"):
+                    task_with_source = {
+                        **task,
+                        "source_task_result": output_path.relative_to(REPO).as_posix(),
+                    }
+                    persisted = persist_refutation(task_with_source, record, args.stage)
                     print(
                         f"persisted witness {persisted['result_submission']} ",
                         f"weight={persisted['weight']}",
@@ -709,7 +825,7 @@ def main() -> None:
     aggregates = []
     for context in contexts:
         aggregate = aggregate_candidate(context, certifier_hash)
-        atomic_json(context["run_dir"] / "aggregate.json", aggregate, overwrite=args.resume)
+        atomic_json(context["run_dir"] / "aggregate.json", aggregate)
         aggregates.append(aggregate)
     status_counts = {
         status: sum(item["aggregate_status"] == status for item in aggregates)
@@ -742,7 +858,7 @@ def main() -> None:
             for item in aggregates
         ],
     }
-    atomic_json(batch_output_path, batch, overwrite=args.resume)
+    atomic_json(batch_output_path, batch)
     print(json.dumps({"stage": args.stage, "status_counts": status_counts}, indent=2))
 
 

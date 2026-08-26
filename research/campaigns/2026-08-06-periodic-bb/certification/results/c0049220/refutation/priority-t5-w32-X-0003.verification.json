@@ -1,0 +1,95 @@
+{
+  "name": "[[648,4,38]] local periodic BB c49220 MILP refutation witness",
+  "checks": [
+    {
+      "check": "schema_valid",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "qubit_indices_in_range",
+      "ok": true,
+      "detail": "max index 647, n=648"
+    },
+    {
+      "check": "no_repeated_qubits_in_a_check",
+      "ok": true,
+      "detail": "rows with repeats: []"
+    },
+    {
+      "check": "css_commutation",
+      "ok": true,
+      "detail": "H_X H_Z^T = 0 over GF(2)"
+    },
+    {
+      "check": "k_matches_claim",
+      "ok": true,
+      "detail": "computed k=4, claimed 4"
+    },
+    {
+      "check": "k_at_least_1",
+      "ok": true,
+      "detail": "computed k=4; a submission must encode >= 1 logical qubit"
+    },
+    {
+      "check": "check_weight_is_ldpc",
+      "ok": true,
+      "detail": "max check weight 6"
+    },
+    {
+      "check": "family_in_vocabulary",
+      "ok": true,
+      "detail": "bivariate-bicycle"
+    },
+    {
+      "check": "distance_X_witness",
+      "ok": true,
+      "detail": "weight=36 (claim 36), in_ker=True, nontrivial=True"
+    },
+    {
+      "check": "distance_Z_witness",
+      "ok": true,
+      "detail": "weight=40 (claim 40), in_ker=True, nontrivial=True"
+    },
+    {
+      "check": "d_matches_min_side",
+      "ok": true,
+      "detail": "min earned side = 36, claimed d = 36"
+    }
+  ],
+  "ok": true,
+  "computed": {
+    "n": 648,
+    "rank_HX": 322,
+    "rank_HZ": 322,
+    "k": 4,
+    "max_check_weight": 6,
+    "weight_class": "weight-6",
+    "locality_class": "unrestricted",
+    "flags": {
+      "css": true,
+      "locality_class": "unrestricted"
+    }
+  },
+  "earned_distance": {
+    "X": {
+      "value": 36,
+      "tier": "upper_bound"
+    },
+    "Z": {
+      "value": 40,
+      "tier": "upper_bound"
+    },
+    "d": {
+      "value": 36,
+      "tier": "upper_bound"
+    }
+  },
+  "signature": {
+    "hash": "be2c0d5ec88b1657",
+    "n": 648,
+    "k": 4,
+    "d": 36
+  },
+  "fingerprint": "f1975c63f0be94c4"
+}

@@ -3,8 +3,8 @@
   "target_count": 128,
   "counts": {
     "exact": 0,
-    "refuted": 0,
-    "timeout": 10,
+    "refuted": 1,
+    "timeout": 9,
     "pending": 118
   },
   "batch_wall_seconds": 144.50395440099996,
@@ -1504,9 +1504,9 @@
       "n": 648,
       "k": 4,
       "d": 38,
-      "status": "timeout",
+      "status": "refuted",
       "side_status": {
-        "X": "timeout",
+        "X": "refuted",
         "Z": "timeout"
       },
       "timeout_budgets_seconds": [
@@ -1516,7 +1516,10 @@
       "solver_cpu_seconds": 133.33526357899999,
       "task_result_count": 8,
       "serial_confirmation": null,
-      "refutation_evidence": []
+      "refutation_evidence": [
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049220/refutation/priority-t5-w32-X-0002.json",
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049220/refutation/priority-t5-w32-X-0003.json"
+      ]
     },
     {
       "candidate_id": 49291,
