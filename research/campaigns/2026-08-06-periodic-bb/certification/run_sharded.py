@@ -149,8 +149,14 @@ def run_one_task(task: dict) -> dict:
     memory_before = proc_memory_bytes()
     solver_calls: list[dict] = []
     original_milp = certify.milp
+    original_rref = certify.gf2.rref
     H = task["H"]
     logical = task["logical"]
+
+    def cached_rref(matrix: np.ndarray) -> tuple[np.ndarray, list[int]]:
+        if matrix.shape != H.shape or not np.array_equal(matrix, H):
+            return original_rref(matrix)
+        return task["H_rref"].copy(), list(task["H_pivots"])
 
     def recording_milp(*args: Any, **kwargs: Any) -> Any:
         solver_start = time.monotonic()
@@ -173,6 +179,7 @@ def run_one_task(task: dict) -> dict:
 
     try:
         certify.milp = recording_milp
+        certify.gf2.rref = cached_rref
         lighter = certify._exists_lighter(
             H, logical.reshape(1, -1), task["cutoff"], task["time_limit_seconds"]
         )
@@ -201,6 +208,7 @@ def run_one_task(task: dict) -> dict:
         }
     finally:
         certify.milp = original_milp
+        certify.gf2.rref = original_rref
 
     memory_after = proc_memory_bytes()
     usage = resource.getrusage(resource.RUSAGE_SELF)
@@ -231,6 +239,11 @@ def run_one_task(task: dict) -> dict:
         "status_basis": status_basis,
         "stock_predicate_return": lighter,
         "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+        "preprocessing": {
+            "method": "parent-cached result of verify/gf2.py::rref",
+            "rref_sha256": array_sha256(task["H_rref"]),
+            "pivot_count": len(task["H_pivots"]),
+        },
         "solver_options": {"time_limit": task["time_limit_seconds"], "threads": 1},
         "solver_calls": solver_calls,
         "error": error,
@@ -455,16 +468,18 @@ def prepare_candidate(
     n = int(doc["n"])
     HX = certify._matrix(doc["checks"]["X"], n)
     HZ = certify._matrix(doc["checks"]["Z"], n)
+    x_rref, x_pivots = gf2.rref(HZ)
+    z_rref, z_pivots = gf2.rref(HX)
     sides = {
-        "X": (HZ, gf2.logical_basis(HX, HZ)),
-        "Z": (HX, gf2.logical_basis(HZ, HX)),
+        "X": (HZ, gf2.logical_basis(HX, HZ), x_rref, x_pivots),
+        "Z": (HX, gf2.logical_basis(HZ, HX), z_rref, z_pivots),
     }
     task_descriptors = []
     new_tasks = []
     for side in ("X", "Z"):
         if side not in doc["distance"]:
             continue
-        H, logical_basis = sides[side]
+        H, logical_basis, H_rref, H_pivots = sides[side]
         value = int(doc["distance"][side]["value"])
         for row_index, logical in enumerate(logical_basis):
             task_id = f"{side}-{row_index:04d}"
@@ -504,6 +519,8 @@ def prepare_candidate(
                     "cutoff": value - 1,
                     "time_limit_seconds": args.tlim,
                     "H": H,
+                    "H_rref": H_rref,
+                    "H_pivots": H_pivots,
                     "logical": logical,
                 }
             )
@@ -535,7 +552,10 @@ def prepare_candidate(
         },
         "matrix_sha256": {"HX": array_sha256(HX), "HZ": array_sha256(HZ)},
         "logical_basis_sha256": {
-            side: array_sha256(basis) for side, (_, basis) in sides.items()
+            side: array_sha256(basis) for side, (_, basis, _, _) in sides.items()
+        },
+        "rref_sha256": {
+            side: array_sha256(rref) for side, (_, _, rref, _) in sides.items()
         },
         "worker_limit": args.workers,
         "task_time_limit_seconds": args.tlim,
@@ -561,6 +581,7 @@ def prepare_candidate(
             "parameters",
             "matrix_sha256",
             "logical_basis_sha256",
+            "rref_sha256",
             "worker_limit",
             "task_time_limit_seconds",
             "thread_limits",

@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "stage": "calibration-rref-cache-v3",
+  "finished_at_utc": "2026-08-26T09:00:43.998419+00:00",
+  "candidate_key": "16-2-4",
+  "candidate_path": "codes/16-2-4.json",
+  "candidate_sha256": "6e54b7775555735e4084fcabe32d74efe52c2aae9c54d11df6c050fc49757547",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "parameters": {
+    "n": 16,
+    "k": 2,
+    "d": 4,
+    "d_x_upper": 4,
+    "d_z_upper": 4
+  },
+  "aggregate_status": "apparent_exact_requires_serial_confirmation",
+  "sides": {
+    "X": {
+      "status": "exact",
+      "task_count": 2,
+      "counts": {
+        "proven_infeasible": 2,
+        "feasible_refutation": 0,
+        "unknown": 0,
+        "runner_error": 0,
+        "missing": 0
+      }
+    },
+    "Z": {
+      "status": "exact",
+      "task_count": 2,
+      "counts": {
+        "proven_infeasible": 2,
+        "feasible_refutation": 0,
+        "unknown": 0,
+        "runner_error": 0,
+        "missing": 0
+      }
+    }
+  },
+  "task_count": 4,
+  "task_wall_seconds_sum": 0.05246843099985199,
+  "task_cpu_seconds_sum": 0.052098955999999974,
+  "tasks": [
+    {
+      "task_id": "X-0000",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/calibration/sharded/16-2-4/attempts/calibration-rref-cache-v3/tasks/X-0000.json",
+      "duration_seconds": 0.013130847999946127,
+      "process_cpu_seconds": 0.013028755000000003
+    },
+    {
+      "task_id": "X-0001",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/calibration/sharded/16-2-4/attempts/calibration-rref-cache-v3/tasks/X-0001.json",
+      "duration_seconds": 0.01139186399996106,
+      "process_cpu_seconds": 0.011303598999999998
+    },
+    {
+      "task_id": "Z-0000",
+      "side": "Z",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/calibration/sharded/16-2-4/attempts/calibration-rref-cache-v3/tasks/Z-0000.json",
+      "duration_seconds": 0.01515507199997046,
+      "process_cpu_seconds": 0.015061604000000006
+    },
+    {
+      "task_id": "Z-0001",
+      "side": "Z",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/calibration/sharded/16-2-4/attempts/calibration-rref-cache-v3/tasks/Z-0001.json",
+      "duration_seconds": 0.012790646999974342,
+      "process_cpu_seconds": 0.012704997999999967
+    }
+  ]
+}

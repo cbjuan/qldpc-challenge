@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "stage": "calibration-rref-cache-v3",
+  "started_at_utc": "2026-08-26T09:00:42.811355+00:00",
+  "candidate_key": "36-2-6",
+  "candidate_path": "codes/36-2-6.json",
+  "candidate_sha256": "5309551c679705a64d932341edb6eaba1dcd256963a91394f26fadca804f26ab",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "git_commit": "80673d5d72cc6a6d33000841832b7f116e5f7dd3",
+  "parameters": {
+    "n": 36,
+    "k": 2,
+    "d": 6,
+    "d_x_upper": 6,
+    "d_z_upper": 6
+  },
+  "matrix_sha256": {
+    "HX": "17792c4cc84ceee46c6dafe4bef5b418fd164d1a7f3a0c4dd892d03eb054ca28",
+    "HZ": "9838136b2bb0fda02e31c20ed0a262e3dcca6cf627f0a316e8d706b0ce850cd5"
+  },
+  "logical_basis_sha256": {
+    "X": "7801c3dd70b05455fb3ba1ed265f45d91f3ee0b1591d02696cae305c2e25869f",
+    "Z": "7801c3dd70b05455fb3ba1ed265f45d91f3ee0b1591d02696cae305c2e25869f"
+  },
+  "rref_sha256": {
+    "X": "f74be421f2e4c1091a510b5222c1afc46aa7e90c42f18fcd9ed705fd248fee30",
+    "Z": "87fb96d8502a26e51600b22a119768b308166022a46b64b726a2ba8fe5a984d0"
+  },
+  "worker_limit": 8,
+  "task_time_limit_seconds": 120.0,
+  "thread_limits": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "expected_task_count": 4,
+  "new_task_count": 4,
+  "inherited_definitive_task_count": 0,
+  "tasks": [
+    {
+      "task_id": "X-0000",
+      "side": "X",
+      "logical_row_index": 0,
+      "cutoff": 5,
+      "inherited": false,
+      "evidence_path": null
+    },
+    {
+      "task_id": "X-0001",
+      "side": "X",
+      "logical_row_index": 1,
+      "cutoff": 5,
+      "inherited": false,
+      "evidence_path": null
+    },
+    {
+      "task_id": "Z-0000",
+      "side": "Z",
+      "logical_row_index": 0,
+      "cutoff": 5,
+      "inherited": false,
+      "evidence_path": null
+    },
+    {
+      "task_id": "Z-0001",
+      "side": "Z",
+      "logical_row_index": 1,
+      "cutoff": 5,
+      "inherited": false,
+      "evidence_path": null
+    }
+  ]
+}
