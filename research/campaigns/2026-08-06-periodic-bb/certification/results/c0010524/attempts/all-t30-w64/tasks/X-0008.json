@@ -1,0 +1,75 @@
+{
+  "schema_version": 2,
+  "candidate_key": "c0010524",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0010524-88d55b4bd0-60k-python8000-s852276647-fast60000.json",
+  "candidate_sha256": "9c54048022ef19654bc31d671da310fc29f76c44915f6db14ee528da77cb4d3c",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508",
+  "runner_sha256": "a3ee133c53004306d25729729e85d009a0b905174e877836cdc591846bba6845",
+  "task_id": "X-0008",
+  "side": "X",
+  "logical_row_index": 8,
+  "check_matrix_sha256": "32f8f540b3a96cae7cdd714f89eb4c25ccd98990221fd8a3bb4b8f126c0d6fb8",
+  "logical_generator_sha256": "3798f96f9f0aae5532db850134f60139c6faef389c51e2feca3517caf0a9411f",
+  "logical_generator_support": [
+    134,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    255,
+    256,
+    257,
+    258
+  ],
+  "cutoff": 8,
+  "time_limit_seconds": 30.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T10:20:31.247262+00:00",
+  "finished_at_utc": "2026-08-26T10:21:01.277312+00:00",
+  "duration_seconds": 30.030044793000343,
+  "process_cpu_seconds": 29.642399065000006,
+  "worker_pid": 138,
+  "memory_bytes": {
+    "before": {
+      "rss": 220213248,
+      "high_water": 274132992
+    },
+    "after": {
+      "rss": 170766336,
+      "high_water": 342208512
+    },
+    "ru_maxrss": 342208512
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "a792806d785250d9d690c13aec1844fee06751e594fecb0d0afa7fff3d478486",
+    "pivot_count": 126
+  },
+  "solver_options": {
+    "time_limit": 30.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 30.02816599200014
+    }
+  ],
+  "error": null
+}

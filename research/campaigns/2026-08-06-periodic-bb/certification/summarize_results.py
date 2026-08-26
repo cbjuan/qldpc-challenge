@@ -618,13 +618,18 @@ def load_attempts(
             )
             canonical = geometry["tasks"].get(task_id)
             require(canonical is not None, start_path, f"unknown canonical task {task_id}")
-            for field in (
-                "logical_generator_support",
-                "logical_generator_sha256",
-                "check_matrix_sha256",
+            for field, canonical_field in (
+                ("logical_generator_support", "support"),
+                ("logical_generator_sha256", "logical_generator_sha256"),
+                ("check_matrix_sha256", "check_matrix_sha256"),
             ):
                 if field in descriptor:
-                    check_field(descriptor, field, canonical[field], start_path)
+                    check_field(
+                        descriptor,
+                        field,
+                        canonical[canonical_field],
+                        start_path,
+                    )
             descriptors[task_id] = descriptor
         expected_ids = {
             f"{side}-{index:04d}" for side in SIDES for index in range(target["k"])

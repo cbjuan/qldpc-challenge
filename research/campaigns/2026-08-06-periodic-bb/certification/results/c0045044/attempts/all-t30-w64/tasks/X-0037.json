@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "candidate_key": "c0045044",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0045044-1cbba62c17-1m-python8000reuse8k-s1746706602-fast1000000-allrungs.json",
+  "candidate_sha256": "93a956e9fc2097cbb397cdb92b12a1e214323fcac9031eb2c15b984a2cefb7e1",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508",
+  "runner_sha256": "a3ee133c53004306d25729729e85d009a0b905174e877836cdc591846bba6845",
+  "task_id": "X-0037",
+  "side": "X",
+  "logical_row_index": 37,
+  "check_matrix_sha256": "e6d4cc4cfe0d835c3a4300523ff4040e7691a95a81521697f4d3e10e48524337",
+  "logical_generator_sha256": "c3bb331270e02480007c89495944ba07d52c381d59d716aed5cb49ec3a8c5a7d",
+  "logical_generator_support": [
+    223,
+    426,
+    427,
+    428,
+    429,
+    430,
+    431,
+    521,
+    522,
+    523,
+    524,
+    525,
+    526,
+    527,
+    528,
+    529,
+    530,
+    531
+  ],
+  "cutoff": 7,
+  "time_limit_seconds": 30.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T10:53:30.838068+00:00",
+  "finished_at_utc": "2026-08-26T10:53:44.383912+00:00",
+  "duration_seconds": 13.545852127000217,
+  "process_cpu_seconds": 13.414194242000121,
+  "worker_pid": 149,
+  "memory_bytes": {
+    "before": {
+      "rss": 249720832,
+      "high_water": 396726272
+    },
+    "after": {
+      "rss": 250568704,
+      "high_water": 396726272
+    },
+    "ru_maxrss": 396726272
+  },
+  "status": "proven_infeasible",
+  "status_basis": "stock_predicate_infeasible",
+  "stock_predicate_return": false,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "b2ff3cd5243ad441bf8b8e3010ed6af24a5b1aab066a1768811a5fbd6ea8ffe4",
+    "pivot_count": 286
+  },
+  "solver_options": {
+    "time_limit": 30.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 13.542359356999441
+    }
+  ],
+  "error": null
+}

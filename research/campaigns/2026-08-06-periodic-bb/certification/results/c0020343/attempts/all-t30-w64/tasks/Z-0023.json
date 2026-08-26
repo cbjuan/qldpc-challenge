@@ -1,0 +1,100 @@
+{
+  "schema_version": 2,
+  "candidate_key": "c0020343",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0020343-fcf20f92d7-60k-python8000-s1563588468-fast60000.json",
+  "candidate_sha256": "8eac245690505ed99b883a78c8a520c0bc149dfcc74d63cd70cbec2354853738",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508",
+  "runner_sha256": "a3ee133c53004306d25729729e85d009a0b905174e877836cdc591846bba6845",
+  "task_id": "Z-0023",
+  "side": "Z",
+  "logical_row_index": 23,
+  "check_matrix_sha256": "ca25d1b3036b934d9b5f56e457cbb49d5f05c8c6d289d2e64d15ceb186c3528c",
+  "logical_generator_sha256": "9e68ae5bf27e8d314762601e47c4cdea4169f0d9e2ccf5efff479cd9f36209f1",
+  "logical_generator_support": [
+    127,
+    132,
+    134,
+    139,
+    141,
+    146,
+    148,
+    153,
+    155,
+    160,
+    162,
+    167,
+    169,
+    174,
+    176,
+    181,
+    183,
+    188,
+    190,
+    195,
+    197,
+    202,
+    204,
+    209,
+    211,
+    216,
+    218,
+    223,
+    225,
+    230,
+    232,
+    237,
+    239,
+    244,
+    246,
+    251
+  ],
+  "cutoff": 5,
+  "time_limit_seconds": 30.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T10:24:36.783782+00:00",
+  "finished_at_utc": "2026-08-26T10:25:06.797388+00:00",
+  "duration_seconds": 30.01361114500014,
+  "process_cpu_seconds": 29.754806199999962,
+  "worker_pid": 192,
+  "memory_bytes": {
+    "before": {
+      "rss": 212832256,
+      "high_water": 377954304
+    },
+    "after": {
+      "rss": 237412352,
+      "high_water": 377954304
+    },
+    "ru_maxrss": 377954304
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "c68e856862ec4fc17c69269ffc304d52e1da5bdb5e04817aaa8ab0cad264c9b7",
+    "pivot_count": 102
+  },
+  "solver_options": {
+    "time_limit": 30.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 30.011878569000146
+    }
+  ],
+  "error": null
+}

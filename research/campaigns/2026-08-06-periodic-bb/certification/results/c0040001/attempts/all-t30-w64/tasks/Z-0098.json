@@ -1,0 +1,68 @@
+{
+  "schema_version": 2,
+  "candidate_key": "c0040001",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0040001-81f0c752c6-1m-python8000-s2031276414-fast1000000.json",
+  "candidate_sha256": "757d4bb0892cd37b646113af0fecc4fd6a796acfd2968f0925ef5629c632db4e",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508",
+  "runner_sha256": "a3ee133c53004306d25729729e85d009a0b905174e877836cdc591846bba6845",
+  "task_id": "Z-0098",
+  "side": "Z",
+  "logical_row_index": 98,
+  "check_matrix_sha256": "51b2c127bb44d8b1174c4fa380e63ed8c0b294a35dbbbdac58446469936cb938",
+  "logical_generator_sha256": "8b82f17fb23c81b577f92cf6b426b67080acec90409eb9fc45ffad3522836e28",
+  "logical_generator_support": [
+    329,
+    330,
+    445,
+    561
+  ],
+  "cutoff": 2,
+  "time_limit_seconds": 30.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T10:30:46.669652+00:00",
+  "finished_at_utc": "2026-08-26T10:30:53.933451+00:00",
+  "duration_seconds": 7.263799618000121,
+  "process_cpu_seconds": 7.197280020999983,
+  "worker_pid": 150,
+  "memory_bytes": {
+    "before": {
+      "rss": 180256768,
+      "high_water": 345866240
+    },
+    "after": {
+      "rss": 180256768,
+      "high_water": 345866240
+    },
+    "ru_maxrss": 345866240
+  },
+  "status": "proven_infeasible",
+  "status_basis": "stock_predicate_infeasible",
+  "stock_predicate_return": false,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "9234b65857d4743cfe59abae7505bace578c7e2626ec308e12b9edf94bac0309",
+    "pivot_count": 232
+  },
+  "solver_options": {
+    "time_limit": 30.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 7.260268967000229
+    }
+  ],
+  "error": null
+}

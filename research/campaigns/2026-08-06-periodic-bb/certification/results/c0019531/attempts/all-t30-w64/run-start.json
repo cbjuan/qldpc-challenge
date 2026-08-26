@@ -1,0 +1,2337 @@
+{
+  "schema_version": 2,
+  "stage": "all-t30-w64",
+  "started_at_utc": "2026-08-26T10:16:05.816316+00:00",
+  "candidate_key": "c0019531",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0019531-4fba9c6576-60k-python8000-s172055528-fast60000.json",
+  "candidate_sha256": "8198d188cc6475e1ac9128beeeb1360d837f3430414150a40c29cc53eba63abf",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508",
+  "runner_sha256": "a3ee133c53004306d25729729e85d009a0b905174e877836cdc591846bba6845",
+  "git_commit": "41e9fe56513814120a65b61a7c6c6a3d29f7d482",
+  "parameters": {
+    "n": 248,
+    "k": 62,
+    "d": 4,
+    "d_x_upper": 4,
+    "d_z_upper": 4
+  },
+  "matrix_sha256": {
+    "HX": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+    "HZ": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2"
+  },
+  "logical_basis_sha256": {
+    "X": "3101a7ed68f67cf637c2ecff77d4c77c7f207216bde44a42898066d9b8c45fb3",
+    "Z": "747ce2301da411454318ae617557d42ca59b05e1cd86b2908162c8799b0ec499"
+  },
+  "rref_sha256": {
+    "X": "fffaa58713dd05f6f232452a7e8932ea759d1eb8b0ce598fb27a3b1051c634b0",
+    "Z": "890518436dfcf2409935a43b76434213290cb19005baf093c2593e42825e586d"
+  },
+  "worker_limit": 64,
+  "task_time_limit_seconds": 30.0,
+  "thread_limits": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "expected_task_count": 124,
+  "new_task_count": 0,
+  "inherited_definitive_task_count": 124,
+  "tasks": [
+    {
+      "task_id": "X-0000",
+      "side": "X",
+      "logical_row_index": 0,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "15f59a02fc3968cd5bc4270ac613b50438514cea4126ac8c226469e3e81d1ba4",
+      "logical_generator_support": [
+        125,
+        156,
+        187,
+        218
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0000.json",
+      "evidence_sha256": "eb047f05ce97aeb138861c3ffb04052494035763128a718460b5262315df046a"
+    },
+    {
+      "task_id": "X-0001",
+      "side": "X",
+      "logical_row_index": 1,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "38a2417a06fb5dcf6312f1c1e8f2406cdc7e5eb84360ffe4aa5e35c36f596f4c",
+      "logical_generator_support": [
+        126,
+        157,
+        188,
+        219
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0001.json",
+      "evidence_sha256": "6ca26ebfbc985fdabbadf15833a1a881f20e6a75e715b4cfa585912aab62494d"
+    },
+    {
+      "task_id": "X-0002",
+      "side": "X",
+      "logical_row_index": 2,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "ff682f101cfd1decfb691def3da6fdfc895d3d4298b289278cf69428a793ff5a",
+      "logical_generator_support": [
+        127,
+        158,
+        189,
+        220
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0002.json",
+      "evidence_sha256": "36ee82936dd131cf0e842600b6aa241cd6c2bcca5060b493a8ae438680854764"
+    },
+    {
+      "task_id": "X-0003",
+      "side": "X",
+      "logical_row_index": 3,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "4ef7c9bb703e81615ff656a475b26d17ff717effc645ed6a34d560ac004225e6",
+      "logical_generator_support": [
+        128,
+        159,
+        190,
+        221
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0003.json",
+      "evidence_sha256": "3a9d3dcd6520d03e1b0f2af5659e9aa6cdd830b4f20420665f2f35d0119ec4a0"
+    },
+    {
+      "task_id": "X-0004",
+      "side": "X",
+      "logical_row_index": 4,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "e437956c9669445443aced5f9a92f8a1e02322b932daace831978f471173ad5e",
+      "logical_generator_support": [
+        129,
+        160,
+        191,
+        222
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0004.json",
+      "evidence_sha256": "acce5ba7691fd91c450b4061ac793bd4e3d53ee6eb513e71b44fe7221e712040"
+    },
+    {
+      "task_id": "X-0005",
+      "side": "X",
+      "logical_row_index": 5,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "fc82374dc3068c9217b041917ad80f5944e640b733cfd0097e9ceee647591bc4",
+      "logical_generator_support": [
+        130,
+        161,
+        192,
+        223
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0005.json",
+      "evidence_sha256": "0e6512ad7fb178016cfb8cc80d985be996ad8be0a0b8f498ca8216237e73ff5a"
+    },
+    {
+      "task_id": "X-0006",
+      "side": "X",
+      "logical_row_index": 6,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "2de0950eb7a5e1a8bc9dcc50570cd6e8b0dd0c241d709e39b09473920d83a4f2",
+      "logical_generator_support": [
+        131,
+        162,
+        193,
+        224
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0006.json",
+      "evidence_sha256": "59ef45764149db44700627d396d6234d07c0a2e4b6a9a0cb6b0abad776ee12f5"
+    },
+    {
+      "task_id": "X-0007",
+      "side": "X",
+      "logical_row_index": 7,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "085c8458336f7fd9e5a2339b29b70ec39719a4a6253cc81373f1359af2d6b7ee",
+      "logical_generator_support": [
+        132,
+        163,
+        194,
+        225
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0007.json",
+      "evidence_sha256": "af27ab483c1496adfac3f457ca5210032d3621970de3835d11ae79f95906c334"
+    },
+    {
+      "task_id": "X-0008",
+      "side": "X",
+      "logical_row_index": 8,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "118e8f355faf07c781e16205194a2044b2361878ddd6e7e287129eaee51ad4de",
+      "logical_generator_support": [
+        133,
+        164,
+        195,
+        226
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0008.json",
+      "evidence_sha256": "09a207e8022ad5902c35ecee72b51b3ecfc270e3717ac6c2f081298ae0548846"
+    },
+    {
+      "task_id": "X-0009",
+      "side": "X",
+      "logical_row_index": 9,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "f3a42e35ee213592dcff041aa33980c6e819d052dbabdb5c2c735f9776b94c32",
+      "logical_generator_support": [
+        134,
+        165,
+        196,
+        227
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0009.json",
+      "evidence_sha256": "591e81c68fd9aa9c69dbed574b0438a99d8e5fd872bd6a9a0c013c34868d764f"
+    },
+    {
+      "task_id": "X-0010",
+      "side": "X",
+      "logical_row_index": 10,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "b92b4f0f79a16cf8f12643d8c6e8cbd09d75aef94cbb5e922020764699b83fa2",
+      "logical_generator_support": [
+        135,
+        166,
+        197,
+        228
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0010.json",
+      "evidence_sha256": "25d406d1d9a694aced90a582cde50948c50129b69d1e043b49e6780d5d85892f"
+    },
+    {
+      "task_id": "X-0011",
+      "side": "X",
+      "logical_row_index": 11,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "09ca2b91c4ba32230ecf1b41d0a1a3c51798e3aacff13a037ce91033cb349f9e",
+      "logical_generator_support": [
+        136,
+        167,
+        198,
+        229
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0011.json",
+      "evidence_sha256": "e8ddb2642918dc2cd922c8e74dcf6f7e43883442d4dff5c8dfdc9ca765e78e8c"
+    },
+    {
+      "task_id": "X-0012",
+      "side": "X",
+      "logical_row_index": 12,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "9bfde93eb3c44480db8d3e8e594b4fa749a0003c9ac8b5206782f9cf2f459b4f",
+      "logical_generator_support": [
+        137,
+        168,
+        199,
+        230
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0012.json",
+      "evidence_sha256": "2b1ddfb2da5503ac8508886f027cc920ea24d33625d56c4a4e2cc80e023a129f"
+    },
+    {
+      "task_id": "X-0013",
+      "side": "X",
+      "logical_row_index": 13,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "806fc073d9528d16ff664ac13fcb781d6bb7957b55466930e074290823be1ee4",
+      "logical_generator_support": [
+        138,
+        169,
+        200,
+        231
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0013.json",
+      "evidence_sha256": "1db16df8cd76f09f8fc9731c45ffe0a3db0405ae46b18dac5c1cb488bfb98e48"
+    },
+    {
+      "task_id": "X-0014",
+      "side": "X",
+      "logical_row_index": 14,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "0775037762c30f1f67c6fd291e7b74d510145d141d7e66ef63444874ea7247ea",
+      "logical_generator_support": [
+        139,
+        170,
+        201,
+        232
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0014.json",
+      "evidence_sha256": "84216bfcdaa2814eafa5a6aad10cfff9850a7dabc3055b0e00d73b15efab299e"
+    },
+    {
+      "task_id": "X-0015",
+      "side": "X",
+      "logical_row_index": 15,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "50c8ecb778d7d06aced1bf8c61dd792a7746b3237e48a639b2fe6ffc0da8aa6b",
+      "logical_generator_support": [
+        140,
+        171,
+        202,
+        233
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0015.json",
+      "evidence_sha256": "612a94293337ab5c021546df2085dba699b6a4be1faa6756104e9eebc2551f67"
+    },
+    {
+      "task_id": "X-0016",
+      "side": "X",
+      "logical_row_index": 16,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "dd21fefc1e2ae489af090e71faa71236588b27e919bd7851213df6b17a99660d",
+      "logical_generator_support": [
+        141,
+        172,
+        203,
+        234
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0016.json",
+      "evidence_sha256": "8a863302a8a0fe3fe1b821b8a8234fe8cd0e85bfac09b06bf3d9872744fc7da8"
+    },
+    {
+      "task_id": "X-0017",
+      "side": "X",
+      "logical_row_index": 17,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "0ceccb6584d72fc4826a87f1385ff5716371d4b49e8e8fe1c32700af951f759c",
+      "logical_generator_support": [
+        142,
+        173,
+        204,
+        235
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0017.json",
+      "evidence_sha256": "5169f864fe4382736cee0fc0be62a4097074d3e7b8b0bb33612b8ee35eb6a5f7"
+    },
+    {
+      "task_id": "X-0018",
+      "side": "X",
+      "logical_row_index": 18,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "06d69eaa45a2375fbbdffccbe82a5d3fd87203fffe9fcfa61c939013bf1a00b1",
+      "logical_generator_support": [
+        143,
+        174,
+        205,
+        236
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0018.json",
+      "evidence_sha256": "ec8966e5fb112171937b0b86c751dbabcb2bc86bff6232e0d29a63062bc0a6e0"
+    },
+    {
+      "task_id": "X-0019",
+      "side": "X",
+      "logical_row_index": 19,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "dbecd424a7ef7e3daf3206b07347812de33ad0551cc4a678940450d72080e479",
+      "logical_generator_support": [
+        144,
+        175,
+        206,
+        237
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0019.json",
+      "evidence_sha256": "217222a725d14bb99f04b11710097748e0abd35fe87f298f0e87a7f5d7da936e"
+    },
+    {
+      "task_id": "X-0020",
+      "side": "X",
+      "logical_row_index": 20,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "730c8a3d56472b24fb63d8f372cf118a0288f4ae772a5d238de0d5cd2ec16e04",
+      "logical_generator_support": [
+        145,
+        176,
+        207,
+        238
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0020.json",
+      "evidence_sha256": "316d06a5bd807da1540ea878c2e967617406bb841675965e47a5ab4e554847f2"
+    },
+    {
+      "task_id": "X-0021",
+      "side": "X",
+      "logical_row_index": 21,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "8a930552a596f7c92e7a99270b65971baa5d1aa8375c00c404ed88c0e903ca47",
+      "logical_generator_support": [
+        146,
+        177,
+        208,
+        239
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0021.json",
+      "evidence_sha256": "686ef5ea836490a12733159ba41583d06d1198ce3936b90d169f9b04a0729a2f"
+    },
+    {
+      "task_id": "X-0022",
+      "side": "X",
+      "logical_row_index": 22,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "c2d3c17405a5993521e542e1cde0ff31f212e80bb0dd69c31ff1536723e9a740",
+      "logical_generator_support": [
+        147,
+        178,
+        209,
+        240
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0022.json",
+      "evidence_sha256": "d992669f78b5b22d01c2a80e35d809017ef95e3bc2221ea77d94769bc967974c"
+    },
+    {
+      "task_id": "X-0023",
+      "side": "X",
+      "logical_row_index": 23,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "25a1da904257824a1de20846cd6f009d17a2c05dd184c789dda56509f1fbedc5",
+      "logical_generator_support": [
+        148,
+        179,
+        210,
+        241
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0023.json",
+      "evidence_sha256": "6cfba9559dfad2ce429fe62d78e0fb634436f5d90174d4bf0b1dbbee3ccbfb16"
+    },
+    {
+      "task_id": "X-0024",
+      "side": "X",
+      "logical_row_index": 24,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "823f89ec025c95447aeb6ced0ea95fb8931a35d39ea0b4e7083122835497869a",
+      "logical_generator_support": [
+        149,
+        180,
+        211,
+        242
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0024.json",
+      "evidence_sha256": "adb875fb72b984349e663a6402f06e995a9114399672877541c8c415d165eda4"
+    },
+    {
+      "task_id": "X-0025",
+      "side": "X",
+      "logical_row_index": 25,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "54aec66efba09a93ba402b3cbffb8a2c75a4003c1869aff2a0f78d245e7e8a03",
+      "logical_generator_support": [
+        150,
+        181,
+        212,
+        243
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0025.json",
+      "evidence_sha256": "4cd9723ec29d56b6297f6fe39aafe46516461a80761eddb65edcf2d045d05e7a"
+    },
+    {
+      "task_id": "X-0026",
+      "side": "X",
+      "logical_row_index": 26,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "6199a66468b76163215b17f1cc594d837e8b0ed47394722a4e2493108c7a04ba",
+      "logical_generator_support": [
+        151,
+        182,
+        213,
+        244
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0026.json",
+      "evidence_sha256": "17999759e37274e86b65a07360dc51bae3be37cdf76d8ccd9a19b9090c399e5e"
+    },
+    {
+      "task_id": "X-0027",
+      "side": "X",
+      "logical_row_index": 27,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "78e33d21e2cd8630535d278060dd04d64cd704270be6543568d8c29dfc926693",
+      "logical_generator_support": [
+        152,
+        183,
+        214,
+        245
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0027.json",
+      "evidence_sha256": "0e95ece78d20696fc6d0c67a04b5b728d65f6f33bfefc898a93be8b87227c76f"
+    },
+    {
+      "task_id": "X-0028",
+      "side": "X",
+      "logical_row_index": 28,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "569f3eeff457386b6cfbeac6007821e873fb1a6bb0c137426228f3f2d92eed23",
+      "logical_generator_support": [
+        153,
+        184,
+        215,
+        246
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0028.json",
+      "evidence_sha256": "7622e5ee260c1113e7dc7912e2e17f0c2b035921df022506c5f146775818b311"
+    },
+    {
+      "task_id": "X-0029",
+      "side": "X",
+      "logical_row_index": 29,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "660556528b8e3286961bf3dc3d759cc139f088c69f6c0a34c5da91d546221ddc",
+      "logical_generator_support": [
+        154,
+        185,
+        216,
+        247
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0029.json",
+      "evidence_sha256": "a1ad371fbbd204bd761d87af29c577d3778064a4ec18fd2052dbcbd5771d083e"
+    },
+    {
+      "task_id": "X-0030",
+      "side": "X",
+      "logical_row_index": 30,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "1257ddfcfb1d9e41b7de949b18adf2c343da74a2d54b3bfa6b07060f41155830",
+      "logical_generator_support": [
+        124,
+        155,
+        186,
+        217
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0030.json",
+      "evidence_sha256": "8e70c8cb15ce965c27c1998c463e1826e8d6d980e1b779dba8a647fd509ab262"
+    },
+    {
+      "task_id": "X-0031",
+      "side": "X",
+      "logical_row_index": 31,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "51c327cb84b65f22ece733d8455fb6199f922b29f25d170e7902a9cd83b7be50",
+      "logical_generator_support": [
+        123,
+        155,
+        186,
+        216,
+        217,
+        247
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0031.json",
+      "evidence_sha256": "8162facf28e1651239fa147a94d2d5942857dc4f67896562113ac4b727613066"
+    },
+    {
+      "task_id": "X-0032",
+      "side": "X",
+      "logical_row_index": 32,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "555326b833163f335f5bc9e39cfafbb9c3d7919289e53ba72a50733c9b6866fc",
+      "logical_generator_support": [
+        93,
+        156,
+        186,
+        187,
+        217,
+        218
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0032.json",
+      "evidence_sha256": "35f8088ce253c01db42287395e929a386528e316d3434cf9fb44889014a0903f"
+    },
+    {
+      "task_id": "X-0033",
+      "side": "X",
+      "logical_row_index": 33,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "d51f9a89ddff175269f6dc3fb36af82b6258aed715f9c1c5e93c62266c0dde8b",
+      "logical_generator_support": [
+        94,
+        157,
+        187,
+        188,
+        218,
+        219
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0033.json",
+      "evidence_sha256": "d0cce60c64c297f7c76c72cec49153c322a085a614a0be8ba20d8d7c6b609b6f"
+    },
+    {
+      "task_id": "X-0034",
+      "side": "X",
+      "logical_row_index": 34,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "46fae8db108fee0ca4c04183fda3d48adeb527b74976c29bdc2aa33b57be4e0a",
+      "logical_generator_support": [
+        95,
+        158,
+        188,
+        189,
+        219,
+        220
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0034.json",
+      "evidence_sha256": "0be0e7a7c691518f98301fab74d24ed288e23c6b4e1778975b49aa3ee8db3708"
+    },
+    {
+      "task_id": "X-0035",
+      "side": "X",
+      "logical_row_index": 35,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "4fef0ad8665e4a5b0315ed43b371eb47119436304d3f62458acdc4969c069b56",
+      "logical_generator_support": [
+        96,
+        159,
+        189,
+        190,
+        220,
+        221
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0035.json",
+      "evidence_sha256": "3f661e803fca4648494198dcdf0004084b8b18e13f9b2a02fc51ca251ef254bf"
+    },
+    {
+      "task_id": "X-0036",
+      "side": "X",
+      "logical_row_index": 36,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "ba1f468f34fd19b5aa3ca95de79845b162cbf5b69dc393c753b5d80b2502edf0",
+      "logical_generator_support": [
+        97,
+        160,
+        190,
+        191,
+        221,
+        222
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0036.json",
+      "evidence_sha256": "8d46235de290b34a4563907924ae51d36a87b15d0e87262962bcc4652379b1f3"
+    },
+    {
+      "task_id": "X-0037",
+      "side": "X",
+      "logical_row_index": 37,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "c5a5533134a2a4f6304d8a6422e76c2a6afd24e29966c61b9cbfb4d0a75a6e92",
+      "logical_generator_support": [
+        98,
+        161,
+        191,
+        192,
+        222,
+        223
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0037.json",
+      "evidence_sha256": "1427e4c2b36fb255e58d7467dd27f90176a5e4dd4c7ce424f4c9f37f295c83c1"
+    },
+    {
+      "task_id": "X-0038",
+      "side": "X",
+      "logical_row_index": 38,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "3f423592b8a5560dd0792472901a03d23e2f91fad767f1f25e1d7b80f98753d4",
+      "logical_generator_support": [
+        99,
+        162,
+        192,
+        193,
+        223,
+        224
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0038.json",
+      "evidence_sha256": "641be6f026b0620f6403792bf0df24c651d841c73cf2011cbe1a1d1ad03a9952"
+    },
+    {
+      "task_id": "X-0039",
+      "side": "X",
+      "logical_row_index": 39,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "b18e3c6fd759bc9056010dc013c0a199f7b7dd9fb8ca8f5072805f0aca08db41",
+      "logical_generator_support": [
+        100,
+        163,
+        193,
+        194,
+        224,
+        225
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0039.json",
+      "evidence_sha256": "3eb99a1dc1df320f48ed6f5fcbef4c29041d7824c07747f1b79241235be9fa37"
+    },
+    {
+      "task_id": "X-0040",
+      "side": "X",
+      "logical_row_index": 40,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "11710fec9f5eb97d375311e8afdb2a12095e465e103fd6ad0173f0d2c15f62c3",
+      "logical_generator_support": [
+        101,
+        164,
+        194,
+        195,
+        225,
+        226
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0040.json",
+      "evidence_sha256": "d328c54027943d477fd4ad2a9fc946365e6d36f65f22786a4e2b6ee9b5bc3fb4"
+    },
+    {
+      "task_id": "X-0041",
+      "side": "X",
+      "logical_row_index": 41,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "cb00fafbd78f99564abf4cca53f9865abb051f76617e157873df233de6276616",
+      "logical_generator_support": [
+        102,
+        165,
+        195,
+        196,
+        226,
+        227
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0041.json",
+      "evidence_sha256": "4b90478af729321b4012319a2b6727352ea5269fa9b504502a0b95429f14718c"
+    },
+    {
+      "task_id": "X-0042",
+      "side": "X",
+      "logical_row_index": 42,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "657507fde8d30f0c721d6893f4a19c7911eabbd3f1311e417616526bd8d5f78b",
+      "logical_generator_support": [
+        103,
+        166,
+        196,
+        197,
+        227,
+        228
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0042.json",
+      "evidence_sha256": "d5f7683074797bdd152d6491eb8a90037ff97c2982d880f59de55c4e23fd635d"
+    },
+    {
+      "task_id": "X-0043",
+      "side": "X",
+      "logical_row_index": 43,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "80915b45c91fb353a27f9d245ea5f95798e3d9234fb86867c8ec789b4f8d0523",
+      "logical_generator_support": [
+        104,
+        167,
+        197,
+        198,
+        228,
+        229
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0043.json",
+      "evidence_sha256": "1e24562c47a415761d1a72c9a71175f7eb216556536db8ac10c697f509255052"
+    },
+    {
+      "task_id": "X-0044",
+      "side": "X",
+      "logical_row_index": 44,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "ffcc3e9b68810f5428cc7e5ad1fcb2eb31f9321f3fd1a7eae574b51dc605cd09",
+      "logical_generator_support": [
+        105,
+        168,
+        198,
+        199,
+        229,
+        230
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0044.json",
+      "evidence_sha256": "b71943e1dd27fb99770f71d037044a2cf4c7a611681fb990284d13e79d186e52"
+    },
+    {
+      "task_id": "X-0045",
+      "side": "X",
+      "logical_row_index": 45,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "1c4c0c0977b24e19809fca4a51bae50768e3a063c3e7bb4eecb307226dd04c0d",
+      "logical_generator_support": [
+        106,
+        169,
+        199,
+        200,
+        230,
+        231
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0045.json",
+      "evidence_sha256": "88b6769a79e0bb2947fbc294fdfd04d1338caa66dabeb1915d999253a5a44969"
+    },
+    {
+      "task_id": "X-0046",
+      "side": "X",
+      "logical_row_index": 46,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "a9806354f71e55ef1a71eece85099227e9ec21601b08534816a472b8aa35bda9",
+      "logical_generator_support": [
+        107,
+        170,
+        200,
+        201,
+        231,
+        232
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0046.json",
+      "evidence_sha256": "35fbff29e366ad48e71b3977c6edd7fa4e94b000519e41accf8e39f752911531"
+    },
+    {
+      "task_id": "X-0047",
+      "side": "X",
+      "logical_row_index": 47,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "b01d1defa51af084a176137944c24f3b90467fe71717eff2da252f4197afc659",
+      "logical_generator_support": [
+        108,
+        171,
+        201,
+        202,
+        232,
+        233
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0047.json",
+      "evidence_sha256": "3f1f35ce8bcf6208b016c8caa09aa40fafaa6ca7b71cad9b2e76f718b1bf186b"
+    },
+    {
+      "task_id": "X-0048",
+      "side": "X",
+      "logical_row_index": 48,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "2c6657cabcc990a30efd2eb5f88ed7475715b7f648ce9ec916bc068ca27d5600",
+      "logical_generator_support": [
+        109,
+        172,
+        202,
+        203,
+        233,
+        234
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0048.json",
+      "evidence_sha256": "ef3ef88f792c10dbbc1c7f7be5340eb338a856bab2664dd01e43ad4637ee626f"
+    },
+    {
+      "task_id": "X-0049",
+      "side": "X",
+      "logical_row_index": 49,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "38848959948340bc8850282e954ae0e710745fb1c12016818f5ab77ce44208de",
+      "logical_generator_support": [
+        110,
+        173,
+        203,
+        204,
+        234,
+        235
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0049.json",
+      "evidence_sha256": "873b5a8c5b8f8b0beb91b9ef97589cc91b9b5537bcecbd670ebb080fa3bfe14a"
+    },
+    {
+      "task_id": "X-0050",
+      "side": "X",
+      "logical_row_index": 50,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "ca53554cad6be41b60ccea9492e0a79f7406464e9c0e7230842f9c50718b5493",
+      "logical_generator_support": [
+        111,
+        174,
+        204,
+        205,
+        235,
+        236
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0050.json",
+      "evidence_sha256": "93f309aaa6ebf9df318ee3e0c9864836cc18d41c54dcc6e55e0a2525c0835257"
+    },
+    {
+      "task_id": "X-0051",
+      "side": "X",
+      "logical_row_index": 51,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "0ffde264a394f7eede9b701b03251dcfc010f7b0e208040f98878a70ea027bf0",
+      "logical_generator_support": [
+        112,
+        175,
+        205,
+        206,
+        236,
+        237
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0051.json",
+      "evidence_sha256": "3798b17b44c044e979e0911454728fbb8d3167bcd3a0028016a12e9dc330716b"
+    },
+    {
+      "task_id": "X-0052",
+      "side": "X",
+      "logical_row_index": 52,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "8a4051489e98838f54b80434ca746af51fa768f993a1b8abb8023f018dce5d31",
+      "logical_generator_support": [
+        113,
+        176,
+        206,
+        207,
+        237,
+        238
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0052.json",
+      "evidence_sha256": "fd301ae1e8d9b333cd86fc96e15895b8aacb0daacaf3da5353ac3620ca17dc28"
+    },
+    {
+      "task_id": "X-0053",
+      "side": "X",
+      "logical_row_index": 53,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "9a1f1b4043c93bc2cb11e41c8c1ca0e537c3cf2dc83825085e33fc842ab9a027",
+      "logical_generator_support": [
+        114,
+        177,
+        207,
+        208,
+        238,
+        239
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0053.json",
+      "evidence_sha256": "daeef90fbf3939d5eb6681772c8c3a15cf49532ce23e328e6ea793d1f9406aeb"
+    },
+    {
+      "task_id": "X-0054",
+      "side": "X",
+      "logical_row_index": 54,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "97875a2b30a49b1a65d2275bbd7b8225f6fbc4425fba91c93d088399776cabb2",
+      "logical_generator_support": [
+        115,
+        178,
+        208,
+        209,
+        239,
+        240
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0054.json",
+      "evidence_sha256": "42bf9ff124c2cc54eef13cd8499cc3fb0a82aa0923e6532bdd5356b4acbb277e"
+    },
+    {
+      "task_id": "X-0055",
+      "side": "X",
+      "logical_row_index": 55,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "849efd0ee4b2b8115ad5d5179de5b2a4032aec8b755eb9fbeffc5d9e3abecf00",
+      "logical_generator_support": [
+        116,
+        179,
+        209,
+        210,
+        240,
+        241
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0055.json",
+      "evidence_sha256": "9ea3e0d334fa2b978dd0aac388c02fa99c0a82e196fa9fb1543d0345467401c7"
+    },
+    {
+      "task_id": "X-0056",
+      "side": "X",
+      "logical_row_index": 56,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "ba628e2339f7c3f04514f1ac0a4798c71b9109dfdecb9f40c7c85b45a7679eae",
+      "logical_generator_support": [
+        117,
+        180,
+        210,
+        211,
+        241,
+        242
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0056.json",
+      "evidence_sha256": "5fe7baba1f8e1a407be7c6e528b0edb3c4b3f56556f50cdb763bf7b430a5c2c7"
+    },
+    {
+      "task_id": "X-0057",
+      "side": "X",
+      "logical_row_index": 57,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "ba02884877a1b5e7995f2c3d5f634f94d6317adbf1f76eac3ca06a3bd9b235ef",
+      "logical_generator_support": [
+        118,
+        181,
+        211,
+        212,
+        242,
+        243
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0057.json",
+      "evidence_sha256": "a65d0cf307c6e3a14cc5f63fd847beb868440d7089682a4478556fca6b60016e"
+    },
+    {
+      "task_id": "X-0058",
+      "side": "X",
+      "logical_row_index": 58,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "5ec77f6db06d037e1deacd072717969ccd434122f5f13aef5bd2153c89fc63e4",
+      "logical_generator_support": [
+        119,
+        182,
+        212,
+        213,
+        243,
+        244
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0058.json",
+      "evidence_sha256": "6d2d4a7c641226514282e54b0039b16e59acd316b7759b45d37125a51e8f48c9"
+    },
+    {
+      "task_id": "X-0059",
+      "side": "X",
+      "logical_row_index": 59,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "e8066ab0f3739297b15bd11315ed7b206ae407495f5b9e26199a141b12e717df",
+      "logical_generator_support": [
+        120,
+        183,
+        213,
+        214,
+        244,
+        245
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0059.json",
+      "evidence_sha256": "4eafa5aad2b9eebef2e843648d7e89f3c61bdde86ce4c272272b377335170bb8"
+    },
+    {
+      "task_id": "X-0060",
+      "side": "X",
+      "logical_row_index": 60,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "ec9f264577e487e2962b6071100065b797af09e8dbbe3c8f3f896b20592cdc82",
+      "logical_generator_support": [
+        121,
+        184,
+        214,
+        215,
+        245,
+        246
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0060.json",
+      "evidence_sha256": "343b971726782cd9581d0e7a52939c17d32aa9a1dbf84aa9636a82583e5d34b0"
+    },
+    {
+      "task_id": "X-0061",
+      "side": "X",
+      "logical_row_index": 61,
+      "cutoff": 3,
+      "check_matrix_sha256": "8cb09912c3dc2c0b9a956cac6776630384e6e340d86a1c19ebbff4a3fb546cc2",
+      "logical_generator_sha256": "f578228c091521c95b957320a65f0c3724d89a908641c13e2175790dc218af9b",
+      "logical_generator_support": [
+        122,
+        185,
+        215,
+        216,
+        246,
+        247
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/X-0061.json",
+      "evidence_sha256": "01002e03b74972d53863b58abefe52fb12347cfafc6b42890b780b15845da6e2"
+    },
+    {
+      "task_id": "Z-0000",
+      "side": "Z",
+      "logical_row_index": 0,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "15f59a02fc3968cd5bc4270ac613b50438514cea4126ac8c226469e3e81d1ba4",
+      "logical_generator_support": [
+        125,
+        156,
+        187,
+        218
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0000.json",
+      "evidence_sha256": "17741b520ffef5690c6543def0d3f1358310e9b066e9896ff2cefe046f509010"
+    },
+    {
+      "task_id": "Z-0001",
+      "side": "Z",
+      "logical_row_index": 1,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "38a2417a06fb5dcf6312f1c1e8f2406cdc7e5eb84360ffe4aa5e35c36f596f4c",
+      "logical_generator_support": [
+        126,
+        157,
+        188,
+        219
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0001.json",
+      "evidence_sha256": "5730cdf105234115e56532a5923dd50e0ffc764f326d9770f072051609b674ea"
+    },
+    {
+      "task_id": "Z-0002",
+      "side": "Z",
+      "logical_row_index": 2,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "ff682f101cfd1decfb691def3da6fdfc895d3d4298b289278cf69428a793ff5a",
+      "logical_generator_support": [
+        127,
+        158,
+        189,
+        220
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0002.json",
+      "evidence_sha256": "d80c01a80020de92f9d50af55dbc320ec935ff330ef15aaa85eb07fb032399f1"
+    },
+    {
+      "task_id": "Z-0003",
+      "side": "Z",
+      "logical_row_index": 3,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "4ef7c9bb703e81615ff656a475b26d17ff717effc645ed6a34d560ac004225e6",
+      "logical_generator_support": [
+        128,
+        159,
+        190,
+        221
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0003.json",
+      "evidence_sha256": "e26c42de4a343b49d3f813976640189ecd7be4f4b0d4f123803f004f4abec668"
+    },
+    {
+      "task_id": "Z-0004",
+      "side": "Z",
+      "logical_row_index": 4,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "e437956c9669445443aced5f9a92f8a1e02322b932daace831978f471173ad5e",
+      "logical_generator_support": [
+        129,
+        160,
+        191,
+        222
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0004.json",
+      "evidence_sha256": "39f3bf7cc447d20b6102131a59953dc663118b0c89aae8f9720558fdf3583a67"
+    },
+    {
+      "task_id": "Z-0005",
+      "side": "Z",
+      "logical_row_index": 5,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "fc82374dc3068c9217b041917ad80f5944e640b733cfd0097e9ceee647591bc4",
+      "logical_generator_support": [
+        130,
+        161,
+        192,
+        223
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0005.json",
+      "evidence_sha256": "3973ee8ca0986176f69d7ae44b8e146d5facba59108d3d59acc40de5e4e5f492"
+    },
+    {
+      "task_id": "Z-0006",
+      "side": "Z",
+      "logical_row_index": 6,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "2de0950eb7a5e1a8bc9dcc50570cd6e8b0dd0c241d709e39b09473920d83a4f2",
+      "logical_generator_support": [
+        131,
+        162,
+        193,
+        224
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0006.json",
+      "evidence_sha256": "36e3641a9c6fb7f83da3bd8c45ebfc20362f3fc409d15b9b732c6dffff37b92b"
+    },
+    {
+      "task_id": "Z-0007",
+      "side": "Z",
+      "logical_row_index": 7,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "085c8458336f7fd9e5a2339b29b70ec39719a4a6253cc81373f1359af2d6b7ee",
+      "logical_generator_support": [
+        132,
+        163,
+        194,
+        225
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0007.json",
+      "evidence_sha256": "36b74055f8dcca0bcfbb4359d29841229149eb934a6c8c2cd9457138a91a4c6f"
+    },
+    {
+      "task_id": "Z-0008",
+      "side": "Z",
+      "logical_row_index": 8,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "118e8f355faf07c781e16205194a2044b2361878ddd6e7e287129eaee51ad4de",
+      "logical_generator_support": [
+        133,
+        164,
+        195,
+        226
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0008.json",
+      "evidence_sha256": "28d6133a0a45bdd5a380c522226bb1610526876cc551c687a19e2a6df161225f"
+    },
+    {
+      "task_id": "Z-0009",
+      "side": "Z",
+      "logical_row_index": 9,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "f3a42e35ee213592dcff041aa33980c6e819d052dbabdb5c2c735f9776b94c32",
+      "logical_generator_support": [
+        134,
+        165,
+        196,
+        227
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0009.json",
+      "evidence_sha256": "452bb3e4f97a36cd9e6104d3420fb1712f411a3c5e38d5a5801fa6d08b12e757"
+    },
+    {
+      "task_id": "Z-0010",
+      "side": "Z",
+      "logical_row_index": 10,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "b92b4f0f79a16cf8f12643d8c6e8cbd09d75aef94cbb5e922020764699b83fa2",
+      "logical_generator_support": [
+        135,
+        166,
+        197,
+        228
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0010.json",
+      "evidence_sha256": "26bc31002365513084361f11702b9ffdf494e421f0bbbcb6c0e8ae3dd76dc2ba"
+    },
+    {
+      "task_id": "Z-0011",
+      "side": "Z",
+      "logical_row_index": 11,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "09ca2b91c4ba32230ecf1b41d0a1a3c51798e3aacff13a037ce91033cb349f9e",
+      "logical_generator_support": [
+        136,
+        167,
+        198,
+        229
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0011.json",
+      "evidence_sha256": "bfadcdaa893770bb229ad10c3fac56aed721a6fa65062f6ae50580cc695c04ec"
+    },
+    {
+      "task_id": "Z-0012",
+      "side": "Z",
+      "logical_row_index": 12,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "9bfde93eb3c44480db8d3e8e594b4fa749a0003c9ac8b5206782f9cf2f459b4f",
+      "logical_generator_support": [
+        137,
+        168,
+        199,
+        230
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0012.json",
+      "evidence_sha256": "410df49c7bfd3ecd62b69b3f4fa1e16926d39fc93bb3ddffb1ceec2cfb35c9b7"
+    },
+    {
+      "task_id": "Z-0013",
+      "side": "Z",
+      "logical_row_index": 13,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "806fc073d9528d16ff664ac13fcb781d6bb7957b55466930e074290823be1ee4",
+      "logical_generator_support": [
+        138,
+        169,
+        200,
+        231
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0013.json",
+      "evidence_sha256": "92b00aff99b47cd61ba386e9aa4538433c5f3966a5669602e779dc071f216a1b"
+    },
+    {
+      "task_id": "Z-0014",
+      "side": "Z",
+      "logical_row_index": 14,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "0775037762c30f1f67c6fd291e7b74d510145d141d7e66ef63444874ea7247ea",
+      "logical_generator_support": [
+        139,
+        170,
+        201,
+        232
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0014.json",
+      "evidence_sha256": "6f9a4087ee42c26ecfaa6441ac4badc487e6c781ccf853b662441252c20186de"
+    },
+    {
+      "task_id": "Z-0015",
+      "side": "Z",
+      "logical_row_index": 15,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "50c8ecb778d7d06aced1bf8c61dd792a7746b3237e48a639b2fe6ffc0da8aa6b",
+      "logical_generator_support": [
+        140,
+        171,
+        202,
+        233
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0015.json",
+      "evidence_sha256": "5b3cce971bbf5e6e0f8c2654a9e5e7324d56eb142da01632ca384680c663e1bb"
+    },
+    {
+      "task_id": "Z-0016",
+      "side": "Z",
+      "logical_row_index": 16,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "dd21fefc1e2ae489af090e71faa71236588b27e919bd7851213df6b17a99660d",
+      "logical_generator_support": [
+        141,
+        172,
+        203,
+        234
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0016.json",
+      "evidence_sha256": "2fa2b72719f52eda9f33f26b5ce27ab40cf1373db85451dc28ada13f7ef95ab2"
+    },
+    {
+      "task_id": "Z-0017",
+      "side": "Z",
+      "logical_row_index": 17,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "0ceccb6584d72fc4826a87f1385ff5716371d4b49e8e8fe1c32700af951f759c",
+      "logical_generator_support": [
+        142,
+        173,
+        204,
+        235
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0017.json",
+      "evidence_sha256": "b481e0a3ef5d95cfd26b3a2563799c3332761cb0a53aace03c73d0fdf6e58c52"
+    },
+    {
+      "task_id": "Z-0018",
+      "side": "Z",
+      "logical_row_index": 18,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "06d69eaa45a2375fbbdffccbe82a5d3fd87203fffe9fcfa61c939013bf1a00b1",
+      "logical_generator_support": [
+        143,
+        174,
+        205,
+        236
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0018.json",
+      "evidence_sha256": "0e72766b76933d77b9c748e9ce868b4079ad456767038237aebf395f42d0631b"
+    },
+    {
+      "task_id": "Z-0019",
+      "side": "Z",
+      "logical_row_index": 19,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "dbecd424a7ef7e3daf3206b07347812de33ad0551cc4a678940450d72080e479",
+      "logical_generator_support": [
+        144,
+        175,
+        206,
+        237
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0019.json",
+      "evidence_sha256": "7dc73cb03a483e78283b042d6c9f2e53bf4bf0869b1b80c3a3e7317200ba4e93"
+    },
+    {
+      "task_id": "Z-0020",
+      "side": "Z",
+      "logical_row_index": 20,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "730c8a3d56472b24fb63d8f372cf118a0288f4ae772a5d238de0d5cd2ec16e04",
+      "logical_generator_support": [
+        145,
+        176,
+        207,
+        238
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0020.json",
+      "evidence_sha256": "7b237938a5e409527bae84e09adc4c5872d98ecc3197010c218546879f3118fc"
+    },
+    {
+      "task_id": "Z-0021",
+      "side": "Z",
+      "logical_row_index": 21,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "8a930552a596f7c92e7a99270b65971baa5d1aa8375c00c404ed88c0e903ca47",
+      "logical_generator_support": [
+        146,
+        177,
+        208,
+        239
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0021.json",
+      "evidence_sha256": "a2eb7e0c4460d6e0a9857e81c39eb4e28d78081e2bd4b2db021930c7d4b513a6"
+    },
+    {
+      "task_id": "Z-0022",
+      "side": "Z",
+      "logical_row_index": 22,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "c2d3c17405a5993521e542e1cde0ff31f212e80bb0dd69c31ff1536723e9a740",
+      "logical_generator_support": [
+        147,
+        178,
+        209,
+        240
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0022.json",
+      "evidence_sha256": "9b1aa1f9a2b78e77180078c814f2b362a563e93f4b97c32082f4747dd44f6585"
+    },
+    {
+      "task_id": "Z-0023",
+      "side": "Z",
+      "logical_row_index": 23,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "25a1da904257824a1de20846cd6f009d17a2c05dd184c789dda56509f1fbedc5",
+      "logical_generator_support": [
+        148,
+        179,
+        210,
+        241
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0023.json",
+      "evidence_sha256": "cf211da9caab8e2f04ea110964a403642b4da1eacd4504934ee912fea3dbe6f4"
+    },
+    {
+      "task_id": "Z-0024",
+      "side": "Z",
+      "logical_row_index": 24,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "823f89ec025c95447aeb6ced0ea95fb8931a35d39ea0b4e7083122835497869a",
+      "logical_generator_support": [
+        149,
+        180,
+        211,
+        242
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0024.json",
+      "evidence_sha256": "408590b8831912e306d8a85f1638f745e1586a98816cbe3e90f1dbd5945c4318"
+    },
+    {
+      "task_id": "Z-0025",
+      "side": "Z",
+      "logical_row_index": 25,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "54aec66efba09a93ba402b3cbffb8a2c75a4003c1869aff2a0f78d245e7e8a03",
+      "logical_generator_support": [
+        150,
+        181,
+        212,
+        243
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0025.json",
+      "evidence_sha256": "322b0faf897e6f791b5acd4892753950c3dd0655d87b8c64798c08c008979a8f"
+    },
+    {
+      "task_id": "Z-0026",
+      "side": "Z",
+      "logical_row_index": 26,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "6199a66468b76163215b17f1cc594d837e8b0ed47394722a4e2493108c7a04ba",
+      "logical_generator_support": [
+        151,
+        182,
+        213,
+        244
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0026.json",
+      "evidence_sha256": "a9e7454d0c8a0bcee48b1a0b0049fc930373cec687e2a7e7c6ce5c7fb6598be9"
+    },
+    {
+      "task_id": "Z-0027",
+      "side": "Z",
+      "logical_row_index": 27,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "78e33d21e2cd8630535d278060dd04d64cd704270be6543568d8c29dfc926693",
+      "logical_generator_support": [
+        152,
+        183,
+        214,
+        245
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0027.json",
+      "evidence_sha256": "364bdde04316ace8e050b72c4879c79754f92f44b73c1c6ebb37d2f76d32787f"
+    },
+    {
+      "task_id": "Z-0028",
+      "side": "Z",
+      "logical_row_index": 28,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "569f3eeff457386b6cfbeac6007821e873fb1a6bb0c137426228f3f2d92eed23",
+      "logical_generator_support": [
+        153,
+        184,
+        215,
+        246
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0028.json",
+      "evidence_sha256": "f42ecefe0c35b3059ea84775acf3f7b2748346e7fb2e9ad5ca39ec26391a3200"
+    },
+    {
+      "task_id": "Z-0029",
+      "side": "Z",
+      "logical_row_index": 29,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "660556528b8e3286961bf3dc3d759cc139f088c69f6c0a34c5da91d546221ddc",
+      "logical_generator_support": [
+        154,
+        185,
+        216,
+        247
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0029.json",
+      "evidence_sha256": "f93fc6d517df9c44988653b1d2c38dbded7fbd411722d14320c2c3fb65fa1f5c"
+    },
+    {
+      "task_id": "Z-0030",
+      "side": "Z",
+      "logical_row_index": 30,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "1257ddfcfb1d9e41b7de949b18adf2c343da74a2d54b3bfa6b07060f41155830",
+      "logical_generator_support": [
+        124,
+        155,
+        186,
+        217
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0030.json",
+      "evidence_sha256": "596ace9aacb5f6562ea5d5ccc997bc9f8a9e52a3b3714ebfb635acb4418684a9"
+    },
+    {
+      "task_id": "Z-0031",
+      "side": "Z",
+      "logical_row_index": 31,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "749fbf1b53770bcfefa18615484779edd26efb1d6365d695de6450a403395991",
+      "logical_generator_support": [
+        123,
+        155,
+        156,
+        157,
+        186,
+        187,
+        217,
+        219
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0031.json",
+      "evidence_sha256": "0807aa773dc18ffa44c8a422e5eb45682866cb9ee1634f9af3b9c734d1cc43e6"
+    },
+    {
+      "task_id": "Z-0032",
+      "side": "Z",
+      "logical_row_index": 32,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "2b3f999093f97c9ae17ac0d3634a96d6977a6a824c7145ec3b6031a9cac00ed1",
+      "logical_generator_support": [
+        93,
+        156,
+        157,
+        158,
+        187,
+        188,
+        218,
+        220
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0032.json",
+      "evidence_sha256": "ef78b3a69c831c173b386cd23ccca9f13edc1882db83f54a30e25cde1321e3d6"
+    },
+    {
+      "task_id": "Z-0033",
+      "side": "Z",
+      "logical_row_index": 33,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "12014ca10b1586060b921dc463b470bda0cb2f532fea713c48a6135837fa679f",
+      "logical_generator_support": [
+        94,
+        157,
+        158,
+        159,
+        188,
+        189,
+        219,
+        221
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0033.json",
+      "evidence_sha256": "6949a06c4f5042fde35a0203eb4f9b29f63ba151cb0bbea867150476572fd60d"
+    },
+    {
+      "task_id": "Z-0034",
+      "side": "Z",
+      "logical_row_index": 34,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "c688c0efa42925e639ce0e15c6fd540c238bbb1786dae585c7271143225cccbe",
+      "logical_generator_support": [
+        95,
+        158,
+        159,
+        160,
+        189,
+        190,
+        220,
+        222
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0034.json",
+      "evidence_sha256": "90e36f359ea9524b5c3c6303d5a4f9dff133b979a17af147250f9b466b06785e"
+    },
+    {
+      "task_id": "Z-0035",
+      "side": "Z",
+      "logical_row_index": 35,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "eab68445315f56d3cd081a44eac34c7c3a6146f1f471a54b9ea148d00f498330",
+      "logical_generator_support": [
+        96,
+        159,
+        160,
+        161,
+        190,
+        191,
+        221,
+        223
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0035.json",
+      "evidence_sha256": "9be5f2071ce83047c86aceec5cf5d68df2d019d7dec15d4f720cebfbc6db31b3"
+    },
+    {
+      "task_id": "Z-0036",
+      "side": "Z",
+      "logical_row_index": 36,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "3def4151acd704075893cd2ee3bd78fbd5ef7e34103a1100a263dade5d99df62",
+      "logical_generator_support": [
+        97,
+        160,
+        161,
+        162,
+        191,
+        192,
+        222,
+        224
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0036.json",
+      "evidence_sha256": "377317e045c5174f2d84bc47aec724f9452287f0148f279166abf7899d4599da"
+    },
+    {
+      "task_id": "Z-0037",
+      "side": "Z",
+      "logical_row_index": 37,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "c974eafa583ff19dbe0c432906f6a8039c2738b3c71f43b3b2b5b73289b90783",
+      "logical_generator_support": [
+        98,
+        161,
+        162,
+        163,
+        192,
+        193,
+        223,
+        225
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0037.json",
+      "evidence_sha256": "d4adb41d7f272fcbfb33975ba136e0bf89d189037c5fff0f32328d8d6d166404"
+    },
+    {
+      "task_id": "Z-0038",
+      "side": "Z",
+      "logical_row_index": 38,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "82b5aeb16384c348d07ce3a0d39e67cc38260fa2c4cb2852d5b6a1220a436142",
+      "logical_generator_support": [
+        99,
+        162,
+        163,
+        164,
+        193,
+        194,
+        224,
+        226
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0038.json",
+      "evidence_sha256": "84290a356c3f6343eafe6f42c99647ed36acbc9e38bdcb37d904925a3b21ebb0"
+    },
+    {
+      "task_id": "Z-0039",
+      "side": "Z",
+      "logical_row_index": 39,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "14fe242b63786dacdcc3cb5f38f1c005f2ef051d73848c6d8b63d3982d5e3105",
+      "logical_generator_support": [
+        100,
+        163,
+        164,
+        165,
+        194,
+        195,
+        225,
+        227
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0039.json",
+      "evidence_sha256": "74bbfb53c7ea86b4b550fd917b58ed614561353a924597a4e72037910c5c0203"
+    },
+    {
+      "task_id": "Z-0040",
+      "side": "Z",
+      "logical_row_index": 40,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "d874f7ceb31a53913263ed1caa0e060e8e0e4d5b0e00c47a96eee87732d5be08",
+      "logical_generator_support": [
+        101,
+        164,
+        165,
+        166,
+        195,
+        196,
+        226,
+        228
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0040.json",
+      "evidence_sha256": "b390d685eb795358ec2f16a15c6c7a4dee302adb17f39e43feb65c3463fa1b30"
+    },
+    {
+      "task_id": "Z-0041",
+      "side": "Z",
+      "logical_row_index": 41,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "1a25ad235f050a3cafee09d276152f995fcd27ea0c4b4e4eb15c41c9476837b8",
+      "logical_generator_support": [
+        102,
+        165,
+        166,
+        167,
+        196,
+        197,
+        227,
+        229
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0041.json",
+      "evidence_sha256": "024ffc9203624414e3768e571c55a58e2d9e353a273b7bfc72281694bd81018a"
+    },
+    {
+      "task_id": "Z-0042",
+      "side": "Z",
+      "logical_row_index": 42,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "10bf68e98835b5f6d7f6c065dcb9a47321dbf695449dcfb99e679b4fed002510",
+      "logical_generator_support": [
+        103,
+        166,
+        167,
+        168,
+        197,
+        198,
+        228,
+        230
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0042.json",
+      "evidence_sha256": "95f49cd15169018d853663c6c32988accdcee6c522a255eadf7f35724d80de8d"
+    },
+    {
+      "task_id": "Z-0043",
+      "side": "Z",
+      "logical_row_index": 43,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "e9ce59b662cea8fa6d92cc35d62a8a06cc73451c62a435727f926f18876dc228",
+      "logical_generator_support": [
+        104,
+        167,
+        168,
+        169,
+        198,
+        199,
+        229,
+        231
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0043.json",
+      "evidence_sha256": "38f8d4077d58a74a81bfdbfee7d88238cd63f9b83f2b99f4f7603a4c6a2d33db"
+    },
+    {
+      "task_id": "Z-0044",
+      "side": "Z",
+      "logical_row_index": 44,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "2316c7023bca95a2de173ac7a3552c59a553bc3994e36a38401c36571baf7777",
+      "logical_generator_support": [
+        105,
+        168,
+        169,
+        170,
+        199,
+        200,
+        230,
+        232
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0044.json",
+      "evidence_sha256": "ce894415b616bc362c7c6aa81ecab16d565a22225547ade678abe7e5f5946a94"
+    },
+    {
+      "task_id": "Z-0045",
+      "side": "Z",
+      "logical_row_index": 45,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "d9c257860ea1ccb3eed582daa8d550f464e81e1bc5fc7e74b537f7b76bab5c90",
+      "logical_generator_support": [
+        106,
+        169,
+        170,
+        171,
+        200,
+        201,
+        231,
+        233
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0045.json",
+      "evidence_sha256": "9ea5cfa1060339c64898d271979725dd79526aca52da99e3dfc8b60ef262ce1f"
+    },
+    {
+      "task_id": "Z-0046",
+      "side": "Z",
+      "logical_row_index": 46,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "8074d728c7ceee898948194b4237e741728c68881e46f7cbfdcb10f43db460d5",
+      "logical_generator_support": [
+        107,
+        170,
+        171,
+        172,
+        201,
+        202,
+        232,
+        234
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0046.json",
+      "evidence_sha256": "92d3b2e259cebda5c82e487c4c12bd52fb6ee91662d572a0ba114a40f115dafa"
+    },
+    {
+      "task_id": "Z-0047",
+      "side": "Z",
+      "logical_row_index": 47,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "0bbdeee58fce65b59a5d5a5c381700852e182dc91c18ce9cd7313a7a6e264257",
+      "logical_generator_support": [
+        108,
+        171,
+        172,
+        173,
+        202,
+        203,
+        233,
+        235
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0047.json",
+      "evidence_sha256": "724541e64eee0d229a2b9561a4a6f566aa9907216c7412dc7363117cb7f4c5b1"
+    },
+    {
+      "task_id": "Z-0048",
+      "side": "Z",
+      "logical_row_index": 48,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "c09946e378d8fa28aa96165d04b0740a195ca59712e6d8c1e67e43bb1d0c121b",
+      "logical_generator_support": [
+        109,
+        172,
+        173,
+        174,
+        203,
+        204,
+        234,
+        236
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0048.json",
+      "evidence_sha256": "9cec0729541183c80736e7ecff767cbbba8d7c768160ff3d77a3cd120c71ebd6"
+    },
+    {
+      "task_id": "Z-0049",
+      "side": "Z",
+      "logical_row_index": 49,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "2d7b2237180ce31c57843585ddbd410dcb9aea39c5075abfb90784fe484af5cc",
+      "logical_generator_support": [
+        110,
+        173,
+        174,
+        175,
+        204,
+        205,
+        235,
+        237
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0049.json",
+      "evidence_sha256": "71e672b9c298c4811afc974e30bb1f8a89ff757fa6b846c008f58806c841f671"
+    },
+    {
+      "task_id": "Z-0050",
+      "side": "Z",
+      "logical_row_index": 50,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "d6dbb5ae56e651469d273fe509c13da5f0780724afc3b751abbe2537f943d00a",
+      "logical_generator_support": [
+        111,
+        174,
+        175,
+        176,
+        205,
+        206,
+        236,
+        238
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0050.json",
+      "evidence_sha256": "06c672e693bf6dfa4f0314b75bfc293b72feae883d817208b7cb551fccb7e919"
+    },
+    {
+      "task_id": "Z-0051",
+      "side": "Z",
+      "logical_row_index": 51,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "375bcf7d7573cac17f61f63eeaec54bf6d7fcd2350f940be296a489f097eb95f",
+      "logical_generator_support": [
+        112,
+        175,
+        176,
+        177,
+        206,
+        207,
+        237,
+        239
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0051.json",
+      "evidence_sha256": "bcc1ec8384dd3a333d2e3ccad8683cd56f49110429bc9268f9888b464838d04c"
+    },
+    {
+      "task_id": "Z-0052",
+      "side": "Z",
+      "logical_row_index": 52,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "998ed07e7493c75b713e3fa2fa18da77125430c7df0be58ea6ea57169472b28d",
+      "logical_generator_support": [
+        113,
+        176,
+        177,
+        178,
+        207,
+        208,
+        238,
+        240
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0052.json",
+      "evidence_sha256": "d4550009ac9865be597fe614856a11bb25a192f9696fd00a1b926c1bd801d047"
+    },
+    {
+      "task_id": "Z-0053",
+      "side": "Z",
+      "logical_row_index": 53,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "8ce9252fbcda158fa20432b625b6ebd06fc2da8219adc794dffc3e64ab2ee349",
+      "logical_generator_support": [
+        114,
+        177,
+        178,
+        179,
+        208,
+        209,
+        239,
+        241
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0053.json",
+      "evidence_sha256": "ee5cb44b35df0b5ea8f17e59ed74202b6eddf70657700d44a684f608687b700d"
+    },
+    {
+      "task_id": "Z-0054",
+      "side": "Z",
+      "logical_row_index": 54,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "38b8b25282174725c2dbedf89b14fd3c5eaa72798bdc18bc6a8d0eff524db566",
+      "logical_generator_support": [
+        115,
+        178,
+        179,
+        180,
+        209,
+        210,
+        240,
+        242
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0054.json",
+      "evidence_sha256": "d08a53b96fa757cb898d06eac949ad105ae82e0be0a21b4d0c6abf654f84687c"
+    },
+    {
+      "task_id": "Z-0055",
+      "side": "Z",
+      "logical_row_index": 55,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "698f7829f9d03c488167bf267908afafc05ac1877678ac03dfac29dc9041040e",
+      "logical_generator_support": [
+        116,
+        179,
+        180,
+        181,
+        210,
+        211,
+        241,
+        243
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0055.json",
+      "evidence_sha256": "dfc60c8c5ea26f2c4a067ca2e9137526290329ae59a1e1e5b0e3db3981967161"
+    },
+    {
+      "task_id": "Z-0056",
+      "side": "Z",
+      "logical_row_index": 56,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "961b61c9c84c139c8e5836e23a5418c999c9e1f270e977e8e9f2941906e0b07c",
+      "logical_generator_support": [
+        117,
+        180,
+        181,
+        182,
+        211,
+        212,
+        242,
+        244
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0056.json",
+      "evidence_sha256": "049d9aa30fe7112832463bc3fe84ff345c231d381f51d9d2a7ceeb4bc3ab1ecd"
+    },
+    {
+      "task_id": "Z-0057",
+      "side": "Z",
+      "logical_row_index": 57,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "25e725cbac8ea37aaff9490e8f4b6cf59cbede9262a777c09d4cd993757098e0",
+      "logical_generator_support": [
+        118,
+        181,
+        182,
+        183,
+        212,
+        213,
+        243,
+        245
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0057.json",
+      "evidence_sha256": "f391d03ac0f68c0789df333ae81cb2d7dd81b7bcd5617a561caa67e825ecd220"
+    },
+    {
+      "task_id": "Z-0058",
+      "side": "Z",
+      "logical_row_index": 58,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "61d590a382405e7bf508dda9442a2e4112c62928eb13840fceeb80bcea78ad71",
+      "logical_generator_support": [
+        119,
+        182,
+        183,
+        184,
+        213,
+        214,
+        244,
+        246
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0058.json",
+      "evidence_sha256": "03a14ae0cfd02c3e72691408a52d9afbd478bdad60301875d24f5c5929373d21"
+    },
+    {
+      "task_id": "Z-0059",
+      "side": "Z",
+      "logical_row_index": 59,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "219b5e98c0bdf92a081c59a0a44638940070b81382589f05e2ce09e777ffe166",
+      "logical_generator_support": [
+        120,
+        183,
+        184,
+        185,
+        214,
+        215,
+        245,
+        247
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0059.json",
+      "evidence_sha256": "45cd1bcb072d5c2a32047873a3550645e8c8a748e12a6ae8e5c5c3e5085558d6"
+    },
+    {
+      "task_id": "Z-0060",
+      "side": "Z",
+      "logical_row_index": 60,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "14e143a6814d24331011402e74287dbc74b9379be1486041bfc46b843a0f85b4",
+      "logical_generator_support": [
+        121,
+        155,
+        184,
+        185,
+        215,
+        216,
+        217,
+        246
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0060.json",
+      "evidence_sha256": "d53de2de4ea81d75ef53c46d739d741acd93c7cbae9daa191335927b77612503"
+    },
+    {
+      "task_id": "Z-0061",
+      "side": "Z",
+      "logical_row_index": 61,
+      "cutoff": 3,
+      "check_matrix_sha256": "f63b152c982f53102bee9e3125ca5a387e001568d4c89cd05e5cbb92f30a7f7c",
+      "logical_generator_sha256": "b2fff7c9ab51ddaa6009d8f21667aeec71096788d2e4e5a347cc04d3bb07bebb",
+      "logical_generator_support": [
+        122,
+        155,
+        156,
+        185,
+        186,
+        216,
+        218,
+        247
+      ],
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0019531/attempts/all-t5-w64/tasks/Z-0061.json",
+      "evidence_sha256": "436d2c5260b3a97cdf44217ec647ae055a4cbccc75623f36d38d99de33b3a856"
+    }
+  ]
+}
