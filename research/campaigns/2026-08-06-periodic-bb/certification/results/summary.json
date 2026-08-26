@@ -7,8 +7,8 @@
     "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
     "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508",
     "candidate_hashes_verified": 129,
-    "task_records_verified": 23775,
-    "canonical_logical_rows_verified": 23775,
+    "task_records_verified": 23886,
+    "canonical_logical_rows_verified": 23886,
     "refutation_indexes_verified": 23,
     "stock_serial_exact_records_verified": 40
   },
@@ -16,21 +16,21 @@
   "counts": {
     "exact": 22,
     "refuted": 6,
-    "sharded_closed_pending_serial": 5,
-    "timeout": 95,
+    "sharded_closed_pending_serial": 6,
+    "timeout": 94,
     "pending": 0
   },
-  "batch_wall_seconds": 20864.871238,
-  "batch_wall_seconds_reported_sum": 20864.87126197199,
-  "new_task_wall_seconds": 1195694.745107636,
-  "new_task_cpu_seconds": 1183922.1336829201,
-  "solver_wall_seconds": 1195694.745107636,
-  "solver_cpu_seconds": 1183922.1336829201,
-  "new_task_count": 23671,
-  "inherited_definitive_task_count": 10389,
-  "orphan_new_task_count": 104,
-  "orphan_new_task_wall_seconds": 225092.003716395,
-  "orphan_new_task_cpu_seconds": 222388.771691979,
+  "batch_wall_seconds": 21718.212303,
+  "batch_wall_seconds_reported_sum": 22509.28300429098,
+  "new_task_wall_seconds": 1228129.155251649,
+  "new_task_cpu_seconds": 1216162.2563228412,
+  "solver_wall_seconds": 1228129.155251649,
+  "solver_cpu_seconds": 1216162.2563228412,
+  "new_task_count": 23812,
+  "inherited_definitive_task_count": 11192,
+  "orphan_new_task_count": 74,
+  "orphan_new_task_wall_seconds": 230267.844295525,
+  "orphan_new_task_cpu_seconds": 227493.910923331,
   "task_time_budgets_seconds": [
     5.0,
     30.0,
@@ -46,7 +46,9 @@
     "selective-t600-w63-r1",
     "selective-t3600-w62-r1",
     "selective-t600-w54-r2",
-    "selective-t600-w54-r3"
+    "selective-t600-w54-r3",
+    "selective-t600-w45-r4",
+    "selective-t3600-w2-r5-c0040002"
   ],
   "batch_details": [
     {
@@ -168,12 +170,45 @@
       "new_task_cpu_seconds": 25024.728727195,
       "reported_task_wall_seconds_sum": 25366.822118690994,
       "reported_task_cpu_seconds_sum": 25024.728727195
+    },
+    {
+      "stage": "selective-t600-w45-r4",
+      "batch_result": "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w45-r4.json",
+      "batch_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w45-r4-start.json",
+      "candidate_count": 1,
+      "workers": 45,
+      "task_time_limit_seconds": 600.0,
+      "wall_seconds": 853.5192263219942,
+      "new_task_count": 139,
+      "inherited_definitive_task_count": 333,
+      "new_task_wall_seconds": 31057.28909757801,
+      "new_task_cpu_seconds": 30872.354961371,
+      "reported_task_wall_seconds_sum": 31057.28909757801,
+      "reported_task_cpu_seconds_sum": 30872.354961371
+    },
+    {
+      "stage": "selective-t3600-w2-r5-c0040002",
+      "batch_result": "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t3600-w2-r5-c0040002.json",
+      "batch_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t3600-w2-r5-c0040002-start.json",
+      "candidate_count": 1,
+      "workers": 2,
+      "task_time_limit_seconds": 3600.0,
+      "wall_seconds": 790.8925159969949,
+      "new_task_count": 2,
+      "inherited_definitive_task_count": 470,
+      "new_task_wall_seconds": 1377.1210464349933,
+      "new_task_cpu_seconds": 1367.7676785499998,
+      "reported_task_wall_seconds_sum": 1377.1210464349933,
+      "reported_task_cpu_seconds_sum": 1367.7676785499998
     }
   ],
   "orphan_incomplete_batch_starts": [
-    "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t3600-w2-r5-c0040002-start.json",
+    "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w2-r6-c0020418-start.json",
+    "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w8-r7-c0020168-start.json",
     "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t3600-w62-r2-start.json",
-    "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w45-r4-start.json"
+    "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w13-r10-c0045064-start.json",
+    "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w22-r9-c0020283-start.json",
+    "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w9-r8-c0010524-start.json"
   ],
   "targets": [
     {
@@ -785,18 +820,19 @@
         "Z": {
           "required_task_count": 18,
           "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 0,
+          "all_persisted_proven_infeasible_task_count": 8,
           "persisted_refutation_count": 0
         }
       },
       "timeout_budgets_seconds": [
         5.0,
         30.0,
-        120.0
+        120.0,
+        600.0
       ],
-      "solver_wall_seconds": 3449.899552808992,
-      "solver_cpu_seconds": 3413.0486717709996,
-      "task_result_count": 96,
+      "solver_wall_seconds": 5083.5488145439795,
+      "solver_cpu_seconds": 5032.767884813999,
+      "task_result_count": 104,
       "attempts": [
         {
           "stage": "all-t120-w64",
@@ -836,9 +872,24 @@
           "inherited_definitive_task_count": 0,
           "task_time_limit_seconds": 5.0,
           "missing_task_count": 0
+        },
+        {
+          "stage": "selective-t600-w9-r8-c0010524",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0010524/attempts/selective-t600-w9-r8-c0010524/run-start.json",
+          "aggregate": null,
+          "complete": false,
+          "orphan_incomplete": true,
+          "expected_task_count": 36,
+          "new_task_count": 18,
+          "persisted_new_task_count": 8,
+          "inherited_definitive_task_count": 18,
+          "task_time_limit_seconds": 600.0,
+          "missing_task_count": 10
         }
       ],
-      "orphan_incomplete_attempts": [],
+      "orphan_incomplete_attempts": [
+        "selective-t600-w9-r8-c0010524"
+      ],
       "serial_confirmation": null,
       "serial_confirmations": [],
       "refutation_evidence": [],
@@ -1947,6 +1998,19 @@
           "missing_task_count": 0
         },
         {
+          "stage": "selective-t14400-w8-r7-c0020168",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020168/attempts/selective-t14400-w8-r7-c0020168/run-start.json",
+          "aggregate": null,
+          "complete": false,
+          "orphan_incomplete": true,
+          "expected_task_count": 40,
+          "new_task_count": 8,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 32,
+          "task_time_limit_seconds": 14400.0,
+          "missing_task_count": 8
+        },
+        {
           "stage": "selective-t3600-w62-r1",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020168/attempts/selective-t3600-w62-r1/run-start.json",
           "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020168/attempts/selective-t3600-w62-r1/aggregate.json",
@@ -1973,7 +2037,9 @@
           "missing_task_count": 0
         }
       ],
-      "orphan_incomplete_attempts": [],
+      "orphan_incomplete_attempts": [
+        "selective-t14400-w8-r7-c0020168"
+      ],
       "serial_confirmation": null,
       "serial_confirmations": [],
       "refutation_evidence": [],
@@ -2152,9 +2218,24 @@
           "inherited_definitive_task_count": 0,
           "task_time_limit_seconds": 5.0,
           "missing_task_count": 0
+        },
+        {
+          "stage": "selective-t600-w22-r9-c0020283",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020283/attempts/selective-t600-w22-r9-c0020283/run-start.json",
+          "aggregate": null,
+          "complete": false,
+          "orphan_incomplete": true,
+          "expected_task_count": 44,
+          "new_task_count": 22,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 22,
+          "task_time_limit_seconds": 600.0,
+          "missing_task_count": 22
         }
       ],
-      "orphan_incomplete_attempts": [],
+      "orphan_incomplete_attempts": [
+        "selective-t600-w22-r9-c0020283"
+      ],
       "serial_confirmation": null,
       "serial_confirmations": [],
       "refutation_evidence": [],
@@ -2324,6 +2405,19 @@
           "missing_task_count": 0
         },
         {
+          "stage": "selective-t14400-w2-r6-c0020418",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020418/attempts/selective-t14400-w2-r6-c0020418/run-start.json",
+          "aggregate": null,
+          "complete": false,
+          "orphan_incomplete": true,
+          "expected_task_count": 60,
+          "new_task_count": 2,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 58,
+          "task_time_limit_seconds": 14400.0,
+          "missing_task_count": 2
+        },
+        {
           "stage": "selective-t3600-w62-r2",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020418/attempts/selective-t3600-w62-r2/run-start.json",
           "aggregate": null,
@@ -2351,6 +2445,7 @@
         }
       ],
       "orphan_incomplete_attempts": [
+        "selective-t14400-w2-r6-c0020418",
         "selective-t3600-w62-r2"
       ],
       "serial_confirmation": null,
@@ -2920,20 +3015,20 @@
       "d": 3,
       "status": "timeout",
       "side_status": {
-        "X": "timeout",
+        "X": "sharded_closed_pending_serial",
         "Z": "timeout"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 236,
-          "proven_infeasible_task_count": 189,
-          "all_persisted_proven_infeasible_task_count": 227,
+          "proven_infeasible_task_count": 236,
+          "all_persisted_proven_infeasible_task_count": 236,
           "persisted_refutation_count": 0
         },
         "Z": {
           "required_task_count": 236,
-          "proven_infeasible_task_count": 144,
-          "all_persisted_proven_infeasible_task_count": 147,
+          "proven_infeasible_task_count": 235,
+          "all_persisted_proven_infeasible_task_count": 235,
           "persisted_refutation_count": 0
         }
       },
@@ -2943,9 +3038,9 @@
         120.0,
         600.0
       ],
-      "solver_wall_seconds": 58039.221403474,
-      "solver_cpu_seconds": 57535.741596506,
-      "task_result_count": 1388,
+      "solver_wall_seconds": 81824.90688979502,
+      "solver_cpu_seconds": 81184.104783291,
+      "task_result_count": 1486,
       "attempts": [
         {
           "stage": "all-t120-w64",
@@ -2989,20 +3084,18 @@
         {
           "stage": "selective-t600-w45-r4",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040000/attempts/selective-t600-w45-r4/run-start.json",
-          "aggregate": null,
-          "complete": false,
-          "orphan_incomplete": true,
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040000/attempts/selective-t600-w45-r4/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
           "expected_task_count": 472,
           "new_task_count": 139,
-          "persisted_new_task_count": 41,
+          "persisted_new_task_count": 139,
           "inherited_definitive_task_count": 333,
           "task_time_limit_seconds": 600.0,
-          "missing_task_count": 98
+          "missing_task_count": 0
         }
       ],
-      "orphan_incomplete_attempts": [
-        "selective-t600-w45-r4"
-      ],
+      "orphan_incomplete_attempts": [],
       "serial_confirmation": null,
       "serial_confirmations": [],
       "refutation_evidence": [],
@@ -3102,16 +3195,16 @@
       "n": 696,
       "k": 236,
       "d": 3,
-      "status": "timeout",
+      "status": "sharded_closed_pending_serial",
       "side_status": {
-        "X": "timeout",
+        "X": "sharded_closed_pending_serial",
         "Z": "sharded_closed_pending_serial"
       },
       "side_evidence": {
         "X": {
           "required_task_count": 236,
-          "proven_infeasible_task_count": 234,
-          "all_persisted_proven_infeasible_task_count": 234,
+          "proven_infeasible_task_count": 236,
+          "all_persisted_proven_infeasible_task_count": 236,
           "persisted_refutation_count": 0
         },
         "Z": {
@@ -3125,11 +3218,12 @@
         5.0,
         30.0,
         120.0,
-        600.0
+        600.0,
+        3600.0
       ],
-      "solver_wall_seconds": 56184.824682662,
-      "solver_cpu_seconds": 55549.291450414,
-      "task_result_count": 1093,
+      "solver_wall_seconds": 57561.945729096995,
+      "solver_cpu_seconds": 56917.059128964,
+      "task_result_count": 1095,
       "attempts": [
         {
           "stage": "all-t120-w64",
@@ -3173,15 +3267,15 @@
         {
           "stage": "selective-t3600-w2-r5-c0040002",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040002/attempts/selective-t3600-w2-r5-c0040002/run-start.json",
-          "aggregate": null,
-          "complete": false,
-          "orphan_incomplete": true,
+          "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0040002/attempts/selective-t3600-w2-r5-c0040002/aggregate.json",
+          "complete": true,
+          "orphan_incomplete": false,
           "expected_task_count": 472,
           "new_task_count": 2,
-          "persisted_new_task_count": 0,
+          "persisted_new_task_count": 2,
           "inherited_definitive_task_count": 470,
           "task_time_limit_seconds": 3600.0,
-          "missing_task_count": 2
+          "missing_task_count": 0
         },
         {
           "stage": "selective-t600-w54-r3",
@@ -3197,9 +3291,7 @@
           "missing_task_count": 0
         }
       ],
-      "orphan_incomplete_attempts": [
-        "selective-t3600-w2-r5-c0040002"
-      ],
+      "orphan_incomplete_attempts": [],
       "serial_confirmation": null,
       "serial_confirmations": [],
       "refutation_evidence": [],
@@ -5545,9 +5637,24 @@
           "inherited_definitive_task_count": 0,
           "task_time_limit_seconds": 5.0,
           "missing_task_count": 0
+        },
+        {
+          "stage": "selective-t600-w13-r10-c0045064",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045064/attempts/selective-t600-w13-r10-c0045064/run-start.json",
+          "aggregate": null,
+          "complete": false,
+          "orphan_incomplete": true,
+          "expected_task_count": 52,
+          "new_task_count": 26,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 26,
+          "task_time_limit_seconds": 600.0,
+          "missing_task_count": 26
         }
       ],
-      "orphan_incomplete_attempts": [],
+      "orphan_incomplete_attempts": [
+        "selective-t600-w13-r10-c0045064"
+      ],
       "serial_confirmation": null,
       "serial_confirmations": [],
       "refutation_evidence": [],
@@ -5585,9 +5692,9 @@
         600.0,
         3600.0
       ],
-      "solver_wall_seconds": 53341.04332862301,
-      "solver_cpu_seconds": 52727.372881188,
-      "task_result_count": 75,
+      "solver_wall_seconds": 64154.83825727501,
+      "solver_cpu_seconds": 63436.784674083,
+      "task_result_count": 78,
       "attempts": [
         {
           "stage": "all-t120-w64",
@@ -5636,10 +5743,10 @@
           "orphan_incomplete": true,
           "expected_task_count": 16,
           "new_task_count": 16,
-          "persisted_new_task_count": 11,
+          "persisted_new_task_count": 14,
           "inherited_definitive_task_count": 0,
           "task_time_limit_seconds": 3600.0,
-          "missing_task_count": 5
+          "missing_task_count": 2
         },
         {
           "stage": "selective-t600-w63-r1",
