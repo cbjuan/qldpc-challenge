@@ -1,0 +1,75 @@
+{
+  "schema_version": 2,
+  "stage": "selective-t3600-w9-r29-c0010524",
+  "started_at_utc": "2026-08-26T21:39:00.032772+00:00",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508",
+  "runner_sha256": "a3ee133c53004306d25729729e85d009a0b905174e877836cdc591846bba6845",
+  "workers": 9,
+  "task_time_limit_seconds": 3600.0,
+  "reuse_definitive": true,
+  "candidate_keys": [
+    "c0010524"
+  ],
+  "candidate_inputs": [
+    {
+      "candidate_key": "c0010524",
+      "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0010524-88d55b4bd0-60k-python8000-s852276647-fast60000.json",
+      "candidate_sha256": "9c54048022ef19654bc31d671da310fc29f76c44915f6db14ee528da77cb4d3c"
+    }
+  ],
+  "thread_limits": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "finished_at_utc": "2026-08-26T22:39:01.492092+00:00",
+  "invocation_started_at_utc": "2026-08-26T21:39:00.032772+00:00",
+  "invocation_wall_seconds": 3601.459338584995,
+  "invocation_submitted_task_count": 9,
+  "invocation_completed_task_count": 9,
+  "wall_seconds": 3601.459341433998,
+  "submitted_task_count": 9,
+  "completed_task_count": 9,
+  "scheduled_task_count": 9,
+  "persisted_task_count": 9,
+  "candidate_count": 1,
+  "status_counts": {
+    "apparent_exact_requires_serial_confirmation": 0,
+    "refuted": 0,
+    "timeout": 1
+  },
+  "task_wall_seconds_sum": 19054.816941382996,
+  "task_cpu_seconds_sum": 18822.527522666,
+  "aggregates": [
+    {
+      "candidate_key": "c0010524",
+      "aggregate_status": "timeout",
+      "sides": {
+        "X": {
+          "status": "exact",
+          "task_count": 18,
+          "counts": {
+            "proven_infeasible": 18,
+            "feasible_refutation": 0,
+            "unknown": 0,
+            "runner_error": 0,
+            "missing": 0
+          }
+        },
+        "Z": {
+          "status": "timeout",
+          "task_count": 18,
+          "counts": {
+            "proven_infeasible": 17,
+            "feasible_refutation": 0,
+            "unknown": 1,
+            "runner_error": 0,
+            "missing": 0
+          }
+        }
+      },
+      "aggregate_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0010524/attempts/selective-t3600-w9-r29-c0010524/aggregate.json"
+    }
+  ]
+}
