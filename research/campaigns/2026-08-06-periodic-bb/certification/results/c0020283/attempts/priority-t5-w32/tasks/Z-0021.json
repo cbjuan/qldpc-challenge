@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0020283",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0020283-3498d1f68e-1m-python8000reuse8k-s694493791-fast1000000.json",
+  "candidate_sha256": "33e8c4271cddd00c6915469c57e4aaa3cf38e17b20d498d951b68b3f7081a363",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "Z-0021",
+  "side": "Z",
+  "logical_row_index": 21,
+  "logical_generator_support": [
+    315,
+    316,
+    317,
+    318,
+    319,
+    320,
+    321,
+    322,
+    323,
+    324,
+    325,
+    326,
+    327,
+    328,
+    329
+  ],
+  "cutoff": 8,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T08:45:08.138972+00:00",
+  "finished_at_utc": "2026-08-26T08:45:13.284401+00:00",
+  "duration_seconds": 5.145447386000001,
+  "process_cpu_seconds": 5.124672737999987,
+  "worker_pid": 9,
+  "memory_bytes": {
+    "before": {
+      "rss": 180023296,
+      "high_water": 229371904
+    },
+    "after": {
+      "rss": 162177024,
+      "high_water": 229371904
+    },
+    "ru_maxrss": 229371904
+  },
+  "status": "unknown",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 5.140535222999972
+    }
+  ],
+  "error": null
+}

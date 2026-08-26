@@ -1,8 +1,8 @@
 # Periodic BB exact-certification summary
 
-Targets: 128; exact: 0; refuted: 0; timeout: 0; pending: 128.
+Targets: 128; exact: 0; refuted: 0; timeout: 10; pending: 118.
 
-Batch wall time: 0.0 s; summed solver wall time: 0.0 s; summed task CPU time: 0.0 s.
+Batch wall time: 144.5 s; summed solver wall time: 4437.8 s; summed task CPU time: 4419.3 s.
 
 A row is `exact` only after a persisted unmodified serial `verify/certify.py` output has `d_exact: true`.
 
@@ -26,9 +26,9 @@ A row is `exact` only after a persisted unmodified serial `verify/certify.py` ou
 | c0019531 | [[248,62,4]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0020058 | [[304,52,7]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0020118 | [[272,48,8]] | pending | pending | pending | — | 0.0 | 0.0 |
-| c0020168 | [[280,20,8]] | pending | pending | pending | — | 0.0 | 0.0 |
+| c0020168 | [[280,20,8]] | timeout | timeout | timeout | 5 | 162.7 | 161.9 |
 | c0020198 | [[238,46,6]] | pending | pending | pending | — | 0.0 | 0.0 |
-| c0020283 | [[330,22,9]] | pending | pending | pending | — | 0.0 | 0.0 |
+| c0020283 | [[330,22,9]] | timeout | timeout | timeout | 5 | 225.5 | 224.3 |
 | c0020343 | [[252,48,6]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0020418 | [[270,30,7]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0020458 | [[240,30,6]] | pending | pending | pending | — | 0.0 | 0.0 |
@@ -73,7 +73,7 @@ A row is `exact` only after a persisted unmodified serial `verify/certify.py` ou
 | c0045091 | [[576,12,28]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0045094 | [[504,8,28]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0045107 | [[576,24,12]] | pending | pending | pending | — | 0.0 | 0.0 |
-| c0045113 | [[432,24,12]] | pending | pending | pending | — | 0.0 | 0.0 |
+| c0045113 | [[432,24,12]] | timeout | timeout | timeout | 5 | 245.3 | 244.1 |
 | c0045118 | [[630,8,30]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0045244 | [[648,4,34]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0045426 | [[420,8,26]] | pending | pending | pending | — | 0.0 | 0.0 |
@@ -88,9 +88,9 @@ A row is `exact` only after a persisted unmodified serial `verify/certify.py` ou
 | c0047091 | [[630,14,20]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0047122 | [[540,8,28]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0048101 | [[660,8,34]] | pending | pending | pending | — | 0.0 | 0.0 |
-| c0048487 | [[686,6,36]] | pending | pending | pending | — | 0.0 | 0.0 |
+| c0048487 | [[686,6,36]] | timeout | timeout | timeout | 5 | 65.1 | 64.9 |
 | c0048911 | [[630,8,28]] | pending | pending | pending | — | 0.0 | 0.0 |
-| c0049220 | [[648,4,38]] | pending | pending | pending | — | 0.0 | 0.0 |
+| c0049220 | [[648,4,38]] | timeout | timeout | timeout | 5 | 133.9 | 133.3 |
 | c0049291 | [[660,8,28]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0049482 | [[540,8,26]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0049503 | [[648,8,30]] | pending | pending | pending | — | 0.0 | 0.0 |
@@ -103,7 +103,7 @@ A row is `exact` only after a persisted unmodified serial `verify/certify.py` ou
 | c0050071 | [[660,8,28]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0050292 | [[576,8,30]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0050526 | [[540,8,30]] | pending | pending | pending | — | 0.0 | 0.0 |
-| c0050584 | [[630,8,34]] | pending | pending | pending | — | 0.0 | 0.0 |
+| c0050584 | [[630,8,34]] | timeout | timeout | timeout | 5 | 89.6 | 89.2 |
 | c0050641 | [[576,16,20]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0050670 | [[540,8,28]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0050719 | [[660,8,28]] | pending | pending | pending | — | 0.0 | 0.0 |
@@ -119,18 +119,18 @@ A row is `exact` only after a persisted unmodified serial `verify/certify.py` ou
 | c0054911 | [[630,8,28]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0055020 | [[648,8,28]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0055406 | [[630,4,36]] | pending | pending | pending | — | 0.0 | 0.0 |
-| c0056213 | [[576,12,30]] | pending | pending | pending | — | 0.0 | 0.0 |
+| c0056213 | [[576,12,30]] | timeout | timeout | timeout | 5 | 907.0 | 903.4 |
 | c0056263 | [[540,8,28]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0056884 | [[686,12,28]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0057634 | [[686,12,30]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0057792 | [[540,8,28]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0058472 | [[648,8,30]] | pending | pending | pending | — | 0.0 | 0.0 |
-| c0058579 | [[686,18,24]] | pending | pending | pending | — | 0.0 | 0.0 |
+| c0058579 | [[686,18,24]] | timeout | timeout | timeout | 5 | 1576.7 | 1570.6 |
 | c0058638 | [[648,8,32]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0059571 | [[576,16,20]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0060611 | [[630,10,28]] | pending | pending | pending | — | 0.0 | 0.0 |
-| c0060702 | [[630,14,28]] | pending | pending | pending | — | 0.0 | 0.0 |
-| c0060754 | [[576,16,20]] | pending | pending | pending | — | 0.0 | 0.0 |
+| c0060702 | [[630,14,28]] | timeout | timeout | timeout | 5 | 154.7 | 154.0 |
+| c0060754 | [[576,16,20]] | timeout | timeout | timeout | 5 | 877.2 | 873.5 |
 | c0060824 | [[660,8,32]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0060866 | [[648,8,32]] | pending | pending | pending | — | 0.0 | 0.0 |
 | c0061526 | [[648,8,32]] | pending | pending | pending | — | 0.0 | 0.0 |

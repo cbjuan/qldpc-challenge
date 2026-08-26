@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0049220",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0049220-a008d53cd9-epoch2-001-final-allrungs-s345672872.json",
+  "candidate_sha256": "53044049607773aeb0d9efa5ce809fa9bbf708c4a36d8f1b68858a7a157ac478",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "X-0001",
+  "side": "X",
+  "logical_row_index": 1,
+  "logical_generator_support": [
+    407,
+    410,
+    413,
+    416,
+    419,
+    422,
+    425,
+    428,
+    431,
+    459,
+    462,
+    465,
+    468,
+    471,
+    474,
+    477,
+    480,
+    483,
+    569,
+    572,
+    575,
+    578,
+    581,
+    584,
+    587,
+    590,
+    593,
+    621,
+    624,
+    627,
+    630,
+    633,
+    636,
+    639,
+    642,
+    645
+  ],
+  "cutoff": 37,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T08:44:34.990996+00:00",
+  "finished_at_utc": "2026-08-26T08:45:02.973066+00:00",
+  "duration_seconds": 27.98207481099996,
+  "process_cpu_seconds": 27.856781249000008,
+  "worker_pid": 30,
+  "memory_bytes": {
+    "before": {
+      "rss": 118292480,
+      "high_water": 135065600
+    },
+    "after": {
+      "rss": 110972928,
+      "high_water": 137551872
+    },
+    "ru_maxrss": 137551872
+  },
+  "status": "unknown",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 27.96921291999996
+    }
+  ],
+  "error": null
+}
