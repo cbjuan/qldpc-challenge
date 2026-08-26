@@ -1,6 +1,6 @@
 # Periodic BB exact-certification summary
 
-Targets: 128; exact: 0; refuted: 5; sharded closed pending serial: 6; timeout: 117; pending: 0.
+Targets: 128; exact: 6; refuted: 5; sharded closed pending serial: 0; timeout: 117; pending: 0.
 
 Non-overlapping batch wall time: 973.7 s; summed new-task wall time: 56317.7 s; summed new-task CPU time: 55663.4 s.
 
@@ -17,22 +17,22 @@ A side marked `sharded_closed_pending_serial` has all logical-row cutoff MILPs p
 
 | target | parameters | X | Z | overall | budgets (s) | new-task wall (s) | CPU (s) |
 |---|---:|---|---|---|---:|---:|---:|
-| c0000142 | [[208,52,2]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5 | 8.9 | 8.5 |
-| c0002359 | [[108,36,3]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5 | 16.4 | 15.8 |
-| c0004417 | [[452,228,2]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5 | 154.4 | 151.4 |
+| c0000142 | [[208,52,2]] | exact | exact | exact | 5 | 8.9 | 8.5 |
+| c0002359 | [[108,36,3]] | exact | exact | exact | 5 | 16.4 | 15.8 |
+| c0004417 | [[452,228,2]] | exact | exact | exact | 5 | 154.4 | 151.4 |
 | c0004584 | [[198,26,3]] | sharded_closed_pending_serial | timeout | timeout | 5 | 43.7 | 42.9 |
-| c0006423 | [[234,78,3]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5 | 59.6 | 58.6 |
+| c0006423 | [[234,78,3]] | exact | exact | exact | 5 | 59.6 | 58.6 |
 | c0006625 | [[266,38,4]] | sharded_closed_pending_serial | timeout | timeout | 5 | 111.7 | 109.9 |
 | c0010524 | [[270,18,9]] | timeout | timeout | timeout | 5 | 186.3 | 183.9 |
 | c0011462 | [[270,90,3]] | timeout | timeout | timeout | 5 | 306.2 | 301.7 |
-| c0012783 | [[224,112,2]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5 | 3.7 | 3.4 |
+| c0012783 | [[224,112,2]] | exact | exact | exact | 5 | 3.7 | 3.4 |
 | c0014474 | [[396,136,3]] | timeout | timeout | timeout | 5 | 1130.5 | 1121.5 |
 | c0016039 | [[288,96,3]] | timeout | timeout | timeout | 5 | 390.9 | 386.0 |
 | c0016229 | [[208,26,6]] | sharded_closed_pending_serial | timeout | timeout | 5 | 114.9 | 113.4 |
 | c0016394 | [[288,100,3]] | timeout | timeout | timeout | 5 | 300.5 | 295.7 |
 | c0018628 | [[280,20,7]] | timeout | timeout | timeout | 5 | 150.1 | 147.6 |
 | c0019513 | [[384,96,4]] | sharded_closed_pending_serial | timeout | timeout | 5 | 401.4 | 395.0 |
-| c0019531 | [[248,62,4]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5 | 20.2 | 19.5 |
+| c0019531 | [[248,62,4]] | exact | exact | exact | 5 | 20.2 | 19.5 |
 | c0020058 | [[304,52,7]] | timeout | timeout | timeout | 5 | 527.0 | 521.1 |
 | c0020118 | [[272,48,8]] | timeout | timeout | timeout | 5 | 489.5 | 485.5 |
 | c0020168 | [[280,20,8]] | timeout | timeout | timeout | 5 | 285.1 | 283.0 |

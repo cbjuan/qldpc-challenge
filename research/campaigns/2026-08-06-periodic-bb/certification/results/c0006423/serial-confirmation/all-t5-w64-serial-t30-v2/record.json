@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "confirmation_stage": "all-t5-w64-serial-t30-v2",
+  "candidate_id": 6423,
+  "candidate": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0006423-842ade0cea-60k-python8000-s196597815-fast60000.json",
+  "candidate_sha256": "cc1c5aeaf25e64fa604f313daa256b2bf73aa6fec21c5880e0dea6053795f1e8",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508",
+  "per_task_time_limit_seconds": 30.0,
+  "command": [
+    "/root/qldpc-challenge/.venv/bin/python3",
+    "verify/certify.py",
+    "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0006423-842ade0cea-60k-python8000-s196597815-fast60000.json",
+    "--tlim",
+    "30.0"
+  ],
+  "started_at_utc": "2026-08-26T10:12:42.969329+00:00",
+  "finished_at_utc": "2026-08-26T10:13:14.492252+00:00",
+  "duration_seconds": 31.52293317800013,
+  "parent_process_cpu_seconds": 0.0014464730000000037,
+  "child_process_user_seconds": 33.21200400000001,
+  "child_process_system_seconds": 0.16814900000000005,
+  "child_process_cpu_seconds": 33.38015300000001,
+  "returncode": 0,
+  "stdout": "{\n  \"name\": \"[[234,78,3]] local periodic BB c6423\",\n  \"d\": 3,\n  \"solver\": \"scipy/HiGHS MILP\",\n  \"sides\": {\n    \"X\": {\n      \"value\": 3,\n      \"exact\": true,\n      \"note\": \"no logical < 3 exists\"\n    },\n    \"Z\": {\n      \"value\": 3,\n      \"exact\": true,\n      \"note\": \"no logical < 3 exists\"\n    }\n  },\n  \"d_exact\": true\n}\n",
+  "stderr": "",
+  "execution_error": null,
+  "certifier_output": {
+    "name": "[[234,78,3]] local periodic BB c6423",
+    "d": 3,
+    "solver": "scipy/HiGHS MILP",
+    "sides": {
+      "X": {
+        "value": 3,
+        "exact": true,
+        "note": "no logical < 3 exists"
+      },
+      "Z": {
+        "value": 3,
+        "exact": true,
+        "note": "no logical < 3 exists"
+      }
+    },
+    "d_exact": true
+  },
+  "identity_after": {
+    "candidate_sha256": "cc1c5aeaf25e64fa604f313daa256b2bf73aa6fec21c5880e0dea6053795f1e8",
+    "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+    "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508"
+  },
+  "identity_errors": [],
+  "output_validation": {
+    "valid": true,
+    "errors": [],
+    "refutation_signal_sides": [],
+    "timed_out_sides": []
+  },
+  "status": "exact",
+  "d_exact": true
+}

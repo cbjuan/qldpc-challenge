@@ -466,7 +466,10 @@ def main() -> None:
         "certifier_sha256": certifier_hash,
         "gf2_sha256": gf2_hash,
         "per_task_time_limit_seconds": args.tlim,
-        "python_executable": str(Path(sys.executable).resolve()),
+        # Keep the environment launcher path intact.  Resolving the venv
+        # symlink selects the bare uv-managed interpreter and drops the
+        # repository environment's installed SciPy/NumPy packages.
+        "python_executable": sys.executable,
         "thread_limits": {
             key: env[key]
             for key in ("OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS")
@@ -550,7 +553,7 @@ def main() -> None:
         record_path = output_dir / "record.json"
         authoritative_path = output_dir / "authoritative-output.json"
         command = [
-            str(Path(sys.executable).resolve()),
+            sys.executable,
             "verify/certify.py",
             target["candidate"],
             "--tlim",
