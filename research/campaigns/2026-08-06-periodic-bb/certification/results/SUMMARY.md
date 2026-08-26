@@ -1,8 +1,8 @@
 # Periodic BB exact-certification summary
 
-Targets: 128; exact: 23; refuted: 6; sharded closed pending serial: 7; timeout: 92; pending: 0.
+Targets: 128; exact: 23; refuted: 6; sharded closed pending serial: 8; timeout: 91; pending: 0.
 
-Non-overlapping batch wall time: 28742.8 s; summed new-task wall time: 1578763.9 s; summed new-task CPU time: 1562530.6 s.
+Non-overlapping batch wall time: 29988.0 s; summed new-task wall time: 1608082.8 s; summed new-task CPU time: 1591474.6 s.
 
 A side marked `sharded_closed_pending_serial` has all logical-row cutoff MILPs proven infeasible, but the candidate is `exact` only after a hash-matched, persisted stock `verify/certify.py` result has `d_exact: true`.
 
@@ -29,20 +29,23 @@ A side marked `sharded_closed_pending_serial` has all logical-row cutoff MILPs p
 | selective-t600-w12-r12-c0045061 | 600 | 12 | 1 | 32 | 32 | 1812.4 | 18948.5 |
 | selective-t600-w11-r13-c0045049 | 600 | 11 | 1 | 34 | 34 | 2404.0 | 20194.3 |
 | selective-t14400-w1-r14-c0040000 | 14400 | 1 | 1 | 1 | 471 | 747.5 | 731.0 |
+| selective-t600-w9-r15-c0045060 | 600 | 9 | 1 | 34 | 34 | 2417.7 | 20246.8 |
+| selective-t3600-w3-r16-c0045062 | 3600 | 3 | 1 | 8 | 52 | 3341.1 | 8697.1 |
 | selective-t600-w13-r17-c0045048 | 600 | 13 | 1 | 36 | 36 | 1817.8 | 21394.9 |
 
 Incomplete batch starts (not counted as timeouts):
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w8-r7-c0020168-start.json`
-- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t3600-w3-r16-c0045062-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w1-r22-c0045016-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w1-r25-c0045044-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w1-r26-c0046164-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w10-r20-c0045047-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w10-r23-c0045046-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w4-r18-c0045059-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w5-r21-c0046587-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r19-c0045017-start.json`
-- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w9-r15-c0045060-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r24-c0045015-start.json`
 
-Persisted tasks outside completed batches: 66 (41715.3 CPU s); retained as evidence but not counted as completed-batch timeouts.
+Persisted tasks outside completed batches: 115 (68816.3 CPU s); retained as evidence but not counted as completed-batch timeouts.
 
 ## Targets
 
@@ -86,9 +89,9 @@ Persisted tasks outside completed batches: 66 (41715.3 CPU s); retained as evide
 | c0040006 | [[688,172,4]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120 | 28405.8 | 28160.6 |
 | c0040007 | [[680,170,4]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120 | 28448.2 | 28203.9 |
 | c0045014 | [[690,46,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120 | 10586.9 | 10484.5 |
-| c0045015 | [[660,44,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120 | 9573.6 | 9485.6 |
-| c0045016 | [[600,40,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120 | 9079.9 | 8990.1 |
-| c0045017 | [[570,38,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 13095.9 | 12961.2 |
+| c0045015 | [[660,44,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 14379.3 | 14241.4 |
+| c0045016 | [[600,40,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 10284.1 | 10183.0 |
+| c0045017 | [[570,38,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 22737.4 | 22520.3 |
 | c0045030 | [[464,72,8]] | timeout | timeout | timeout | 5,30,120 | 22333.3 | 22090.0 |
 | c0045031 | [[448,70,8]] | timeout | timeout | timeout | 5,30,120 | 21842.4 | 21608.2 |
 | c0045032 | [[432,68,8]] | timeout | timeout | timeout | 5,30,120 | 21172.6 | 20938.7 |
@@ -100,14 +103,14 @@ Persisted tasks outside completed batches: 66 (41715.3 CPU s); retained as evide
 | c0045042 | [[672,48,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120 | 8824.5 | 8755.1 |
 | c0045043 | [[644,46,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120 | 8481.4 | 8410.4 |
 | c0045044 | [[616,44,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120 | 7642.3 | 7570.2 |
-| c0045046 | [[560,40,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120 | 6808.8 | 6734.3 |
-| c0045047 | [[532,38,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 12586.0 | 12432.2 |
+| c0045046 | [[560,40,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 18907.4 | 18716.6 |
+| c0045047 | [[532,38,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 24675.2 | 24413.9 |
 | c0045048 | [[504,36,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 28294.6 | 27907.1 |
 | c0045049 | [[476,34,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 26582.7 | 26227.4 |
-| c0045059 | [[540,36,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 12551.5 | 12402.9 |
+| c0045059 | [[540,36,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 17380.7 | 17189.1 |
 | c0045060 | [[510,34,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 27957.0 | 27603.8 |
 | c0045061 | [[480,32,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 26165.9 | 25777.3 |
-| c0045062 | [[450,30,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600,3600 | 20876.7 | 20635.5 |
+| c0045062 | [[450,30,9]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5,30,120,600,3600 | 24273.1 | 23993.8 |
 | c0045064 | [[390,26,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 20901.8 | 20665.8 |
 | c0045088 | [[648,8,34]] | timeout | timeout | timeout | 5,30,120,600,3600 | 71355.0 | 70566.7 |
 | c0045091 | [[576,12,28]] | timeout | timeout | timeout | 5,30,120 | 4731.8 | 4681.0 |
@@ -123,7 +126,7 @@ Persisted tasks outside completed batches: 66 (41715.3 CPU s); retained as evide
 | c0046164 | [[616,44,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120 | 7738.9 | 7661.0 |
 | c0046282 | [[540,8,30]] | timeout | timeout | timeout | 5,30,120 | 3235.8 | 3205.7 |
 | c0046378 | [[630,4,32]] | timeout | timeout | timeout | 5,30,120,600,3600 | 35425.7 | 35140.5 |
-| c0046587 | [[532,38,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 7879.5 | 7806.0 |
+| c0046587 | [[532,38,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 16388.5 | 16234.8 |
 | c0046841 | [[660,8,34]] | timeout | timeout | timeout | 5,30,120 | 3943.3 | 3912.1 |
 | c0047091 | [[630,14,20]] | timeout | timeout | timeout | 5,30,120 | 5955.7 | 5908.5 |
 | c0047122 | [[540,8,28]] | timeout | timeout | timeout | 5,30,120 | 3182.0 | 3156.9 |
