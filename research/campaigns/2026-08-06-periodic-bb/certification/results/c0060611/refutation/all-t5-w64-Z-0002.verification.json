@@ -1,0 +1,95 @@
+{
+  "name": "[[630,10,28]] local periodic BB c60611 MILP refutation witness",
+  "checks": [
+    {
+      "check": "schema_valid",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "qubit_indices_in_range",
+      "ok": true,
+      "detail": "max index 629, n=630"
+    },
+    {
+      "check": "no_repeated_qubits_in_a_check",
+      "ok": true,
+      "detail": "rows with repeats: []"
+    },
+    {
+      "check": "css_commutation",
+      "ok": true,
+      "detail": "H_X H_Z^T = 0 over GF(2)"
+    },
+    {
+      "check": "k_matches_claim",
+      "ok": true,
+      "detail": "computed k=10, claimed 10"
+    },
+    {
+      "check": "k_at_least_1",
+      "ok": true,
+      "detail": "computed k=10; a submission must encode >= 1 logical qubit"
+    },
+    {
+      "check": "check_weight_is_ldpc",
+      "ok": true,
+      "detail": "max check weight 6"
+    },
+    {
+      "check": "family_in_vocabulary",
+      "ok": true,
+      "detail": "bivariate-bicycle"
+    },
+    {
+      "check": "distance_X_witness",
+      "ok": true,
+      "detail": "weight=28 (claim 28), in_ker=True, nontrivial=True"
+    },
+    {
+      "check": "distance_Z_witness",
+      "ok": true,
+      "detail": "weight=30 (claim 30), in_ker=True, nontrivial=True"
+    },
+    {
+      "check": "d_matches_min_side",
+      "ok": true,
+      "detail": "min earned side = 28, claimed d = 28"
+    }
+  ],
+  "ok": true,
+  "computed": {
+    "n": 630,
+    "rank_HX": 310,
+    "rank_HZ": 310,
+    "k": 10,
+    "max_check_weight": 6,
+    "weight_class": "weight-6",
+    "locality_class": "unrestricted",
+    "flags": {
+      "css": true,
+      "locality_class": "unrestricted"
+    }
+  },
+  "earned_distance": {
+    "X": {
+      "value": 28,
+      "tier": "upper_bound"
+    },
+    "Z": {
+      "value": 30,
+      "tier": "upper_bound"
+    },
+    "d": {
+      "value": 28,
+      "tier": "upper_bound"
+    }
+  },
+  "signature": {
+    "hash": "f0244ec71ba9a8c2",
+    "n": 630,
+    "k": 10,
+    "d": 28
+  },
+  "fingerprint": "317fef3640f93255"
+}

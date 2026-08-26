@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0040007",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0040007-1eec85e1b2-1m-python8000reuse8k-s774987152-fast1000000.json",
+  "candidate_sha256": "36e5cfb1fc1ed9b9fe4963113b9b4148e21c489c15ab17abc53e309f2ae0f501",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "X-0114",
+  "side": "X",
+  "logical_row_index": 114,
+  "logical_generator_support": [
+    284,
+    295,
+    298,
+    310,
+    325,
+    495,
+    523,
+    526,
+    538,
+    553,
+    609,
+    620,
+    623,
+    624,
+    638,
+    665
+  ],
+  "cutoff": 3,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:09:38.764570+00:00",
+  "finished_at_utc": "2026-08-26T09:09:39.091409+00:00",
+  "duration_seconds": 0.3268380750000688,
+  "process_cpu_seconds": 0.32237476799997467,
+  "worker_pid": 59,
+  "memory_bytes": {
+    "before": {
+      "rss": 163299328,
+      "high_water": 228507648
+    },
+    "after": {
+      "rss": 163299328,
+      "high_water": 228507648
+    },
+    "ru_maxrss": 228507648
+  },
+  "status": "proven_infeasible",
+  "status_basis": "stock_predicate_infeasible",
+  "stock_predicate_return": false,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "baff60f486d150861184568a720ffc781223d877f566403a8b0e039afa2cf7f5",
+    "pivot_count": 255
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 0.3227072530000896
+    }
+  ],
+  "error": null
+}

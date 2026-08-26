@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0045016",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0045016-e6185b9f4a-1m-python8000reuse8k-s377675374-fast1000000.json",
+  "candidate_sha256": "9677e86c64323ec79cba86adfaef6066af4bbc3ab04fd3e59666b08a5a72c4fb",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "Z-0035",
+  "side": "Z",
+  "logical_row_index": 35,
+  "logical_generator_support": [
+    525,
+    526,
+    527,
+    528,
+    529,
+    530,
+    531,
+    532,
+    533,
+    534,
+    535,
+    536,
+    537,
+    538,
+    539
+  ],
+  "cutoff": 8,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:10:15.474864+00:00",
+  "finished_at_utc": "2026-08-26T09:10:21.147461+00:00",
+  "duration_seconds": 5.672599979999859,
+  "process_cpu_seconds": 5.648088499000039,
+  "worker_pid": 25,
+  "memory_bytes": {
+    "before": {
+      "rss": 115208192,
+      "high_water": 243200000
+    },
+    "after": {
+      "rss": 144228352,
+      "high_water": 243200000
+    },
+    "ru_maxrss": 243200000
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "269ce529d2713f58c158cf54280e700c8e43babcd65c99cb154332ce8c0ebcfb",
+    "pivot_count": 280
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 5.669958253999994
+    }
+  ],
+  "error": null
+}

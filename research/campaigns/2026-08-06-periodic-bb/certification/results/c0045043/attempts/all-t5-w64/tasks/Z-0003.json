@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0045043",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0045043-bd31490bf3-1m-python8000reuse8k-s128654370-fast1000000-allrungs.json",
+  "candidate_sha256": "ed04b1062ba3be639f6d2c5647268c9b2c5b12c41dbf74587bc4e10afeff0926",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "Z-0003",
+  "side": "Z",
+  "logical_row_index": 3,
+  "logical_generator_support": [
+    364,
+    365,
+    366,
+    367,
+    368,
+    369,
+    370,
+    371,
+    372,
+    373,
+    374,
+    375,
+    376,
+    377
+  ],
+  "cutoff": 7,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:11:55.941691+00:00",
+  "finished_at_utc": "2026-08-26T09:12:02.273650+00:00",
+  "duration_seconds": 6.331963059000145,
+  "process_cpu_seconds": 6.30089565399993,
+  "worker_pid": 55,
+  "memory_bytes": {
+    "before": {
+      "rss": 150388736,
+      "high_water": 260341760
+    },
+    "after": {
+      "rss": 150388736,
+      "high_water": 260341760
+    },
+    "ru_maxrss": 260341760
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "812a4cbd5f7399484bcb19e6d7100495a347ca9d096682fb2f1d2c3fe9e5dc41",
+    "pivot_count": 299
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 6.328849124000044
+    }
+  ],
+  "error": null
+}

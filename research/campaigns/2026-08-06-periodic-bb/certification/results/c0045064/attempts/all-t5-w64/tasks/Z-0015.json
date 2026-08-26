@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0045064",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0045064-62fb7cc83f-1m-python8000reuse8k-s1618242633-fast1000000-allrungs.json",
+  "candidate_sha256": "227ba37bb8a6a32b0f6cb89c144d5e9ca78ad472ee26b7cd70394f8b204e972b",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "Z-0015",
+  "side": "Z",
+  "logical_row_index": 15,
+  "logical_generator_support": [
+    225,
+    226,
+    227,
+    228,
+    229,
+    230,
+    231,
+    232,
+    233,
+    234,
+    235,
+    236,
+    237,
+    238,
+    239
+  ],
+  "cutoff": 8,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:13:10.687353+00:00",
+  "finished_at_utc": "2026-08-26T09:13:18.507496+00:00",
+  "duration_seconds": 7.82015023699978,
+  "process_cpu_seconds": 7.77485966800009,
+  "worker_pid": 69,
+  "memory_bytes": {
+    "before": {
+      "rss": 128229376,
+      "high_water": 269873152
+    },
+    "after": {
+      "rss": 128229376,
+      "high_water": 269873152
+    },
+    "ru_maxrss": 269873152
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "d25c17fbb2a5a204739a5a776a723c7802c9ba5dc9c944e1ccc08b0d0f396da7",
+    "pivot_count": 182
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 7.818133223999666
+    }
+  ],
+  "error": null
+}

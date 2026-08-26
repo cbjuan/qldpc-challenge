@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0045059",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0045059-9b6f81d9f6-1m-python8000reuse8k-s1867800169-fast1000000-allrungs.json",
+  "candidate_sha256": "8962d80574c48c526902b1bc28846540ea568a35524ddf20a7dd0f685f308802",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "Z-0027",
+  "side": "Z",
+  "logical_row_index": 27,
+  "logical_generator_support": [
+    405,
+    406,
+    407,
+    408,
+    409,
+    410,
+    411,
+    412,
+    413,
+    414,
+    415,
+    416,
+    417,
+    418,
+    419
+  ],
+  "cutoff": 8,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:12:43.737743+00:00",
+  "finished_at_utc": "2026-08-26T09:12:48.939529+00:00",
+  "duration_seconds": 5.20177870800012,
+  "process_cpu_seconds": 5.176768389000017,
+  "worker_pid": 45,
+  "memory_bytes": {
+    "before": {
+      "rss": 137408512,
+      "high_water": 312610816
+    },
+    "after": {
+      "rss": 138985472,
+      "high_water": 312610816
+    },
+    "ru_maxrss": 312610816
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "0f7afe23ea7e99d4c2559409c0838754e4b7d53ac69fc5428694d964d641613f",
+    "pivot_count": 252
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 5.199509833000093
+    }
+  ],
+  "error": null
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0010524",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0010524-88d55b4bd0-60k-python8000-s852276647-fast60000.json",
+  "candidate_sha256": "9c54048022ef19654bc31d671da310fc29f76c44915f6db14ee528da77cb4d3c",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "X-0014",
+  "side": "X",
+  "logical_row_index": 14,
+  "logical_generator_support": [
+    210,
+    211,
+    212,
+    213,
+    214,
+    215,
+    216,
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    224
+  ],
+  "cutoff": 8,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:04:05.164731+00:00",
+  "finished_at_utc": "2026-08-26T09:04:10.199674+00:00",
+  "duration_seconds": 5.034946894999848,
+  "process_cpu_seconds": 4.990273512999998,
+  "worker_pid": 42,
+  "memory_bytes": {
+    "before": {
+      "rss": 109604864,
+      "high_water": 124309504
+    },
+    "after": {
+      "rss": 107778048,
+      "high_water": 191213568
+    },
+    "ru_maxrss": 191213568
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "a792806d785250d9d690c13aec1844fee06751e594fecb0d0afa7fff3d478486",
+    "pivot_count": 126
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 5.033692213999984
+    }
+  ],
+  "error": null
+}

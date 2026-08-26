@@ -3,15 +3,16 @@
   "target_count": 128,
   "counts": {
     "exact": 0,
-    "refuted": 1,
-    "timeout": 9,
-    "pending": 118
+    "refuted": 5,
+    "timeout": 117,
+    "pending": 6
   },
-  "batch_wall_seconds": 144.50395440099996,
-  "solver_wall_seconds": 4437.767996116,
-  "solver_cpu_seconds": 4419.26877883,
+  "batch_wall_seconds": 973.6587817500002,
+  "solver_wall_seconds": 56317.728788913984,
+  "solver_cpu_seconds": 55663.352190595,
   "batches": [
-    "priority-t5-w32"
+    "priority-t5-w32",
+    "all-t5-w64"
   ],
   "targets": [
     {
@@ -22,13 +23,15 @@
       "d": 2,
       "status": "pending",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "closed (pending serial)",
+        "Z": "closed (pending serial)"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 8.915454366997665,
+      "solver_cpu_seconds": 8.502704108000017,
+      "task_result_count": 104,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -40,13 +43,15 @@
       "d": 3,
       "status": "pending",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "closed (pending serial)",
+        "Z": "closed (pending serial)"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 16.44794511999953,
+      "solver_cpu_seconds": 15.785041114000016,
+      "task_result_count": 72,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -58,13 +63,15 @@
       "d": 2,
       "status": "pending",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "closed (pending serial)",
+        "Z": "closed (pending serial)"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 154.433052087001,
+      "solver_cpu_seconds": 151.43009468300008,
+      "task_result_count": 456,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -74,15 +81,17 @@
       "n": 198,
       "k": 26,
       "d": 3,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "closed (pending serial)",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 43.74072599100009,
+      "solver_cpu_seconds": 42.929876011999966,
+      "task_result_count": 52,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -94,13 +103,15 @@
       "d": 3,
       "status": "pending",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "closed (pending serial)",
+        "Z": "closed (pending serial)"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 59.64219952200028,
+      "solver_cpu_seconds": 58.61168873199998,
+      "task_result_count": 156,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -110,15 +121,17 @@
       "n": 266,
       "k": 38,
       "d": 4,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "closed (pending serial)",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 111.68478712499973,
+      "solver_cpu_seconds": 109.91146104199996,
+      "task_result_count": 76,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -128,15 +141,17 @@
       "n": 270,
       "k": 18,
       "d": 9,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 186.34066980500074,
+      "solver_cpu_seconds": 183.905573756,
+      "task_result_count": 36,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -146,15 +161,17 @@
       "n": 270,
       "k": 90,
       "d": 3,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 306.15916459699974,
+      "solver_cpu_seconds": 301.65437872999996,
+      "task_result_count": 180,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -166,13 +183,15 @@
       "d": 2,
       "status": "pending",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "closed (pending serial)",
+        "Z": "closed (pending serial)"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 3.668577669000342,
+      "solver_cpu_seconds": 3.373112871999986,
+      "task_result_count": 224,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -182,15 +201,17 @@
       "n": 396,
       "k": 136,
       "d": 3,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 1130.5432872000013,
+      "solver_cpu_seconds": 1121.4766383,
+      "task_result_count": 272,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -200,15 +221,17 @@
       "n": 288,
       "k": 96,
       "d": 3,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 390.8741480629983,
+      "solver_cpu_seconds": 385.96931703000007,
+      "task_result_count": 192,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -218,15 +241,17 @@
       "n": 208,
       "k": 26,
       "d": 6,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "closed (pending serial)",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 114.88885833400013,
+      "solver_cpu_seconds": 113.41827191900002,
+      "task_result_count": 52,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -236,15 +261,17 @@
       "n": 288,
       "k": 100,
       "d": 3,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 300.54235066799765,
+      "solver_cpu_seconds": 295.65883798699997,
+      "task_result_count": 200,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -254,15 +281,17 @@
       "n": 280,
       "k": 20,
       "d": 7,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 150.13504228700026,
+      "solver_cpu_seconds": 147.64527397699993,
+      "task_result_count": 40,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -272,15 +301,17 @@
       "n": 384,
       "k": 96,
       "d": 4,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "closed (pending serial)",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 401.3733133779997,
+      "solver_cpu_seconds": 394.95430827600006,
+      "task_result_count": 192,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -292,13 +323,15 @@
       "d": 4,
       "status": "pending",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "closed (pending serial)",
+        "Z": "closed (pending serial)"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 20.208525452998856,
+      "solver_cpu_seconds": 19.478381762999987,
+      "task_result_count": 124,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -308,15 +341,17 @@
       "n": 304,
       "k": 52,
       "d": 7,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 527.0429834650004,
+      "solver_cpu_seconds": 521.087825696,
+      "task_result_count": 104,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -326,15 +361,17 @@
       "n": 272,
       "k": 48,
       "d": 8,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 489.50161038500005,
+      "solver_cpu_seconds": 485.533191998,
+      "task_result_count": 96,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -352,9 +389,9 @@
       "timeout_budgets_seconds": [
         5.0
       ],
-      "solver_wall_seconds": 162.72037390200018,
-      "solver_cpu_seconds": 161.87643080200004,
-      "task_result_count": 40,
+      "solver_wall_seconds": 285.1048663260006,
+      "solver_cpu_seconds": 283.021605043,
+      "task_result_count": 64,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -364,15 +401,17 @@
       "n": 238,
       "k": 46,
       "d": 6,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 463.8573240100002,
+      "solver_cpu_seconds": 459.71867457200005,
+      "task_result_count": 92,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -390,9 +429,9 @@
       "timeout_budgets_seconds": [
         5.0
       ],
-      "solver_wall_seconds": 225.53911536100003,
-      "solver_cpu_seconds": 224.30322016899993,
-      "task_result_count": 44,
+      "solver_wall_seconds": 439.81090707100105,
+      "solver_cpu_seconds": 436.6263162879999,
+      "task_result_count": 86,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -402,15 +441,17 @@
       "n": 252,
       "k": 48,
       "d": 6,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 486.0252280000004,
+      "solver_cpu_seconds": 481.8773240849999,
+      "task_result_count": 96,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -420,15 +461,17 @@
       "n": 270,
       "k": 30,
       "d": 7,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 282.6670366809999,
+      "solver_cpu_seconds": 280.00936205600004,
+      "task_result_count": 60,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -438,15 +481,17 @@
       "n": 240,
       "k": 30,
       "d": 6,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "closed (pending serial)",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 139.70726760299954,
+      "solver_cpu_seconds": 138.43074605700008,
+      "task_result_count": 60,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -456,15 +501,17 @@
       "n": 224,
       "k": 44,
       "d": 6,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 440.2646036719998,
+      "solver_cpu_seconds": 435.9680981099999,
+      "task_result_count": 88,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -474,15 +521,17 @@
       "n": 260,
       "k": 26,
       "d": 6,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "closed (pending serial)",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 87.33645716200022,
+      "solver_cpu_seconds": 86.29705252700006,
+      "task_result_count": 52,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -492,15 +541,17 @@
       "n": 256,
       "k": 46,
       "d": 6,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 464.93694558999914,
+      "solver_cpu_seconds": 457.68167212699996,
+      "task_result_count": 92,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -510,15 +561,17 @@
       "n": 234,
       "k": 26,
       "d": 7,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 249.59906467799965,
+      "solver_cpu_seconds": 244.49556912700004,
+      "task_result_count": 52,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -528,15 +581,17 @@
       "n": 266,
       "k": 50,
       "d": 6,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 498.01855000400064,
+      "solver_cpu_seconds": 489.56451960799996,
+      "task_result_count": 100,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -546,15 +601,17 @@
       "n": 696,
       "k": 236,
       "d": 3,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 2618.6625164240004,
+      "solver_cpu_seconds": 2583.9796588540003,
+      "task_result_count": 472,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -564,15 +621,17 @@
       "n": 696,
       "k": 232,
       "d": 3,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 1884.604420200998,
+      "solver_cpu_seconds": 1851.7359796489995,
+      "task_result_count": 464,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -582,15 +641,17 @@
       "n": 696,
       "k": 236,
       "d": 3,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 2329.694310267999,
+      "solver_cpu_seconds": 2287.310079953,
+      "task_result_count": 472,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -600,15 +661,17 @@
       "n": 690,
       "k": 234,
       "d": 3,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 2293.748320064,
+      "solver_cpu_seconds": 2240.419877277,
+      "task_result_count": 468,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -618,15 +681,17 @@
       "n": 672,
       "k": 228,
       "d": 3,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 2238.5412063950016,
+      "solver_cpu_seconds": 2204.03389505,
+      "task_result_count": 456,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -636,15 +701,17 @@
       "n": 696,
       "k": 174,
       "d": 4,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 1315.7261862350013,
+      "solver_cpu_seconds": 1300.6209254530004,
+      "task_result_count": 348,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -654,15 +721,17 @@
       "n": 688,
       "k": 172,
       "d": 4,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 1229.3753671679976,
+      "solver_cpu_seconds": 1217.2060605089996,
+      "task_result_count": 344,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -672,15 +741,17 @@
       "n": 680,
       "k": 170,
       "d": 4,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 1242.298705849997,
+      "solver_cpu_seconds": 1225.068381411,
+      "task_result_count": 340,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -690,15 +761,17 @@
       "n": 690,
       "k": 46,
       "d": 9,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 509.28873110100017,
+      "solver_cpu_seconds": 500.3825035379998,
+      "task_result_count": 92,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -708,15 +781,17 @@
       "n": 660,
       "k": 44,
       "d": 9,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 464.2615079109996,
+      "solver_cpu_seconds": 458.84340419600017,
+      "task_result_count": 88,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -726,15 +801,17 @@
       "n": 600,
       "k": 40,
       "d": 9,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 426.80931399599876,
+      "solver_cpu_seconds": 421.67763022800034,
+      "task_result_count": 80,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -744,15 +821,17 @@
       "n": 570,
       "k": 38,
       "d": 9,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 396.95139275000065,
+      "solver_cpu_seconds": 393.4323694479996,
+      "task_result_count": 76,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -762,15 +841,17 @@
       "n": 464,
       "k": 72,
       "d": 8,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 737.642443674999,
+      "solver_cpu_seconds": 731.2483790499999,
+      "task_result_count": 144,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -780,15 +861,17 @@
       "n": 448,
       "k": 70,
       "d": 8,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 849.8207725830007,
+      "solver_cpu_seconds": 840.1055028069998,
+      "task_result_count": 140,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -798,15 +881,17 @@
       "n": 432,
       "k": 68,
       "d": 8,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 794.2944655270007,
+      "solver_cpu_seconds": 783.1946622820001,
+      "task_result_count": 136,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -816,15 +901,17 @@
       "n": 416,
       "k": 66,
       "d": 8,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 672.8539537570007,
+      "solver_cpu_seconds": 666.5818073639997,
+      "task_result_count": 132,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -834,15 +921,17 @@
       "n": 384,
       "k": 62,
       "d": 8,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 635.2046877209984,
+      "solver_cpu_seconds": 629.3734708929999,
+      "task_result_count": 124,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -852,15 +941,17 @@
       "n": 368,
       "k": 60,
       "d": 8,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 617.8541627009995,
+      "solver_cpu_seconds": 612.6247699110002,
+      "task_result_count": 120,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -870,15 +961,17 @@
       "n": 352,
       "k": 58,
       "d": 8,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 590.2348062860003,
+      "solver_cpu_seconds": 584.5084641620003,
+      "task_result_count": 116,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -888,15 +981,17 @@
       "n": 700,
       "k": 50,
       "d": 8,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 479.87387546300033,
+      "solver_cpu_seconds": 472.6521210679999,
+      "task_result_count": 100,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -906,15 +1001,17 @@
       "n": 672,
       "k": 48,
       "d": 8,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 445.82981788000006,
+      "solver_cpu_seconds": 439.281711871,
+      "task_result_count": 96,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -924,15 +1021,17 @@
       "n": 644,
       "k": 46,
       "d": 8,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 426.49261986300075,
+      "solver_cpu_seconds": 421.1975771169997,
+      "task_result_count": 92,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -942,15 +1041,17 @@
       "n": 616,
       "k": 44,
       "d": 8,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 391.06828572100085,
+      "solver_cpu_seconds": 387.37726328099984,
+      "task_result_count": 88,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -960,15 +1061,17 @@
       "n": 560,
       "k": 40,
       "d": 8,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 348.3672058860009,
+      "solver_cpu_seconds": 344.33186311500003,
+      "task_result_count": 80,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -978,15 +1081,17 @@
       "n": 532,
       "k": 38,
       "d": 8,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 345.42937026799973,
+      "solver_cpu_seconds": 341.972084238,
+      "task_result_count": 76,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -996,15 +1101,17 @@
       "n": 504,
       "k": 36,
       "d": 8,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 775.1457047279998,
+      "solver_cpu_seconds": 767.6020450729986,
+      "task_result_count": 72,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1014,15 +1121,17 @@
       "n": 476,
       "k": 34,
       "d": 8,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 696.5563602939988,
+      "solver_cpu_seconds": 691.1140793310008,
+      "task_result_count": 68,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1032,15 +1141,17 @@
       "n": 540,
       "k": 36,
       "d": 9,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 404.6823844420003,
+      "solver_cpu_seconds": 399.92724917900046,
+      "task_result_count": 72,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1050,15 +1161,17 @@
       "n": 510,
       "k": 34,
       "d": 9,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 500.87417059999893,
+      "solver_cpu_seconds": 494.1914106350007,
+      "task_result_count": 68,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1068,15 +1181,17 @@
       "n": 480,
       "k": 32,
       "d": 9,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 433.7347525209998,
+      "solver_cpu_seconds": 429.0970104110005,
+      "task_result_count": 64,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1086,15 +1201,17 @@
       "n": 450,
       "k": 30,
       "d": 9,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 391.4738330489986,
+      "solver_cpu_seconds": 387.19861601900004,
+      "task_result_count": 60,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1104,15 +1221,17 @@
       "n": 390,
       "k": 26,
       "d": 9,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 302.2709633630002,
+      "solver_cpu_seconds": 299.12483266399965,
+      "task_result_count": 52,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1122,15 +1241,17 @@
       "n": 648,
       "k": 8,
       "d": 34,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 86.28565692699976,
+      "solver_cpu_seconds": 85.6106061710002,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1140,15 +1261,17 @@
       "n": 576,
       "k": 12,
       "d": 28,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 557.483882919998,
+      "solver_cpu_seconds": 552.5472045509998,
+      "task_result_count": 24,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1158,15 +1281,17 @@
       "n": 504,
       "k": 8,
       "d": 28,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 788.1124015379996,
+      "solver_cpu_seconds": 782.9020213079999,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1176,15 +1301,17 @@
       "n": 576,
       "k": 24,
       "d": 12,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 303.34727431500005,
+      "solver_cpu_seconds": 300.7078086239993,
+      "task_result_count": 48,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1202,9 +1329,9 @@
       "timeout_budgets_seconds": [
         5.0
       ],
-      "solver_wall_seconds": 245.272169308,
-      "solver_cpu_seconds": 244.06068485600002,
-      "task_result_count": 48,
+      "solver_wall_seconds": 496.1006703950004,
+      "solver_cpu_seconds": 492.608026214,
+      "task_result_count": 96,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1214,15 +1341,17 @@
       "n": 630,
       "k": 8,
       "d": 30,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 93.43620277299897,
+      "solver_cpu_seconds": 92.91940747799981,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1232,15 +1361,17 @@
       "n": 648,
       "k": 4,
       "d": 34,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 198.1160868579991,
+      "solver_cpu_seconds": 196.69550027899993,
+      "task_result_count": 8,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1250,15 +1381,17 @@
       "n": 420,
       "k": 8,
       "d": 26,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 451.30061239499946,
+      "solver_cpu_seconds": 447.30239443799996,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1268,15 +1401,17 @@
       "n": 648,
       "k": 4,
       "d": 36,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 44.92040668300115,
+      "solver_cpu_seconds": 44.678438218000224,
+      "task_result_count": 8,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1286,15 +1421,17 @@
       "n": 448,
       "k": 56,
       "d": 8,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 577.5109801419999,
+      "solver_cpu_seconds": 570.3361362450006,
+      "task_result_count": 112,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1304,15 +1441,17 @@
       "n": 644,
       "k": 46,
       "d": 8,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 493.7435324040016,
+      "solver_cpu_seconds": 488.38378143899934,
+      "task_result_count": 92,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1322,15 +1461,17 @@
       "n": 616,
       "k": 44,
       "d": 8,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 457.31086855200056,
+      "solver_cpu_seconds": 448.10610224499953,
+      "task_result_count": 88,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1340,15 +1481,17 @@
       "n": 540,
       "k": 8,
       "d": 30,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 87.28721895999979,
+      "solver_cpu_seconds": 85.66688494200014,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1358,15 +1501,17 @@
       "n": 630,
       "k": 4,
       "d": 32,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 44.36751384599984,
+      "solver_cpu_seconds": 43.50002361700001,
+      "task_result_count": 8,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1376,15 +1521,17 @@
       "n": 532,
       "k": 38,
       "d": 8,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 398.9553336950007,
+      "solver_cpu_seconds": 393.8520661369995,
+      "task_result_count": 76,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1394,15 +1541,17 @@
       "n": 660,
       "k": 8,
       "d": 34,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 90.47179546800044,
+      "solver_cpu_seconds": 89.56085947799988,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1412,15 +1561,17 @@
       "n": 630,
       "k": 14,
       "d": 20,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 157.06064999899945,
+      "solver_cpu_seconds": 154.76408511,
+      "task_result_count": 28,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1430,15 +1581,17 @@
       "n": 540,
       "k": 8,
       "d": 28,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 351.44960614400134,
+      "solver_cpu_seconds": 348.85266728199974,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1448,15 +1601,17 @@
       "n": 660,
       "k": 8,
       "d": 34,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 90.05566440999883,
+      "solver_cpu_seconds": 89.10195836700018,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1474,9 +1629,9 @@
       "timeout_budgets_seconds": [
         5.0
       ],
-      "solver_wall_seconds": 65.14013746700005,
-      "solver_cpu_seconds": 64.854054123,
-      "task_result_count": 12,
+      "solver_wall_seconds": 141.68187539099983,
+      "solver_cpu_seconds": 140.963092222,
+      "task_result_count": 24,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1486,15 +1641,17 @@
       "n": 630,
       "k": 8,
       "d": 28,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 86.99044537700047,
+      "solver_cpu_seconds": 85.9841347439999,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1512,9 +1669,9 @@
       "timeout_budgets_seconds": [
         5.0
       ],
-      "solver_wall_seconds": 133.9213067689999,
-      "solver_cpu_seconds": 133.33526357899999,
-      "task_result_count": 8,
+      "solver_wall_seconds": 248.53338983299943,
+      "solver_cpu_seconds": 246.96729664,
+      "task_result_count": 14,
       "serial_confirmation": null,
       "refutation_evidence": [
         "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049220/refutation/priority-t5-w32-X-0002.json",
@@ -1527,15 +1684,17 @@
       "n": 660,
       "k": 8,
       "d": 28,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 87.85124080600008,
+      "solver_cpu_seconds": 87.1201136059999,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1545,15 +1704,17 @@
       "n": 540,
       "k": 8,
       "d": 26,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 366.28089902900047,
+      "solver_cpu_seconds": 361.8434174629999,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1563,15 +1724,17 @@
       "n": 648,
       "k": 8,
       "d": 30,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 86.50099100299985,
+      "solver_cpu_seconds": 84.95759367200003,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1581,15 +1744,17 @@
       "n": 540,
       "k": 8,
       "d": 30,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 87.205072198999,
+      "solver_cpu_seconds": 86.32399962300008,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1599,15 +1764,17 @@
       "n": 630,
       "k": 8,
       "d": 30,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 91.93763815299917,
+      "solver_cpu_seconds": 90.60679450700013,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1617,15 +1784,17 @@
       "n": 600,
       "k": 8,
       "d": 26,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 86.0257088329995,
+      "solver_cpu_seconds": 84.87572240899976,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1635,15 +1804,17 @@
       "n": 648,
       "k": 8,
       "d": 28,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 86.04020564599932,
+      "solver_cpu_seconds": 84.86725855500015,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1653,15 +1824,17 @@
       "n": 540,
       "k": 8,
       "d": 28,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 392.17879634400015,
+      "solver_cpu_seconds": 388.51466197,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1671,15 +1844,17 @@
       "n": 660,
       "k": 8,
       "d": 28,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 93.52534975299977,
+      "solver_cpu_seconds": 92.19714452099981,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1689,15 +1864,17 @@
       "n": 660,
       "k": 8,
       "d": 28,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 90.81698040200035,
+      "solver_cpu_seconds": 89.37743271700026,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1707,15 +1884,17 @@
       "n": 576,
       "k": 8,
       "d": 30,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 93.04095398799836,
+      "solver_cpu_seconds": 91.9261331780001,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1725,15 +1904,17 @@
       "n": 540,
       "k": 8,
       "d": 30,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 87.95103408099976,
+      "solver_cpu_seconds": 86.56749796800034,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1751,9 +1932,9 @@
       "timeout_budgets_seconds": [
         5.0
       ],
-      "solver_wall_seconds": 89.61914824899986,
-      "solver_cpu_seconds": 89.23717818200005,
-      "task_result_count": 16,
+      "solver_wall_seconds": 185.902147108,
+      "solver_cpu_seconds": 184.97394607400005,
+      "task_result_count": 32,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1763,15 +1944,17 @@
       "n": 576,
       "k": 16,
       "d": 20,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 679.9879453169997,
+      "solver_cpu_seconds": 674.4419618899999,
+      "task_result_count": 32,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1781,15 +1964,17 @@
       "n": 540,
       "k": 8,
       "d": 28,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 367.5401752980006,
+      "solver_cpu_seconds": 365.28677510500006,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1799,15 +1984,17 @@
       "n": 660,
       "k": 8,
       "d": 28,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 240.96667446499987,
+      "solver_cpu_seconds": 239.10863426099968,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1817,15 +2004,17 @@
       "n": 660,
       "k": 8,
       "d": 32,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 89.48433138499968,
+      "solver_cpu_seconds": 88.91564705500002,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1835,15 +2024,17 @@
       "n": 540,
       "k": 8,
       "d": 26,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 140.37443877000032,
+      "solver_cpu_seconds": 139.1097503860002,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1853,15 +2044,17 @@
       "n": 648,
       "k": 4,
       "d": 38,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 43.08667081599924,
+      "solver_cpu_seconds": 42.61687883800005,
+      "task_result_count": 8,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1871,15 +2064,17 @@
       "n": 660,
       "k": 8,
       "d": 32,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 92.06690518799951,
+      "solver_cpu_seconds": 90.5003792120001,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1889,15 +2084,17 @@
       "n": 648,
       "k": 8,
       "d": 30,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 87.71634105400017,
+      "solver_cpu_seconds": 86.6630598600002,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1907,15 +2104,17 @@
       "n": 576,
       "k": 16,
       "d": 20,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 730.7905232639996,
+      "solver_cpu_seconds": 722.669126699,
+      "task_result_count": 32,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1925,17 +2124,23 @@
       "n": 686,
       "k": 6,
       "d": 28,
-      "status": "pending",
+      "status": "refuted",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "refuted"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 195.29106116300045,
+      "solver_cpu_seconds": 192.82751376599992,
+      "task_result_count": 12,
       "serial_confirmation": null,
-      "refutation_evidence": []
+      "refutation_evidence": [
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0054814/refutation/all-t5-w64-Z-0001.json",
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0054814/refutation/all-t5-w64-Z-0000.json",
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0054814/refutation/all-t5-w64-Z-0002.json"
+      ]
     },
     {
       "candidate_id": 54828,
@@ -1943,15 +2148,17 @@
       "n": 660,
       "k": 8,
       "d": 32,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 87.84651925000071,
+      "solver_cpu_seconds": 87.34808538099969,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1961,15 +2168,17 @@
       "n": 686,
       "k": 6,
       "d": 36,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 76.6353411060013,
+      "solver_cpu_seconds": 75.85204016099988,
+      "task_result_count": 12,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1979,15 +2188,17 @@
       "n": 630,
       "k": 8,
       "d": 28,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 89.73888807499952,
+      "solver_cpu_seconds": 88.61746811500029,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -1997,15 +2208,17 @@
       "n": 648,
       "k": 8,
       "d": 28,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 498.3568445780011,
+      "solver_cpu_seconds": 493.0169173639998,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -2015,15 +2228,17 @@
       "n": 630,
       "k": 4,
       "d": 36,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 44.70757316699928,
+      "solver_cpu_seconds": 44.217468857000085,
+      "task_result_count": 8,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -2041,9 +2256,9 @@
       "timeout_budgets_seconds": [
         5.0
       ],
-      "solver_wall_seconds": 906.955466181,
-      "solver_cpu_seconds": 903.433244151,
-      "task_result_count": 24,
+      "solver_wall_seconds": 1506.7805936260002,
+      "solver_cpu_seconds": 1498.502258861,
+      "task_result_count": 48,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -2053,15 +2268,17 @@
       "n": 540,
       "k": 8,
       "d": 28,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 368.91493714299986,
+      "solver_cpu_seconds": 365.95493480599987,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -2071,17 +2288,26 @@
       "n": 686,
       "k": 12,
       "d": 28,
-      "status": "pending",
+      "status": "refuted",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "refuted"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 427.2807187639987,
+      "solver_cpu_seconds": 424.4861531670001,
+      "task_result_count": 24,
       "serial_confirmation": null,
-      "refutation_evidence": []
+      "refutation_evidence": [
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0056884/refutation/all-t5-w64-Z-0004.json",
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0056884/refutation/all-t5-w64-Z-0002.json",
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0056884/refutation/all-t5-w64-Z-0003.json",
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0056884/refutation/all-t5-w64-Z-0001.json",
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0056884/refutation/all-t5-w64-Z-0000.json",
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0056884/refutation/all-t5-w64-Z-0005.json"
+      ]
     },
     {
       "candidate_id": 57634,
@@ -2089,17 +2315,26 @@
       "n": 686,
       "k": 12,
       "d": 30,
-      "status": "pending",
+      "status": "refuted",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "refuted",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 482.7816058960011,
+      "solver_cpu_seconds": 479.00002285299956,
+      "task_result_count": 24,
       "serial_confirmation": null,
-      "refutation_evidence": []
+      "refutation_evidence": [
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0057634/refutation/all-t5-w64-X-0003.json",
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0057634/refutation/all-t5-w64-X-0001.json",
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0057634/refutation/all-t5-w64-X-0004.json",
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0057634/refutation/all-t5-w64-X-0005.json",
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0057634/refutation/all-t5-w64-X-0000.json",
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0057634/refutation/all-t5-w64-X-0002.json"
+      ]
     },
     {
       "candidate_id": 57792,
@@ -2107,15 +2342,17 @@
       "n": 540,
       "k": 8,
       "d": 28,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 89.09581747699895,
+      "solver_cpu_seconds": 87.8959784079999,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -2125,15 +2362,17 @@
       "n": 648,
       "k": 8,
       "d": 30,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 90.42031040599932,
+      "solver_cpu_seconds": 89.50035343599973,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -2151,9 +2390,9 @@
       "timeout_budgets_seconds": [
         5.0
       ],
-      "solver_wall_seconds": 1576.677193806,
-      "solver_cpu_seconds": 1570.607681563,
-      "task_result_count": 36,
+      "solver_wall_seconds": 1843.4191913050006,
+      "solver_cpu_seconds": 1834.486137464,
+      "task_result_count": 72,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -2163,15 +2402,17 @@
       "n": 648,
       "k": 8,
       "d": 32,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 89.19820491699875,
+      "solver_cpu_seconds": 88.6641098020001,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -2181,15 +2422,17 @@
       "n": 576,
       "k": 16,
       "d": 20,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 1125.667944065999,
+      "solver_cpu_seconds": 1117.7953533099999,
+      "task_result_count": 32,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -2199,17 +2442,25 @@
       "n": 630,
       "k": 10,
       "d": 28,
-      "status": "pending",
+      "status": "refuted",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "refuted"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 419.5702462019999,
+      "solver_cpu_seconds": 416.7213798370001,
+      "task_result_count": 20,
       "serial_confirmation": null,
-      "refutation_evidence": []
+      "refutation_evidence": [
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060611/refutation/all-t5-w64-Z-0004.json",
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060611/refutation/all-t5-w64-Z-0002.json",
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060611/refutation/all-t5-w64-Z-0000.json",
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060611/refutation/all-t5-w64-Z-0003.json",
+        "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060611/refutation/all-t5-w64-Z-0001.json"
+      ]
     },
     {
       "candidate_id": 60702,
@@ -2225,9 +2476,9 @@
       "timeout_budgets_seconds": [
         5.0
       ],
-      "solver_wall_seconds": 154.73267129100012,
-      "solver_cpu_seconds": 154.016639189,
-      "task_result_count": 28,
+      "solver_wall_seconds": 316.1937465560002,
+      "solver_cpu_seconds": 314.247710121,
+      "task_result_count": 56,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -2245,9 +2496,9 @@
       "timeout_budgets_seconds": [
         5.0
       ],
-      "solver_wall_seconds": 877.1904137820001,
-      "solver_cpu_seconds": 873.544382216,
-      "task_result_count": 32,
+      "solver_wall_seconds": 1448.175757247,
+      "solver_cpu_seconds": 1439.410950205,
+      "task_result_count": 64,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -2257,15 +2508,17 @@
       "n": 660,
       "k": 8,
       "d": 32,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 92.02601427799982,
+      "solver_cpu_seconds": 90.83967120500006,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -2275,15 +2528,17 @@
       "n": 648,
       "k": 8,
       "d": 32,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 91.50144792500032,
+      "solver_cpu_seconds": 90.42176631199993,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -2293,15 +2548,17 @@
       "n": 648,
       "k": 8,
       "d": 32,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 93.48709979200021,
+      "solver_cpu_seconds": 92.46640652999986,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -2311,15 +2568,17 @@
       "n": 630,
       "k": 14,
       "d": 28,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 157.19152804399891,
+      "solver_cpu_seconds": 155.39176557199983,
+      "task_result_count": 28,
       "serial_confirmation": null,
       "refutation_evidence": []
     },
@@ -2329,15 +2588,17 @@
       "n": 648,
       "k": 8,
       "d": 34,
-      "status": "pending",
+      "status": "timeout",
       "side_status": {
-        "X": "pending",
-        "Z": "pending"
+        "X": "timeout",
+        "Z": "timeout"
       },
-      "timeout_budgets_seconds": [],
-      "solver_wall_seconds": 0,
-      "solver_cpu_seconds": 0,
-      "task_result_count": 0,
+      "timeout_budgets_seconds": [
+        5.0
+      ],
+      "solver_wall_seconds": 88.51674500000081,
+      "solver_cpu_seconds": 87.78071611200028,
+      "task_result_count": 16,
       "serial_confirmation": null,
       "refutation_evidence": []
     }

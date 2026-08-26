@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0020283",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0020283-3498d1f68e-1m-python8000reuse8k-s694493791-fast1000000.json",
+  "candidate_sha256": "33e8c4271cddd00c6915469c57e4aaa3cf38e17b20d498d951b68b3f7081a363",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "X-0013",
+  "side": "X",
+  "logical_row_index": 13,
+  "logical_generator_support": [
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    207,
+    208,
+    209
+  ],
+  "cutoff": 8,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:03:50.886673+00:00",
+  "finished_at_utc": "2026-08-26T09:03:55.939854+00:00",
+  "duration_seconds": 5.053182280000101,
+  "process_cpu_seconds": 5.007407958999998,
+  "worker_pid": 66,
+  "memory_bytes": {
+    "before": {
+      "rss": 146415616,
+      "high_water": 176484352
+    },
+    "after": {
+      "rss": 114479104,
+      "high_water": 241872896
+    },
+    "ru_maxrss": 241872896
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "ed131459937fa97d0b59a3732ae427dcfa65ac2f8e119643ee5204e5234d7e24",
+    "pivot_count": 154
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 5.051160895000066
+    }
+  ],
+  "error": null
+}

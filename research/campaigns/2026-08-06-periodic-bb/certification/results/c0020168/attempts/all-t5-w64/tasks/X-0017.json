@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0020168",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0020168-bbd117ff9f-60k-python8000reuse8k-s318274233-fast60000.json",
+  "candidate_sha256": "a7a2602d1277f961765c015f67390e9b0a25f7a2e22468a31b9efba33510baa8",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "X-0017",
+  "side": "X",
+  "logical_row_index": 17,
+  "logical_generator_support": [
+    111,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    241,
+    242,
+    243,
+    244,
+    245,
+    246,
+    247,
+    248,
+    249,
+    250,
+    251
+  ],
+  "cutoff": 7,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:03:44.948615+00:00",
+  "finished_at_utc": "2026-08-26T09:03:49.962383+00:00",
+  "duration_seconds": 5.013758719999942,
+  "process_cpu_seconds": 4.9782558739999985,
+  "worker_pid": 33,
+  "memory_bytes": {
+    "before": {
+      "rss": 139517952,
+      "high_water": 178298880
+    },
+    "after": {
+      "rss": 108474368,
+      "high_water": 220729344
+    },
+    "ru_maxrss": 220729344
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "56dd40db2fdab3cf4331d3d02a4981275cca94795c0bedcb13559e831988110e",
+    "pivot_count": 130
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 5.0119168039998385
+    }
+  ],
+  "error": null
+}

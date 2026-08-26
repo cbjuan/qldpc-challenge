@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0000142",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0000142-fac92a1832-python2000-s1512128256.json",
+  "candidate_sha256": "07f499a47de5989b27bd6a85bb459912b30a774820153c79388ec604ad0374c2",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "Z-0009",
+  "side": "Z",
+  "logical_row_index": 9,
+  "logical_generator_support": [
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200
+  ],
+  "cutoff": 1,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:03:56.497274+00:00",
+  "finished_at_utc": "2026-08-26T09:03:56.536553+00:00",
+  "duration_seconds": 0.03927843299993583,
+  "process_cpu_seconds": 0.03832703700000195,
+  "worker_pid": 15,
+  "memory_bytes": {
+    "before": {
+      "rss": 154193920,
+      "high_water": 194117632
+    },
+    "after": {
+      "rss": 154193920,
+      "high_water": 194117632
+    },
+    "ru_maxrss": 194117632
+  },
+  "status": "proven_infeasible",
+  "status_basis": "stock_predicate_infeasible",
+  "stock_predicate_return": false,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "fa3ca592ed12db0fdc29b5b52354d06d5d8f97546df529987d9339906140b044",
+    "pivot_count": 78
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 0.03819962699981261
+    }
+  ],
+  "error": null
+}

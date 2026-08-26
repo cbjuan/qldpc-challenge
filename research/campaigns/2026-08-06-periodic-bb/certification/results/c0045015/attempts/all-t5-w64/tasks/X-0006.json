@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0045015",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0045015-91948ad11f-1m-python8000reuse8k-s1026164771-fast1000000.json",
+  "candidate_sha256": "fe0314e7285641228501e895bf61f8799874581c0a3447d72c399a94e907f53c",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "X-0006",
+  "side": "X",
+  "logical_row_index": 6,
+  "logical_generator_support": [
+    104,
+    420,
+    421,
+    422,
+    423,
+    652,
+    653,
+    654,
+    655,
+    656,
+    657
+  ],
+  "cutoff": 8,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:10:02.181859+00:00",
+  "finished_at_utc": "2026-08-26T09:10:07.216786+00:00",
+  "duration_seconds": 5.034942944000022,
+  "process_cpu_seconds": 4.886209027000007,
+  "worker_pid": 12,
+  "memory_bytes": {
+    "before": {
+      "rss": 197066752,
+      "high_water": 254779392
+    },
+    "after": {
+      "rss": 199176192,
+      "high_water": 254779392
+    },
+    "ru_maxrss": 254779392
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "8e8b8446e655b8d577d8d332823c5f2c4984bc2ad9e1d4b638aab2044544a759",
+    "pivot_count": 308
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 5.031369365000046
+    }
+  ],
+  "error": null
+}

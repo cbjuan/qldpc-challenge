@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0011462",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0011462-508dfbd86d-60k-python8000-s2136219389-fast60000.json",
+  "candidate_sha256": "0ec732ed6102b134181ed9d083ddf82c939485a0880346ee6dd391fbf2dfcbda",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "Z-0029",
+  "side": "Z",
+  "logical_row_index": 29,
+  "logical_generator_support": [
+    117,
+    118,
+    119,
+    143,
+    149,
+    151,
+    158,
+    159,
+    166,
+    167,
+    174,
+    182,
+    189,
+    190,
+    199,
+    205,
+    213,
+    222,
+    230,
+    237,
+    238,
+    245,
+    246,
+    253,
+    261,
+    268,
+    269
+  ],
+  "cutoff": 2,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:04:12.000553+00:00",
+  "finished_at_utc": "2026-08-26T09:04:12.818744+00:00",
+  "duration_seconds": 0.8181989889999386,
+  "process_cpu_seconds": 0.8126086059999977,
+  "worker_pid": 69,
+  "memory_bytes": {
+    "before": {
+      "rss": 109182976,
+      "high_water": 242249728
+    },
+    "after": {
+      "rss": 109182976,
+      "high_water": 242249728
+    },
+    "ru_maxrss": 242249728
+  },
+  "status": "proven_infeasible",
+  "status_basis": "stock_predicate_infeasible",
+  "stock_predicate_return": false,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "9c065852fba2ae321051047492241adf289f60a0963a9d123debc56507f27f90",
+    "pivot_count": 90
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 0.8165907000000061
+    }
+  ],
+  "error": null
+}

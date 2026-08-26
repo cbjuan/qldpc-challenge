@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0045046",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0045046-8eb759b131-1m-python8000reuse8k-s1241659517-fast1000000-allrungs.json",
+  "candidate_sha256": "3202777f236d3f29544eb9d9133c6960d7051169ad44bcc864befb059660721e",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "X-0021",
+  "side": "X",
+  "logical_row_index": 21,
+  "logical_generator_support": [
+    27,
+    297,
+    298,
+    299,
+    300,
+    301,
+    302,
+    303,
+    304,
+    305,
+    306,
+    307,
+    482,
+    483,
+    484,
+    485,
+    486,
+    487
+  ],
+  "cutoff": 7,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:12:07.690554+00:00",
+  "finished_at_utc": "2026-08-26T09:12:12.821269+00:00",
+  "duration_seconds": 5.130717435000179,
+  "process_cpu_seconds": 5.090223974999958,
+  "worker_pid": 57,
+  "memory_bytes": {
+    "before": {
+      "rss": 152932352,
+      "high_water": 280711168
+    },
+    "after": {
+      "rss": 113278976,
+      "high_water": 280711168
+    },
+    "ru_maxrss": 280711168
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "7e0000ce5000f18f94e008b37abd2e0745e1ddda794c509d4e674d0a0b17b280",
+    "pivot_count": 260
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 5.1282608630001505
+    }
+  ],
+  "error": null
+}

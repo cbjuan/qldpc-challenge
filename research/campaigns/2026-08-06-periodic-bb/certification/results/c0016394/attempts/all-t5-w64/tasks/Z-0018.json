@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0016394",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0016394-ec8a86c6f4-60k-python8000-s1804300979-fast60000.json",
+  "candidate_sha256": "79a51eed7d77b1e97b2402ef69532c702e5b99f5000fa6af3e180f5a3eaabc6e",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "Z-0018",
+  "side": "Z",
+  "logical_row_index": 18,
+  "logical_generator_support": [
+    101,
+    102,
+    104,
+    106,
+    107,
+    110,
+    113,
+    116,
+    119,
+    155,
+    158,
+    159,
+    162,
+    181,
+    184,
+    185,
+    188,
+    194,
+    195,
+    199,
+    203,
+    207,
+    211,
+    220,
+    221,
+    225,
+    229,
+    233,
+    237,
+    246,
+    247,
+    251,
+    255,
+    259,
+    263,
+    265,
+    272,
+    273,
+    277,
+    281,
+    285
+  ],
+  "cutoff": 2,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:04:42.312388+00:00",
+  "finished_at_utc": "2026-08-26T09:04:43.672667+00:00",
+  "duration_seconds": 1.3602841319998333,
+  "process_cpu_seconds": 1.3472132379999948,
+  "worker_pid": 66,
+  "memory_bytes": {
+    "before": {
+      "rss": 153419776,
+      "high_water": 241872896
+    },
+    "after": {
+      "rss": 153419776,
+      "high_water": 241872896
+    },
+    "ru_maxrss": 241872896
+  },
+  "status": "proven_infeasible",
+  "status_basis": "stock_predicate_infeasible",
+  "stock_predicate_return": false,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "5b760407bb2a54c1c003eb409a208f53e516c54a01d2540f64dc69126e063f46",
+    "pivot_count": 94
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 1.358646748999945
+    }
+  ],
+  "error": null
+}

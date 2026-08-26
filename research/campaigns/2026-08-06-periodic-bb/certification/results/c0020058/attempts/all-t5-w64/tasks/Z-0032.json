@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0020058",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0020058-540ca6a88d-1m-python8000-s1887582726-fast1000000.json",
+  "candidate_sha256": "be3142e44e0eb287d7e166ced4f9e744c3a2298608675866d5c58e58e2344d10",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "Z-0032",
+  "side": "Z",
+  "logical_row_index": 32,
+  "logical_generator_support": [
+    157,
+    159,
+    165,
+    167,
+    173,
+    175,
+    181,
+    183,
+    189,
+    191,
+    197,
+    199,
+    205,
+    207,
+    213,
+    215,
+    221,
+    223,
+    229,
+    231,
+    237,
+    239,
+    245,
+    247,
+    253,
+    255,
+    261,
+    263,
+    269,
+    271,
+    277,
+    279,
+    285,
+    287,
+    293,
+    295,
+    296,
+    297,
+    298,
+    299,
+    300,
+    302
+  ],
+  "cutoff": 6,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:05:00.509409+00:00",
+  "finished_at_utc": "2026-08-26T09:05:05.530261+00:00",
+  "duration_seconds": 5.020851979000099,
+  "process_cpu_seconds": 4.9852334739999975,
+  "worker_pid": 59,
+  "memory_bytes": {
+    "before": {
+      "rss": 134008832,
+      "high_water": 196476928
+    },
+    "after": {
+      "rss": 151420928,
+      "high_water": 196476928
+    },
+    "ru_maxrss": 196476928
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "e2b348596847b5fcb0d8c9f7e110a08cf93fe7f70e4db84f1fde953f5a7a49eb",
+    "pivot_count": 126
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 5.018029130000059
+    }
+  ],
+  "error": null
+}

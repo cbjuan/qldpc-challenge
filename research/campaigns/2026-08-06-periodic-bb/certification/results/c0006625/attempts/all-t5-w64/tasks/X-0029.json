@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0006625",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0006625-3fadd04521-60k-python8000-s572072710-fast60000.json",
+  "candidate_sha256": "a2a984158ceb5d686628b0125456095313e40b62ebf7179cee564fd67e69b521",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "X-0029",
+  "side": "X",
+  "logical_row_index": 29,
+  "logical_generator_support": [
+    143,
+    144,
+    162,
+    163,
+    181,
+    182,
+    200,
+    201,
+    219,
+    220,
+    238,
+    239,
+    257,
+    258
+  ],
+  "cutoff": 3,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:04:04.544076+00:00",
+  "finished_at_utc": "2026-08-26T09:04:04.619449+00:00",
+  "duration_seconds": 0.07537115499985703,
+  "process_cpu_seconds": 0.07474357899999973,
+  "worker_pid": 67,
+  "memory_bytes": {
+    "before": {
+      "rss": 107077632,
+      "high_water": 124076032
+    },
+    "after": {
+      "rss": 107077632,
+      "high_water": 124076032
+    },
+    "ru_maxrss": 124076032
+  },
+  "status": "proven_infeasible",
+  "status_basis": "stock_predicate_infeasible",
+  "stock_predicate_return": false,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "bbdcc4036016f6a1a5948127f89d3fca7f64fc57a865e5a7592116f149b17cef",
+    "pivot_count": 114
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 0.0742022030001408
+    }
+  ],
+  "error": null
+}

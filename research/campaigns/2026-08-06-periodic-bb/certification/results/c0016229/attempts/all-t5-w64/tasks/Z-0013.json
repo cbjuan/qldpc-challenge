@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0016229",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0016229-34ddd89e34-60k-python8000-s730123194-fast60000.json",
+  "candidate_sha256": "6dfa6eac8a95020d8c79c5b6a415bb8a27f0aca064e25754b78db233f73bfeb5",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "Z-0013",
+  "side": "Z",
+  "logical_row_index": 13,
+  "logical_generator_support": [
+    91,
+    117,
+    118,
+    120,
+    124,
+    126,
+    131,
+    137,
+    139,
+    143,
+    144,
+    145,
+    146,
+    150,
+    151,
+    156,
+    163,
+    164,
+    172,
+    176,
+    177,
+    178,
+    182,
+    183,
+    189,
+    190,
+    191,
+    195,
+    197,
+    198
+  ],
+  "cutoff": 5,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:04:38.890318+00:00",
+  "finished_at_utc": "2026-08-26T09:04:43.929558+00:00",
+  "duration_seconds": 5.0392432789999475,
+  "process_cpu_seconds": 4.989274544000011,
+  "worker_pid": 25,
+  "memory_bytes": {
+    "before": {
+      "rss": 119144448,
+      "high_water": 158695424
+    },
+    "after": {
+      "rss": 100585472,
+      "high_water": 190259200
+    },
+    "ru_maxrss": 190259200
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "afc76cef92b19d28bd382989ce9a981c06cc58e0330a2a7d076d0e7c65564ba0",
+    "pivot_count": 91
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 5.037091273999977
+    }
+  ],
+  "error": null
+}

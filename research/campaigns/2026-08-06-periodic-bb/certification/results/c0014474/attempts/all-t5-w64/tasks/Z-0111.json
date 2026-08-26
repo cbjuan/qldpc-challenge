@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0014474",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0014474-4b5cda8d68-1m-python8000-s996299447-fast1000000.json",
+  "candidate_sha256": "a2be1c278f9ed05872ae4c0a6e7d457f54c58cae4d525a86166c6eda21a438f8",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "Z-0111",
+  "side": "Z",
+  "logical_row_index": 111,
+  "logical_generator_support": [
+    242,
+    245,
+    308,
+    311,
+    374,
+    377
+  ],
+  "cutoff": 2,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:04:30.035253+00:00",
+  "finished_at_utc": "2026-08-26T09:04:31.118515+00:00",
+  "duration_seconds": 1.083262999999988,
+  "process_cpu_seconds": 1.070598136000001,
+  "worker_pid": 49,
+  "memory_bytes": {
+    "before": {
+      "rss": 111763456,
+      "high_water": 153485312
+    },
+    "after": {
+      "rss": 111767552,
+      "high_water": 153485312
+    },
+    "ru_maxrss": 153485312
+  },
+  "status": "proven_infeasible",
+  "status_basis": "stock_predicate_infeasible",
+  "stock_predicate_return": false,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "3bcb0e646b6110033ec94cbea792f7cf33645b3a9370bc4d0dbfb8c58f95def1",
+    "pivot_count": 130
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 1.0815358500001366
+    }
+  ],
+  "error": null
+}

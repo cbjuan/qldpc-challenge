@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0045059",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0045059-9b6f81d9f6-1m-python8000reuse8k-s1867800169-fast1000000-allrungs.json",
+  "candidate_sha256": "8962d80574c48c526902b1bc28846540ea568a35524ddf20a7dd0f685f308802",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "X-0000",
+  "side": "X",
+  "logical_row_index": 0,
+  "logical_generator_support": [
+    14,
+    270,
+    271,
+    272,
+    273,
+    442,
+    443,
+    444,
+    445,
+    446,
+    447
+  ],
+  "cutoff": 8,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:12:35.833321+00:00",
+  "finished_at_utc": "2026-08-26T09:12:40.852128+00:00",
+  "duration_seconds": 5.0188363049999225,
+  "process_cpu_seconds": 4.982165344000009,
+  "worker_pid": 68,
+  "memory_bytes": {
+    "before": {
+      "rss": 142557184,
+      "high_water": 262635520
+    },
+    "after": {
+      "rss": 112340992,
+      "high_water": 262635520
+    },
+    "ru_maxrss": 262635520
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "7dfd06b20f48bd40b5be5143cbfc36de7aee36e66056249c50667267da91d7bb",
+    "pivot_count": 252
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 5.016439279999986
+    }
+  ],
+  "error": null
+}

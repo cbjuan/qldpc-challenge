@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0045041",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0045041-d2d733f70e-1m-python8000reuse8k-s1358071328-fast1000000-allrungs.json",
+  "candidate_sha256": "50f186ea58ace0243aeab34a1d1e9d4652c40548ac4312e6298924900f0aa5a3",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "X-0006",
+  "side": "X",
+  "logical_row_index": 6,
+  "logical_generator_support": [
+    434,
+    435,
+    436,
+    437,
+    438,
+    439,
+    440,
+    441,
+    442,
+    443,
+    444,
+    445,
+    446,
+    447
+  ],
+  "cutoff": 7,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:11:39.472259+00:00",
+  "finished_at_utc": "2026-08-26T09:11:41.029313+00:00",
+  "duration_seconds": 1.5570787619999464,
+  "process_cpu_seconds": 1.5397870109999872,
+  "worker_pid": 9,
+  "memory_bytes": {
+    "before": {
+      "rss": 164417536,
+      "high_water": 292450304
+    },
+    "after": {
+      "rss": 166535168,
+      "high_water": 292450304
+    },
+    "ru_maxrss": 292450304
+  },
+  "status": "proven_infeasible",
+  "status_basis": "stock_predicate_infeasible",
+  "stock_predicate_return": false,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "597cbb9bd89977c7f252c5fa3d8ca268008c7b60718afbfd580210b91c3ecd39",
+    "pivot_count": 325
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 1.5539762179998888
+    }
+  ],
+  "error": null
+}

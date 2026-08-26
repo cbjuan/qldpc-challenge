@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0004584",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0004584-ff039c096b-python2000-s1431612151.json",
+  "candidate_sha256": "62e6e276ca79bcc3ff22c4c887de571fef8d5119580a594ffd912a2a1c5f7b74",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "Z-0024",
+  "side": "Z",
+  "logical_row_index": 24,
+  "logical_generator_support": [
+    109,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    142,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    175,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196
+  ],
+  "cutoff": 2,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:04:02.488693+00:00",
+  "finished_at_utc": "2026-08-26T09:04:03.874523+00:00",
+  "duration_seconds": 1.385820706000004,
+  "process_cpu_seconds": 1.345387646000006,
+  "worker_pid": 52,
+  "memory_bytes": {
+    "before": {
+      "rss": 108630016,
+      "high_water": 191090688
+    },
+    "after": {
+      "rss": 126935040,
+      "high_water": 191090688
+    },
+    "ru_maxrss": 191090688
+  },
+  "status": "proven_infeasible",
+  "status_basis": "stock_predicate_infeasible",
+  "stock_predicate_return": false,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "c3081ff0dec3bee0c87a22472fda383a749fae132d9cbd6b156a15bf927b45f3",
+    "pivot_count": 86
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 1.384850669999878
+    }
+  ],
+  "error": null
+}

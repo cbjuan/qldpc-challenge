@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0002359",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0002359-0daec5be0e-python2000-s1571305854.json",
+  "candidate_sha256": "f5058af187f63431a183c080e9111eb50b221028ca879300e5701610d0d0779b",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "Z-0014",
+  "side": "Z",
+  "logical_row_index": 14,
+  "logical_generator_support": [
+    50,
+    52,
+    55,
+    56,
+    57,
+    59,
+    62,
+    65,
+    68,
+    70,
+    77,
+    79,
+    80,
+    82,
+    83,
+    84,
+    88,
+    89,
+    91,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    104
+  ],
+  "cutoff": 2,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:03:57.107157+00:00",
+  "finished_at_utc": "2026-08-26T09:03:57.342041+00:00",
+  "duration_seconds": 0.23488671899986002,
+  "process_cpu_seconds": 0.14985411199999987,
+  "worker_pid": 58,
+  "memory_bytes": {
+    "before": {
+      "rss": 105050112,
+      "high_water": 124960768
+    },
+    "after": {
+      "rss": 105050112,
+      "high_water": 124960768
+    },
+    "ru_maxrss": 124960768
+  },
+  "status": "proven_infeasible",
+  "status_basis": "stock_predicate_infeasible",
+  "stock_predicate_return": false,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "c49a64b59d00ea4706b86b7e5296214e1d1fa2732030d80665372cfea20f6885",
+    "pivot_count": 36
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 0.2281129850000525
+    }
+  ],
+  "error": null
+}

@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0020418",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0020418-ac336096c5-60k-python8000-s833036170-fast60000.json",
+  "candidate_sha256": "b1e3b8ce17a834f8c07ff61474ceea1dc665710ed3119ff6fcb05ba3fa1b3437",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "X-0020",
+  "side": "X",
+  "logical_row_index": 20,
+  "logical_generator_support": [
+    140,
+    141,
+    155,
+    156,
+    170,
+    171,
+    185,
+    186,
+    200,
+    201,
+    215,
+    216,
+    230,
+    231,
+    245,
+    246,
+    260,
+    261
+  ],
+  "cutoff": 6,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:05:25.985879+00:00",
+  "finished_at_utc": "2026-08-26T09:05:31.001736+00:00",
+  "duration_seconds": 5.015861183999959,
+  "process_cpu_seconds": 4.97342491900001,
+  "worker_pid": 69,
+  "memory_bytes": {
+    "before": {
+      "rss": 109187072,
+      "high_water": 246038528
+    },
+    "after": {
+      "rss": 109187072,
+      "high_water": 246038528
+    },
+    "ru_maxrss": 246038528
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "06ca0fabfe3c33985a22a969fb79d112f3892c4f0f23de95147a94e8cc469558",
+    "pivot_count": 120
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 5.013840622999851
+    }
+  ],
+  "error": null
+}

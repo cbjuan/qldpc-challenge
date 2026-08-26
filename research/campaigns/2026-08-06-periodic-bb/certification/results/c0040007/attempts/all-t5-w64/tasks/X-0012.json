@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0040007",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0040007-1eec85e1b2-1m-python8000reuse8k-s774987152-fast1000000.json",
+  "candidate_sha256": "36e5cfb1fc1ed9b9fe4963113b9b4148e21c489c15ab17abc53e309f2ae0f501",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "X-0012",
+  "side": "X",
+  "logical_row_index": 12,
+  "logical_generator_support": [
+    352,
+    393,
+    422,
+    437,
+    478,
+    507,
+    522,
+    563,
+    592,
+    607,
+    648,
+    677
+  ],
+  "cutoff": 3,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:09:34.970661+00:00",
+  "finished_at_utc": "2026-08-26T09:09:35.249316+00:00",
+  "duration_seconds": 0.2786525259998598,
+  "process_cpu_seconds": 0.2751789110000118,
+  "worker_pid": 39,
+  "memory_bytes": {
+    "before": {
+      "rss": 178343936,
+      "high_water": 235438080
+    },
+    "after": {
+      "rss": 178343936,
+      "high_water": 235438080
+    },
+    "ru_maxrss": 235438080
+  },
+  "status": "proven_infeasible",
+  "status_basis": "stock_predicate_infeasible",
+  "stock_predicate_return": false,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "baff60f486d150861184568a720ffc781223d877f566403a8b0e039afa2cf7f5",
+    "pivot_count": 255
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 0.2747543109999242
+    }
+  ],
+  "error": null
+}

@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0019513",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0019513-cf4de4242f-1m-python8000-s724216748-fast1000000.json",
+  "candidate_sha256": "444dd86a93838a0c94eb786c8af0640b2f68f5ee86748c30c46a8b410f172b26",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "Z-0064",
+  "side": "Z",
+  "logical_row_index": 64,
+  "logical_generator_support": [
+    166,
+    170,
+    181,
+    247,
+    248,
+    250,
+    264,
+    286,
+    289,
+    290,
+    292,
+    301,
+    302,
+    303,
+    316,
+    328,
+    330,
+    343,
+    344,
+    345,
+    358,
+    382
+  ],
+  "cutoff": 3,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:04:50.515077+00:00",
+  "finished_at_utc": "2026-08-26T09:04:55.903340+00:00",
+  "duration_seconds": 5.388262141000041,
+  "process_cpu_seconds": 5.230786916,
+  "worker_pid": 30,
+  "memory_bytes": {
+    "before": {
+      "rss": 113766400,
+      "high_water": 191176704
+    },
+    "after": {
+      "rss": 161890304,
+      "high_water": 191176704
+    },
+    "ru_maxrss": 191176704
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "81c46f0fdb0f4ea42e3c001fefde6cbeea59c6f9e4040211e8adc19aac9229ce",
+    "pivot_count": 144
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 5.386545727000112
+    }
+  ],
+  "error": null
+}

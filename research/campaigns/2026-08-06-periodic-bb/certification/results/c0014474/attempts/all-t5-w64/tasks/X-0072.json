@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0014474",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0014474-4b5cda8d68-1m-python8000-s996299447-fast1000000.json",
+  "candidate_sha256": "a2be1c278f9ed05872ae4c0a6e7d457f54c58cae4d525a86166c6eda21a438f8",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "X-0072",
+  "side": "X",
+  "logical_row_index": 72,
+  "logical_generator_support": [
+    205,
+    208,
+    211,
+    214,
+    217,
+    220,
+    223,
+    226,
+    229,
+    271,
+    274,
+    277,
+    280,
+    283,
+    286,
+    289,
+    292,
+    295,
+    298,
+    301,
+    304,
+    307,
+    310,
+    313,
+    316,
+    319,
+    322,
+    325,
+    328,
+    331,
+    334,
+    364,
+    367,
+    370,
+    373,
+    376,
+    379,
+    382,
+    385,
+    388,
+    391,
+    394
+  ],
+  "cutoff": 2,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:04:17.692180+00:00",
+  "finished_at_utc": "2026-08-26T09:04:20.340355+00:00",
+  "duration_seconds": 2.6481752170000163,
+  "process_cpu_seconds": 2.633086573,
+  "worker_pid": 41,
+  "memory_bytes": {
+    "before": {
+      "rss": 103874560,
+      "high_water": 132759552
+    },
+    "after": {
+      "rss": 106299392,
+      "high_water": 132759552
+    },
+    "ru_maxrss": 132759552
+  },
+  "status": "proven_infeasible",
+  "status_basis": "stock_predicate_infeasible",
+  "stock_predicate_return": false,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "2358c41bbe60e0f09fb5ad33597ab31c8f8633cf2ad91ed9ee197866b94fd549",
+    "pivot_count": 130
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 2.646863498999892
+    }
+  ],
+  "error": null
+}

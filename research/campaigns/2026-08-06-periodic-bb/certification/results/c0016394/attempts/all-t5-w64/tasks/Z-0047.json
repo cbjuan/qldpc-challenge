@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0016394",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0016394-ec8a86c6f4-60k-python8000-s1804300979-fast60000.json",
+  "candidate_sha256": "79a51eed7d77b1e97b2402ef69532c702e5b99f5000fa6af3e180f5a3eaabc6e",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "Z-0047",
+  "side": "Z",
+  "logical_row_index": 47,
+  "logical_generator_support": [
+    133,
+    137,
+    141,
+    152,
+    160,
+    163,
+    164,
+    169,
+    173,
+    174,
+    182,
+    186,
+    190,
+    192,
+    195,
+    199,
+    200,
+    208,
+    212,
+    218,
+    226,
+    229,
+    230,
+    244,
+    252,
+    255,
+    256,
+    270,
+    278,
+    281,
+    282
+  ],
+  "cutoff": 2,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:04:43.248709+00:00",
+  "finished_at_utc": "2026-08-26T09:04:44.001276+00:00",
+  "duration_seconds": 0.7525599059999877,
+  "process_cpu_seconds": 0.7337104430000068,
+  "worker_pid": 59,
+  "memory_bytes": {
+    "before": {
+      "rss": 139763712,
+      "high_water": 196476928
+    },
+    "after": {
+      "rss": 139763712,
+      "high_water": 196476928
+    },
+    "ru_maxrss": 196476928
+  },
+  "status": "proven_infeasible",
+  "status_basis": "stock_predicate_infeasible",
+  "stock_predicate_return": false,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "5b760407bb2a54c1c003eb409a208f53e516c54a01d2540f64dc69126e063f46",
+    "pivot_count": 94
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 0.7499849620000987
+    }
+  ],
+  "error": null
+}

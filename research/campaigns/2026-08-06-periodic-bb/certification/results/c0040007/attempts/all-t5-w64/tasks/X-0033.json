@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0040007",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0040007-1eec85e1b2-1m-python8000reuse8k-s774987152-fast1000000.json",
+  "candidate_sha256": "36e5cfb1fc1ed9b9fe4963113b9b4148e21c489c15ab17abc53e309f2ae0f501",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "X-0033",
+  "side": "X",
+  "logical_row_index": 33,
+  "logical_generator_support": [
+    373,
+    399,
+    411,
+    414,
+    458,
+    484,
+    496,
+    499,
+    543,
+    569,
+    581,
+    584,
+    628,
+    654,
+    666,
+    669
+  ],
+  "cutoff": 3,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:09:35.621519+00:00",
+  "finished_at_utc": "2026-08-26T09:09:39.002987+00:00",
+  "duration_seconds": 3.3814851220001856,
+  "process_cpu_seconds": 3.3586674630000175,
+  "worker_pid": 18,
+  "memory_bytes": {
+    "before": {
+      "rss": 140390400,
+      "high_water": 238505984
+    },
+    "after": {
+      "rss": 140390400,
+      "high_water": 238505984
+    },
+    "ru_maxrss": 238505984
+  },
+  "status": "proven_infeasible",
+  "status_basis": "stock_predicate_infeasible",
+  "stock_predicate_return": false,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "baff60f486d150861184568a720ffc781223d877f566403a8b0e039afa2cf7f5",
+    "pivot_count": 255
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 3.3788159629998518
+    }
+  ],
+  "error": null
+}

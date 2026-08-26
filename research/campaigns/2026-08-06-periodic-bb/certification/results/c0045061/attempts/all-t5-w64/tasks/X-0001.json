@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0045061",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0045061-20add8e45a-1m-python8000reuse8k-s1658808318-fast1000000-allrungs.json",
+  "candidate_sha256": "cadd2e634316e1d17a13ee9847fa0cc1a117fac1de5be6442ef7040af8cc2efd",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "X-0001",
+  "side": "X",
+  "logical_row_index": 1,
+  "logical_generator_support": [
+    29,
+    255,
+    256,
+    257,
+    258,
+    397,
+    398,
+    399,
+    400,
+    401,
+    402
+  ],
+  "cutoff": 8,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:12:51.341396+00:00",
+  "finished_at_utc": "2026-08-26T09:12:56.351273+00:00",
+  "duration_seconds": 5.009884478000004,
+  "process_cpu_seconds": 4.758372684000051,
+  "worker_pid": 69,
+  "memory_bytes": {
+    "before": {
+      "rss": 123850752,
+      "high_water": 269873152
+    },
+    "after": {
+      "rss": 123850752,
+      "high_water": 269873152
+    },
+    "ru_maxrss": 269873152
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "087071d44fc177f60150a0b5958a0781651ef24a1f5dd740e5e92ee718e73137",
+    "pivot_count": 224
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 5.007862798999895
+    }
+  ],
+  "error": null
+}

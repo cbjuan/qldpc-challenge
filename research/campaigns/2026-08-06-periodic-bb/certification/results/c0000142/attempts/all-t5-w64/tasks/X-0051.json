@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0000142",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0000142-fac92a1832-python2000-s1512128256.json",
+  "candidate_sha256": "07f499a47de5989b27bd6a85bb459912b30a774820153c79388ec604ad0374c2",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "X-0051",
+  "side": "X",
+  "logical_row_index": 51,
+  "logical_generator_support": [
+    131,
+    133,
+    135,
+    137,
+    139,
+    141,
+    143,
+    145,
+    147,
+    149,
+    151,
+    153,
+    155,
+    182,
+    184,
+    186,
+    188,
+    190,
+    192,
+    194,
+    196,
+    198,
+    200,
+    202,
+    204,
+    206
+  ],
+  "cutoff": 1,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:03:56.388025+00:00",
+  "finished_at_utc": "2026-08-26T09:03:56.578564+00:00",
+  "duration_seconds": 0.1905402239999603,
+  "process_cpu_seconds": 0.1542602590000044,
+  "worker_pid": 27,
+  "memory_bytes": {
+    "before": {
+      "rss": 109740032,
+      "high_water": 233512960
+    },
+    "after": {
+      "rss": 109740032,
+      "high_water": 233512960
+    },
+    "ru_maxrss": 233512960
+  },
+  "status": "proven_infeasible",
+  "status_basis": "stock_predicate_infeasible",
+  "stock_predicate_return": false,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "e857d116e4b29866bee1ea0e3029466bb180bf3049deb5569e51a0fde4e12547",
+    "pivot_count": 78
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 2,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 0.18903302800003985
+    }
+  ],
+  "error": null
+}

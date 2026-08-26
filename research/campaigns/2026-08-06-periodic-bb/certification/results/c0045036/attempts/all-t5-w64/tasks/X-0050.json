@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0045036",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0045036-273e86fd05-1m-python8000reuse8k-s1971815854-fast1000000-allrungs.json",
+  "candidate_sha256": "442c0db34a5e4e95e475fb1272ffa0d9e6d490f4d92e59e84ab0188b713c83ff",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "X-0050",
+  "side": "X",
+  "logical_row_index": 50,
+  "logical_generator_support": [
+    119,
+    127,
+    135,
+    143,
+    151,
+    159,
+    167,
+    175,
+    211,
+    212,
+    213,
+    214,
+    215,
+    251,
+    252,
+    253,
+    254,
+    255,
+    291,
+    292,
+    293,
+    294,
+    295
+  ],
+  "cutoff": 7,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:11:23.975256+00:00",
+  "finished_at_utc": "2026-08-26T09:11:28.998877+00:00",
+  "duration_seconds": 5.023621623000054,
+  "process_cpu_seconds": 4.99636926300002,
+  "worker_pid": 16,
+  "memory_bytes": {
+    "before": {
+      "rss": 182435840,
+      "high_water": 294481920
+    },
+    "after": {
+      "rss": 182435840,
+      "high_water": 294481920
+    },
+    "ru_maxrss": 294481920
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "e4d50ad81317e9c7e1a85f8ccd56856b31d9f5ebb0defe9c527e0059136bec30",
+    "pivot_count": 154
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 5.021821185000135
+    }
+  ],
+  "error": null
+}

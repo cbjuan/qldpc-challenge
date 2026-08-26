@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0045033",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0045033-c7400cab3b-1m-python8000reuse8k-s1595771069-fast1000000-allrungs.json",
+  "candidate_sha256": "c2eddc7f26d0c24e5fa169c38a2ba09cf01829a1063db950077ae0827c030824",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "Z-0018",
+  "side": "Z",
+  "logical_row_index": 18,
+  "logical_generator_support": [
+    344,
+    345,
+    346,
+    347,
+    348,
+    349,
+    350,
+    351,
+    384,
+    385,
+    386,
+    387,
+    388,
+    389,
+    390,
+    391
+  ],
+  "cutoff": 7,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:11:06.239844+00:00",
+  "finished_at_utc": "2026-08-26T09:11:11.429917+00:00",
+  "duration_seconds": 5.190076022000085,
+  "process_cpu_seconds": 5.160840984999993,
+  "worker_pid": 47,
+  "memory_bytes": {
+    "before": {
+      "rss": 113754112,
+      "high_water": 258125824
+    },
+    "after": {
+      "rss": 121622528,
+      "high_water": 258125824
+    },
+    "ru_maxrss": 258125824
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "999faf1fdd3d9c0cc3c7a039af6a62c8cd12a6d315056cacb7af655efc0c3513",
+    "pivot_count": 175
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 5.188053541000045
+    }
+  ],
+  "error": null
+}

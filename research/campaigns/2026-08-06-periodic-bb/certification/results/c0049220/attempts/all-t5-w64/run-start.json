@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "stage": "all-t5-w64",
+  "started_at_utc": "2026-08-26T09:03:29.502036+00:00",
+  "candidate_key": "c0049220",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0049220-a008d53cd9-epoch2-001-final-allrungs-s345672872.json",
+  "candidate_sha256": "53044049607773aeb0d9efa5ce809fa9bbf708c4a36d8f1b68858a7a157ac478",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "git_commit": "b9089f062f8dfef75b8d85eabddfab0fc7158e9f",
+  "parameters": {
+    "n": 648,
+    "k": 4,
+    "d": 38,
+    "d_x_upper": 38,
+    "d_z_upper": 40
+  },
+  "matrix_sha256": {
+    "HX": "6a4d0e06d7158e9470d038e977ded82a41c1269c659f5a65174988a05089c1e4",
+    "HZ": "b47f685ee5de0c1e678805375486608eaf04f092203ad866d204e0615ae2b26e"
+  },
+  "logical_basis_sha256": {
+    "X": "56e811784a61df735ab996882d659cba8b303eab2f99cdbcac5dc55a22ff7ade",
+    "Z": "485a2e27d79bae8fc1668f67c83e500e9ff2ff1c2b8dafb99aefd7444bb2d8e1"
+  },
+  "rref_sha256": {
+    "X": "71c4e29583e4678fd72e7b365ae3b666f9538a66bc03dade43e6272e3f58aa6c",
+    "Z": "f10d21e2139435662aa29535d78f8a7ffba724fd9afbe287685372470803f210"
+  },
+  "worker_limit": 64,
+  "task_time_limit_seconds": 5.0,
+  "thread_limits": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "expected_task_count": 8,
+  "new_task_count": 6,
+  "inherited_definitive_task_count": 2,
+  "tasks": [
+    {
+      "task_id": "X-0000",
+      "side": "X",
+      "logical_row_index": 0,
+      "cutoff": 37,
+      "inherited": false,
+      "evidence_path": null
+    },
+    {
+      "task_id": "X-0001",
+      "side": "X",
+      "logical_row_index": 1,
+      "cutoff": 37,
+      "inherited": false,
+      "evidence_path": null
+    },
+    {
+      "task_id": "X-0002",
+      "side": "X",
+      "logical_row_index": 2,
+      "cutoff": 37,
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049220/attempts/priority-t5-w32/tasks/X-0002.json"
+    },
+    {
+      "task_id": "X-0003",
+      "side": "X",
+      "logical_row_index": 3,
+      "cutoff": 37,
+      "inherited": true,
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0049220/attempts/priority-t5-w32/tasks/X-0003.json"
+    },
+    {
+      "task_id": "Z-0000",
+      "side": "Z",
+      "logical_row_index": 0,
+      "cutoff": 39,
+      "inherited": false,
+      "evidence_path": null
+    },
+    {
+      "task_id": "Z-0001",
+      "side": "Z",
+      "logical_row_index": 1,
+      "cutoff": 39,
+      "inherited": false,
+      "evidence_path": null
+    },
+    {
+      "task_id": "Z-0002",
+      "side": "Z",
+      "logical_row_index": 2,
+      "cutoff": 39,
+      "inherited": false,
+      "evidence_path": null
+    },
+    {
+      "task_id": "Z-0003",
+      "side": "Z",
+      "logical_row_index": 3,
+      "cutoff": 39,
+      "inherited": false,
+      "evidence_path": null
+    }
+  ]
+}

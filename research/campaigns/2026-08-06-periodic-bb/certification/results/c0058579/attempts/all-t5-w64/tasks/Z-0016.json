@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0058579",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0058579-4962667b1a-epoch5-balance-final-allrungs-s146694265.json",
+  "candidate_sha256": "3ee57aa6fbe69ea741568ca64c5e7c513e1ade2c8aa17c56b3783b404c63ee15",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "Z-0016",
+  "side": "Z",
+  "logical_row_index": 16,
+  "logical_generator_support": [
+    362,
+    368,
+    374,
+    386,
+    411,
+    417,
+    423,
+    435,
+    460,
+    466,
+    472,
+    484,
+    509,
+    515,
+    521,
+    533,
+    558,
+    564,
+    570,
+    582,
+    607,
+    613,
+    619,
+    631,
+    656,
+    662,
+    668,
+    680
+  ],
+  "cutoff": 23,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:03:28.310828+00:00",
+  "finished_at_utc": "2026-08-26T09:03:33.629515+00:00",
+  "duration_seconds": 5.318689792999976,
+  "process_cpu_seconds": 5.2932051079999995,
+  "worker_pid": 52,
+  "memory_bytes": {
+    "before": {
+      "rss": 110092288,
+      "high_water": 117379072
+    },
+    "after": {
+      "rss": 114581504,
+      "high_water": 128364544
+    },
+    "ru_maxrss": 128364544
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "d4cabb77d619e2246888820171604875d1225e7e9f8558d7d3082edc2ce296c5",
+    "pivot_count": 334
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 5.315111596000179
+    }
+  ],
+  "error": null
+}

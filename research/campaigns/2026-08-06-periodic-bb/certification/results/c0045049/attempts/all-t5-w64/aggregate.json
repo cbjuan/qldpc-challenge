@@ -1,0 +1,590 @@
+{
+  "schema_version": 1,
+  "stage": "all-t5-w64",
+  "finished_at_utc": "2026-08-26T09:17:10.144483+00:00",
+  "candidate_key": "c0045049",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0045049-1051eeb67b-1m-python8000reuse8k-s624348592-fast1000000-allrungs.json",
+  "candidate_sha256": "5419a3cb313c3bd82930e32a5aafce6539a73c8e2e04d3419ee48d4013a71375",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "parameters": {
+    "n": 476,
+    "k": 34,
+    "d": 8,
+    "d_x_upper": 8,
+    "d_z_upper": 8
+  },
+  "aggregate_status": "timeout",
+  "sides": {
+    "X": {
+      "status": "timeout",
+      "task_count": 34,
+      "counts": {
+        "proven_infeasible": 19,
+        "feasible_refutation": 0,
+        "unknown": 15,
+        "runner_error": 0,
+        "missing": 0
+      }
+    },
+    "Z": {
+      "status": "timeout",
+      "task_count": 34,
+      "counts": {
+        "proven_infeasible": 0,
+        "feasible_refutation": 0,
+        "unknown": 34,
+        "runner_error": 0,
+        "missing": 0
+      }
+    }
+  },
+  "task_count": 68,
+  "task_wall_seconds_sum": 696.5563602939988,
+  "task_cpu_seconds_sum": 691.1140793310008,
+  "tasks": [
+    {
+      "task_id": "X-0000",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0000.json",
+      "duration_seconds": 1.794930260000001,
+      "process_cpu_seconds": 1.7749733189999688
+    },
+    {
+      "task_id": "X-0001",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0001.json",
+      "duration_seconds": 1.1478288559999328,
+      "process_cpu_seconds": 1.139918458000011
+    },
+    {
+      "task_id": "X-0002",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0002.json",
+      "duration_seconds": 1.5194906939998418,
+      "process_cpu_seconds": 1.5015206730000727
+    },
+    {
+      "task_id": "X-0003",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0003.json",
+      "duration_seconds": 1.5085900480000873,
+      "process_cpu_seconds": 1.4940493139999944
+    },
+    {
+      "task_id": "X-0004",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0004.json",
+      "duration_seconds": 1.3729703490000702,
+      "process_cpu_seconds": 1.3610955490000833
+    },
+    {
+      "task_id": "X-0005",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0005.json",
+      "duration_seconds": 4.062131390000104,
+      "process_cpu_seconds": 4.02708136199999
+    },
+    {
+      "task_id": "X-0006",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0006.json",
+      "duration_seconds": 1.496553565000113,
+      "process_cpu_seconds": 1.4872386590000133
+    },
+    {
+      "task_id": "X-0007",
+      "side": "X",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0007.json",
+      "duration_seconds": 5.015784552000014,
+      "process_cpu_seconds": 4.973950315000025
+    },
+    {
+      "task_id": "X-0008",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0008.json",
+      "duration_seconds": 1.5410675680000168,
+      "process_cpu_seconds": 1.5273693340000136
+    },
+    {
+      "task_id": "X-0009",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0009.json",
+      "duration_seconds": 1.610154047999913,
+      "process_cpu_seconds": 1.5948945840000306
+    },
+    {
+      "task_id": "X-0010",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0010.json",
+      "duration_seconds": 1.927821324999968,
+      "process_cpu_seconds": 1.9149769370000058
+    },
+    {
+      "task_id": "X-0011",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0011.json",
+      "duration_seconds": 1.4443464859998585,
+      "process_cpu_seconds": 1.4259316189999254
+    },
+    {
+      "task_id": "X-0012",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0012.json",
+      "duration_seconds": 1.3547133600000052,
+      "process_cpu_seconds": 1.3446424500000376
+    },
+    {
+      "task_id": "X-0013",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0013.json",
+      "duration_seconds": 1.7421026419999635,
+      "process_cpu_seconds": 1.7094997849999345
+    },
+    {
+      "task_id": "X-0014",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0014.json",
+      "duration_seconds": 1.6027020700000776,
+      "process_cpu_seconds": 1.5923422230000597
+    },
+    {
+      "task_id": "X-0015",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0015.json",
+      "duration_seconds": 1.0602206019998448,
+      "process_cpu_seconds": 1.0485196229999474
+    },
+    {
+      "task_id": "X-0016",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0016.json",
+      "duration_seconds": 1.8614103739998882,
+      "process_cpu_seconds": 1.8287617130000626
+    },
+    {
+      "task_id": "X-0017",
+      "side": "X",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0017.json",
+      "duration_seconds": 5.017677546999948,
+      "process_cpu_seconds": 4.9808616450000045
+    },
+    {
+      "task_id": "X-0018",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0018.json",
+      "duration_seconds": 3.9735412359998463,
+      "process_cpu_seconds": 3.9344372350000185
+    },
+    {
+      "task_id": "X-0019",
+      "side": "X",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0019.json",
+      "duration_seconds": 5.020381024999779,
+      "process_cpu_seconds": 4.98078853100003
+    },
+    {
+      "task_id": "X-0020",
+      "side": "X",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0020.json",
+      "duration_seconds": 5.011291837999806,
+      "process_cpu_seconds": 4.971607773999949
+    },
+    {
+      "task_id": "X-0021",
+      "side": "X",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0021.json",
+      "duration_seconds": 5.03413192999983,
+      "process_cpu_seconds": 4.982697372000075
+    },
+    {
+      "task_id": "X-0022",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0022.json",
+      "duration_seconds": 4.119244386999981,
+      "process_cpu_seconds": 4.08328838500006
+    },
+    {
+      "task_id": "X-0023",
+      "side": "X",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0023.json",
+      "duration_seconds": 5.010367679999945,
+      "process_cpu_seconds": 4.967847914000004
+    },
+    {
+      "task_id": "X-0024",
+      "side": "X",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0024.json",
+      "duration_seconds": 5.057376447000024,
+      "process_cpu_seconds": 5.019576700000016
+    },
+    {
+      "task_id": "X-0025",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0025.json",
+      "duration_seconds": 4.551466298999912,
+      "process_cpu_seconds": 4.518302575000007
+    },
+    {
+      "task_id": "X-0026",
+      "side": "X",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0026.json",
+      "duration_seconds": 5.025946110999939,
+      "process_cpu_seconds": 4.990356075000022
+    },
+    {
+      "task_id": "X-0027",
+      "side": "X",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0027.json",
+      "duration_seconds": 5.043806797999878,
+      "process_cpu_seconds": 5.002015926000013
+    },
+    {
+      "task_id": "X-0028",
+      "side": "X",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0028.json",
+      "duration_seconds": 5.059441570999979,
+      "process_cpu_seconds": 5.02060132400004
+    },
+    {
+      "task_id": "X-0029",
+      "side": "X",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0029.json",
+      "duration_seconds": 5.013740897000162,
+      "process_cpu_seconds": 4.938341991000016
+    },
+    {
+      "task_id": "X-0030",
+      "side": "X",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0030.json",
+      "duration_seconds": 5.028239877000033,
+      "process_cpu_seconds": 4.982174544000031
+    },
+    {
+      "task_id": "X-0031",
+      "side": "X",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0031.json",
+      "duration_seconds": 5.010587853000061,
+      "process_cpu_seconds": 4.963481866000052
+    },
+    {
+      "task_id": "X-0032",
+      "side": "X",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0032.json",
+      "duration_seconds": 5.049444857000026,
+      "process_cpu_seconds": 4.996319607000032
+    },
+    {
+      "task_id": "X-0033",
+      "side": "X",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/X-0033.json",
+      "duration_seconds": 5.040370774000166,
+      "process_cpu_seconds": 4.992692640000087
+    },
+    {
+      "task_id": "Z-0000",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0000.json",
+      "duration_seconds": 21.77765952699997,
+      "process_cpu_seconds": 21.657114231000037
+    },
+    {
+      "task_id": "Z-0001",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0001.json",
+      "duration_seconds": 14.301286855999933,
+      "process_cpu_seconds": 14.226937552000095
+    },
+    {
+      "task_id": "Z-0002",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0002.json",
+      "duration_seconds": 19.14685627899985,
+      "process_cpu_seconds": 19.049991266999996
+    },
+    {
+      "task_id": "Z-0003",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0003.json",
+      "duration_seconds": 14.579298312999981,
+      "process_cpu_seconds": 14.50888248900003
+    },
+    {
+      "task_id": "Z-0004",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0004.json",
+      "duration_seconds": 16.464371820999986,
+      "process_cpu_seconds": 16.391148876999978
+    },
+    {
+      "task_id": "Z-0005",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0005.json",
+      "duration_seconds": 14.503166598000007,
+      "process_cpu_seconds": 14.40030423799999
+    },
+    {
+      "task_id": "Z-0006",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0006.json",
+      "duration_seconds": 15.470554859999993,
+      "process_cpu_seconds": 15.379366497999968
+    },
+    {
+      "task_id": "Z-0007",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0007.json",
+      "duration_seconds": 13.72392409300005,
+      "process_cpu_seconds": 13.633806008000079
+    },
+    {
+      "task_id": "Z-0008",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0008.json",
+      "duration_seconds": 14.419621175999964,
+      "process_cpu_seconds": 14.279377898999996
+    },
+    {
+      "task_id": "Z-0009",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0009.json",
+      "duration_seconds": 16.473959981999997,
+      "process_cpu_seconds": 16.386940720999974
+    },
+    {
+      "task_id": "Z-0010",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0010.json",
+      "duration_seconds": 14.355636153999967,
+      "process_cpu_seconds": 14.244467286000031
+    },
+    {
+      "task_id": "Z-0011",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0011.json",
+      "duration_seconds": 15.438858179000135,
+      "process_cpu_seconds": 15.345666660000006
+    },
+    {
+      "task_id": "Z-0012",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0012.json",
+      "duration_seconds": 13.189664773999993,
+      "process_cpu_seconds": 13.122150404999957
+    },
+    {
+      "task_id": "Z-0013",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0013.json",
+      "duration_seconds": 15.926626749999969,
+      "process_cpu_seconds": 15.752570272999947
+    },
+    {
+      "task_id": "Z-0014",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0014.json",
+      "duration_seconds": 15.358450579999953,
+      "process_cpu_seconds": 15.25852867399999
+    },
+    {
+      "task_id": "Z-0015",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0015.json",
+      "duration_seconds": 18.721756225000036,
+      "process_cpu_seconds": 18.623067246000005
+    },
+    {
+      "task_id": "Z-0016",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0016.json",
+      "duration_seconds": 12.751340691999985,
+      "process_cpu_seconds": 12.629484401000013
+    },
+    {
+      "task_id": "Z-0017",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0017.json",
+      "duration_seconds": 18.12103279300004,
+      "process_cpu_seconds": 18.019262916000002
+    },
+    {
+      "task_id": "Z-0018",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0018.json",
+      "duration_seconds": 22.012184844999865,
+      "process_cpu_seconds": 21.818370503999972
+    },
+    {
+      "task_id": "Z-0019",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0019.json",
+      "duration_seconds": 14.484099550999872,
+      "process_cpu_seconds": 14.410339499999964
+    },
+    {
+      "task_id": "Z-0020",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0020.json",
+      "duration_seconds": 16.99417350900012,
+      "process_cpu_seconds": 16.882551041000056
+    },
+    {
+      "task_id": "Z-0021",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0021.json",
+      "duration_seconds": 15.236869080000133,
+      "process_cpu_seconds": 15.14476326800002
+    },
+    {
+      "task_id": "Z-0022",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0022.json",
+      "duration_seconds": 18.221729704999916,
+      "process_cpu_seconds": 18.103817194000044
+    },
+    {
+      "task_id": "Z-0023",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0023.json",
+      "duration_seconds": 13.853471436000063,
+      "process_cpu_seconds": 13.763494909999963
+    },
+    {
+      "task_id": "Z-0024",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0024.json",
+      "duration_seconds": 22.196863313999984,
+      "process_cpu_seconds": 22.077371158999995
+    },
+    {
+      "task_id": "Z-0025",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0025.json",
+      "duration_seconds": 15.335742555000024,
+      "process_cpu_seconds": 15.235268024999982
+    },
+    {
+      "task_id": "Z-0026",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0026.json",
+      "duration_seconds": 21.53792712900008,
+      "process_cpu_seconds": 21.266240154000002
+    },
+    {
+      "task_id": "Z-0027",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0027.json",
+      "duration_seconds": 16.91534851900019,
+      "process_cpu_seconds": 16.77144767900006
+    },
+    {
+      "task_id": "Z-0028",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0028.json",
+      "duration_seconds": 15.916721284000005,
+      "process_cpu_seconds": 15.81505990700009
+    },
+    {
+      "task_id": "Z-0029",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0029.json",
+      "duration_seconds": 20.396309559999963,
+      "process_cpu_seconds": 19.94888998199997
+    },
+    {
+      "task_id": "Z-0030",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0030.json",
+      "duration_seconds": 22.3717703289999,
+      "process_cpu_seconds": 22.157086188999983
+    },
+    {
+      "task_id": "Z-0031",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0031.json",
+      "duration_seconds": 17.46411302899992,
+      "process_cpu_seconds": 17.326383391000036
+    },
+    {
+      "task_id": "Z-0032",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0032.json",
+      "duration_seconds": 20.580511202000025,
+      "process_cpu_seconds": 20.406556011999896
+    },
+    {
+      "task_id": "Z-0033",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045049/attempts/all-t5-w64/tasks/Z-0033.json",
+      "duration_seconds": 23.184584278999864,
+      "process_cpu_seconds": 23.005214754000008
+    }
+  ]
+}

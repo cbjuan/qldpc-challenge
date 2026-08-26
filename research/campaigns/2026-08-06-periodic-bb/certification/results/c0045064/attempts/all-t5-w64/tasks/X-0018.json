@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0045064",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0045064-62fb7cc83f-1m-python8000reuse8k-s1618242633-fast1000000-allrungs.json",
+  "candidate_sha256": "227ba37bb8a6a32b0f6cb89c144d5e9ca78ad472ee26b7cd70394f8b204e972b",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "X-0018",
+  "side": "X",
+  "logical_row_index": 18,
+  "logical_generator_support": [
+    270,
+    271,
+    272,
+    273,
+    274,
+    275,
+    276,
+    277,
+    278,
+    279,
+    280,
+    281,
+    282,
+    283,
+    284
+  ],
+  "cutoff": 8,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:13:07.510628+00:00",
+  "finished_at_utc": "2026-08-26T09:13:12.569949+00:00",
+  "duration_seconds": 5.0593117779999375,
+  "process_cpu_seconds": 5.014242414000023,
+  "worker_pid": 64,
+  "memory_bytes": {
+    "before": {
+      "rss": 147775488,
+      "high_water": 314802176
+    },
+    "after": {
+      "rss": 165863424,
+      "high_water": 314802176
+    },
+    "ru_maxrss": 314802176
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "3cec06751c355a9105da77c4e2664d822f8958662c16be704d87926b0a04a498",
+    "pivot_count": 182
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 5.057091795999895
+    }
+  ],
+  "error": null
+}

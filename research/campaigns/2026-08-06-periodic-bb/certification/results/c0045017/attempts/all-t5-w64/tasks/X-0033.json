@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "candidate_key": "c0045017",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0045017-347e0a320d-1m-python8000reuse8k-s417531114-fast1000000.json",
+  "candidate_sha256": "a92c892fc3ef51467b1c04f7a36ab1925539f47bbd6816058517030eade07baf",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "task_id": "X-0033",
+  "side": "X",
+  "logical_row_index": 33,
+  "logical_generator_support": [
+    495,
+    496,
+    497,
+    498,
+    499,
+    500,
+    501,
+    502,
+    503,
+    504,
+    505,
+    506,
+    507,
+    508,
+    509
+  ],
+  "cutoff": 8,
+  "time_limit_seconds": 5.0,
+  "seed": null,
+  "started_at_utc": "2026-08-26T09:10:18.767424+00:00",
+  "finished_at_utc": "2026-08-26T09:10:23.792063+00:00",
+  "duration_seconds": 5.024635825999894,
+  "process_cpu_seconds": 4.9788211829999796,
+  "worker_pid": 48,
+  "memory_bytes": {
+    "before": {
+      "rss": 134438912,
+      "high_water": 270286848
+    },
+    "after": {
+      "rss": 112361472,
+      "high_water": 270286848
+    },
+    "ru_maxrss": 270286848
+  },
+  "status": "unknown",
+  "status_basis": "stock_predicate_unknown_without_valid_incumbent",
+  "stock_predicate_return": null,
+  "solver": "scipy/HiGHS MILP via verify/certify.py::_exists_lighter",
+  "preprocessing": {
+    "method": "parent-cached result of verify/gf2.py::rref",
+    "rref_sha256": "db8728a0867d24cdcb83012b252215da041fafce345aa28bf18891048af70ce5",
+    "pivot_count": 266
+  },
+  "solver_options": {
+    "time_limit": 5.0,
+    "threads": 1
+  },
+  "solver_calls": [
+    {
+      "success": false,
+      "status": 1,
+      "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+      "fun": null,
+      "mip_node_count": null,
+      "mip_dual_bound": null,
+      "mip_gap": null,
+      "nit": null,
+      "x": null,
+      "logical_witness": null,
+      "duration_seconds": 5.020704573999865
+    }
+  ],
+  "error": null
+}

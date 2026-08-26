@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "stage": "all-t5-w64",
+  "started_at_utc": "2026-08-26T09:13:19.905634+00:00",
+  "candidate_key": "c0045508",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0045508-b6632bcfda-parent14-final-allrungs-s981475032.json",
+  "candidate_sha256": "9f2b2cc9ea04d86f621bdb6a65b0df48521d2fe01a338474f145d66ed91bdb91",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "git_commit": "b9089f062f8dfef75b8d85eabddfab0fc7158e9f",
+  "parameters": {
+    "n": 648,
+    "k": 4,
+    "d": 36,
+    "d_x_upper": 36,
+    "d_z_upper": 48
+  },
+  "matrix_sha256": {
+    "HX": "57e015735d992b15a4e649b5de15f21552a89e09deb38a7691384e8226b81d78",
+    "HZ": "2dcf38d55d9469bd3ae23ea450e46c1e3edea57e529121cf1b31169b16e85199"
+  },
+  "logical_basis_sha256": {
+    "X": "9bff3b5f096fde61ff104473477241469d2ab70b4acaa83b6d6b09360180ea54",
+    "Z": "ef77424abc8164f408e4a900afbc13d390b59c36c6fb64af19ccbe53cb663965"
+  },
+  "rref_sha256": {
+    "X": "757f8e28a16c8319a86ac561d03a882bb2800dda0f239cdd7c81bb940ccbf4ce",
+    "Z": "1c69f55f0f00448080dd9f75ae610a80b40d3a0c28dae921bd7c76e0de1b0316"
+  },
+  "worker_limit": 64,
+  "task_time_limit_seconds": 5.0,
+  "thread_limits": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "expected_task_count": 8,
+  "new_task_count": 8,
+  "inherited_definitive_task_count": 0,
+  "tasks": [
+    {
+      "task_id": "X-0000",
+      "side": "X",
+      "logical_row_index": 0,
+      "cutoff": 35,
+      "inherited": false,
+      "evidence_path": null
+    },
+    {
+      "task_id": "X-0001",
+      "side": "X",
+      "logical_row_index": 1,
+      "cutoff": 35,
+      "inherited": false,
+      "evidence_path": null
+    },
+    {
+      "task_id": "X-0002",
+      "side": "X",
+      "logical_row_index": 2,
+      "cutoff": 35,
+      "inherited": false,
+      "evidence_path": null
+    },
+    {
+      "task_id": "X-0003",
+      "side": "X",
+      "logical_row_index": 3,
+      "cutoff": 35,
+      "inherited": false,
+      "evidence_path": null
+    },
+    {
+      "task_id": "Z-0000",
+      "side": "Z",
+      "logical_row_index": 0,
+      "cutoff": 47,
+      "inherited": false,
+      "evidence_path": null
+    },
+    {
+      "task_id": "Z-0001",
+      "side": "Z",
+      "logical_row_index": 1,
+      "cutoff": 47,
+      "inherited": false,
+      "evidence_path": null
+    },
+    {
+      "task_id": "Z-0002",
+      "side": "Z",
+      "logical_row_index": 2,
+      "cutoff": 47,
+      "inherited": false,
+      "evidence_path": null
+    },
+    {
+      "task_id": "Z-0003",
+      "side": "Z",
+      "logical_row_index": 3,
+      "cutoff": 47,
+      "inherited": false,
+      "evidence_path": null
+    }
+  ]
+}
