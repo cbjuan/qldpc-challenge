@@ -47,7 +47,7 @@ Incomplete batch starts (not counted as timeouts):
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r19-c0045017-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r24-c0045015-start.json`
 
-Persisted tasks outside completed batches: 220 (131302.9 CPU s); retained as evidence but not counted as completed-batch timeouts.
+Persisted tasks outside completed batches: 268 (159900.7 CPU s); retained as evidence but not counted as completed-batch timeouts.
 
 ## Targets
 
@@ -106,7 +106,7 @@ Persisted tasks outside completed batches: 220 (131302.9 CPU s); retained as evi
 | c0045043 | [[644,46,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120 | 8481.4 | 8410.4 |
 | c0045044 | [[616,44,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 34887.1 | 34376.4 |
 | c0045046 | [[560,40,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 18907.4 | 18716.6 |
-| c0045047 | [[532,38,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 24675.2 | 24413.9 |
+| c0045047 | [[532,38,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 34421.6 | 34007.1 |
 | c0045048 | [[504,36,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 28294.6 | 27907.1 |
 | c0045049 | [[476,34,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 26582.7 | 26227.4 |
 | c0045059 | [[540,36,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 17380.7 | 17189.1 |
@@ -125,7 +125,7 @@ Persisted tasks outside completed batches: 220 (131302.9 CPU s); retained as evi
 | c0045508 | [[648,4,36]] | timeout | refuted | refuted | 5,30,120,600,3600 | 35517.3 | 35233.6 |
 | c0045591 | [[448,56,8]] | timeout | timeout | timeout | 5,30,120 | 16073.7 | 15875.4 |
 | c0046163 | [[644,46,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120 | 8853.7 | 8764.6 |
-| c0046164 | [[616,44,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 14950.4 | 14754.4 |
+| c0046164 | [[616,44,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 34256.9 | 33759.1 |
 | c0046282 | [[540,8,30]] | timeout | timeout | timeout | 5,30,120 | 3235.8 | 3205.7 |
 | c0046378 | [[630,4,32]] | timeout | timeout | timeout | 5,30,120,600,3600 | 35425.7 | 35140.5 |
 | c0046587 | [[532,38,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 16388.5 | 16234.8 |
