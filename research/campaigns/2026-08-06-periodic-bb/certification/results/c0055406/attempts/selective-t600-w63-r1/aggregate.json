@@ -1,0 +1,120 @@
+{
+  "schema_version": 2,
+  "stage": "selective-t600-w63-r1",
+  "finished_at_utc": "2026-08-26T15:38:01.026343+00:00",
+  "candidate_key": "c0055406",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0055406-60eb660396-epoch4-ceiling-final-allrungs-s1367341703.json",
+  "candidate_sha256": "e4366338bb6dfbf11649a5ce58a8121b11b348c37e08a74c5ce6b79afb65a7ab",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508",
+  "runner_sha256": "a3ee133c53004306d25729729e85d009a0b905174e877836cdc591846bba6845",
+  "parameters": {
+    "n": 630,
+    "k": 4,
+    "d": 36,
+    "d_x_upper": 36,
+    "d_z_upper": 44
+  },
+  "aggregate_status": "timeout",
+  "sides": {
+    "X": {
+      "status": "timeout",
+      "task_count": 4,
+      "counts": {
+        "proven_infeasible": 0,
+        "feasible_refutation": 0,
+        "unknown": 4,
+        "runner_error": 0,
+        "missing": 0
+      }
+    },
+    "Z": {
+      "status": "timeout",
+      "task_count": 4,
+      "counts": {
+        "proven_infeasible": 0,
+        "feasible_refutation": 0,
+        "unknown": 4,
+        "runner_error": 0,
+        "missing": 0
+      }
+    }
+  },
+  "task_count": 8,
+  "task_wall_seconds_sum": 4884.777773892998,
+  "task_cpu_seconds_sum": 4827.256236157,
+  "tasks": [
+    {
+      "task_id": "X-0000",
+      "side": "X",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0055406/attempts/selective-t600-w63-r1/tasks/X-0000.json",
+      "inherited": false,
+      "duration_seconds": 631.4890991270004,
+      "process_cpu_seconds": 623.066030928
+    },
+    {
+      "task_id": "X-0001",
+      "side": "X",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0055406/attempts/selective-t600-w63-r1/tasks/X-0001.json",
+      "inherited": false,
+      "duration_seconds": 600.1832932069992,
+      "process_cpu_seconds": 592.0327214499999
+    },
+    {
+      "task_id": "X-0002",
+      "side": "X",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0055406/attempts/selective-t600-w63-r1/tasks/X-0002.json",
+      "inherited": false,
+      "duration_seconds": 601.5656854400004,
+      "process_cpu_seconds": 594.3989477990001
+    },
+    {
+      "task_id": "X-0003",
+      "side": "X",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0055406/attempts/selective-t600-w63-r1/tasks/X-0003.json",
+      "inherited": false,
+      "duration_seconds": 643.983178724,
+      "process_cpu_seconds": 635.366342324
+    },
+    {
+      "task_id": "Z-0000",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0055406/attempts/selective-t600-w63-r1/tasks/Z-0000.json",
+      "inherited": false,
+      "duration_seconds": 606.0150768589992,
+      "process_cpu_seconds": 600.874948829
+    },
+    {
+      "task_id": "Z-0001",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0055406/attempts/selective-t600-w63-r1/tasks/Z-0001.json",
+      "inherited": false,
+      "duration_seconds": 600.067645940002,
+      "process_cpu_seconds": 593.303580977
+    },
+    {
+      "task_id": "Z-0002",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0055406/attempts/selective-t600-w63-r1/tasks/Z-0002.json",
+      "inherited": false,
+      "duration_seconds": 600.1284276109982,
+      "process_cpu_seconds": 593.530618627
+    },
+    {
+      "task_id": "Z-0003",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0055406/attempts/selective-t600-w63-r1/tasks/Z-0003.json",
+      "inherited": false,
+      "duration_seconds": 601.3453669849987,
+      "process_cpu_seconds": 594.683045223
+    }
+  ]
+}

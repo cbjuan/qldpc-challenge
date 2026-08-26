@@ -1,0 +1,516 @@
+{
+  "schema_version": 2,
+  "stage": "selective-t600-w63-r1",
+  "finished_at_utc": "2026-08-26T15:38:01.071899+00:00",
+  "candidate_key": "c0020918",
+  "candidate_path": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0020918-56134fef19-60k-python8000-s1591394722-fast60000.json",
+  "candidate_sha256": "066d047f87f5c3adaae320955ddfc42238c8e4bfb70388e04aa172fc7e5c0a03",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508",
+  "runner_sha256": "a3ee133c53004306d25729729e85d009a0b905174e877836cdc591846bba6845",
+  "parameters": {
+    "n": 234,
+    "k": 26,
+    "d": 7,
+    "d_x_upper": 7,
+    "d_z_upper": 7
+  },
+  "aggregate_status": "timeout",
+  "sides": {
+    "X": {
+      "status": "exact",
+      "task_count": 26,
+      "counts": {
+        "proven_infeasible": 26,
+        "feasible_refutation": 0,
+        "unknown": 0,
+        "runner_error": 0,
+        "missing": 0
+      }
+    },
+    "Z": {
+      "status": "timeout",
+      "task_count": 26,
+      "counts": {
+        "proven_infeasible": 16,
+        "feasible_refutation": 0,
+        "unknown": 10,
+        "runner_error": 0,
+        "missing": 0
+      }
+    }
+  },
+  "task_count": 52,
+  "task_wall_seconds_sum": 6160.924756332999,
+  "task_cpu_seconds_sum": 6080.219497391,
+  "tasks": [
+    {
+      "task_id": "X-0000",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t30-w64/tasks/X-0000.json",
+      "inherited": true,
+      "duration_seconds": 29.175815619999412,
+      "process_cpu_seconds": 28.80469383700006
+    },
+    {
+      "task_id": "X-0001",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/tasks/X-0001.json",
+      "inherited": true,
+      "duration_seconds": 42.855102744999385,
+      "process_cpu_seconds": 42.44276203200002
+    },
+    {
+      "task_id": "X-0002",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/tasks/X-0002.json",
+      "inherited": true,
+      "duration_seconds": 42.187611123999886,
+      "process_cpu_seconds": 41.772288557000024
+    },
+    {
+      "task_id": "X-0003",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/tasks/X-0003.json",
+      "inherited": true,
+      "duration_seconds": 41.156812231,
+      "process_cpu_seconds": 40.76272154399999
+    },
+    {
+      "task_id": "X-0004",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/tasks/X-0004.json",
+      "inherited": true,
+      "duration_seconds": 47.00677036500019,
+      "process_cpu_seconds": 46.446201785000085
+    },
+    {
+      "task_id": "X-0005",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/tasks/X-0005.json",
+      "inherited": true,
+      "duration_seconds": 42.628011390999745,
+      "process_cpu_seconds": 42.20577681899999
+    },
+    {
+      "task_id": "X-0006",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/tasks/X-0006.json",
+      "inherited": true,
+      "duration_seconds": 49.46918083499986,
+      "process_cpu_seconds": 48.94000822499993
+    },
+    {
+      "task_id": "X-0007",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/tasks/X-0007.json",
+      "inherited": true,
+      "duration_seconds": 32.79115441899921,
+      "process_cpu_seconds": 32.452978175
+    },
+    {
+      "task_id": "X-0008",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t30-w64/tasks/X-0008.json",
+      "inherited": true,
+      "duration_seconds": 27.040852979000192,
+      "process_cpu_seconds": 26.68965442000001
+    },
+    {
+      "task_id": "X-0009",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t30-w64/tasks/X-0009.json",
+      "inherited": true,
+      "duration_seconds": 22.475099843999487,
+      "process_cpu_seconds": 22.200951196000005
+    },
+    {
+      "task_id": "X-0010",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t30-w64/tasks/X-0010.json",
+      "inherited": true,
+      "duration_seconds": 10.07693877300062,
+      "process_cpu_seconds": 9.983078572000068
+    },
+    {
+      "task_id": "X-0011",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t30-w64/tasks/X-0011.json",
+      "inherited": true,
+      "duration_seconds": 4.728559627999857,
+      "process_cpu_seconds": 4.632299762000002
+    },
+    {
+      "task_id": "X-0012",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t5-w64/tasks/X-0012.json",
+      "inherited": true,
+      "duration_seconds": 3.8074336690001473,
+      "process_cpu_seconds": 3.777562103000008
+    },
+    {
+      "task_id": "X-0013",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t5-w64/tasks/X-0013.json",
+      "inherited": true,
+      "duration_seconds": 4.64485641400006,
+      "process_cpu_seconds": 4.5384367279999935
+    },
+    {
+      "task_id": "X-0014",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t5-w64/tasks/X-0014.json",
+      "inherited": true,
+      "duration_seconds": 4.8090602390000186,
+      "process_cpu_seconds": 4.762748476000013
+    },
+    {
+      "task_id": "X-0015",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t5-w64/tasks/X-0015.json",
+      "inherited": true,
+      "duration_seconds": 3.5250537370000075,
+      "process_cpu_seconds": 3.4408868159999884
+    },
+    {
+      "task_id": "X-0016",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t5-w64/tasks/X-0016.json",
+      "inherited": true,
+      "duration_seconds": 4.375415713999928,
+      "process_cpu_seconds": 4.290831698000005
+    },
+    {
+      "task_id": "X-0017",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t5-w64/tasks/X-0017.json",
+      "inherited": true,
+      "duration_seconds": 4.190507387000025,
+      "process_cpu_seconds": 3.84693599900001
+    },
+    {
+      "task_id": "X-0018",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t5-w64/tasks/X-0018.json",
+      "inherited": true,
+      "duration_seconds": 2.9384235939999144,
+      "process_cpu_seconds": 2.88093131399998
+    },
+    {
+      "task_id": "X-0019",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t5-w64/tasks/X-0019.json",
+      "inherited": true,
+      "duration_seconds": 3.145998961000032,
+      "process_cpu_seconds": 2.9689055249999967
+    },
+    {
+      "task_id": "X-0020",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t5-w64/tasks/X-0020.json",
+      "inherited": true,
+      "duration_seconds": 4.054703223999923,
+      "process_cpu_seconds": 4.013606596000017
+    },
+    {
+      "task_id": "X-0021",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t5-w64/tasks/X-0021.json",
+      "inherited": true,
+      "duration_seconds": 3.5074009529998875,
+      "process_cpu_seconds": 3.437636357999992
+    },
+    {
+      "task_id": "X-0022",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t5-w64/tasks/X-0022.json",
+      "inherited": true,
+      "duration_seconds": 4.019859975999907,
+      "process_cpu_seconds": 3.906807664000013
+    },
+    {
+      "task_id": "X-0023",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t5-w64/tasks/X-0023.json",
+      "inherited": true,
+      "duration_seconds": 2.996800011000005,
+      "process_cpu_seconds": 2.9604188620000116
+    },
+    {
+      "task_id": "X-0024",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t5-w64/tasks/X-0024.json",
+      "inherited": true,
+      "duration_seconds": 4.491194102000009,
+      "process_cpu_seconds": 4.348019076000014
+    },
+    {
+      "task_id": "X-0025",
+      "side": "X",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t5-w64/tasks/X-0025.json",
+      "inherited": true,
+      "duration_seconds": 0.33841481700005716,
+      "process_cpu_seconds": 0.3322110969999983
+    },
+    {
+      "task_id": "Z-0000",
+      "side": "Z",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t30-w64/tasks/Z-0000.json",
+      "inherited": true,
+      "duration_seconds": 24.302687225000227,
+      "process_cpu_seconds": 23.94513849300006
+    },
+    {
+      "task_id": "Z-0001",
+      "side": "Z",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/tasks/Z-0001.json",
+      "inherited": true,
+      "duration_seconds": 66.01853768000001,
+      "process_cpu_seconds": 65.20294381699989
+    },
+    {
+      "task_id": "Z-0002",
+      "side": "Z",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/tasks/Z-0002.json",
+      "inherited": true,
+      "duration_seconds": 58.1908689640004,
+      "process_cpu_seconds": 57.46305504199995
+    },
+    {
+      "task_id": "Z-0003",
+      "side": "Z",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/tasks/Z-0003.json",
+      "inherited": true,
+      "duration_seconds": 61.097051865999674,
+      "process_cpu_seconds": 60.38884367499986
+    },
+    {
+      "task_id": "Z-0004",
+      "side": "Z",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/tasks/Z-0004.json",
+      "inherited": true,
+      "duration_seconds": 65.36547176099884,
+      "process_cpu_seconds": 64.60078274099988
+    },
+    {
+      "task_id": "Z-0005",
+      "side": "Z",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/tasks/Z-0005.json",
+      "inherited": true,
+      "duration_seconds": 62.04072309500043,
+      "process_cpu_seconds": 61.381005842000036
+    },
+    {
+      "task_id": "Z-0006",
+      "side": "Z",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/tasks/Z-0006.json",
+      "inherited": true,
+      "duration_seconds": 59.79257587500069,
+      "process_cpu_seconds": 59.23666585500007
+    },
+    {
+      "task_id": "Z-0007",
+      "side": "Z",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/tasks/Z-0007.json",
+      "inherited": true,
+      "duration_seconds": 49.03505530500115,
+      "process_cpu_seconds": 48.49384637500009
+    },
+    {
+      "task_id": "Z-0008",
+      "side": "Z",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/tasks/Z-0008.json",
+      "inherited": true,
+      "duration_seconds": 66.15031105599883,
+      "process_cpu_seconds": 65.56071795600008
+    },
+    {
+      "task_id": "Z-0009",
+      "side": "Z",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/tasks/Z-0009.json",
+      "inherited": true,
+      "duration_seconds": 78.7956464279996,
+      "process_cpu_seconds": 77.762659772
+    },
+    {
+      "task_id": "Z-0010",
+      "side": "Z",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/tasks/Z-0010.json",
+      "inherited": true,
+      "duration_seconds": 57.73593315100152,
+      "process_cpu_seconds": 56.95008812200001
+    },
+    {
+      "task_id": "Z-0011",
+      "side": "Z",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/tasks/Z-0011.json",
+      "inherited": true,
+      "duration_seconds": 51.37214833800135,
+      "process_cpu_seconds": 50.89783042399995
+    },
+    {
+      "task_id": "Z-0012",
+      "side": "Z",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/tasks/Z-0012.json",
+      "inherited": true,
+      "duration_seconds": 55.77571804500076,
+      "process_cpu_seconds": 55.00089200000002
+    },
+    {
+      "task_id": "Z-0013",
+      "side": "Z",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/tasks/Z-0013.json",
+      "inherited": true,
+      "duration_seconds": 82.10079758899883,
+      "process_cpu_seconds": 81.24804178999989
+    },
+    {
+      "task_id": "Z-0014",
+      "side": "Z",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/all-t120-w64/tasks/Z-0014.json",
+      "inherited": true,
+      "duration_seconds": 82.406475365,
+      "process_cpu_seconds": 81.55614939299994
+    },
+    {
+      "task_id": "Z-0015",
+      "side": "Z",
+      "status": "proven_infeasible",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/selective-t600-w63-r1/tasks/Z-0015.json",
+      "inherited": false,
+      "duration_seconds": 160.59671723599968,
+      "process_cpu_seconds": 158.484022799
+    },
+    {
+      "task_id": "Z-0016",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/selective-t600-w63-r1/tasks/Z-0016.json",
+      "inherited": false,
+      "duration_seconds": 600.027665878999,
+      "process_cpu_seconds": 592.371612518
+    },
+    {
+      "task_id": "Z-0017",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/selective-t600-w63-r1/tasks/Z-0017.json",
+      "inherited": false,
+      "duration_seconds": 600.0275132550014,
+      "process_cpu_seconds": 592.6366443979999
+    },
+    {
+      "task_id": "Z-0018",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/selective-t600-w63-r1/tasks/Z-0018.json",
+      "inherited": false,
+      "duration_seconds": 600.0413501250005,
+      "process_cpu_seconds": 592.542366143
+    },
+    {
+      "task_id": "Z-0019",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/selective-t600-w63-r1/tasks/Z-0019.json",
+      "inherited": false,
+      "duration_seconds": 600.0409942450024,
+      "process_cpu_seconds": 592.845187917
+    },
+    {
+      "task_id": "Z-0020",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/selective-t600-w63-r1/tasks/Z-0020.json",
+      "inherited": false,
+      "duration_seconds": 600.0504901839995,
+      "process_cpu_seconds": 592.666764539
+    },
+    {
+      "task_id": "Z-0021",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/selective-t600-w63-r1/tasks/Z-0021.json",
+      "inherited": false,
+      "duration_seconds": 600.0366389109986,
+      "process_cpu_seconds": 590.815577552
+    },
+    {
+      "task_id": "Z-0022",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/selective-t600-w63-r1/tasks/Z-0022.json",
+      "inherited": false,
+      "duration_seconds": 600.0268383729999,
+      "process_cpu_seconds": 592.505420628
+    },
+    {
+      "task_id": "Z-0023",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/selective-t600-w63-r1/tasks/Z-0023.json",
+      "inherited": false,
+      "duration_seconds": 600.0195253489983,
+      "process_cpu_seconds": 590.269136541
+    },
+    {
+      "task_id": "Z-0024",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/selective-t600-w63-r1/tasks/Z-0024.json",
+      "inherited": false,
+      "duration_seconds": 600.0370573680011,
+      "process_cpu_seconds": 592.146081749
+    },
+    {
+      "task_id": "Z-0025",
+      "side": "Z",
+      "status": "unknown",
+      "evidence_path": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0020918/attempts/selective-t600-w63-r1/tasks/Z-0025.json",
+      "inherited": false,
+      "duration_seconds": 600.0199654079988,
+      "process_cpu_seconds": 592.936682607
+    }
+  ]
+}

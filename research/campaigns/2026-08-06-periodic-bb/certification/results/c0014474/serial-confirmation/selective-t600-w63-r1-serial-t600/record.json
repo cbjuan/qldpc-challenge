@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "confirmation_stage": "selective-t600-w63-r1-serial-t600",
+  "candidate_id": 14474,
+  "candidate": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0014474-4b5cda8d68-1m-python8000-s996299447-fast1000000.json",
+  "candidate_sha256": "a2be1c278f9ed05872ae4c0a6e7d457f54c58cae4d525a86166c6eda21a438f8",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508",
+  "per_task_time_limit_seconds": 600.0,
+  "command": [
+    "/root/qldpc-challenge/.venv/bin/python3",
+    "verify/certify.py",
+    "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0014474-4b5cda8d68-1m-python8000-s996299447-fast1000000.json",
+    "--tlim",
+    "600.0"
+  ],
+  "started_at_utc": "2026-08-26T15:41:33.231621+00:00",
+  "finished_at_utc": "2026-08-26T16:46:07.894876+00:00",
+  "duration_seconds": 3874.663243504001,
+  "parent_process_cpu_seconds": 0.0010826859999999994,
+  "child_process_user_seconds": 3803.928587,
+  "child_process_system_seconds": 55.231189,
+  "child_process_cpu_seconds": 3859.159776,
+  "returncode": 0,
+  "stdout": "{\n  \"name\": \"[[396,136,3]] local periodic BB c14474\",\n  \"d\": 3,\n  \"solver\": \"scipy/HiGHS MILP\",\n  \"sides\": {\n    \"X\": {\n      \"value\": 3,\n      \"exact\": true,\n      \"note\": \"no logical < 3 exists\"\n    },\n    \"Z\": {\n      \"value\": 3,\n      \"exact\": true,\n      \"note\": \"no logical < 3 exists\"\n    }\n  },\n  \"d_exact\": true\n}\nHighsMipSolverData::transformNewIntegerFeasibleSolution tmpSolver.run();\n",
+  "stderr": "",
+  "execution_error": null,
+  "certifier_output": null,
+  "identity_after": {
+    "candidate_sha256": "a2be1c278f9ed05872ae4c0a6e7d457f54c58cae4d525a86166c6eda21a438f8",
+    "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+    "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508"
+  },
+  "identity_errors": [],
+  "output_validation": {
+    "valid": false,
+    "errors": [
+      "invalid JSON: Extra data: line 19 column 1 (char 323)",
+      "top-level output is not a JSON object"
+    ],
+    "refutation_signal_sides": [],
+    "timed_out_sides": []
+  },
+  "status": "invalid_output",
+  "d_exact": false
+}
