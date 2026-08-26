@@ -34,6 +34,8 @@ A side marked `sharded_closed_pending_serial` has all logical-row cutoff MILPs p
 | selective-t600-w13-r17-c0045048 | 600 | 13 | 1 | 36 | 36 | 1817.8 | 21394.9 |
 
 Incomplete batch starts (not counted as timeouts):
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/one-sided-t600-w48-r27-restart1-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w8-r28-c0020168-restart1-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w8-r7-c0020168-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w1-r22-c0045016-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w1-r25-c0045044-start.json`
@@ -45,7 +47,7 @@ Incomplete batch starts (not counted as timeouts):
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r19-c0045017-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r24-c0045015-start.json`
 
-Persisted tasks outside completed batches: 115 (68816.3 CPU s); retained as evidence but not counted as completed-batch timeouts.
+Persisted tasks outside completed batches: 172 (102743.4 CPU s); retained as evidence but not counted as completed-batch timeouts.
 
 ## Targets
 
@@ -89,8 +91,8 @@ Persisted tasks outside completed batches: 115 (68816.3 CPU s); retained as evid
 | c0040006 | [[688,172,4]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120 | 28405.8 | 28160.6 |
 | c0040007 | [[680,170,4]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120 | 28448.2 | 28203.9 |
 | c0045014 | [[690,46,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120 | 10586.9 | 10484.5 |
-| c0045015 | [[660,44,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 14379.3 | 14241.4 |
-| c0045016 | [[600,40,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 10284.1 | 10183.0 |
+| c0045015 | [[660,44,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 19185.4 | 19009.1 |
+| c0045016 | [[600,40,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 34512.6 | 34002.1 |
 | c0045017 | [[570,38,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 22737.4 | 22520.3 |
 | c0045030 | [[464,72,8]] | timeout | timeout | timeout | 5,30,120 | 22333.3 | 22090.0 |
 | c0045031 | [[448,70,8]] | timeout | timeout | timeout | 5,30,120 | 21842.4 | 21608.2 |
@@ -102,7 +104,7 @@ Persisted tasks outside completed batches: 115 (68816.3 CPU s); retained as evid
 | c0045041 | [[700,50,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120 | 9697.1 | 9604.2 |
 | c0045042 | [[672,48,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120 | 8824.5 | 8755.1 |
 | c0045043 | [[644,46,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120 | 8481.4 | 8410.4 |
-| c0045044 | [[616,44,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120 | 7642.3 | 7570.2 |
+| c0045044 | [[616,44,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 13069.8 | 12910.4 |
 | c0045046 | [[560,40,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 18907.4 | 18716.6 |
 | c0045047 | [[532,38,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 24675.2 | 24413.9 |
 | c0045048 | [[504,36,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 28294.6 | 27907.1 |
