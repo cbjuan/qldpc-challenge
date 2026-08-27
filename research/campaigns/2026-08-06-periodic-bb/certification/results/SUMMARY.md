@@ -1,8 +1,8 @@
 # Periodic BB exact-certification summary
 
-Targets: 128; exact: 32; refuted: 6; sharded closed pending serial: 7; timeout: 83; pending: 0.
+Targets: 128; exact: 33; refuted: 6; sharded closed pending serial: 6; timeout: 83; pending: 0.
 
-Non-overlapping batch wall time: 81764.7 s; summed new-task wall time: 3790901.2 s; summed new-task CPU time: 3748412.7 s.
+Non-overlapping batch wall time: 87899.0 s; summed new-task wall time: 3877402.0 s; summed new-task CPU time: 3833427.7 s.
 
 A side marked `sharded_closed_pending_serial` has all logical-row cutoff MILPs proven infeasible, but the candidate is `exact` only after a hash-matched, persisted stock `verify/certify.py` result has `d_exact: true`.
 
@@ -76,6 +76,7 @@ A side marked `sharded_closed_pending_serial` has all logical-row cutoff MILPs p
 | selective-t3600-w16-r42g-c0045033 | 3600 | 16 | 1 | 33 | 99 | 2830.6 | 35036.1 |
 | selective-t600-w7-r42h-c0048101 | 600 | 7 | 1 | 16 | 0 | 1878.6 | 9719.1 |
 | selective-t3600-w16-r42j-c0045036 | 3600 | 16 | 1 | 45 | 75 | 3500.1 | 46289.2 |
+| selective-t3600-w16-r42o-c0045031 | 3600 | 16 | 1 | 60 | 80 | 6134.3 | 85015.0 |
 
 Incomplete batch starts (not counted as timeouts):
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w1-r29b-c0010524-start.json`
@@ -86,10 +87,12 @@ Incomplete batch starts (not counted as timeouts):
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w2-r42k-c0045244-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w3-r41j-c0048487-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w3-r42e-c0045064-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w3-r42p-c0045031-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w7-r42f-c0045048-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w8-r7-c0020168-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w9-r42i-c0045049-start.json`
-- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t3600-w16-r42o-c0045031-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t3600-w1-r42r-c0045107-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t3600-w13-r42q-c0045032-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t3600-w18-r33b-c0045037-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t3600-w20-r31-c0020283-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t3600-w6-r34a-c0045035-start.json`
@@ -106,7 +109,7 @@ Incomplete batch starts (not counted as timeouts):
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r19-c0045017-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r24-c0045015-start.json`
 
-Persisted tasks outside completed batches: 288 (214989.8 CPU s); retained as evidence but not counted as completed-batch timeouts.
+Persisted tasks outside completed batches: 307 (392818.0 CPU s); retained as evidence but not counted as completed-batch timeouts.
 
 ## Targets
 
@@ -154,25 +157,25 @@ Persisted tasks outside completed batches: 288 (214989.8 CPU s); retained as evi
 | c0045016 | [[600,40,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 34512.6 | 34002.1 |
 | c0045017 | [[570,38,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 45681.2 | 45095.5 |
 | c0045030 | [[464,72,8]] | timeout | timeout | timeout | 5,30,120,600 | 80646.5 | 79488.9 |
-| c0045031 | [[448,70,8]] | timeout | timeout | timeout | 5,30,120,600 | 80752.8 | 79534.1 |
+| c0045031 | [[448,70,8]] | timeout | sharded_closed_pending_serial | timeout | 5,30,120,600,3600 | 167253.7 | 164549.1 |
 | c0045032 | [[432,68,8]] | timeout | timeout | timeout | 5,30,120,600 | 78527.1 | 77206.3 |
 | c0045033 | [[416,66,8]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5,30,120,600,3600 | 101917.3 | 100592.2 |
 | c0045035 | [[384,62,8]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5,30,120,600,3600 | 87904.2 | 86755.2 |
 | c0045036 | [[368,60,8]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5,30,120,600,3600 | 133570.9 | 131737.4 |
-| c0045037 | [[352,58,8]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5,30,120,600,3600 | 72114.9 | 71180.9 |
+| c0045037 | [[352,58,8]] | exact | exact | exact | 5,30,120,600,3600 | 72114.9 | 71180.9 |
 | c0045041 | [[700,50,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 40210.2 | 39414.0 |
 | c0045042 | [[672,48,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 38025.1 | 37698.0 |
 | c0045043 | [[644,46,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 36749.8 | 36230.2 |
 | c0045044 | [[616,44,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 34887.1 | 34376.4 |
 | c0045046 | [[560,40,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 42996.9 | 42419.4 |
-| c0045047 | [[532,38,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600,3600 | 175520.7 | 173811.9 |
-| c0045048 | [[504,36,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600,3600 | 116967.9 | 115863.8 |
+| c0045047 | [[532,38,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600,3600,14400 | 222673.3 | 220189.3 |
+| c0045048 | [[504,36,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600,3600,14400 | 217769.9 | 215221.8 |
 | c0045049 | [[476,34,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600,3600 | 115880.5 | 114744.4 |
 | c0045059 | [[540,36,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 39224.3 | 38703.3 |
 | c0045060 | [[510,34,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 27957.0 | 27603.8 |
 | c0045061 | [[480,32,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600,3600 | 141370.4 | 139962.4 |
 | c0045062 | [[450,30,9]] | exact | exact | exact | 5,30,120,600,3600 | 24273.1 | 23993.8 |
-| c0045064 | [[390,26,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600,3600,14400 | 116523.2 | 115458.9 |
+| c0045064 | [[390,26,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600,3600,14400 | 134668.8 | 133310.9 |
 | c0045088 | [[648,8,34]] | timeout | timeout | timeout | 5,30,120,600,3600 | 71355.0 | 70566.7 |
 | c0045091 | [[576,12,28]] | timeout | timeout | timeout | 5,30,120,600 | 19292.8 | 19108.6 |
 | c0045094 | [[504,8,28]] | timeout | timeout | timeout | 5,30,120 | 3580.4 | 3543.2 |
@@ -186,7 +189,7 @@ Persisted tasks outside completed batches: 288 (214989.8 CPU s); retained as evi
 | c0046163 | [[644,46,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 36610.3 | 36282.8 |
 | c0046164 | [[616,44,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 34256.9 | 33759.1 |
 | c0046282 | [[540,8,30]] | timeout | timeout | timeout | 5,30,120 | 3235.8 | 3205.7 |
-| c0046378 | [[630,4,32]] | timeout | timeout | timeout | 5,30,120,600,3600,14400 | 49826.0 | 49415.8 |
+| c0046378 | [[630,4,32]] | timeout | timeout | timeout | 5,30,120,600,3600,14400 | 64226.2 | 63656.5 |
 | c0046587 | [[532,38,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600,3600 | 176170.8 | 174507.0 |
 | c0046841 | [[660,8,34]] | timeout | timeout | timeout | 5,30,120 | 3943.3 | 3912.1 |
 | c0047091 | [[630,14,20]] | timeout | timeout | timeout | 5,30,120 | 5955.7 | 5908.5 |
