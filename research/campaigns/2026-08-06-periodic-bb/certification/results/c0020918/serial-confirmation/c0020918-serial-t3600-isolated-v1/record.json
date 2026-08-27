@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "confirmation_stage": "c0020918-serial-t3600-isolated-v1",
+  "candidate_id": 20918,
+  "candidate": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0020918-56134fef19-60k-python8000-s1591394722-fast60000.json",
+  "candidate_sha256": "066d047f87f5c3adaae320955ddfc42238c8e4bfb70388e04aa172fc7e5c0a03",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508",
+  "per_task_time_limit_seconds": 3600.0,
+  "command": [
+    "/root/qldpc-challenge/.venv/bin/python3",
+    "verify/certify.py",
+    "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0020918-56134fef19-60k-python8000-s1591394722-fast60000.json",
+    "--tlim",
+    "3600.0"
+  ],
+  "stdout_isolation": {
+    "sitecustomize_path": "research/campaigns/2026-08-06-periodic-bb/certification/serial_stdout_isolation/sitecustomize.py",
+    "sitecustomize_sha256": "e368c89d543920e0145b359d0f28fb081f170d77fd5ddbf9f40b5a336ebb348d",
+    "child_pythonpath": "research/campaigns/2026-08-06-periodic-bb/certification/serial_stdout_isolation",
+    "child_python_pycache_prefix": "research/campaigns/2026-08-06-periodic-bb/certification/serial_stdout_isolation/.disabled-pycache",
+    "child_python_dont_write_bytecode": "1",
+    "child_python_no_user_site": "1",
+    "child_expected_sha256_environment": "e368c89d543920e0145b359d0f28fb081f170d77fd5ddbf9f40b5a336ebb348d",
+    "python_stdout_capture": "stdout",
+    "native_fd1_capture": "stderr",
+    "activation_marker": "QLDPC_STDOUT_ISOLATION_V1:e368c89d543920e0145b359d0f28fb081f170d77fd5ddbf9f40b5a336ebb348d",
+    "pythonpath_directory_policy": "only-regular-sitecustomize.py"
+  },
+  "started_at_utc": "2026-08-27T08:38:51.827058+00:00",
+  "finished_at_utc": "2026-08-27T13:23:59.685405+00:00",
+  "duration_seconds": 17107.85835219099,
+  "parent_process_cpu_seconds": 0.001739127,
+  "child_process_user_seconds": 16226.28926,
+  "child_process_system_seconds": 703.813757,
+  "child_process_cpu_seconds": 16930.103017,
+  "returncode": 0,
+  "stdout": "{\n  \"name\": \"[[234,26,7]] local periodic BB c20918\",\n  \"d\": 7,\n  \"solver\": \"scipy/HiGHS MILP\",\n  \"sides\": {\n    \"X\": {\n      \"value\": 7,\n      \"exact\": true,\n      \"note\": \"no logical < 7 exists\"\n    },\n    \"Z\": {\n      \"value\": 7,\n      \"exact\": true,\n      \"note\": \"no logical < 7 exists\"\n    }\n  },\n  \"d_exact\": true\n}\n",
+  "stderr": "QLDPC_STDOUT_ISOLATION_V1:e368c89d543920e0145b359d0f28fb081f170d77fd5ddbf9f40b5a336ebb348d\n",
+  "execution_error": null,
+  "certifier_output": {
+    "name": "[[234,26,7]] local periodic BB c20918",
+    "d": 7,
+    "solver": "scipy/HiGHS MILP",
+    "sides": {
+      "X": {
+        "value": 7,
+        "exact": true,
+        "note": "no logical < 7 exists"
+      },
+      "Z": {
+        "value": 7,
+        "exact": true,
+        "note": "no logical < 7 exists"
+      }
+    },
+    "d_exact": true
+  },
+  "identity_after": {
+    "candidate_sha256": "066d047f87f5c3adaae320955ddfc42238c8e4bfb70388e04aa172fc7e5c0a03",
+    "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+    "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508",
+    "stdout_isolator_sha256": "e368c89d543920e0145b359d0f28fb081f170d77fd5ddbf9f40b5a336ebb348d",
+    "stdout_isolator_activation_marker": "QLDPC_STDOUT_ISOLATION_V1:e368c89d543920e0145b359d0f28fb081f170d77fd5ddbf9f40b5a336ebb348d",
+    "stdout_isolator_activation_marker_count": 1,
+    "stdout_isolator_pythonpath_directory_clean": true
+  },
+  "identity_errors": [],
+  "output_validation": {
+    "valid": true,
+    "errors": [],
+    "refutation_signal_sides": [],
+    "timed_out_sides": []
+  },
+  "status": "exact",
+  "d_exact": true
+}
