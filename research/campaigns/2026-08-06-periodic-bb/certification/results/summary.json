@@ -10,13 +10,13 @@
     "task_records_verified": 27047,
     "canonical_logical_rows_verified": 27047,
     "refutation_indexes_verified": 23,
-    "stock_serial_exact_records_verified": 55
+    "stock_serial_exact_records_verified": 56
   },
   "target_count": 128,
   "counts": {
-    "exact": 37,
+    "exact": 38,
     "refuted": 6,
-    "sharded_closed_pending_serial": 4,
+    "sharded_closed_pending_serial": 3,
     "timeout": 81,
     "pending": 0
   },
@@ -1264,9 +1264,13 @@
     "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w1-r44g-c0051880-start.json",
     "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w1-r46a-c0060754-start.json",
     "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w1-r46b-c0050584-start.json",
+    "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w1-r47a-c0046378-start.json",
+    "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w1-r47b-c0055406-start.json",
+    "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w1-r47c-c0051880-start.json",
     "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w14-r43b-c0045047-start.json",
     "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w14-r44h-c0045047-start.json",
     "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w2-r44e-c0045244-start.json",
+    "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w2-r47d-c0045244-start.json",
     "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w3-r44b-c0048487-start.json",
     "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w3-r44c-c0045064-start.json",
     "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w4-r45c-c0060754-start.json",
@@ -1292,7 +1296,8 @@
     "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w5-r21-c0046587-start.json",
     "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w7-r33a-c0045033-start.json",
     "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r19-c0045017-start.json",
-    "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r24-c0045015-start.json"
+    "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r24-c0045015-start.json",
+    "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r47e-c0045426-start.json"
   ],
   "targets": [
     {
@@ -5813,10 +5818,10 @@
       "n": 416,
       "k": 66,
       "d": 8,
-      "status": "sharded_closed_pending_serial",
+      "status": "exact",
       "side_status": {
-        "X": "sharded_closed_pending_serial",
-        "Z": "sharded_closed_pending_serial"
+        "X": "exact",
+        "Z": "exact"
       },
       "side_evidence": {
         "X": {
@@ -5925,8 +5930,16 @@
       "orphan_incomplete_attempts": [
         "selective-t600-w7-r33a-c0045033"
       ],
-      "serial_confirmation": null,
-      "serial_confirmations": [],
+      "serial_confirmation": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045033/serial-confirmation/c0045033-serial-t3600-isolated-v1/record.json",
+      "serial_confirmations": [
+        {
+          "record": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045033/serial-confirmation/c0045033-serial-t3600-isolated-v1/record.json",
+          "record_sha256": "c85d0e5d984e53dbbb123f8634981edbb4298c945bdf646ef556b36feb10e2e5",
+          "authoritative_output": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045033/serial-confirmation/c0045033-serial-t3600-isolated-v1/authoritative-output.json",
+          "authoritative_output_sha256": "9f9941579928b7e4171727fd371ca80a9c69ddba8f768f8f91c95a3b709a5db9",
+          "finished_at_utc": "2026-08-29T12:27:01.414664+00:00"
+        }
+      ],
       "refutation_evidence": [],
       "refutation_details": []
     },
@@ -8589,6 +8602,19 @@
           "missing_task_count": 6
         },
         {
+          "stage": "selective-t28800-w2-r47d-c0045244",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045244/attempts/selective-t28800-w2-r47d-c0045244/run-start.json",
+          "aggregate": null,
+          "complete": false,
+          "orphan_incomplete": true,
+          "expected_task_count": 8,
+          "new_task_count": 8,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 28800.0,
+          "missing_task_count": 8
+        },
+        {
           "stage": "selective-t3600-w62-r1",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045244/attempts/selective-t3600-w62-r1/run-start.json",
           "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045244/attempts/selective-t3600-w62-r1/aggregate.json",
@@ -8617,7 +8643,8 @@
       ],
       "orphan_incomplete_attempts": [
         "selective-t14400-w2-r42k-c0045244",
-        "selective-t28800-w2-r44e-c0045244"
+        "selective-t28800-w2-r44e-c0045244",
+        "selective-t28800-w2-r47d-c0045244"
       ],
       "serial_confirmation": null,
       "serial_confirmations": [],
@@ -8696,9 +8723,24 @@
           "inherited_definitive_task_count": 0,
           "task_time_limit_seconds": 5.0,
           "missing_task_count": 0
+        },
+        {
+          "stage": "selective-t600-w8-r47e-c0045426",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045426/attempts/selective-t600-w8-r47e-c0045426/run-start.json",
+          "aggregate": null,
+          "complete": false,
+          "orphan_incomplete": true,
+          "expected_task_count": 16,
+          "new_task_count": 16,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 600.0,
+          "missing_task_count": 16
         }
       ],
-      "orphan_incomplete_attempts": [],
+      "orphan_incomplete_attempts": [
+        "selective-t600-w8-r47e-c0045426"
+      ],
       "serial_confirmation": null,
       "serial_confirmations": [],
       "refutation_evidence": [],
@@ -9308,6 +9350,19 @@
           "missing_task_count": 7
         },
         {
+          "stage": "selective-t28800-w1-r47a-c0046378",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0046378/attempts/selective-t28800-w1-r47a-c0046378/run-start.json",
+          "aggregate": null,
+          "complete": false,
+          "orphan_incomplete": true,
+          "expected_task_count": 8,
+          "new_task_count": 8,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 28800.0,
+          "missing_task_count": 8
+        },
+        {
           "stage": "selective-t3600-w62-r1",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0046378/attempts/selective-t3600-w62-r1/run-start.json",
           "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0046378/attempts/selective-t3600-w62-r1/aggregate.json",
@@ -9336,7 +9391,8 @@
       ],
       "orphan_incomplete_attempts": [
         "selective-t14400-w1-r40a-c0046378",
-        "selective-t28800-w1-r44a-c0046378"
+        "selective-t28800-w1-r44a-c0046378",
+        "selective-t28800-w1-r47a-c0046378"
       ],
       "serial_confirmation": null,
       "serial_confirmations": [],
@@ -11780,6 +11836,19 @@
           "missing_task_count": 7
         },
         {
+          "stage": "selective-t28800-w1-r47c-c0051880",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0051880/attempts/selective-t28800-w1-r47c-c0051880/run-start.json",
+          "aggregate": null,
+          "complete": false,
+          "orphan_incomplete": true,
+          "expected_task_count": 8,
+          "new_task_count": 8,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 28800.0,
+          "missing_task_count": 8
+        },
+        {
           "stage": "selective-t3600-w62-r1",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0051880/attempts/selective-t3600-w62-r1/run-start.json",
           "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0051880/attempts/selective-t3600-w62-r1/aggregate.json",
@@ -11808,7 +11877,8 @@
       ],
       "orphan_incomplete_attempts": [
         "selective-t14400-w1-r42n-c0051880",
-        "selective-t28800-w1-r44g-c0051880"
+        "selective-t28800-w1-r44g-c0051880",
+        "selective-t28800-w1-r47c-c0051880"
       ],
       "serial_confirmation": null,
       "serial_confirmations": [],
@@ -12642,6 +12712,19 @@
           "missing_task_count": 7
         },
         {
+          "stage": "selective-t28800-w1-r47b-c0055406",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0055406/attempts/selective-t28800-w1-r47b-c0055406/run-start.json",
+          "aggregate": null,
+          "complete": false,
+          "orphan_incomplete": true,
+          "expected_task_count": 8,
+          "new_task_count": 8,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 28800.0,
+          "missing_task_count": 8
+        },
+        {
           "stage": "selective-t3600-w62-r1",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0055406/attempts/selective-t3600-w62-r1/run-start.json",
           "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0055406/attempts/selective-t3600-w62-r1/aggregate.json",
@@ -12670,7 +12753,8 @@
       ],
       "orphan_incomplete_attempts": [
         "selective-t14400-w1-r42l-c0055406",
-        "selective-t28800-w1-r44f-c0055406"
+        "selective-t28800-w1-r44f-c0055406",
+        "selective-t28800-w1-r47b-c0055406"
       ],
       "serial_confirmation": null,
       "serial_confirmations": [],
