@@ -2,7 +2,7 @@
 
 Targets: 128; exact: 38; refuted: 6; sharded closed pending serial: 3; timeout: 81; pending: 0.
 
-Non-overlapping batch wall time: 124971.1 s; summed new-task wall time: 5096295.0 s; summed new-task CPU time: 5038407.3 s.
+Non-overlapping batch wall time: 126193.1 s; summed new-task wall time: 5105936.2 s; summed new-task CPU time: 5047982.3 s.
 
 A side marked `sharded_closed_pending_serial` has all logical-row cutoff MILPs proven infeasible, but the candidate is `exact` only after a hash-matched, persisted stock `verify/certify.py` result has `d_exact: true`.
 
@@ -85,6 +85,7 @@ A side marked `sharded_closed_pending_serial` has all logical-row cutoff MILPs p
 | selective-t14400-w3-r42p-c0045031 | 14400 | 3 | 1 | 3 | 137 | 5357.1 | 13404.1 |
 | selective-t14400-w1-r42v-c0045032 | 14400 | 1 | 1 | 1 | 135 | 3986.9 | 3943.5 |
 | selective-t3600-w12-r42w-c0060754 | 3600 | 12 | 1 | 32 | 0 | 10803.0 | 114292.7 |
+| selective-t600-w8-r47e-c0045426 | 600 | 8 | 1 | 16 | 0 | 1222.1 | 9574.9 |
 
 Incomplete batch starts (not counted as timeouts):
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w1-r29b-c0010524-start.json`
@@ -139,9 +140,9 @@ Incomplete batch starts (not counted as timeouts):
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w7-r33a-c0045033-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r19-c0045017-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r24-c0045015-start.json`
-- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r47e-c0045426-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r47f-c0051763-start.json`
 
-Persisted tasks outside completed batches: 447 (2455981.0 CPU s); retained as evidence but not counted as completed-batch timeouts.
+Persisted tasks outside completed batches: 449 (2497763.5 CPU s); retained as evidence but not counted as completed-batch timeouts.
 
 ## Targets
 
@@ -207,15 +208,15 @@ Persisted tasks outside completed batches: 447 (2455981.0 CPU s); retained as ev
 | c0045060 | [[510,34,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 27957.0 | 27603.8 |
 | c0045061 | [[480,32,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600,3600 | 141370.4 | 139962.4 |
 | c0045062 | [[450,30,9]] | exact | exact | exact | 5,30,120,600,3600 | 24273.1 | 23993.8 |
-| c0045064 | [[390,26,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600,3600,14400,28800 | 332239.2 | 328892.2 |
+| c0045064 | [[390,26,9]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600,3600,14400,28800 | 361039.4 | 357468.2 |
 | c0045088 | [[648,8,34]] | timeout | timeout | timeout | 5,30,120,600,3600 | 71355.0 | 70566.7 |
 | c0045091 | [[576,12,28]] | timeout | timeout | timeout | 5,30,120,600 | 19292.8 | 19108.6 |
 | c0045094 | [[504,8,28]] | timeout | timeout | timeout | 5,30,120 | 3580.4 | 3543.2 |
-| c0045107 | [[576,24,12]] | timeout | timeout | timeout | 5,30,120,600,3600,14400 | 104490.4 | 103455.7 |
+| c0045107 | [[576,24,12]] | timeout | timeout | timeout | 5,30,120,600,3600,14400 | 117781.9 | 116662.2 |
 | c0045113 | [[432,24,12]] | timeout | timeout | timeout | 5,30,120,600,3600,14400 | 101570.7 | 100477.9 |
 | c0045118 | [[630,8,30]] | timeout | timeout | timeout | 5,30,120 | 3734.6 | 3687.4 |
 | c0045244 | [[648,4,34]] | timeout | timeout | timeout | 5,30,120,600,3600,14400,28800 | 179422.4 | 177636.6 |
-| c0045426 | [[420,8,26]] | timeout | timeout | timeout | 5,30,120 | 2888.6 | 2853.2 |
+| c0045426 | [[420,8,26]] | timeout | timeout | timeout | 5,30,120,600 | 12529.7 | 12428.1 |
 | c0045508 | [[648,4,36]] | timeout | refuted | refuted | 5,30,120,600,3600 | 35517.3 | 35233.6 |
 | c0045591 | [[448,56,8]] | timeout | timeout | timeout | 5,30,120,600 | 50921.8 | 50244.4 |
 | c0046163 | [[644,46,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 36610.3 | 36282.8 |
