@@ -91,12 +91,27 @@ Incomplete batch starts (not counted as timeouts):
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w1-r40a-c0046378-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w1-r42l-c0055406-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w1-r42n-c0051880-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w1-r44i-c0045107-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w1-r44j-c0060702-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w1-r44k-c0056213-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w1-r44o-c0045113-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w12-r43a-c0060754-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w12-r44m-c0060754-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w2-r42k-c0045244-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w2-r44l-c0058579-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w3-r42e-c0045064-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t14400-w8-r7-c0020168-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w1-r44a-c0046378-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w1-r44f-c0055406-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w1-r44g-c0051880-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w14-r43b-c0045047-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w14-r44h-c0045047-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w2-r44e-c0045244-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w3-r44b-c0048487-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w3-r44c-c0045064-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w7-r44d-c0045048-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w9-r42z-c0045049-start.json`
+- `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w9-r44n-c0045049-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t3600-w1-r42r-c0045107-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t3600-w1-r42s-c0060702-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t3600-w1-r42t-c0056213-start.json`
@@ -118,7 +133,7 @@ Incomplete batch starts (not counted as timeouts):
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r19-c0045017-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r24-c0045015-start.json`
 
-Persisted tasks outside completed batches: 371 (853150.5 CPU s); retained as evidence but not counted as completed-batch timeouts.
+Persisted tasks outside completed batches: 372 (859652.7 CPU s); retained as evidence but not counted as completed-batch timeouts.
 
 ## Targets
 
@@ -189,7 +204,7 @@ Persisted tasks outside completed batches: 371 (853150.5 CPU s); retained as evi
 | c0045091 | [[576,12,28]] | timeout | timeout | timeout | 5,30,120,600 | 19292.8 | 19108.6 |
 | c0045094 | [[504,8,28]] | timeout | timeout | timeout | 5,30,120 | 3580.4 | 3543.2 |
 | c0045107 | [[576,24,12]] | timeout | timeout | timeout | 5,30,120,600,3600 | 65586.6 | 64942.2 |
-| c0045113 | [[432,24,12]] | timeout | timeout | timeout | 5,30,120,600,3600 | 54506.8 | 53909.0 |
+| c0045113 | [[432,24,12]] | timeout | timeout | timeout | 5,30,120,600,3600,14400 | 61088.7 | 60411.2 |
 | c0045118 | [[630,8,30]] | timeout | timeout | timeout | 5,30,120 | 3734.6 | 3687.4 |
 | c0045244 | [[648,4,34]] | timeout | timeout | timeout | 5,30,120,600,3600,14400 | 121821.1 | 120637.6 |
 | c0045426 | [[420,8,26]] | timeout | timeout | timeout | 5,30,120 | 2888.6 | 2853.2 |
