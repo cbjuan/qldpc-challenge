@@ -134,7 +134,7 @@ Incomplete batch starts (not counted as timeouts):
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r19-c0045017-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r24-c0045015-start.json`
 
-Persisted tasks outside completed batches: 438 (2353586.3 CPU s); retained as evidence but not counted as completed-batch timeouts.
+Persisted tasks outside completed batches: 439 (2362119.8 CPU s); retained as evidence but not counted as completed-batch timeouts.
 
 ## Targets
 
@@ -205,7 +205,7 @@ Persisted tasks outside completed batches: 438 (2353586.3 CPU s); retained as ev
 | c0045091 | [[576,12,28]] | timeout | timeout | timeout | 5,30,120,600 | 19292.8 | 19108.6 |
 | c0045094 | [[504,8,28]] | timeout | timeout | timeout | 5,30,120 | 3580.4 | 3543.2 |
 | c0045107 | [[576,24,12]] | timeout | timeout | timeout | 5,30,120,600,3600,14400 | 94387.0 | 93419.3 |
-| c0045113 | [[432,24,12]] | timeout | timeout | timeout | 5,30,120,600,3600,14400 | 78962.8 | 78064.6 |
+| c0045113 | [[432,24,12]] | timeout | timeout | timeout | 5,30,120,600,3600,14400 | 87570.6 | 86598.1 |
 | c0045118 | [[630,8,30]] | timeout | timeout | timeout | 5,30,120 | 3734.6 | 3687.4 |
 | c0045244 | [[648,4,34]] | timeout | timeout | timeout | 5,30,120,600,3600,14400,28800 | 179422.4 | 177636.6 |
 | c0045426 | [[420,8,26]] | timeout | timeout | timeout | 5,30,120 | 2888.6 | 2853.2 |
