@@ -7,8 +7,8 @@
     "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
     "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508",
     "candidate_hashes_verified": 129,
-    "task_records_verified": 26990,
-    "canonical_logical_rows_verified": 26990,
+    "task_records_verified": 26991,
+    "canonical_logical_rows_verified": 26991,
     "refutation_indexes_verified": 23,
     "stock_serial_exact_records_verified": 54
   },
@@ -28,9 +28,9 @@
   "solver_cpu_seconds": 5038407.34882018,
   "new_task_count": 26600,
   "inherited_definitive_task_count": 14340,
-  "orphan_new_task_count": 390,
-  "orphan_new_task_wall_seconds": 1119222.953795679,
-  "orphan_new_task_cpu_seconds": 1107979.761837344,
+  "orphan_new_task_count": 391,
+  "orphan_new_task_wall_seconds": 1125708.435744726,
+  "orphan_new_task_cpu_seconds": 1114369.187783655,
   "task_time_budgets_seconds": [
     5.0,
     30.0,
@@ -1267,6 +1267,7 @@
     "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w2-r44e-c0045244-start.json",
     "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w3-r44b-c0048487-start.json",
     "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w3-r44c-c0045064-start.json",
+    "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w4-r45c-c0060754-start.json",
     "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w7-r44d-c0045048-start.json",
     "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w9-r42z-c0045049-start.json",
     "research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t28800-w9-r44n-c0045049-start.json",
@@ -8267,7 +8268,7 @@
         "X": {
           "required_task_count": 24,
           "proven_infeasible_task_count": 0,
-          "all_persisted_proven_infeasible_task_count": 2,
+          "all_persisted_proven_infeasible_task_count": 3,
           "persisted_refutation_count": 0
         },
         "Z": {
@@ -8285,9 +8286,9 @@
         3600.0,
         14400.0
       ],
-      "solver_wall_seconds": 67623.19762316995,
-      "solver_cpu_seconds": 66863.028554059,
-      "task_result_count": 247,
+      "solver_wall_seconds": 74108.67957221693,
+      "solver_cpu_seconds": 73252.45450037,
+      "task_result_count": 248,
       "attempts": [
         {
           "stage": "all-t120-w64",
@@ -8349,10 +8350,10 @@
           "orphan_incomplete": true,
           "expected_task_count": 48,
           "new_task_count": 48,
-          "persisted_new_task_count": 2,
+          "persisted_new_task_count": 3,
           "inherited_definitive_task_count": 0,
           "task_time_limit_seconds": 14400.0,
-          "missing_task_count": 46
+          "missing_task_count": 45
         },
         {
           "stage": "selective-t3600-w1-r42x-c0045113",
@@ -14053,6 +14054,19 @@
           "missing_task_count": 20
         },
         {
+          "stage": "selective-t28800-w4-r45c-c0060754",
+          "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060754/attempts/selective-t28800-w4-r45c-c0060754/run-start.json",
+          "aggregate": null,
+          "complete": false,
+          "orphan_incomplete": true,
+          "expected_task_count": 32,
+          "new_task_count": 32,
+          "persisted_new_task_count": 0,
+          "inherited_definitive_task_count": 0,
+          "task_time_limit_seconds": 28800.0,
+          "missing_task_count": 32
+        },
+        {
           "stage": "selective-t3600-w12-r42w-c0060754",
           "run_start": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060754/attempts/selective-t3600-w12-r42w-c0060754/run-start.json",
           "aggregate": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0060754/attempts/selective-t3600-w12-r42w-c0060754/aggregate.json",
@@ -14081,7 +14095,8 @@
       ],
       "orphan_incomplete_attempts": [
         "selective-t14400-w12-r43a-c0060754",
-        "selective-t14400-w12-r44m-c0060754"
+        "selective-t14400-w12-r44m-c0060754",
+        "selective-t28800-w4-r45c-c0060754"
       ],
       "serial_confirmation": null,
       "serial_confirmations": [],
