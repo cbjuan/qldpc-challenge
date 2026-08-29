@@ -1,6 +1,6 @@
 # Periodic BB exact-certification summary
 
-Targets: 128; exact: 36; refuted: 6; sharded closed pending serial: 5; timeout: 81; pending: 0.
+Targets: 128; exact: 37; refuted: 6; sharded closed pending serial: 4; timeout: 81; pending: 0.
 
 Non-overlapping batch wall time: 124971.1 s; summed new-task wall time: 5096295.0 s; summed new-task CPU time: 5038407.3 s.
 
@@ -188,7 +188,7 @@ Persisted tasks outside completed batches: 447 (2455981.0 CPU s); retained as ev
 | c0045032 | [[432,68,8]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5,30,120,600,3600,14400 | 171036.1 | 168528.6 |
 | c0045033 | [[416,66,8]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5,30,120,600,3600 | 101917.3 | 100592.2 |
 | c0045035 | [[384,62,8]] | exact | exact | exact | 5,30,120,600,3600 | 87904.2 | 86755.2 |
-| c0045036 | [[368,60,8]] | sharded_closed_pending_serial | sharded_closed_pending_serial | sharded_closed_pending_serial | 5,30,120,600,3600 | 133570.9 | 131737.4 |
+| c0045036 | [[368,60,8]] | exact | exact | exact | 5,30,120,600,3600 | 133570.9 | 131737.4 |
 | c0045037 | [[352,58,8]] | exact | exact | exact | 5,30,120,600,3600 | 72114.9 | 71180.9 |
 | c0045041 | [[700,50,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 40210.2 | 39414.0 |
 | c0045042 | [[672,48,8]] | sharded_closed_pending_serial | timeout | timeout | 5,30,120,600 | 38025.1 | 37698.0 |

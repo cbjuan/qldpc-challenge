@@ -10,13 +10,13 @@
     "task_records_verified": 27047,
     "canonical_logical_rows_verified": 27047,
     "refutation_indexes_verified": 23,
-    "stock_serial_exact_records_verified": 54
+    "stock_serial_exact_records_verified": 55
   },
   "target_count": 128,
   "counts": {
-    "exact": 36,
+    "exact": 37,
     "refuted": 6,
-    "sharded_closed_pending_serial": 5,
+    "sharded_closed_pending_serial": 4,
     "timeout": 81,
     "pending": 0
   },
@@ -6067,10 +6067,10 @@
       "n": 368,
       "k": 60,
       "d": 8,
-      "status": "sharded_closed_pending_serial",
+      "status": "exact",
       "side_status": {
-        "X": "sharded_closed_pending_serial",
-        "Z": "sharded_closed_pending_serial"
+        "X": "exact",
+        "Z": "exact"
       },
       "side_evidence": {
         "X": {
@@ -6179,8 +6179,16 @@
       "orphan_incomplete_attempts": [
         "selective-t600-w11-r32a-c0045036"
       ],
-      "serial_confirmation": null,
-      "serial_confirmations": [],
+      "serial_confirmation": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045036/serial-confirmation/c0045036-serial-t3600-isolated-v1/record.json",
+      "serial_confirmations": [
+        {
+          "record": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045036/serial-confirmation/c0045036-serial-t3600-isolated-v1/record.json",
+          "record_sha256": "61adc8b4e51d65dec2c7751090de233bcb5b3a29e9b3d806fb3e0a2e0fd0336f",
+          "authoritative_output": "research/campaigns/2026-08-06-periodic-bb/certification/results/c0045036/serial-confirmation/c0045036-serial-t3600-isolated-v1/authoritative-output.json",
+          "authoritative_output_sha256": "43abb33e5c97166057b0b06ac4c3defd6991bf4f2c990665b70966fd0650cb00",
+          "finished_at_utc": "2026-08-29T12:14:08.165113+00:00"
+        }
+      ],
       "refutation_evidence": [],
       "refutation_details": []
     },
