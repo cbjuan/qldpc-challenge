@@ -134,7 +134,7 @@ Incomplete batch starts (not counted as timeouts):
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r19-c0045017-start.json`
 - `research/campaigns/2026-08-06-periodic-bb/certification/results/batches/selective-t600-w8-r24-c0045015-start.json`
 
-Persisted tasks outside completed batches: 442 (2393360.4 CPU s); retained as evidence but not counted as completed-batch timeouts.
+Persisted tasks outside completed batches: 446 (2450610.5 CPU s); retained as evidence but not counted as completed-batch timeouts.
 
 ## Targets
 
@@ -251,17 +251,17 @@ Persisted tasks outside completed batches: 442 (2393360.4 CPU s); retained as ev
 | c0054911 | [[630,8,28]] | timeout | timeout | timeout | 5,30,120 | 3907.0 | 3871.0 |
 | c0055020 | [[648,8,28]] | timeout | timeout | timeout | 5,30,120 | 3866.8 | 3830.1 |
 | c0055406 | [[630,4,36]] | timeout | timeout | timeout | 5,30,120,600,3600,14400,28800 | 107555.2 | 106534.8 |
-| c0056213 | [[576,12,30]] | timeout | timeout | timeout | 5,30,120,600,3600,14400 | 81641.9 | 80946.3 |
+| c0056213 | [[576,12,30]] | timeout | timeout | timeout | 5,30,120,600,3600,14400 | 96042.4 | 95244.5 |
 | c0056263 | [[540,8,28]] | timeout | timeout | timeout | 5,30,120 | 3218.0 | 3191.1 |
 | c0056884 | [[686,12,28]] | timeout | refuted | refuted | 5,30,120 | 4462.2 | 4428.4 |
 | c0057634 | [[686,12,30]] | refuted | timeout | refuted | 5,30,120 | 4876.1 | 4839.9 |
 | c0057792 | [[540,8,28]] | timeout | timeout | timeout | 5,30,120 | 3084.8 | 3058.0 |
 | c0058472 | [[648,8,30]] | timeout | timeout | timeout | 5,30,120 | 3734.6 | 3702.8 |
-| c0058579 | [[686,18,24]] | timeout | timeout | timeout | 5,30,120,600,3600,14400 | 146020.0 | 144694.3 |
+| c0058579 | [[686,18,24]] | timeout | timeout | timeout | 5,30,120,600,3600,14400 | 174821.0 | 173322.2 |
 | c0058638 | [[648,8,32]] | timeout | timeout | timeout | 5,30,120 | 3842.1 | 3811.8 |
 | c0059571 | [[576,16,20]] | timeout | timeout | timeout | 5,30,120,600 | 25416.5 | 25205.9 |
 | c0060611 | [[630,10,28]] | timeout | refuted | refuted | 5,30,120 | 3615.9 | 3586.0 |
-| c0060702 | [[630,14,28]] | timeout | timeout | timeout | 5,30,120,600,3600,14400 | 85171.1 | 84485.3 |
+| c0060702 | [[630,14,28]] | timeout | timeout | timeout | 5,30,120,600,3600,14400 | 99571.3 | 98809.2 |
 | c0060754 | [[576,16,20]] | timeout | timeout | timeout | 5,30,120,600,3600,14400 | 486982.9 | 482298.4 |
 | c0060824 | [[660,8,32]] | timeout | timeout | timeout | 5,30,120 | 3781.4 | 3752.1 |
 | c0060866 | [[648,8,32]] | timeout | timeout | timeout | 5,30,120 | 3847.1 | 3819.0 |
