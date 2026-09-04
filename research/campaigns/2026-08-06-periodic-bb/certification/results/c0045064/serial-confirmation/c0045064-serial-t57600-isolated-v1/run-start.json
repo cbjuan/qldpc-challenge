@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "confirmation_stage": "c0045064-serial-t57600-isolated-v1",
+  "candidate_id": 45064,
+  "candidate": "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0045064-62fb7cc83f-1m-python8000reuse8k-s1618242633-fast1000000-allrungs.json",
+  "candidate_sha256": "227ba37bb8a6a32b0f6cb89c144d5e9ca78ad472ee26b7cd70394f8b204e972b",
+  "certifier_sha256": "e43fc63fc1430f52f885f4484070ddf9c087ef1cd760e8edbcec9b8b469531ba",
+  "gf2_sha256": "47e8999a4e22a12a852d81ce0f5a9e0248cd04a9d8940b9cb3edba7e85ad5508",
+  "per_task_time_limit_seconds": 57600.0,
+  "command": [
+    "/root/qldpc-challenge/.venv/bin/python3",
+    "verify/certify.py",
+    "research/campaigns/2026-08-06-periodic-bb/artifacts/candidates/c0045064-62fb7cc83f-1m-python8000reuse8k-s1618242633-fast1000000-allrungs.json",
+    "--tlim",
+    "57600.0"
+  ],
+  "stdout_isolation": {
+    "sitecustomize_path": "research/campaigns/2026-08-06-periodic-bb/certification/serial_stdout_isolation/sitecustomize.py",
+    "sitecustomize_sha256": "e368c89d543920e0145b359d0f28fb081f170d77fd5ddbf9f40b5a336ebb348d",
+    "child_pythonpath": "research/campaigns/2026-08-06-periodic-bb/certification/serial_stdout_isolation",
+    "child_python_pycache_prefix": "research/campaigns/2026-08-06-periodic-bb/certification/serial_stdout_isolation/.disabled-pycache",
+    "child_python_dont_write_bytecode": "1",
+    "child_python_no_user_site": "1",
+    "child_expected_sha256_environment": "e368c89d543920e0145b359d0f28fb081f170d77fd5ddbf9f40b5a336ebb348d",
+    "python_stdout_capture": "stdout",
+    "native_fd1_capture": "stderr",
+    "activation_marker": "QLDPC_STDOUT_ISOLATION_V1:e368c89d543920e0145b359d0f28fb081f170d77fd5ddbf9f40b5a336ebb348d",
+    "pythonpath_directory_policy": "only-regular-sitecustomize.py"
+  },
+  "started_at_utc": "2026-09-04T22:37:32.216107+00:00"
+}
